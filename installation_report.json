@@ -1,0 +1,77 @@
+{
+  "timestamp": "2025-06-26T22:17:16.133714",
+  "system_info": {
+    "platform": "Windows-11-10.0.26200-SP0",
+    "python_version": "3.12.7",
+    "architecture": "64bit",
+    "processor": "ARMv8 (64-bit) Family 8 Model 1 Revision 201, Qualcomm Technologies Inc"
+  },
+  "python_environment": {},
+  "dependencies": {
+    "pandas": {
+      "status": "INSTALLED",
+      "version": "2.2.2"
+    },
+    "numpy": {
+      "status": "INSTALLED",
+      "version": "1.26.4"
+    },
+    "yaml": {
+      "status": "INSTALLED",
+      "version": "6.0.1"
+    },
+    "requests": {
+      "status": "INSTALLED",
+      "version": "2.32.3"
+    },
+    "python-dotenv": {
+      "status": "MISSING",
+      "version": null
+    },
+    "openpyxl": {
+      "status": "INSTALLED",
+      "version": "3.1.5"
+    },
+    "xlrd": {
+      "status": "INSTALLED",
+      "version": "2.0.2"
+    },
+    "plotly": {
+      "status": "INSTALLED",
+      "version": "5.24.1"
+    },
+    "dash": {
+      "status": "INSTALLED",
+      "version": "3.0.4"
+    },
+    "matplotlib": {
+      "status": "INSTALLED",
+      "version": "3.9.2"
+    },
+    "seaborn": {
+      "status": "INSTALLED",
+      "version": "0.13.2"
+    },
+    "scikit-learn": {
+      "status": "MISSING",
+      "version": null
+    },
+    "jupyter": {
+      "status": "INSTALLED",
+      "version": "Unknown"
+    }
+  },
+  "data_files": {},
+  "source_files": {
+    "logi_meta_fixed.py": {
+      "status": "EXISTS",
+      "size": 19197
+    },
+    "warehouse_enhanced.py": {
+      "status": "MISSING",
+      "size": 0
+    }
+  },
+  "tests": {},
+  "overall_status": "WARNING"
+}
