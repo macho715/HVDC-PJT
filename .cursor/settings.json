@@ -1,0 +1,39 @@
+{
+  "mcpServers": {
+    "filesystem": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "/c"],
+      "description": "File system operations MCP server"
+    },
+    "playwright": {
+      "command": "npx", 
+      "args": ["-y", "@executeautomation/playwright-mcp-server"],
+      "description": "Web browser automation MCP server"
+    },
+    "win-cli": {
+      "command": "npx",
+      "args": ["-y", "@simonb97/server-win-cli"],
+      "description": "Windows CLI operations MCP server"
+    },
+    "desktop-commander": {
+      "command": "npx",
+      "args": ["-y", "@wonderwhy-er/desktop-commander"],
+      "description": "Desktop automation MCP server"
+    },
+    "context7": {
+      "command": "npx",
+      "args": ["-y", "@upstash/context7-mcp"],
+      "description": "Context management MCP server"
+    },
+    "seq-think": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-sequential-thinking", "--port", "8090"],
+      "description": "Structured reasoning MCP server"
+    },
+    "brave-search": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-brave-search", "--port", "8091", "--api-key", "${BRAVE_API_KEY}"],
+      "description": "Live web search MCP server"
+    }
+  }
+} 
