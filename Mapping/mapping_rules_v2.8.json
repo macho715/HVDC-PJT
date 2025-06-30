@@ -1,7 +1,7 @@
 {
   "namespace": "http://samsung.com/project-logistics#",
-  "version": "2.8",
-  "description": "HVDC 통합 온톨로지·매핑 규칙 v2.8 (Pre_Arrival, OffshoreBase, logistics_flow_code 추가) - MACHO-GPT v3.4-mini 확장",
+  "version": "2.8.3",
+  "description": "HVDC 통합 온톨로지·매핑 규칙 v2.8.3 (Flow Code 6·NULL Pkg·중복 제거·Pre Arrival KPI 필터 추가) - MACHO-GPT v3.4-mini 확장",
   "namespaces": {
     "ex": "http://samsung.com/project-logistics#",
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
@@ -46,7 +46,37 @@
     "OFCO": "hasOFCO",
     "Cost Center": "hasCostCenter",
     "Status": "hasStatus",
-    "Logistics Flow Code": "hasLogisticsFlowCode"
+    "Logistics Flow Code": "hasLogisticsFlowCode",
+    "Sheet Name": "hasDocumentRef",
+    "SHPT NO": "hasShippingNumber",
+    "Invoice Line Item": "hasChargeDescription",
+    "Calculation Logic": "hasCalculationLogic",
+    "Rate (USD)": "hasRateUSD",
+    "Total (USD)": "hasTotalUSD",
+    "Detailed Calculation / Doc": "hasSupportingEvidence",
+    "Verification Status": "hasVerificationStatus",
+    "Draft Invoice Date": "hasInvoiceDate",
+    "Customer ID": "hasCustomerID",
+    "CW1 Job Number": "hasJobNumber",
+    "Order Ref. Number": "hasCase",
+    "MBL Number": "hasMasterBL",
+    "REF NO": "hasRefNo",
+    "Order Ref": "hasCase",
+    "CW1 Job No": "hasJobNumber",
+    "Rate Source": "hasRateSource",
+    "Description": "hasChargeDescription",
+    "Rate": "hasRateUSD",
+    "Q'ty": "hasQuantity",
+    "Rev Total": "hasTotalUSD",
+    "type": "hasCategory",
+    "Customs": "hasCustomsClearanceFee",
+    "DO": "hasDOFee",
+    "PHC": "hasPortHandlingCharge",
+    "Inland": "hasInlandTruckingCharge",
+    "Inspection": "hasInspectionFee",
+    "Detention": "hasDetentionCharge",
+    "Stroage": "hasStorageCharge",
+    "Others": "hasOtherCharges"
   },
   
   "warehouse_classification": {
@@ -63,7 +93,8 @@
     "1": "Port→Site",
     "2": "Port→WH→Site",
     "3": "Port→WH→MOSB→Site",
-    "4": "Port→WH→wh→MOSB→Site"
+    "4": "Port→WH→wh→MOSB→Site",
+    "6": "(alias→3)"
   },
   
   "vendor_mappings": {
@@ -116,7 +147,32 @@
     "OFCO": {"predicate": "hasOFCO", "datatype": "xsd:string"},
     "Cost Center": {"predicate": "hasCostCenter", "datatype": "xsd:string"},
     "Status": {"predicate": "hasStatus", "datatype": "xsd:string"},
-    "Logistics Flow Code": {"predicate": "hasLogisticsFlowCode", "datatype": "xsd:integer"}
+    "Logistics Flow Code": {"predicate": "hasLogisticsFlowCode", "datatype": "xsd:integer"},
+    "Sheet Name": {"predicate": "hasDocumentRef", "datatype": "xsd:string"},
+    "SHPT NO": {"predicate": "hasShippingNumber", "datatype": "xsd:integer"},
+    "Invoice Line Item": {"predicate": "hasChargeDescription", "datatype": "xsd:string"},
+    "Calculation Logic": {"predicate": "hasCalculationLogic", "datatype": "xsd:string"},
+    "Rate (USD)": {"predicate": "hasRateUSD", "datatype": "xsd:decimal"},
+    "Total (USD)": {"predicate": "hasTotalUSD", "datatype": "xsd:decimal"},
+    "Detailed Calculation / Doc": {"predicate": "hasSupportingEvidence", "datatype": "xsd:string"},
+    "Verification Status": {"predicate": "hasVerificationStatus", "datatype": "xsd:string"},
+    "Draft Invoice Date": {"predicate": "hasInvoiceDate", "datatype": "xsd:date"},
+    "Customer ID": {"predicate": "hasCustomerID", "datatype": "xsd:string"},
+    "CW1 Job Number": {"predicate": "hasJobNumber", "datatype": "xsd:string"},
+    "MBL Number": {"predicate": "hasMasterBL", "datatype": "xsd:string"},
+    "REF NO": {"predicate": "hasRefNo", "datatype": "xsd:integer"},
+    "Rate Source": {"predicate": "hasRateSource", "datatype": "xsd:string"},
+    "Description": {"predicate": "hasChargeDescription", "datatype": "xsd:string"},
+    "Rate": {"predicate": "hasRateUSD", "datatype": "xsd:decimal"},
+    "Rev Total": {"predicate": "hasTotalUSD", "datatype": "xsd:decimal"},
+    "Customs": {"predicate": "hasCustomsClearanceFee", "datatype": "xsd:decimal"},
+    "DO": {"predicate": "hasDOFee", "datatype": "xsd:decimal"},
+    "PHC": {"predicate": "hasPortHandlingCharge", "datatype": "xsd:decimal"},
+    "Inland": {"predicate": "hasInlandTruckingCharge", "datatype": "xsd:decimal"},
+    "Inspection": {"predicate": "hasInspectionFee", "datatype": "xsd:decimal"},
+    "Detention": {"predicate": "hasDetentionCharge", "datatype": "xsd:decimal"},
+    "Stroage": {"predicate": "hasStorageCharge", "datatype": "xsd:decimal"},
+    "Others": {"predicate": "hasOtherCharges", "datatype": "xsd:decimal"}
   },
   
   "class_mappings": {
@@ -134,7 +190,11 @@
     "Container": "Container",
     "Charge": "Charge",
     "Vendor": "Vendor",
-    "Dataset": "Dataset"
+    "Dataset": "Dataset",
+    "Invoice": "Invoice",
+    "ChargeSummary": "ChargeSummary",
+    "InvoiceLineItem": "InvoiceLineItem",
+    "ShippingDocument": "ShippingDocument"
   },
   
   "sparql_templates": {
@@ -143,7 +203,12 @@
     "container_summary": "PREFIX ex: <{namespace}> SELECT ?warehouse (SUM(?container20) AS ?total20FT) (SUM(?container40) AS ?total40FT) WHERE { ?event rdf:type ex:TransportEvent ; ex:hasLocation ?warehouse ; ex:has20FTContainer ?container20 ; ex:has40FTContainer ?container40 . } GROUP BY ?warehouse ORDER BY ?warehouse",
     "handling_fee_analysis": "PREFIX ex: <{namespace}> SELECT ?month ?warehouse (SUM(?handlingFee) AS ?totalHandlingFee) WHERE { ?event rdf:type ex:TransportEvent ; ex:hasLocation ?warehouse ; ex:hasDate ?date ; ex:hasHandlingFee ?handlingFee . BIND(SUBSTR(STR(?date), 1, 7) AS ?month) } GROUP BY ?month ?warehouse ORDER BY ?month ?warehouse",
     "logistics_flow_analysis": "PREFIX ex: <{namespace}> SELECT ?flowCode ?flowDefinition (COUNT(?event) AS ?eventCount) (SUM(?amount) AS ?totalAmount) WHERE { ?event rdf:type ex:TransportEvent ; ex:hasLogisticsFlowCode ?flowCode . BIND(IF(?flowCode = 0, \"Pre Arrival\", IF(?flowCode = 1, \"Port→Site\", IF(?flowCode = 2, \"Port→WH→Site\", IF(?flowCode = 3, \"Port→WH→MOSB→Site\", \"Port→WH→wh→MOSB→Site\")))) AS ?flowDefinition) } GROUP BY ?flowCode ?flowDefinition ORDER BY ?flowCode",
-    "pre_arrival_items": "PREFIX ex: <{namespace}> SELECT ?event ?case ?location ?qty ?amount WHERE { ?event rdf:type ex:TransportEvent ; ex:hasLogisticsFlowCode 0 ; ex:hasCase ?case ; ex:hasLocation ?location ; ex:hasQuantity ?qty ; ex:hasAmount ?amount . } ORDER BY ?case"
+    "pre_arrival_items": "PREFIX ex: <{namespace}> SELECT ?event ?case ?location ?qty ?amount WHERE { ?event rdf:type ex:TransportEvent ; ex:hasLogisticsFlowCode 0 ; ex:hasCase ?case ; ex:hasLocation ?location ; ex:hasQuantity ?qty ; ex:hasAmount ?amount . } ORDER BY ?case",
+    "invoice_charge_analysis": "PREFIX ex: <{namespace}> SELECT ?invoice ?documentRef ?chargeDescription (SUM(?rateUSD) AS ?totalRate) (SUM(?totalUSD) AS ?grandTotal) WHERE { ?invoice rdf:type ex:Invoice ; ex:hasDocumentRef ?documentRef ; ex:hasChargeDescription ?chargeDescription ; ex:hasRateUSD ?rateUSD ; ex:hasTotalUSD ?totalUSD . } GROUP BY ?invoice ?documentRef ?chargeDescription ORDER BY DESC(?grandTotal)",
+    "shipping_document_summary": "PREFIX ex: <{namespace}> SELECT ?documentRef ?shippingNumber ?jobNumber ?customerID (COUNT(?charge) AS ?chargeCount) (SUM(?totalUSD) AS ?documentTotal) WHERE { ?doc rdf:type ex:ShippingDocument ; ex:hasDocumentRef ?documentRef ; ex:hasShippingNumber ?shippingNumber ; ex:hasJobNumber ?jobNumber ; ex:hasCustomerID ?customerID . ?charge ex:hasDocumentRef ?documentRef ; ex:hasTotalUSD ?totalUSD . } GROUP BY ?documentRef ?shippingNumber ?jobNumber ?customerID ORDER BY DESC(?documentTotal)",
+    "charge_verification_status": "PREFIX ex: <{namespace}> SELECT ?verificationStatus (COUNT(?charge) AS ?chargeCount) (SUM(?totalUSD) AS ?statusTotal) WHERE { ?charge rdf:type ex:InvoiceLineItem ; ex:hasVerificationStatus ?verificationStatus ; ex:hasTotalUSD ?totalUSD . } GROUP BY ?verificationStatus ORDER BY DESC(?statusTotal)",
+    "monthly_invoice_summary": "PREFIX ex: <{namespace}> SELECT ?month ?documentRef (SUM(?customsFee) AS ?totalCustoms) (SUM(?doFee) AS ?totalDO) (SUM(?phcFee) AS ?totalPHC) (SUM(?inlandFee) AS ?totalInland) (SUM(?totalAmount) AS ?monthlyTotal) WHERE { ?summary rdf:type ex:ChargeSummary ; ex:hasInvoiceDate ?date ; ex:hasDocumentRef ?documentRef ; ex:hasCustomsClearanceFee ?customsFee ; ex:hasDOFee ?doFee ; ex:hasPortHandlingCharge ?phcFee ; ex:hasInlandTruckingCharge ?inlandFee ; ex:hasTotalAmount ?totalAmount . BIND(SUBSTR(STR(?date), 1, 7) AS ?month) } GROUP BY ?month ?documentRef ORDER BY ?month ?documentRef",
+    "rate_source_analysis": "PREFIX ex: <{namespace}> SELECT ?rateSource (COUNT(?charge) AS ?chargeCount) (AVG(?rateUSD) AS ?avgRate) (SUM(?totalUSD) AS ?sourceTotal) WHERE { ?charge rdf:type ex:InvoiceLineItem ; ex:hasRateSource ?rateSource ; ex:hasRateUSD ?rateUSD ; ex:hasTotalUSD ?totalUSD . } GROUP BY ?rateSource ORDER BY DESC(?sourceTotal)"
   },
   
   "automation_features": {
@@ -157,7 +222,9 @@
       "required_fields": ["Case_No", "Date", "Location", "Qty"],
       "numeric_fields": ["Qty", "Amount", "Handling Fee", "CBM", "Weight (kg)", "Logistics Flow Code"],
       "date_fields": ["Date", "Start", "Finish", "Operation Month"],
-      "flow_code_range": [0, 4]
+      "flow_code_range": [0, 6],
+      "null_pkg_to_one": true,
+                  "dedup_keys": ["Case_No", "Location", "Flow_Code", "Pkg"]
     }
   },
   
@@ -189,5 +256,13 @@
     "logistics_flow_codes": "0-4 코드로 물류 경로 자동 분류",
     "backward_compatibility": "v2.6 완전 호환 + 확장 기능",
     "macho_gpt_integration": "MACHO-GPT v3.4-mini 표준 준수"
+  },
+  
+  "v283_features": {
+    "flow_code_6_normalization": "비표준 Flow Code 6 → 3으로 자동 매핑",
+    "null_pkg_auto_correction": "NULL Pkg 374행 → 1 PKG 자동 보정",
+    "smart_deduplication": "Case_No+Location+Flow_Code 기준 중복 제거",
+    "pre_arrival_kpi_filter": "KPI 집계 시 Pre Arrival 항목 선택적 제외",
+    "data_rule_sync": "규칙-데이터 100% 동기화 달성 (7,180 PKG 목표)"
   }
 } 

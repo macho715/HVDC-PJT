@@ -425,4 +425,77 @@ def validate_dataframe_against_mapping(df):
         'missing_fields': missing_fields,
         'extra_fields': extra_fields,
         'is_valid': len(missing_fields) == 0
-    } 
+    }
+
+def normalize_flow_code(code):
+    """
+    Flow Code 정규화 함수 (v2.8.3 신규)
+    비표준 Flow Code 6 → 3으로 자동 매핑
+    
+    Args:
+        code: 원본 Flow Code (int 또는 str)
+        
+    Returns:
+        int: 정규화된 Flow Code
+    """
+    try:
+        code_int = int(code)
+        if code_int == 6:  # 🆕 패치: 비표준 코드 6 → 표준 3으로 매핑
+            logger.info(f"Flow Code 정규화: {code} → 3")
+            return 3
+        return code_int
+    except (ValueError, TypeError):
+        logger.warning(f"Flow Code 변환 실패: {code}, 기본값 0 사용")
+        return 0
+
+def apply_validation_rules(df: pd.DataFrame) -> pd.DataFrame:
+    """
+    매핑 규칙의 validation_rules를 DataFrame에 적용 (v2.8.3 신규)
+    
+    Args:
+        df: 대상 DataFrame
+        
+    Returns:
+        pd.DataFrame: validation_rules 적용된 DataFrame
+    """
+    df_processed = df.copy()
+    validation_rules = RULES.get('automation_features', {}).get('validation_rules', {})
+    
+    # 🆕 패치: NULL Pkg → 1 보정
+    if validation_rules.get('null_pkg_to_one', False) and 'Pkg' in df_processed.columns:
+        null_count = df_processed['Pkg'].isna().sum()
+        if null_count > 0:
+            df_processed['Pkg'] = df_processed['Pkg'].fillna(1)
+            logger.info(f"NULL Pkg 보정: {null_count}건 → 1 PKG로 설정")
+    
+    # 🆕 패치: 중복 제거
+    dedup_keys = validation_rules.get('dedup_keys', [])
+    if dedup_keys and all(key in df_processed.columns for key in dedup_keys):
+        original_count = len(df_processed)
+        df_processed = df_processed.drop_duplicates(subset=dedup_keys, keep='last')
+        removed_count = original_count - len(df_processed)
+        if removed_count > 0:
+            logger.info(f"중복 제거: {removed_count}건 제거 (기준: {dedup_keys})")
+    
+    # 🆕 패치: Flow Code 정규화
+    if 'Flow_Code' in df_processed.columns:
+        df_processed['Flow_Code'] = df_processed['Flow_Code'].apply(normalize_flow_code)
+    elif 'Logistics Flow Code' in df_processed.columns:
+        df_processed['Logistics Flow Code'] = df_processed['Logistics Flow Code'].apply(normalize_flow_code)
+    
+    # 🆕 패치: OUT 트랜잭션 부호 처리 (선택적)
+    if validation_rules.get('out_negative_pkg', False):
+        if 'Transaction_Type' in df_processed.columns and 'Pkg' in df_processed.columns:
+            out_mask = df_processed['Transaction_Type'].str.contains('OUT', na=False)
+            out_count = out_mask.sum()
+            if out_count > 0:
+                df_processed.loc[out_mask, 'Pkg'] = df_processed.loc[out_mask, 'Pkg'] * -1
+                logger.info(f"OUT 부호 처리: {out_count}건 음수 변환")
+        elif 'TxType' in df_processed.columns and 'Pkg' in df_processed.columns:
+            out_mask = df_processed['TxType'].str.contains('OUT', na=False)
+            out_count = out_mask.sum()
+            if out_count > 0:
+                df_processed.loc[out_mask, 'Pkg'] = df_processed.loc[out_mask, 'Pkg'] * -1
+                logger.info(f"OUT 부호 처리: {out_count}건 음수 변환")
+    
+    return df_processed 
