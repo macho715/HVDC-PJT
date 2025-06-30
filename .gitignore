@@ -1,0 +1,84 @@
+# 대용량 백업 파일들
+*.zip
+*Backup*.zip
+*backup*.zip
+
+# Python 캐시 파일들
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+venv/
+env/
+ENV/
+
+# IDE 파일들
+.vscode/
+.idea/
+*.swp
+*.swo
+.cursor/
+
+# OS 파일들
+.DS_Store
+Thumbs.db
+
+# 로그 파일들
+*.log
+logs/
+
+# 임시 파일들
+*.tmp
+*.temp
+*.bak
+
+# Excel 임시 파일들
+~$*.xlsx
+~$*.xls
+
+# pytest 캐시
+.pytest_cache/
+
+# Coverage reports
+htmlcov/
+.coverage
+.coverage.*
+coverage.xml
+*.cover
+.hypothesis/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pyenv
+.python-version
+
+# 환경 변수 파일
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Git 관련
+.git/
+*.orig 

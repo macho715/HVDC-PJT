@@ -1,0 +1,78 @@
+@prefix ex: <http://samsung.com/project-logistics#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ex:Case a rdfs:Class ;
+    rdfs:label "케이스"@ko .
+
+ex:DangerousCargoWarehouse a rdfs:Class ;
+    rdfs:label "위험물 창고"@ko ;
+    rdfs:subClassOf ex:Warehouse .
+
+ex:HighValueCargo a rdfs:Class ;
+    rdfs:label "고가 화물"@ko ;
+    rdfs:subClassOf ex:TransportEvent .
+
+ex:IndoorWarehouse a rdfs:Class ;
+    rdfs:label "실내 창고"@ko ;
+    rdfs:subClassOf ex:Warehouse .
+
+ex:LargeCargo a rdfs:Class ;
+    rdfs:label "대형 화물"@ko ;
+    rdfs:subClassOf ex:TransportEvent .
+
+ex:OutdoorWarehouse a rdfs:Class ;
+    rdfs:label "실외 창고"@ko ;
+    rdfs:subClassOf ex:Warehouse .
+
+ex:Site a rdfs:Class ;
+    rdfs:label "현장"@ko ;
+    rdfs:subClassOf ex:Warehouse .
+
+ex:StockSnapshot a rdfs:Class ;
+    rdfs:label "재고 스냅샷"@ko .
+
+ex:TransportEvent a rdfs:Class ;
+    rdfs:label "운송 이벤트"@ko .
+
+ex:Warehouse a rdfs:Class ;
+    rdfs:label "창고"@ko .
+
+ex:hasAmount a rdf:Property ;
+    rdfs:label "금액"@ko ;
+    rdfs:domain ex:TransportEvent .
+
+ex:hasCBM a rdf:Property ;
+    rdfs:label "부피(CBM)"@ko ;
+    rdfs:domain ex:TransportEvent .
+
+ex:hasCaseNo a rdf:Property ;
+    rdfs:label "케이스 번호"@ko .
+
+ex:hasCategory a rdf:Property ;
+    rdfs:label "카테고리"@ko .
+
+ex:hasContainerType a rdf:Property ;
+    rdfs:label "컨테이너 타입"@ko .
+
+ex:hasDataSource a rdf:Property ;
+    rdfs:label "데이터 소스"@ko ;
+    rdfs:domain ex:TransportEvent .
+
+ex:hasLocation a rdf:Property ;
+    rdfs:label "위치"@ko ;
+    rdfs:domain ex:TransportEvent .
+
+ex:hasOperationMonth a rdf:Property ;
+    rdfs:label "작업 월"@ko .
+
+ex:hasPackageCount a rdf:Property ;
+    rdfs:label "패키지 수"@ko ;
+    rdfs:domain ex:TransportEvent .
+
+ex:hasStorageType a rdf:Property ;
+    rdfs:label "저장 타입"@ko .
+
+ex:hasWeight a rdf:Property ;
+    rdfs:label "무게"@ko .
+

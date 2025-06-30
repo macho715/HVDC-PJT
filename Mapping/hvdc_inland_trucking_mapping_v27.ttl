@@ -1,0 +1,4571 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix ex: <http://samsung.com/project-logistics#> .
+
+ex:rate_0001 a ex:InlandTruckingRate ;
+    ex:hasDestination "MIRFA SITE" ;
+    ex:hasWeight_Category "Up to 1 ton" ;
+    ex:hasRate_(USD/truck) "150"^^xsd:decimal ;
+    ex:hasStatus "Outlier" ;
+    ex:hasApproval "Pending Review" ;
+    ex:hasSource "contract_inland_trucking_charge_rates_v1.1.md" .
+
+ex:rate_0002 a ex:InlandTruckingRate ;
+    ex:hasDestination "MIRFA SITE" ;
+    ex:hasWeight_Category "1-3 tons" ;
+    ex:hasRate_(USD/truck) "150"^^xsd:decimal ;
+    ex:hasStatus "Outlier" ;
+    ex:hasApproval "Pending Review" ;
+    ex:hasSource "contract_inland_trucking_charge_rates_v1.1.md" .
+
+ex:rate_0003 a ex:InlandTruckingRate ;
+    ex:hasDestination "MIRFA SITE" ;
+    ex:hasWeight_Category "3-5 tons" ;
+    ex:hasRate_(USD/truck) "180"^^xsd:decimal ;
+    ex:hasStatus "✅ Approved" ;
+    ex:hasApproval "Active" ;
+    ex:hasSource "contract_inland_trucking_charge_rates_v1.1.md" .
+
+ex:rate_0004 a ex:InlandTruckingRate ;
+    ex:hasDestination "SHUWEIHAT Site" ;
+    ex:hasWeight_Category "Up to 1 ton" ;
+    ex:hasRate_(USD/truck) "210"^^xsd:decimal ;
+    ex:hasStatus "✅ Approved" ;
+    ex:hasApproval "Active" ;
+    ex:hasSource "contract_inland_trucking_charge_rates_v1.1.md" .
+
+ex:rate_0005 a ex:InlandTruckingRate ;
+    ex:hasDestination "SHUWEIHAT Site" ;
+    ex:hasWeight_Category "1-3 tons" ;
+    ex:hasRate_(USD/truck) "210"^^xsd:decimal ;
+    ex:hasStatus "✅ Approved" ;
+    ex:hasApproval "Active" ;
+    ex:hasSource "contract_inland_trucking_charge_rates_v1.1.md" .
+
+ex:rate_0006 a ex:InlandTruckingRate ;
+    ex:hasDestination "SHUWEIHAT Site" ;
+    ex:hasWeight_Category "3-5 tons" ;
+    ex:hasRate_(USD/truck) "250"^^xsd:decimal ;
+    ex:hasStatus "✅ Approved" ;
+    ex:hasApproval "Active" ;
+    ex:hasSource "contract_inland_trucking_charge_rates_v1.1.md" .
+
+ex:rate_0007 a ex:InlandTruckingRate ;
+    ex:hasDestination "Storage Yard" ;
+    ex:hasWeight_Category "Up to 1 ton" ;
+    ex:hasRate_(USD/truck) "100"^^xsd:decimal ;
+    ex:hasStatus "Outlier" ;
+    ex:hasApproval "Pending Review" ;
+    ex:hasSource "contract_inland_trucking_charge_rates_v1.1.md" .
+
+ex:rate_0008 a ex:InlandTruckingRate ;
+    ex:hasDestination "Storage Yard" ;
+    ex:hasWeight_Category "1-3 tons" ;
+    ex:hasRate_(USD/truck) "100"^^xsd:decimal ;
+    ex:hasStatus "Outlier" ;
+    ex:hasApproval "Pending Review" ;
+    ex:hasSource "contract_inland_trucking_charge_rates_v1.1.md" .
+
+ex:rate_0009 a ex:InlandTruckingRate ;
+    ex:hasDestination "Storage Yard" ;
+    ex:hasWeight_Category "3-5 tons" ;
+    ex:hasRate_(USD/truck) "120"^^xsd:decimal ;
+    ex:hasStatus "Outlier" ;
+    ex:hasApproval "Pending Review" ;
+    ex:hasSource "contract_inland_trucking_charge_rates_v1.1.md" .
+
+ex:rate_0010 a ex:InlandTruckingRate ;
+    ex:hasDestination "Hamariya FZ, Sharjah" ;
+    ex:hasWeight_Category "Up to 1 ton" ;
+    ex:hasRate_(USD/truck) "250"^^xsd:decimal ;
+    ex:hasStatus "✅ Approved" ;
+    ex:hasApproval "Active" ;
+    ex:hasSource "contract_inland_trucking_charge_rates_v1.1.md" .
+
+ex:rate_0011 a ex:InlandTruckingRate ;
+    ex:hasDestination "Hamariya FZ, Sharjah" ;
+    ex:hasWeight_Category "1-3 tons" ;
+    ex:hasRate_(USD/truck) "250"^^xsd:decimal ;
+    ex:hasStatus "✅ Approved" ;
+    ex:hasApproval "Active" ;
+    ex:hasSource "contract_inland_trucking_charge_rates_v1.1.md" .
+
+ex:rate_0012 a ex:InlandTruckingRate ;
+    ex:hasDestination "Hamariya FZ, Sharjah" ;
+    ex:hasWeight_Category "3-5 tons" ;
+    ex:hasRate_(USD/truck) "300"^^xsd:decimal ;
+    ex:hasStatus "✅ Approved" ;
+    ex:hasApproval "Active" ;
+    ex:hasSource "contract_inland_trucking_charge_rates_v1.1.md" .
+
+ex:rate_0013 a ex:InlandTruckingRate ;
+    ex:hasDestination "MIRFA SITE" ;
+    ex:hasWeight_Category "Up to 1 ton" ;
+    ex:hasRate_(USD/truck) "290"^^xsd:decimal ;
+    ex:hasStatus "✅ Approved" ;
+    ex:hasApproval "Active" ;
+    ex:hasSource "contract_inland_trucking_charge_rates_v1.1.md" .
+
+ex:rate_0014 a ex:InlandTruckingRate ;
+    ex:hasDestination "MIRFA SITE" ;
+    ex:hasWeight_Category "1-3 tons" ;
+    ex:hasRate_(USD/truck) "290"^^xsd:decimal ;
+    ex:hasStatus "✅ Approved" ;
+    ex:hasApproval "Active" ;
+    ex:hasSource "contract_inland_trucking_charge_rates_v1.1.md" .
+
+ex:rate_0015 a ex:InlandTruckingRate ;
+    ex:hasDestination "MIRFA SITE" ;
+    ex:hasWeight_Category "3-5 tons" ;
+    ex:hasRate_(USD/truck) "370"^^xsd:decimal ;
+    ex:hasStatus "Outlier" ;
+    ex:hasApproval "Pending Review" ;
+    ex:hasSource "contract_inland_trucking_charge_rates_v1.1.md" .
+
+ex:rate_0016 a ex:InlandTruckingRate ;
+    ex:hasDestination "SHUWEIHAT Site" ;
+    ex:hasWeight_Category "Up to 1 ton" ;
+    ex:hasRate_(USD/truck) "410"^^xsd:decimal ;
+    ex:hasStatus "Outlier" ;
+    ex:hasApproval "Pending Review" ;
+    ex:hasSource "contract_inland_trucking_charge_rates_v1.1.md" .
+
+ex:rate_0017 a ex:InlandTruckingRate ;
+    ex:hasDestination "SHUWEIHAT Site" ;
+    ex:hasWeight_Category "1-3 tons" ;
+    ex:hasRate_(USD/truck) "410"^^xsd:decimal ;
+    ex:hasStatus "Outlier" ;
+    ex:hasApproval "Pending Review" ;
+    ex:hasSource "contract_inland_trucking_charge_rates_v1.1.md" .
+
+ex:rate_0018 a ex:InlandTruckingRate ;
+    ex:hasDestination "SHUWEIHAT Site" ;
+    ex:hasWeight_Category "3-5 tons" ;
+    ex:hasRate_(USD/truck) "460"^^xsd:decimal ;
+    ex:hasStatus "Outlier" ;
+    ex:hasApproval "Pending Review" ;
+    ex:hasSource "contract_inland_trucking_charge_rates_v1.1.md" .
+
+ex:rate_0019 a ex:InlandTruckingRate ;
+    ex:hasDestination "Storage Yard" ;
+    ex:hasWeight_Category "Up to 1 ton" ;
+    ex:hasRate_(USD/truck) "200"^^xsd:decimal ;
+    ex:hasStatus "✅ Approved" ;
+    ex:hasApproval "Active" ;
+    ex:hasSource "contract_inland_trucking_charge_rates_v1.1.md" .
+
+ex:rate_0020 a ex:InlandTruckingRate ;
+    ex:hasDestination "Storage Yard" ;
+    ex:hasWeight_Category "1-3 tons" ;
+    ex:hasRate_(USD/truck) "200"^^xsd:decimal ;
+    ex:hasStatus "✅ Approved" ;
+    ex:hasApproval "Active" ;
+    ex:hasSource "contract_inland_trucking_charge_rates_v1.1.md" .
+
+ex:rate_0021 a ex:InlandTruckingRate ;
+    ex:hasDestination "Storage Yard" ;
+    ex:hasWeight_Category "3-5 tons" ;
+    ex:hasRate_(USD/truck) "250"^^xsd:decimal ;
+    ex:hasStatus "✅ Approved" ;
+    ex:hasApproval "Active" ;
+    ex:hasSource "contract_inland_trucking_charge_rates_v1.1.md" .
+
+ex:rate_0022 a ex:InlandTruckingRate ;
+    ex:hasDestination "Hamariya FZ, Sharjah" ;
+    ex:hasRate_(USD/RT) "14.00"^^xsd:decimal ;
+    ex:hasStatus "✅ Approved" ;
+    ex:hasApproval "Active" ;
+    ex:hasSource "contract_inland_trucking_charge_rates_v1.1.md" .
+
+ex:rate_0023 a ex:InlandTruckingRate ;
+    ex:hasDestination "Hamariya FZ, Sharjah" ;
+    ex:hasRate_(USD/RT) "19.00"^^xsd:decimal ;
+    ex:hasStatus "✅ Approved" ;
+    ex:hasApproval "Active" ;
+    ex:hasSource "contract_inland_trucking_charge_rates_v1.1.md" .
+
+ex:rate_0024 a ex:InlandTruckingRate ;
+    ex:hasDestination "MIRFA SITE" ;
+    ex:hasRate_(USD/RT) "20.00"^^xsd:decimal ;
+    ex:hasStatus "✅ Approved" ;
+    ex:hasApproval "Active" ;
+    ex:hasSource "contract_inland_trucking_charge_rates_v1.1.md" .
+
+ex:rate_0025 a ex:InlandTruckingRate ;
+    ex:hasDestination "MIRFA SITE" ;
+    ex:hasRate_(USD/RT) "34.50"^^xsd:decimal ;
+    ex:hasStatus "Outlier" ;
+    ex:hasApproval "Pending Review" ;
+    ex:hasSource "contract_inland_trucking_charge_rates_v1.1.md" .
+
+ex:rate_0026 a ex:InlandTruckingRate ;
+    ex:hasDestination "SHUWEIHAT Site" ;
+    ex:hasRate_(USD/RT) "25.00"^^xsd:decimal ;
+    ex:hasStatus "Outlier" ;
+    ex:hasApproval "Pending Review" ;
+    ex:hasSource "contract_inland_trucking_charge_rates_v1.1.md" .
+
+ex:rate_0027 a ex:InlandTruckingRate ;
+    ex:hasDestination "SHUWEIHAT Site" ;
+    ex:hasRate_(USD/RT) "44.50"^^xsd:decimal ;
+    ex:hasStatus "Outlier" ;
+    ex:hasApproval "Pending Review" ;
+    ex:hasSource "contract_inland_trucking_charge_rates_v1.1.md" .
+
+ex:rate_0028 a ex:InlandTruckingRate ;
+    ex:hasDestination "Storage Yard" ;
+    ex:hasRate_(USD/RT) "15.00"^^xsd:decimal ;
+    ex:hasStatus "✅ Approved" ;
+    ex:hasApproval "Active" ;
+    ex:hasSource "contract_inland_trucking_charge_rates_v1.1.md" .
+
+ex:rate_0029 a ex:InlandTruckingRate ;
+    ex:hasDestination "Storage Yard" ;
+    ex:hasRate_(USD/RT) "19.00"^^xsd:decimal ;
+    ex:hasStatus "✅ Approved" ;
+    ex:hasApproval "Active" ;
+    ex:hasSource "contract_inland_trucking_charge_rates_v1.1.md" .
+
+ex:rate_0030 a ex:InlandTruckingRate ;
+    ex:hasDestination "MIRFA SITE" ;
+    ex:hasRate_(USD/RT) "13.40"^^xsd:decimal ;
+    ex:hasStatus "✅ Approved" ;
+    ex:hasApproval "Active" ;
+    ex:hasSource "contract_inland_trucking_charge_rates_v1.1.md" .
+
+ex:rate_0031 a ex:InlandTruckingRate ;
+    ex:hasDestination "MIRFA SITE" ;
+    ex:hasRate_(USD/RT) "24.20"^^xsd:decimal ;
+    ex:hasStatus "Outlier" ;
+    ex:hasApproval "Pending Review" ;
+    ex:hasSource "contract_inland_trucking_charge_rates_v1.1.md" .
+
+ex:rate_0032 a ex:InlandTruckingRate ;
+    ex:hasDestination "SHUWEIHAT Site" ;
+    ex:hasRate_(USD/RT) "15.20"^^xsd:decimal ;
+    ex:hasStatus "✅ Approved" ;
+    ex:hasApproval "Active" ;
+    ex:hasSource "contract_inland_trucking_charge_rates_v1.1.md" .
+
+ex:rate_0033 a ex:InlandTruckingRate ;
+    ex:hasDestination "SHUWEIHAT Site" ;
+    ex:hasRate_(USD/RT) "29.20"^^xsd:decimal ;
+    ex:hasStatus "Outlier" ;
+    ex:hasApproval "Pending Review" ;
+    ex:hasSource "contract_inland_trucking_charge_rates_v1.1.md" .
+
+ex:rate_0034 a ex:InlandTruckingRate ;
+    ex:hasDestination "Storage Yard" ;
+    ex:hasRate_(USD/RT) "10.50"^^xsd:decimal ;
+    ex:hasStatus "Outlier" ;
+    ex:hasApproval "Pending Review" ;
+    ex:hasSource "contract_inland_trucking_charge_rates_v1.1.md" .
+
+ex:rate_0035 a ex:InlandTruckingRate ;
+    ex:hasDestination "Storage Yard" ;
+    ex:hasRate_(USD/RT) "12.40"^^xsd:decimal ;
+    ex:hasStatus "Outlier" ;
+    ex:hasApproval "Pending Review" ;
+    ex:hasSource "contract_inland_trucking_charge_rates_v1.1.md" .
+
+ex:rate_0036 a ex:InlandTruckingRate ;
+    ex:hasDestination "MIRFA SITE" ;
+    ex:hasRate_(USD/RT) "11.60"^^xsd:decimal ;
+    ex:hasStatus "Outlier" ;
+    ex:hasApproval "Pending Review" ;
+    ex:hasSource "contract_inland_trucking_charge_rates_v1.1.md" .
+
+ex:rate_0037 a ex:InlandTruckingRate ;
+    ex:hasDestination "MIRFA SITE" ;
+    ex:hasRate_(USD/RT) "21.00"^^xsd:decimal ;
+    ex:hasStatus "✅ Approved" ;
+    ex:hasApproval "Active" ;
+    ex:hasSource "contract_inland_trucking_charge_rates_v1.1.md" .
+
+ex:rate_0038 a ex:InlandTruckingRate ;
+    ex:hasDestination "MIRFA SITE" ;
+    ex:hasRate_(USD/RT) "28.20"^^xsd:decimal ;
+    ex:hasStatus "Outlier" ;
+    ex:hasApproval "Pending Review" ;
+    ex:hasSource "contract_inland_trucking_charge_rates_v1.1.md" .
+
+ex:rate_0039 a ex:InlandTruckingRate ;
+    ex:hasDestination "SHUWEIHAT Site" ;
+    ex:hasRate_(USD/RT) "13.10"^^xsd:decimal ;
+    ex:hasStatus "✅ Approved" ;
+    ex:hasApproval "Active" ;
+    ex:hasSource "contract_inland_trucking_charge_rates_v1.1.md" .
+
+ex:rate_0040 a ex:InlandTruckingRate ;
+    ex:hasDestination "SHUWEIHAT Site" ;
+    ex:hasRate_(USD/RT) "25.00"^^xsd:decimal ;
+    ex:hasStatus "Outlier" ;
+    ex:hasApproval "Pending Review" ;
+    ex:hasSource "contract_inland_trucking_charge_rates_v1.1.md" .
+
+ex:rate_0041 a ex:InlandTruckingRate ;
+    ex:hasDestination "SHUWEIHAT Site" ;
+    ex:hasRate_(USD/RT) "34.70"^^xsd:decimal ;
+    ex:hasStatus "Outlier" ;
+    ex:hasApproval "Pending Review" ;
+    ex:hasSource "contract_inland_trucking_charge_rates_v1.1.md" .
+
+ex:rate_0042 a ex:InlandTruckingRate ;
+    ex:hasDestination "Storage Yard" ;
+    ex:hasRate_(USD/RT) "8.40"^^xsd:decimal ;
+    ex:hasStatus "Outlier" ;
+    ex:hasApproval "Pending Review" ;
+    ex:hasSource "contract_inland_trucking_charge_rates_v1.1.md" .
+
+ex:rate_0043 a ex:InlandTruckingRate ;
+    ex:hasDestination "Storage Yard" ;
+    ex:hasRate_(USD/RT) "10.50"^^xsd:decimal ;
+    ex:hasStatus "Outlier" ;
+    ex:hasApproval "Pending Review" ;
+    ex:hasSource "contract_inland_trucking_charge_rates_v1.1.md" .
+
+ex:rate_0044 a ex:InlandTruckingRate ;
+    ex:hasDestination "Storage Yard" ;
+    ex:hasRate_(USD/RT) "23.80"^^xsd:decimal ;
+    ex:hasStatus "✅ Approved" ;
+    ex:hasApproval "Active" ;
+    ex:hasSource "contract_inland_trucking_charge_rates_v1.1.md" .
+
+ex:rate_0045 a ex:InlandTruckingRate ;
+    ex:hasDestination "MIRFA SITE" ;
+    ex:hasRate_(USD/RT) "10.50"^^xsd:decimal ;
+    ex:hasStatus "Outlier" ;
+    ex:hasApproval "Pending Review" ;
+    ex:hasSource "contract_inland_trucking_charge_rates_v1.1.md" .
+
+ex:rate_0046 a ex:InlandTruckingRate ;
+    ex:hasDestination "MIRFA SITE" ;
+    ex:hasRate_(USD/RT) "18.40"^^xsd:decimal ;
+    ex:hasStatus "✅ Approved" ;
+    ex:hasApproval "Active" ;
+    ex:hasSource "contract_inland_trucking_charge_rates_v1.1.md" .
+
+ex:rate_0047 a ex:InlandTruckingRate ;
+    ex:hasDestination "SHUWEIHAT Site" ;
+    ex:hasRate_(USD/RT) "11.90"^^xsd:decimal ;
+    ex:hasStatus "Outlier" ;
+    ex:hasApproval "Pending Review" ;
+    ex:hasSource "contract_inland_trucking_charge_rates_v1.1.md" .
+
+ex:rate_0048 a ex:InlandTruckingRate ;
+    ex:hasDestination "SHUWEIHAT Site" ;
+    ex:hasRate_(USD/RT) "22.20"^^xsd:decimal ;
+    ex:hasStatus "✅ Approved" ;
+    ex:hasApproval "Active" ;
+    ex:hasSource "contract_inland_trucking_charge_rates_v1.1.md" .
+
+ex:rate_0049 a ex:InlandTruckingRate ;
+    ex:hasDestination "Storage Yard" ;
+    ex:hasRate_(USD/RT) "5.20"^^xsd:decimal ;
+    ex:hasStatus "Outlier" ;
+    ex:hasApproval "Pending Review" ;
+    ex:hasSource "contract_inland_trucking_charge_rates_v1.1.md" .
+
+ex:rate_0050 a ex:InlandTruckingRate ;
+    ex:hasDestination "Storage Yard" ;
+    ex:hasRate_(USD/RT) "6.30"^^xsd:decimal ;
+    ex:hasStatus "Outlier" ;
+    ex:hasApproval "Pending Review" ;
+    ex:hasSource "contract_inland_trucking_charge_rates_v1.1.md" .
+
+ex:rate_0051 a ex:InlandTruckingRate ;
+    ex:hasDestination "Hamariya FZ, Sharjah" ;
+    ex:hasUnit "per RT" ;
+    ex:hasRate_(USD) "55.00"^^xsd:decimal ;
+    ex:hasStatus "Outlier" ;
+    ex:hasApproval "Pending Review" ;
+    ex:hasSource "contract_inland_trucking_charge_rates_v1.1.md" .
+
+ex:rate_0052 a ex:InlandTruckingRate ;
+    ex:hasDestination "Hamariya FZ, Sharjah" ;
+    ex:hasUnit "per truck" ;
+    ex:hasRate_(USD) "400.00"^^xsd:decimal ;
+    ex:hasStatus "✅ Approved" ;
+    ex:hasApproval "Active" ;
+    ex:hasSource "contract_inland_trucking_charge_rates_v1.1.md" .
+
+ex:rate_0053 a ex:InlandTruckingRate ;
+    ex:hasDestination "MIRFA SITE" ;
+    ex:hasUnit "per RT" ;
+    ex:hasRate_(USD) "68.00"^^xsd:decimal ;
+    ex:hasStatus "Outlier" ;
+    ex:hasApproval "Pending Review" ;
+    ex:hasSource "contract_inland_trucking_charge_rates_v1.1.md" .
+
+ex:rate_0054 a ex:InlandTruckingRate ;
+    ex:hasDestination "MIRFA SITE" ;
+    ex:hasUnit "per truck" ;
+    ex:hasRate_(USD) "770.00"^^xsd:decimal ;
+    ex:hasStatus "Outlier" ;
+    ex:hasApproval "Pending Review" ;
+    ex:hasSource "contract_inland_trucking_charge_rates_v1.1.md" .
+
+ex:rate_0055 a ex:InlandTruckingRate ;
+    ex:hasDestination "SHUWEIHAT Site" ;
+    ex:hasUnit "per RT" ;
+    ex:hasRate_(USD) "85.00"^^xsd:decimal ;
+    ex:hasStatus "Outlier" ;
+    ex:hasApproval "Pending Review" ;
+    ex:hasSource "contract_inland_trucking_charge_rates_v1.1.md" .
+
+ex:rate_0056 a ex:InlandTruckingRate ;
+    ex:hasDestination "SHUWEIHAT Site" ;
+    ex:hasUnit "per truck" ;
+    ex:hasRate_(USD) "980.00"^^xsd:decimal ;
+    ex:hasStatus "Outlier" ;
+    ex:hasApproval "Pending Review" ;
+    ex:hasSource "contract_inland_trucking_charge_rates_v1.1.md" .
+
+ex:rate_0057 a ex:InlandTruckingRate ;
+    ex:hasDestination "Storage Yard" ;
+    ex:hasUnit "per RT" ;
+    ex:hasRate_(USD) "55.00"^^xsd:decimal ;
+    ex:hasStatus "Outlier" ;
+    ex:hasApproval "Pending Review" ;
+    ex:hasSource "contract_inland_trucking_charge_rates_v1.1.md" .
+
+ex:rate_0058 a ex:InlandTruckingRate ;
+    ex:hasDestination "Storage Yard" ;
+    ex:hasUnit "per truck" ;
+    ex:hasRate_(USD) "400.00"^^xsd:decimal ;
+    ex:hasStatus "✅ Approved" ;
+    ex:hasApproval "Active" ;
+    ex:hasSource "contract_inland_trucking_charge_rates_v1.1.md" .
+
+ex:rate_0059 a ex:InlandTruckingRate ;
+    ex:hasDestination "MIRFA SITE" ;
+    ex:hasUnit "per RT" ;
+    ex:hasRate_(USD) "35.00"^^xsd:decimal ;
+    ex:hasStatus "Outlier" ;
+    ex:hasApproval "Pending Review" ;
+    ex:hasSource "contract_inland_trucking_charge_rates_v1.1.md" .
+
+ex:rate_0060 a ex:InlandTruckingRate ;
+    ex:hasDestination "MIRFA SITE" ;
+    ex:hasUnit "per truck" ;
+    ex:hasRate_(USD) "496.00"^^xsd:decimal ;
+    ex:hasStatus "✅ Approved" ;
+    ex:hasApproval "Active" ;
+    ex:hasSource "contract_inland_trucking_charge_rates_v1.1.md" .
+
+ex:rate_0061 a ex:InlandTruckingRate ;
+    ex:hasDestination "Mina Zayed Port" ;
+    ex:hasUnit "per RT" ;
+    ex:hasRate_(USD) "35.00"^^xsd:decimal ;
+    ex:hasStatus "Outlier" ;
+    ex:hasApproval "Pending Review" ;
+    ex:hasSource "contract_inland_trucking_charge_rates_v1.1.md" .
+
+ex:rate_0062 a ex:InlandTruckingRate ;
+    ex:hasDestination "Mina Zayed Port" ;
+    ex:hasUnit "per truck" ;
+    ex:hasRate_(USD) "400.00"^^xsd:decimal ;
+    ex:hasStatus "✅ Approved" ;
+    ex:hasApproval "Active" ;
+    ex:hasSource "contract_inland_trucking_charge_rates_v1.1.md" .
+
+ex:rate_0063 a ex:InlandTruckingRate ;
+    ex:hasDestination "SHUWEIHAT Site" ;
+    ex:hasUnit "per RT" ;
+    ex:hasRate_(USD) "45.00"^^xsd:decimal ;
+    ex:hasStatus "Outlier" ;
+    ex:hasApproval "Pending Review" ;
+    ex:hasSource "contract_inland_trucking_charge_rates_v1.1.md" .
+
+ex:rate_0064 a ex:InlandTruckingRate ;
+    ex:hasDestination "SHUWEIHAT Site" ;
+    ex:hasUnit "per truck" ;
+    ex:hasRate_(USD) "679.00"^^xsd:decimal ;
+    ex:hasStatus "Outlier" ;
+    ex:hasApproval "Pending Review" ;
+    ex:hasSource "contract_inland_trucking_charge_rates_v1.1.md" .
+
+ex:rate_0065 a ex:InlandTruckingRate ;
+    ex:hasDestination "Storage Yard" ;
+    ex:hasUnit "per RT" ;
+    ex:hasRate_(USD) "29.00"^^xsd:decimal ;
+    ex:hasStatus "Outlier" ;
+    ex:hasApproval "Pending Review" ;
+    ex:hasSource "contract_inland_trucking_charge_rates_v1.1.md" .
+
+ex:rate_0066 a ex:InlandTruckingRate ;
+    ex:hasDestination "Storage Yard" ;
+    ex:hasUnit "per truck" ;
+    ex:hasRate_(USD) "252.00"^^xsd:decimal ;
+    ex:hasStatus "Outlier" ;
+    ex:hasApproval "Pending Review" ;
+    ex:hasSource "contract_inland_trucking_charge_rates_v1.1.md" .
+
+ex:rate_0067 a ex:InlandTruckingRate ;
+    ex:hasField "**Document ID**" ;
+    ex:hasValue "HVDC-ITC-2025-001" ;
+    ex:hasSource "contract_inland_trucking_charge_rates_v1.1.md" .
+
+ex:rate_0068 a ex:InlandTruckingRate ;
+    ex:hasField "**Version**" ;
+    ex:hasValue "v1.1" ;
+    ex:hasSource "contract_inland_trucking_charge_rates_v1.1.md" .
+
+ex:rate_0069 a ex:InlandTruckingRate ;
+    ex:hasField "**Created By**" ;
+    ex:hasValue "MACHO-GPT v3.4-mini" ;
+    ex:hasSource "contract_inland_trucking_charge_rates_v1.1.md" .
+
+ex:rate_0070 a ex:InlandTruckingRate ;
+    ex:hasField "**Approved By**" ;
+    ex:hasValue "Samsung C&T × ADNOC·DSV Joint Committee" ;
+    ex:hasSource "contract_inland_trucking_charge_rates_v1.1.md" .
+
+ex:rate_0071 a ex:InlandTruckingRate ;
+    ex:hasField "**Effective Date**" ;
+    ex:hasValue "2025-01-01" ;
+    ex:hasSource "contract_inland_trucking_charge_rates_v1.1.md" .
+
+ex:rate_0072 a ex:InlandTruckingRate ;
+    ex:hasField "**Review Date**" ;
+    ex:hasValue "2025-04-01" ;
+    ex:hasSource "contract_inland_trucking_charge_rates_v1.1.md" .
+
+ex:rate_0073 a ex:InlandTruckingRate ;
+    ex:hasField "**Next Update**" ;
+    ex:hasValue "2025-07-01" ;
+    ex:hasSource "contract_inland_trucking_charge_rates_v1.1.md" .
+
+ex:rate_0074 a ex:InlandTruckingRate ;
+    ex:hasField "**Classification**" ;
+    ex:hasValue "Commercial Confidential" ;
+    ex:hasSource "contract_inland_trucking_charge_rates_v1.1.md" .
+
+ex:rate_0075 a ex:InlandTruckingRate ;
+    ex:hasCategory "Air" ;
+    ex:hasPort "Abu Dhabi Airport" ;
+    ex:hasDestination "MIRFA SITE" ;
+    ex:hasCharge_Description "Inland Trucking (Upto 1ton)" ;
+    ex:hasUnit "per truck" ;
+    ex:hasRate_USD "150"^^xsd:decimal ;
+    ex:hasFlag "outlier" ;
+    ex:hasSource "inland_trucking_charge_rates.md" .
+
+ex:rate_0076 a ex:InlandTruckingRate ;
+    ex:hasCategory "Air" ;
+    ex:hasPort "Abu Dhabi Airport" ;
+    ex:hasDestination "MIRFA SITE" ;
+    ex:hasCharge_Description "Inland Trucking (Above 1ton, Upto 3ton)" ;
+    ex:hasUnit "per truck" ;
+    ex:hasRate_USD "150"^^xsd:decimal ;
+    ex:hasFlag "outlier" ;
+    ex:hasSource "inland_trucking_charge_rates.md" .
+
+ex:rate_0077 a ex:InlandTruckingRate ;
+    ex:hasCategory "Air" ;
+    ex:hasPort "Abu Dhabi Airport" ;
+    ex:hasDestination "MIRFA SITE" ;
+    ex:hasCharge_Description "Inland Trucking (Above 3ton, Upto 5ton)" ;
+    ex:hasUnit "per truck" ;
+    ex:hasRate_USD "180"^^xsd:decimal ;
+    ex:hasFlag "ok" ;
+    ex:hasSource "inland_trucking_charge_rates.md" .
+
+ex:rate_0078 a ex:InlandTruckingRate ;
+    ex:hasCategory "Air" ;
+    ex:hasPort "Abu Dhabi Airport" ;
+    ex:hasDestination "SHUWEIHAT Site" ;
+    ex:hasCharge_Description "Inland Trucking (Upto 1ton)" ;
+    ex:hasUnit "per truck" ;
+    ex:hasRate_USD "210"^^xsd:decimal ;
+    ex:hasFlag "ok" ;
+    ex:hasSource "inland_trucking_charge_rates.md" .
+
+ex:rate_0079 a ex:InlandTruckingRate ;
+    ex:hasCategory "Air" ;
+    ex:hasPort "Abu Dhabi Airport" ;
+    ex:hasDestination "SHUWEIHAT Site" ;
+    ex:hasCharge_Description "Inland Trucking (Above 1ton, Upto 3ton)" ;
+    ex:hasUnit "per truck" ;
+    ex:hasRate_USD "210"^^xsd:decimal ;
+    ex:hasFlag "ok" ;
+    ex:hasSource "inland_trucking_charge_rates.md" .
+
+ex:rate_0080 a ex:InlandTruckingRate ;
+    ex:hasCategory "Air" ;
+    ex:hasPort "Abu Dhabi Airport" ;
+    ex:hasDestination "SHUWEIHAT Site" ;
+    ex:hasCharge_Description "Inland Trucking (Above 3ton, Upto 5ton)" ;
+    ex:hasUnit "per truck" ;
+    ex:hasRate_USD "250"^^xsd:decimal ;
+    ex:hasFlag "ok" ;
+    ex:hasSource "inland_trucking_charge_rates.md" .
+
+ex:rate_0081 a ex:InlandTruckingRate ;
+    ex:hasCategory "Air" ;
+    ex:hasPort "Abu Dhabi Airport" ;
+    ex:hasDestination "Storage Yard" ;
+    ex:hasCharge_Description "Inland Trucking (Upto 1ton)" ;
+    ex:hasUnit "per truck" ;
+    ex:hasRate_USD "100"^^xsd:decimal ;
+    ex:hasFlag "outlier" ;
+    ex:hasSource "inland_trucking_charge_rates.md" .
+
+ex:rate_0082 a ex:InlandTruckingRate ;
+    ex:hasCategory "Air" ;
+    ex:hasPort "Abu Dhabi Airport" ;
+    ex:hasDestination "Storage Yard" ;
+    ex:hasCharge_Description "Inland Trucking (Above 1ton, Upto 3ton)" ;
+    ex:hasUnit "per truck" ;
+    ex:hasRate_USD "100"^^xsd:decimal ;
+    ex:hasFlag "outlier" ;
+    ex:hasSource "inland_trucking_charge_rates.md" .
+
+ex:rate_0083 a ex:InlandTruckingRate ;
+    ex:hasCategory "Air" ;
+    ex:hasPort "Abu Dhabi Airport" ;
+    ex:hasDestination "Storage Yard" ;
+    ex:hasCharge_Description "Inland Trucking (Above 3ton, Upto 5ton)" ;
+    ex:hasUnit "per truck" ;
+    ex:hasRate_USD "120"^^xsd:decimal ;
+    ex:hasFlag "outlier" ;
+    ex:hasSource "inland_trucking_charge_rates.md" .
+
+ex:rate_0084 a ex:InlandTruckingRate ;
+    ex:hasCategory "Air" ;
+    ex:hasPort "Dubai Airport" ;
+    ex:hasDestination "Hamariya free zone, Sharjah" ;
+    ex:hasCharge_Description "Inland Trucking (Upto 1ton)" ;
+    ex:hasUnit "per truck" ;
+    ex:hasRate_USD "250"^^xsd:decimal ;
+    ex:hasFlag "ok" ;
+    ex:hasSource "inland_trucking_charge_rates.md" .
+
+ex:rate_0085 a ex:InlandTruckingRate ;
+    ex:hasCategory "Air" ;
+    ex:hasPort "Dubai Airport" ;
+    ex:hasDestination "Hamariya free zone, Sharjah" ;
+    ex:hasCharge_Description "Inland Trucking (Above 1ton, Upto 3ton)" ;
+    ex:hasUnit "per truck" ;
+    ex:hasRate_USD "250"^^xsd:decimal ;
+    ex:hasFlag "ok" ;
+    ex:hasSource "inland_trucking_charge_rates.md" .
+
+ex:rate_0086 a ex:InlandTruckingRate ;
+    ex:hasCategory "Air" ;
+    ex:hasPort "Dubai Airport" ;
+    ex:hasDestination "Hamariya free zone, Sharjah" ;
+    ex:hasCharge_Description "Inland Trucking (Above 3ton, Upto 5ton)" ;
+    ex:hasUnit "per truck" ;
+    ex:hasRate_USD "300"^^xsd:decimal ;
+    ex:hasFlag "ok" ;
+    ex:hasSource "inland_trucking_charge_rates.md" .
+
+ex:rate_0087 a ex:InlandTruckingRate ;
+    ex:hasCategory "Air" ;
+    ex:hasPort "Dubai Airport" ;
+    ex:hasDestination "MIRFA SITE" ;
+    ex:hasCharge_Description "Inland Trucking (Upto 1ton)" ;
+    ex:hasUnit "per truck" ;
+    ex:hasRate_USD "290"^^xsd:decimal ;
+    ex:hasFlag "ok" ;
+    ex:hasSource "inland_trucking_charge_rates.md" .
+
+ex:rate_0088 a ex:InlandTruckingRate ;
+    ex:hasCategory "Air" ;
+    ex:hasPort "Dubai Airport" ;
+    ex:hasDestination "MIRFA SITE" ;
+    ex:hasCharge_Description "Inland Trucking (Above 1ton, Upto 3ton)" ;
+    ex:hasUnit "per truck" ;
+    ex:hasRate_USD "290"^^xsd:decimal ;
+    ex:hasFlag "ok" ;
+    ex:hasSource "inland_trucking_charge_rates.md" .
+
+ex:rate_0089 a ex:InlandTruckingRate ;
+    ex:hasCategory "Air" ;
+    ex:hasPort "Dubai Airport" ;
+    ex:hasDestination "MIRFA SITE" ;
+    ex:hasCharge_Description "Inland Trucking (Above 3ton, Upto 5ton)" ;
+    ex:hasUnit "per truck" ;
+    ex:hasRate_USD "370"^^xsd:decimal ;
+    ex:hasFlag "outlier" ;
+    ex:hasSource "inland_trucking_charge_rates.md" .
+
+ex:rate_0090 a ex:InlandTruckingRate ;
+    ex:hasCategory "Air" ;
+    ex:hasPort "Dubai Airport" ;
+    ex:hasDestination "SHUWEIHAT Site" ;
+    ex:hasCharge_Description "Inland Trucking (Upto 1ton)" ;
+    ex:hasUnit "per truck" ;
+    ex:hasRate_USD "410"^^xsd:decimal ;
+    ex:hasFlag "outlier" ;
+    ex:hasSource "inland_trucking_charge_rates.md" .
+
+ex:rate_0091 a ex:InlandTruckingRate ;
+    ex:hasCategory "Air" ;
+    ex:hasPort "Dubai Airport" ;
+    ex:hasDestination "SHUWEIHAT Site" ;
+    ex:hasCharge_Description "Inland Trucking (Above 1ton, Upto 3ton)" ;
+    ex:hasUnit "per truck" ;
+    ex:hasRate_USD "410"^^xsd:decimal ;
+    ex:hasFlag "outlier" ;
+    ex:hasSource "inland_trucking_charge_rates.md" .
+
+ex:rate_0092 a ex:InlandTruckingRate ;
+    ex:hasCategory "Air" ;
+    ex:hasPort "Dubai Airport" ;
+    ex:hasDestination "SHUWEIHAT Site" ;
+    ex:hasCharge_Description "Inland Trucking (Above 3ton, Upto 5ton)" ;
+    ex:hasUnit "per truck" ;
+    ex:hasRate_USD "460"^^xsd:decimal ;
+    ex:hasFlag "outlier" ;
+    ex:hasSource "inland_trucking_charge_rates.md" .
+
+ex:rate_0093 a ex:InlandTruckingRate ;
+    ex:hasCategory "Air" ;
+    ex:hasPort "Dubai Airport" ;
+    ex:hasDestination "Storage Yard" ;
+    ex:hasCharge_Description "Inland Trucking (Upto 1ton)" ;
+    ex:hasUnit "per truck" ;
+    ex:hasRate_USD "200"^^xsd:decimal ;
+    ex:hasFlag "ok" ;
+    ex:hasSource "inland_trucking_charge_rates.md" .
+
+ex:rate_0094 a ex:InlandTruckingRate ;
+    ex:hasCategory "Air" ;
+    ex:hasPort "Dubai Airport" ;
+    ex:hasDestination "Storage Yard" ;
+    ex:hasCharge_Description "Inland Trucking (Above 1ton, Upto 3ton)" ;
+    ex:hasUnit "per truck" ;
+    ex:hasRate_USD "200"^^xsd:decimal ;
+    ex:hasFlag "ok" ;
+    ex:hasSource "inland_trucking_charge_rates.md" .
+
+ex:rate_0095 a ex:InlandTruckingRate ;
+    ex:hasCategory "Air" ;
+    ex:hasPort "Dubai Airport" ;
+    ex:hasDestination "Storage Yard" ;
+    ex:hasCharge_Description "Inland Trucking (Above 3ton, Upto 5ton)" ;
+    ex:hasUnit "per truck" ;
+    ex:hasRate_USD "250"^^xsd:decimal ;
+    ex:hasFlag "ok" ;
+    ex:hasSource "inland_trucking_charge_rates.md" .
+
+ex:rate_0096 a ex:InlandTruckingRate ;
+    ex:hasCategory "Bulk" ;
+    ex:hasPort "Jebel Ali Port" ;
+    ex:hasDestination "Hamariya free zone, Sharjah" ;
+    ex:hasCharge_Description "Inland Trucking" ;
+    ex:hasUnit "per RT" ;
+    ex:hasRate_USD "14"^^xsd:decimal ;
+    ex:hasFlag "ok" ;
+    ex:hasSource "inland_trucking_charge_rates.md" .
+
+ex:rate_0097 a ex:InlandTruckingRate ;
+    ex:hasCategory "Bulk" ;
+    ex:hasPort "Jebel Ali Port" ;
+    ex:hasDestination "Hamariya free zone, Sharjah" ;
+    ex:hasCharge_Description "Inland Trucking" ;
+    ex:hasUnit "per RT" ;
+    ex:hasRate_USD "19"^^xsd:decimal ;
+    ex:hasFlag "ok" ;
+    ex:hasSource "inland_trucking_charge_rates.md" .
+
+ex:rate_0098 a ex:InlandTruckingRate ;
+    ex:hasCategory "Bulk" ;
+    ex:hasPort "Jebel Ali Port" ;
+    ex:hasDestination "MIRFA SITE" ;
+    ex:hasCharge_Description "Inland Trucking" ;
+    ex:hasUnit "per RT" ;
+    ex:hasRate_USD "34.5"^^xsd:decimal ;
+    ex:hasFlag "outlier" ;
+    ex:hasSource "inland_trucking_charge_rates.md" .
+
+ex:rate_0099 a ex:InlandTruckingRate ;
+    ex:hasCategory "Bulk" ;
+    ex:hasPort "Jebel Ali Port" ;
+    ex:hasDestination "MIRFA SITE" ;
+    ex:hasCharge_Description "Inland Trucking" ;
+    ex:hasUnit "per RT" ;
+    ex:hasRate_USD "20"^^xsd:decimal ;
+    ex:hasFlag "ok" ;
+    ex:hasSource "inland_trucking_charge_rates.md" .
+
+ex:rate_0100 a ex:InlandTruckingRate ;
+    ex:hasCategory "Bulk" ;
+    ex:hasPort "Jebel Ali Port" ;
+    ex:hasDestination "SHUWEIHAT Site" ;
+    ex:hasCharge_Description "Inland Trucking" ;
+    ex:hasUnit "per RT" ;
+    ex:hasRate_USD "44.5"^^xsd:decimal ;
+    ex:hasFlag "outlier" ;
+    ex:hasSource "inland_trucking_charge_rates.md" .
+
+ex:rate_0101 a ex:InlandTruckingRate ;
+    ex:hasCategory "Bulk" ;
+    ex:hasPort "Jebel Ali Port" ;
+    ex:hasDestination "SHUWEIHAT Site" ;
+    ex:hasCharge_Description "Inland Trucking" ;
+    ex:hasUnit "per RT" ;
+    ex:hasRate_USD "25"^^xsd:decimal ;
+    ex:hasFlag "outlier" ;
+    ex:hasSource "inland_trucking_charge_rates.md" .
+
+ex:rate_0102 a ex:InlandTruckingRate ;
+    ex:hasCategory "Bulk" ;
+    ex:hasPort "Jebel Ali Port" ;
+    ex:hasDestination "Storage Yard" ;
+    ex:hasCharge_Description "Inland Trucking" ;
+    ex:hasUnit "per RT" ;
+    ex:hasRate_USD "15"^^xsd:decimal ;
+    ex:hasFlag "ok" ;
+    ex:hasSource "inland_trucking_charge_rates.md" .
+
+ex:rate_0103 a ex:InlandTruckingRate ;
+    ex:hasCategory "Bulk" ;
+    ex:hasPort "Jebel Ali Port" ;
+    ex:hasDestination "Storage Yard" ;
+    ex:hasCharge_Description "Inland Trucking" ;
+    ex:hasUnit "per RT" ;
+    ex:hasRate_USD "19"^^xsd:decimal ;
+    ex:hasFlag "ok" ;
+    ex:hasSource "inland_trucking_charge_rates.md" .
+
+ex:rate_0104 a ex:InlandTruckingRate ;
+    ex:hasCategory "Bulk" ;
+    ex:hasPort "Khalifa Port" ;
+    ex:hasDestination "MIRFA SITE" ;
+    ex:hasCharge_Description "Inland Trucking" ;
+    ex:hasUnit "per RT" ;
+    ex:hasRate_USD "24.2"^^xsd:decimal ;
+    ex:hasFlag "outlier" ;
+    ex:hasSource "inland_trucking_charge_rates.md" .
+
+ex:rate_0105 a ex:InlandTruckingRate ;
+    ex:hasCategory "Bulk" ;
+    ex:hasPort "Khalifa Port" ;
+    ex:hasDestination "MIRFA SITE" ;
+    ex:hasCharge_Description "Inland Trucking" ;
+    ex:hasUnit "per RT" ;
+    ex:hasRate_USD "13.4"^^xsd:decimal ;
+    ex:hasFlag "ok" ;
+    ex:hasSource "inland_trucking_charge_rates.md" .
+
+ex:rate_0106 a ex:InlandTruckingRate ;
+    ex:hasCategory "Bulk" ;
+    ex:hasPort "Khalifa Port" ;
+    ex:hasDestination "SHUWEIHAT Site" ;
+    ex:hasCharge_Description "Inland Trucking" ;
+    ex:hasUnit "per RT" ;
+    ex:hasRate_USD "29.2"^^xsd:decimal ;
+    ex:hasFlag "outlier" ;
+    ex:hasSource "inland_trucking_charge_rates.md" .
+
+ex:rate_0107 a ex:InlandTruckingRate ;
+    ex:hasCategory "Bulk" ;
+    ex:hasPort "Khalifa Port" ;
+    ex:hasDestination "SHUWEIHAT Site" ;
+    ex:hasCharge_Description "Inland Trucking" ;
+    ex:hasUnit "per RT" ;
+    ex:hasRate_USD "15.2"^^xsd:decimal ;
+    ex:hasFlag "ok" ;
+    ex:hasSource "inland_trucking_charge_rates.md" .
+
+ex:rate_0108 a ex:InlandTruckingRate ;
+    ex:hasCategory "Bulk" ;
+    ex:hasPort "Khalifa Port" ;
+    ex:hasDestination "Storage Yard" ;
+    ex:hasCharge_Description "Inland Trucking" ;
+    ex:hasUnit "per RT" ;
+    ex:hasRate_USD "10.5"^^xsd:decimal ;
+    ex:hasFlag "outlier" ;
+    ex:hasSource "inland_trucking_charge_rates.md" .
+
+ex:rate_0109 a ex:InlandTruckingRate ;
+    ex:hasCategory "Bulk" ;
+    ex:hasPort "Khalifa Port" ;
+    ex:hasDestination "Storage Yard" ;
+    ex:hasCharge_Description "Inland Trucking" ;
+    ex:hasUnit "per RT" ;
+    ex:hasRate_USD "12.4"^^xsd:decimal ;
+    ex:hasFlag "outlier" ;
+    ex:hasSource "inland_trucking_charge_rates.md" .
+
+ex:rate_0110 a ex:InlandTruckingRate ;
+    ex:hasCategory "Bulk" ;
+    ex:hasPort "Mina Zayed Port" ;
+    ex:hasDestination "MIRFA SITE" ;
+    ex:hasCharge_Description "Inland Trucking" ;
+    ex:hasUnit "per RT" ;
+    ex:hasRate_USD "21"^^xsd:decimal ;
+    ex:hasFlag "ok" ;
+    ex:hasSource "inland_trucking_charge_rates.md" .
+
+ex:rate_0111 a ex:InlandTruckingRate ;
+    ex:hasCategory "Bulk" ;
+    ex:hasPort "Mina Zayed Port" ;
+    ex:hasDestination "MIRFA SITE" ;
+    ex:hasCharge_Description "Inland Trucking" ;
+    ex:hasUnit "per RT" ;
+    ex:hasRate_USD "11.6"^^xsd:decimal ;
+    ex:hasFlag "outlier" ;
+    ex:hasSource "inland_trucking_charge_rates.md" .
+
+ex:rate_0112 a ex:InlandTruckingRate ;
+    ex:hasCategory "Bulk" ;
+    ex:hasPort "Mina Zayed Port" ;
+    ex:hasDestination "MIRFA SITE" ;
+    ex:hasCharge_Description "Inland Trucking" ;
+    ex:hasUnit "per RT" ;
+    ex:hasRate_USD "28.2"^^xsd:decimal ;
+    ex:hasFlag "outlier" ;
+    ex:hasSource "inland_trucking_charge_rates.md" .
+
+ex:rate_0113 a ex:InlandTruckingRate ;
+    ex:hasCategory "Bulk" ;
+    ex:hasPort "Mina Zayed Port" ;
+    ex:hasDestination "MIRFA SITE" ;
+    ex:hasCharge_Description "Inland Trucking" ;
+    ex:hasUnit "per RT" ;
+    ex:hasRate_USD "nan" ;
+    ex:hasFlag "missing" ;
+    ex:hasSource "inland_trucking_charge_rates.md" .
+
+ex:rate_0114 a ex:InlandTruckingRate ;
+    ex:hasCategory "Bulk" ;
+    ex:hasPort "Mina Zayed Port" ;
+    ex:hasDestination "SHUWEIHAT Site" ;
+    ex:hasCharge_Description "Inland Trucking" ;
+    ex:hasUnit "per RT" ;
+    ex:hasRate_USD "25"^^xsd:decimal ;
+    ex:hasFlag "outlier" ;
+    ex:hasSource "inland_trucking_charge_rates.md" .
+
+ex:rate_0115 a ex:InlandTruckingRate ;
+    ex:hasCategory "Bulk" ;
+    ex:hasPort "Mina Zayed Port" ;
+    ex:hasDestination "SHUWEIHAT Site" ;
+    ex:hasCharge_Description "Inland Trucking" ;
+    ex:hasUnit "per RT" ;
+    ex:hasRate_USD "13.1"^^xsd:decimal ;
+    ex:hasFlag "ok" ;
+    ex:hasSource "inland_trucking_charge_rates.md" .
+
+ex:rate_0116 a ex:InlandTruckingRate ;
+    ex:hasCategory "Bulk" ;
+    ex:hasPort "Mina Zayed Port" ;
+    ex:hasDestination "SHUWEIHAT Site" ;
+    ex:hasCharge_Description "Inland Trucking" ;
+    ex:hasUnit "per RT" ;
+    ex:hasRate_USD "34.7"^^xsd:decimal ;
+    ex:hasFlag "outlier" ;
+    ex:hasSource "inland_trucking_charge_rates.md" .
+
+ex:rate_0117 a ex:InlandTruckingRate ;
+    ex:hasCategory "Bulk" ;
+    ex:hasPort "Mina Zayed Port" ;
+    ex:hasDestination "SHUWEIHAT Site" ;
+    ex:hasCharge_Description "Inland Trucking" ;
+    ex:hasUnit "per RT" ;
+    ex:hasRate_USD "nan" ;
+    ex:hasFlag "missing" ;
+    ex:hasSource "inland_trucking_charge_rates.md" .
+
+ex:rate_0118 a ex:InlandTruckingRate ;
+    ex:hasCategory "Bulk" ;
+    ex:hasPort "Mina Zayed Port" ;
+    ex:hasDestination "Storage Yard" ;
+    ex:hasCharge_Description "Inland Trucking" ;
+    ex:hasUnit "per RT" ;
+    ex:hasRate_USD "8.4"^^xsd:decimal ;
+    ex:hasFlag "outlier" ;
+    ex:hasSource "inland_trucking_charge_rates.md" .
+
+ex:rate_0119 a ex:InlandTruckingRate ;
+    ex:hasCategory "Bulk" ;
+    ex:hasPort "Mina Zayed Port" ;
+    ex:hasDestination "Storage Yard" ;
+    ex:hasCharge_Description "Inland Trucking" ;
+    ex:hasUnit "per RT" ;
+    ex:hasRate_USD "10.5"^^xsd:decimal ;
+    ex:hasFlag "outlier" ;
+    ex:hasSource "inland_trucking_charge_rates.md" .
+
+ex:rate_0120 a ex:InlandTruckingRate ;
+    ex:hasCategory "Bulk" ;
+    ex:hasPort "Mina Zayed Port" ;
+    ex:hasDestination "Storage Yard" ;
+    ex:hasCharge_Description "Inland Trucking" ;
+    ex:hasUnit "per RT" ;
+    ex:hasRate_USD "23.8"^^xsd:decimal ;
+    ex:hasFlag "ok" ;
+    ex:hasSource "inland_trucking_charge_rates.md" .
+
+ex:rate_0121 a ex:InlandTruckingRate ;
+    ex:hasCategory "Bulk" ;
+    ex:hasPort "Mina Zayed Port" ;
+    ex:hasDestination "Storage Yard" ;
+    ex:hasCharge_Description "Inland Trucking" ;
+    ex:hasUnit "per RT" ;
+    ex:hasRate_USD "nan" ;
+    ex:hasFlag "missing" ;
+    ex:hasSource "inland_trucking_charge_rates.md" .
+
+ex:rate_0122 a ex:InlandTruckingRate ;
+    ex:hasCategory "Bulk" ;
+    ex:hasPort "Musaffah Port" ;
+    ex:hasDestination "MIRFA SITE" ;
+    ex:hasCharge_Description "Inland Trucking" ;
+    ex:hasUnit "per RT" ;
+    ex:hasRate_USD "18.4"^^xsd:decimal ;
+    ex:hasFlag "ok" ;
+    ex:hasSource "inland_trucking_charge_rates.md" .
+
+ex:rate_0123 a ex:InlandTruckingRate ;
+    ex:hasCategory "Bulk" ;
+    ex:hasPort "Musaffah Port" ;
+    ex:hasDestination "MIRFA SITE" ;
+    ex:hasCharge_Description "Inland Trucking" ;
+    ex:hasUnit "per RT" ;
+    ex:hasRate_USD "10.5"^^xsd:decimal ;
+    ex:hasFlag "outlier" ;
+    ex:hasSource "inland_trucking_charge_rates.md" .
+
+ex:rate_0124 a ex:InlandTruckingRate ;
+    ex:hasCategory "Bulk" ;
+    ex:hasPort "Musaffah Port" ;
+    ex:hasDestination "SHUWEIHAT Site" ;
+    ex:hasCharge_Description "Inland Trucking" ;
+    ex:hasUnit "per RT" ;
+    ex:hasRate_USD "22.2"^^xsd:decimal ;
+    ex:hasFlag "ok" ;
+    ex:hasSource "inland_trucking_charge_rates.md" .
+
+ex:rate_0125 a ex:InlandTruckingRate ;
+    ex:hasCategory "Bulk" ;
+    ex:hasPort "Musaffah Port" ;
+    ex:hasDestination "SHUWEIHAT Site" ;
+    ex:hasCharge_Description "Inland Trucking" ;
+    ex:hasUnit "per RT" ;
+    ex:hasRate_USD "11.9"^^xsd:decimal ;
+    ex:hasFlag "outlier" ;
+    ex:hasSource "inland_trucking_charge_rates.md" .
+
+ex:rate_0126 a ex:InlandTruckingRate ;
+    ex:hasCategory "Bulk" ;
+    ex:hasPort "Musaffah Port" ;
+    ex:hasDestination "Storage Yard" ;
+    ex:hasCharge_Description "Inland Trucking" ;
+    ex:hasUnit "per RT" ;
+    ex:hasRate_USD "5.2"^^xsd:decimal ;
+    ex:hasFlag "outlier" ;
+    ex:hasSource "inland_trucking_charge_rates.md" .
+
+ex:rate_0127 a ex:InlandTruckingRate ;
+    ex:hasCategory "Bulk" ;
+    ex:hasPort "Musaffah Port" ;
+    ex:hasDestination "Storage Yard" ;
+    ex:hasCharge_Description "Inland Trucking" ;
+    ex:hasUnit "per RT" ;
+    ex:hasRate_USD "6.3"^^xsd:decimal ;
+    ex:hasFlag "outlier" ;
+    ex:hasSource "inland_trucking_charge_rates.md" .
+
+ex:rate_0128 a ex:InlandTruckingRate ;
+    ex:hasCategory "Container" ;
+    ex:hasPort "Jebel Ali Port" ;
+    ex:hasDestination "Hamariya free zone, Sharjah" ;
+    ex:hasCharge_Description "Inland Trucking" ;
+    ex:hasUnit "per RT" ;
+    ex:hasRate_USD "55"^^xsd:decimal ;
+    ex:hasFlag "outlier" ;
+    ex:hasSource "inland_trucking_charge_rates.md" .
+
+ex:rate_0129 a ex:InlandTruckingRate ;
+    ex:hasCategory "Container" ;
+    ex:hasPort "Jebel Ali Port" ;
+    ex:hasDestination "Hamariya free zone, Sharjah" ;
+    ex:hasCharge_Description "Inland Trucking" ;
+    ex:hasUnit "per truck" ;
+    ex:hasRate_USD "400"^^xsd:decimal ;
+    ex:hasFlag "ok" ;
+    ex:hasSource "inland_trucking_charge_rates.md" .
+
+ex:rate_0130 a ex:InlandTruckingRate ;
+    ex:hasCategory "Container" ;
+    ex:hasPort "Jebel Ali Port" ;
+    ex:hasDestination "Hamariya free zone, Sharjah" ;
+    ex:hasCharge_Description "Inland Trucking" ;
+    ex:hasUnit "per truck" ;
+    ex:hasRate_USD "400"^^xsd:decimal ;
+    ex:hasFlag "ok" ;
+    ex:hasSource "inland_trucking_charge_rates.md" .
+
+ex:rate_0131 a ex:InlandTruckingRate ;
+    ex:hasCategory "Container" ;
+    ex:hasPort "Jebel Ali Port" ;
+    ex:hasDestination "MIRFA SITE" ;
+    ex:hasCharge_Description "Inland Trucking" ;
+    ex:hasUnit "per RT" ;
+    ex:hasRate_USD "68"^^xsd:decimal ;
+    ex:hasFlag "outlier" ;
+    ex:hasSource "inland_trucking_charge_rates.md" .
+
+ex:rate_0132 a ex:InlandTruckingRate ;
+    ex:hasCategory "Container" ;
+    ex:hasPort "Jebel Ali Port" ;
+    ex:hasDestination "MIRFA SITE" ;
+    ex:hasCharge_Description "Inland Trucking" ;
+    ex:hasUnit "per truck" ;
+    ex:hasRate_USD "770"^^xsd:decimal ;
+    ex:hasFlag "outlier" ;
+    ex:hasSource "inland_trucking_charge_rates.md" .
+
+ex:rate_0133 a ex:InlandTruckingRate ;
+    ex:hasCategory "Container" ;
+    ex:hasPort "Jebel Ali Port" ;
+    ex:hasDestination "MIRFA SITE" ;
+    ex:hasCharge_Description "Inland Trucking" ;
+    ex:hasUnit "per truck" ;
+    ex:hasRate_USD "770"^^xsd:decimal ;
+    ex:hasFlag "outlier" ;
+    ex:hasSource "inland_trucking_charge_rates.md" .
+
+ex:rate_0134 a ex:InlandTruckingRate ;
+    ex:hasCategory "Container" ;
+    ex:hasPort "Jebel Ali Port" ;
+    ex:hasDestination "SHUWEIHAT Site" ;
+    ex:hasCharge_Description "Inland Trucking" ;
+    ex:hasUnit "per RT" ;
+    ex:hasRate_USD "85"^^xsd:decimal ;
+    ex:hasFlag "outlier" ;
+    ex:hasSource "inland_trucking_charge_rates.md" .
+
+ex:rate_0135 a ex:InlandTruckingRate ;
+    ex:hasCategory "Container" ;
+    ex:hasPort "Jebel Ali Port" ;
+    ex:hasDestination "SHUWEIHAT Site" ;
+    ex:hasCharge_Description "Inland Trucking" ;
+    ex:hasUnit "per truck" ;
+    ex:hasRate_USD "980"^^xsd:decimal ;
+    ex:hasFlag "outlier" ;
+    ex:hasSource "inland_trucking_charge_rates.md" .
+
+ex:rate_0136 a ex:InlandTruckingRate ;
+    ex:hasCategory "Container" ;
+    ex:hasPort "Jebel Ali Port" ;
+    ex:hasDestination "SHUWEIHAT Site" ;
+    ex:hasCharge_Description "Inland Trucking" ;
+    ex:hasUnit "per truck" ;
+    ex:hasRate_USD "980"^^xsd:decimal ;
+    ex:hasFlag "outlier" ;
+    ex:hasSource "inland_trucking_charge_rates.md" .
+
+ex:rate_0137 a ex:InlandTruckingRate ;
+    ex:hasCategory "Container" ;
+    ex:hasPort "Jebel Ali Port" ;
+    ex:hasDestination "Storage Yard" ;
+    ex:hasCharge_Description "Inland Trucking" ;
+    ex:hasUnit "per RT" ;
+    ex:hasRate_USD "55"^^xsd:decimal ;
+    ex:hasFlag "outlier" ;
+    ex:hasSource "inland_trucking_charge_rates.md" .
+
+ex:rate_0138 a ex:InlandTruckingRate ;
+    ex:hasCategory "Container" ;
+    ex:hasPort "Jebel Ali Port" ;
+    ex:hasDestination "Storage Yard" ;
+    ex:hasCharge_Description "Inland Trucking" ;
+    ex:hasUnit "per truck" ;
+    ex:hasRate_USD "400"^^xsd:decimal ;
+    ex:hasFlag "ok" ;
+    ex:hasSource "inland_trucking_charge_rates.md" .
+
+ex:rate_0139 a ex:InlandTruckingRate ;
+    ex:hasCategory "Container" ;
+    ex:hasPort "Jebel Ali Port" ;
+    ex:hasDestination "Storage Yard" ;
+    ex:hasCharge_Description "Inland Trucking" ;
+    ex:hasUnit "per truck" ;
+    ex:hasRate_USD "400"^^xsd:decimal ;
+    ex:hasFlag "ok" ;
+    ex:hasSource "inland_trucking_charge_rates.md" .
+
+ex:rate_0140 a ex:InlandTruckingRate ;
+    ex:hasCategory "Container" ;
+    ex:hasPort "Khalifa Port" ;
+    ex:hasDestination "MIRFA SITE" ;
+    ex:hasCharge_Description "Inland Trucking" ;
+    ex:hasUnit "per RT" ;
+    ex:hasRate_USD "35"^^xsd:decimal ;
+    ex:hasFlag "outlier" ;
+    ex:hasSource "inland_trucking_charge_rates.md" .
+
+ex:rate_0141 a ex:InlandTruckingRate ;
+    ex:hasCategory "Container" ;
+    ex:hasPort "Khalifa Port" ;
+    ex:hasDestination "MIRFA SITE" ;
+    ex:hasCharge_Description "Inland Trucking" ;
+    ex:hasUnit "per truck" ;
+    ex:hasRate_USD "496"^^xsd:decimal ;
+    ex:hasFlag "ok" ;
+    ex:hasSource "inland_trucking_charge_rates.md" .
+
+ex:rate_0142 a ex:InlandTruckingRate ;
+    ex:hasCategory "Container" ;
+    ex:hasPort "Khalifa Port" ;
+    ex:hasDestination "MIRFA SITE" ;
+    ex:hasCharge_Description "Inland Trucking" ;
+    ex:hasUnit "per truck" ;
+    ex:hasRate_USD "496"^^xsd:decimal ;
+    ex:hasFlag "ok" ;
+    ex:hasSource "inland_trucking_charge_rates.md" .
+
+ex:rate_0143 a ex:InlandTruckingRate ;
+    ex:hasCategory "Container" ;
+    ex:hasPort "Khalifa Port" ;
+    ex:hasDestination "Mina Zayed Port" ;
+    ex:hasCharge_Description "Inland Trucking" ;
+    ex:hasUnit "per RT" ;
+    ex:hasRate_USD "35"^^xsd:decimal ;
+    ex:hasFlag "outlier" ;
+    ex:hasSource "inland_trucking_charge_rates.md" .
+
+ex:rate_0144 a ex:InlandTruckingRate ;
+    ex:hasCategory "Container" ;
+    ex:hasPort "Khalifa Port" ;
+    ex:hasDestination "Mina Zayed Port" ;
+    ex:hasCharge_Description "Inland Trucking" ;
+    ex:hasUnit "per truck" ;
+    ex:hasRate_USD "400"^^xsd:decimal ;
+    ex:hasFlag "ok" ;
+    ex:hasSource "inland_trucking_charge_rates.md" .
+
+ex:rate_0145 a ex:InlandTruckingRate ;
+    ex:hasCategory "Container" ;
+    ex:hasPort "Khalifa Port" ;
+    ex:hasDestination "Mina Zayed Port" ;
+    ex:hasCharge_Description "Inland Trucking" ;
+    ex:hasUnit "per truck" ;
+    ex:hasRate_USD "400"^^xsd:decimal ;
+    ex:hasFlag "ok" ;
+    ex:hasSource "inland_trucking_charge_rates.md" .
+
+ex:rate_0146 a ex:InlandTruckingRate ;
+    ex:hasCategory "Container" ;
+    ex:hasPort "Khalifa Port" ;
+    ex:hasDestination "SHUWEIHAT Site" ;
+    ex:hasCharge_Description "Inland Trucking" ;
+    ex:hasUnit "per RT" ;
+    ex:hasRate_USD "45"^^xsd:decimal ;
+    ex:hasFlag "outlier" ;
+    ex:hasSource "inland_trucking_charge_rates.md" .
+
+ex:rate_0147 a ex:InlandTruckingRate ;
+    ex:hasCategory "Container" ;
+    ex:hasPort "Khalifa Port" ;
+    ex:hasDestination "SHUWEIHAT Site" ;
+    ex:hasCharge_Description "Inland Trucking" ;
+    ex:hasUnit "per truck" ;
+    ex:hasRate_USD "679"^^xsd:decimal ;
+    ex:hasFlag "outlier" ;
+    ex:hasSource "inland_trucking_charge_rates.md" .
+
+ex:rate_0148 a ex:InlandTruckingRate ;
+    ex:hasCategory "Container" ;
+    ex:hasPort "Khalifa Port" ;
+    ex:hasDestination "SHUWEIHAT Site" ;
+    ex:hasCharge_Description "Inland Trucking" ;
+    ex:hasUnit "per truck" ;
+    ex:hasRate_USD "679"^^xsd:decimal ;
+    ex:hasFlag "outlier" ;
+    ex:hasSource "inland_trucking_charge_rates.md" .
+
+ex:rate_0149 a ex:InlandTruckingRate ;
+    ex:hasCategory "Container" ;
+    ex:hasPort "Khalifa Port" ;
+    ex:hasDestination "Storage Yard" ;
+    ex:hasCharge_Description "Inland Trucking" ;
+    ex:hasUnit "per RT" ;
+    ex:hasRate_USD "29"^^xsd:decimal ;
+    ex:hasFlag "outlier" ;
+    ex:hasSource "inland_trucking_charge_rates.md" .
+
+ex:rate_0150 a ex:InlandTruckingRate ;
+    ex:hasCategory "Container" ;
+    ex:hasPort "Khalifa Port" ;
+    ex:hasDestination "Storage Yard" ;
+    ex:hasCharge_Description "Inland Trucking" ;
+    ex:hasUnit "per truck" ;
+    ex:hasRate_USD "252"^^xsd:decimal ;
+    ex:hasFlag "outlier" ;
+    ex:hasSource "inland_trucking_charge_rates.md" .
+
+ex:rate_0151 a ex:InlandTruckingRate ;
+    ex:hasCategory "Container" ;
+    ex:hasPort "Khalifa Port" ;
+    ex:hasDestination "Storage Yard" ;
+    ex:hasCharge_Description "Inland Trucking" ;
+    ex:hasUnit "per truck" ;
+    ex:hasRate_USD "252"^^xsd:decimal ;
+    ex:hasFlag "outlier" ;
+    ex:hasSource "inland_trucking_charge_rates.md" .
+
+ex:rate_0152 a ex:InlandTruckingRate ;
+    ex:hasRef_No. "1"^^xsd:decimal ;
+    ex:hasS/N "1"^^xsd:decimal ;
+    ex:hasShipment_Reference "HVDC-ADOPT-SIM-0050" ;
+    ex:hasPlace_of_Loading "DSV Mussafah Yard" ;
+    ex:hasPlace_of_Delivery "MOSB" ;
+    ex:hasVehicle_Type "Lowbed" ;
+    ex:hasRate_(USD) "617"^^xsd:decimal ;
+    ex:hasAmount_(USD) "617"^^xsd:decimal ;
+    ex:hasVerification_Result "Verified" ;
+    ex:hasVerification_Logic "Contract ±3% match" ;
+    ex:hasSource "DOMESTIC_DELIVERY_APRIL_VERIFICATION.md" .
+
+ex:rate_0153 a ex:InlandTruckingRate ;
+    ex:hasRef_No. "2"^^xsd:decimal ;
+    ex:hasS/N "2"^^xsd:decimal ;
+    ex:hasShipment_Reference "HVDC-ADOPT-SCT-0066,HVDC-ADOPT-SIM-0072" ;
+    ex:hasPlace_of_Loading "DSV Mussafah Yard" ;
+    ex:hasPlace_of_Delivery "MIRFA" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasRate_(USD) "420"^^xsd:decimal ;
+    ex:hasAmount_(USD) "420"^^xsd:decimal ;
+    ex:hasVerification_Result "Verified" ;
+    ex:hasVerification_Logic "Contract ±3% match" ;
+    ex:hasSource "DOMESTIC_DELIVERY_APRIL_VERIFICATION.md" .
+
+ex:rate_0154 a ex:InlandTruckingRate ;
+    ex:hasRef_No. "3"^^xsd:decimal ;
+    ex:hasS/N "2"^^xsd:decimal ;
+    ex:hasShipment_Reference "HVDC-ADOPT-SCT-0066,HVDC-ADOPT-SIM-0072" ;
+    ex:hasPlace_of_Loading "DSV Mussafah Yard" ;
+    ex:hasPlace_of_Delivery "MOSB" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasRate_(USD) "200"^^xsd:decimal ;
+    ex:hasAmount_(USD) "200"^^xsd:decimal ;
+    ex:hasVerification_Result "Verified" ;
+    ex:hasVerification_Logic "Contract ±3% match" ;
+    ex:hasSource "DOMESTIC_DELIVERY_APRIL_VERIFICATION.md" .
+
+ex:rate_0155 a ex:InlandTruckingRate ;
+    ex:hasRef_No. "4"^^xsd:decimal ;
+    ex:hasS/N "2"^^xsd:decimal ;
+    ex:hasShipment_Reference "HVDC-ADOPT-SCT-0066,HVDC-ADOPT-SIM-0072" ;
+    ex:hasPlace_of_Loading "MOSB" ;
+    ex:hasPlace_of_Delivery "Shuweihat" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasRate_(USD) "600"^^xsd:decimal ;
+    ex:hasAmount_(USD) "600"^^xsd:decimal ;
+    ex:hasVerification_Result "Verified" ;
+    ex:hasVerification_Logic "Contract ±3% match" ;
+    ex:hasSource "DOMESTIC_DELIVERY_APRIL_VERIFICATION.md" .
+
+ex:rate_0156 a ex:InlandTruckingRate ;
+    ex:hasRef_No. "5"^^xsd:decimal ;
+    ex:hasS/N "3"^^xsd:decimal ;
+    ex:hasShipment_Reference "HVDC-ADOPT-SCT-0066" ;
+    ex:hasPlace_of_Loading "DSV Mussafah Yard" ;
+    ex:hasPlace_of_Delivery "Shuweihat" ;
+    ex:hasVehicle_Type "3 Ton Pickup" ;
+    ex:hasRate_(USD) "250"^^xsd:decimal ;
+    ex:hasAmount_(USD) "250"^^xsd:decimal ;
+    ex:hasVerification_Result "Pending Review" ;
+    ex:hasVerification_Logic "Rate not found in reference list ±3%" ;
+    ex:hasSource "DOMESTIC_DELIVERY_APRIL_VERIFICATION.md" .
+
+ex:rate_0157 a ex:InlandTruckingRate ;
+    ex:hasRef_No. "6"^^xsd:decimal ;
+    ex:hasS/N "4"^^xsd:decimal ;
+    ex:hasShipment_Reference "HVDC-ADOPT-SIM-0058" ;
+    ex:hasPlace_of_Loading "M44 Warehouse" ;
+    ex:hasPlace_of_Delivery "MOSB" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasRate_(USD) "200"^^xsd:decimal ;
+    ex:hasAmount_(USD) "200"^^xsd:decimal ;
+    ex:hasVerification_Result "Verified" ;
+    ex:hasVerification_Logic "Contract ±3% match" ;
+    ex:hasSource "DOMESTIC_DELIVERY_APRIL_VERIFICATION.md" .
+
+ex:rate_0158 a ex:InlandTruckingRate ;
+    ex:hasRef_No. "7"^^xsd:decimal ;
+    ex:hasS/N "4"^^xsd:decimal ;
+    ex:hasShipment_Reference "HVDC-ADOPT-SIM-0058" ;
+    ex:hasPlace_of_Loading "MOSB" ;
+    ex:hasPlace_of_Delivery "DSV Mussafah Yard" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasRate_(USD) "200"^^xsd:decimal ;
+    ex:hasAmount_(USD) "200"^^xsd:decimal ;
+    ex:hasVerification_Result "Verified" ;
+    ex:hasVerification_Logic "Contract ±3% match" ;
+    ex:hasSource "DOMESTIC_DELIVERY_APRIL_VERIFICATION.md" .
+
+ex:rate_0159 a ex:InlandTruckingRate ;
+    ex:hasRef_No. "8"^^xsd:decimal ;
+    ex:hasS/N "5"^^xsd:decimal ;
+    ex:hasShipment_Reference "HVDC-DSV-F3-SHU-103" ;
+    ex:hasPlace_of_Loading "F3 Fujairah" ;
+    ex:hasPlace_of_Delivery "Shuweihat" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasRate_(USD) "1420"^^xsd:decimal ;
+    ex:hasAmount_(USD) "1420"^^xsd:decimal ;
+    ex:hasVerification_Result "Pending Review" ;
+    ex:hasVerification_Logic "Rate not found in reference list ±3%" ;
+    ex:hasSource "DOMESTIC_DELIVERY_APRIL_VERIFICATION.md" .
+
+ex:rate_0160 a ex:InlandTruckingRate ;
+    ex:hasRef_No. "9"^^xsd:decimal ;
+    ex:hasS/N "6"^^xsd:decimal ;
+    ex:hasShipment_Reference "HVDC-HE-DAS-DSV-ALMASAOOD" ;
+    ex:hasPlace_of_Loading "DSV WH Mussafah Yard" ;
+    ex:hasPlace_of_Delivery "Al Masaood" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasRate_(USD) "200"^^xsd:decimal ;
+    ex:hasAmount_(USD) "800"^^xsd:decimal ;
+    ex:hasVerification_Result "Verified" ;
+    ex:hasVerification_Logic "Contract ±3% match" ;
+    ex:hasSource "DOMESTIC_DELIVERY_APRIL_VERIFICATION.md" .
+
+ex:rate_0161 a ex:InlandTruckingRate ;
+    ex:hasRef_No. "10"^^xsd:decimal ;
+    ex:hasS/N "6"^^xsd:decimal ;
+    ex:hasShipment_Reference "HVDC-HE-DAS-DSV-ALMASAOOD" ;
+    ex:hasPlace_of_Loading "DSV Mussafah Yard" ;
+    ex:hasPlace_of_Delivery "Al Masaood" ;
+    ex:hasVehicle_Type "Lowbed" ;
+    ex:hasRate_(USD) "580"^^xsd:decimal ;
+    ex:hasAmount_(USD) "4060"^^xsd:decimal ;
+    ex:hasVerification_Result "Pending Review" ;
+    ex:hasVerification_Logic "Rate not found in reference list ±3%" ;
+    ex:hasSource "DOMESTIC_DELIVERY_APRIL_VERIFICATION.md" .
+
+ex:rate_0162 a ex:InlandTruckingRate ;
+    ex:hasRef_No. "11"^^xsd:decimal ;
+    ex:hasS/N "6"^^xsd:decimal ;
+    ex:hasShipment_Reference "HVDC-HE-DAS-DSV-ALMASAOOD" ;
+    ex:hasPlace_of_Loading "AL Masaood" ;
+    ex:hasPlace_of_Delivery "DSV Mussafah Yard" ;
+    ex:hasVehicle_Type "Lowbed" ;
+    ex:hasRate_(USD) "580"^^xsd:decimal ;
+    ex:hasAmount_(USD) "580"^^xsd:decimal ;
+    ex:hasVerification_Result "Pending Review" ;
+    ex:hasVerification_Logic "Rate not found in reference list ±3%" ;
+    ex:hasSource "DOMESTIC_DELIVERY_APRIL_VERIFICATION.md" .
+
+ex:rate_0163 a ex:InlandTruckingRate ;
+    ex:hasRef_No. "12"^^xsd:decimal ;
+    ex:hasS/N "6"^^xsd:decimal ;
+    ex:hasShipment_Reference "HVDC-HE-DAS-DSV-ALMASAOOD" ;
+    ex:hasPlace_of_Loading "MOSB" ;
+    ex:hasPlace_of_Delivery "DSV Mussafah Yard" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasRate_(USD) "200"^^xsd:decimal ;
+    ex:hasAmount_(USD) "200"^^xsd:decimal ;
+    ex:hasVerification_Result "Verified" ;
+    ex:hasVerification_Logic "Contract ±3% match" ;
+    ex:hasSource "DOMESTIC_DELIVERY_APRIL_VERIFICATION.md" .
+
+ex:rate_0164 a ex:InlandTruckingRate ;
+    ex:hasRef_No. "13"^^xsd:decimal ;
+    ex:hasS/N "7"^^xsd:decimal ;
+    ex:hasShipment_Reference "HVDC-ADOPT-SCT-0053" ;
+    ex:hasPlace_of_Loading "DSV Mussafah Yard" ;
+    ex:hasPlace_of_Delivery "MIRFA" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasRate_(USD) "420"^^xsd:decimal ;
+    ex:hasAmount_(USD) "420"^^xsd:decimal ;
+    ex:hasVerification_Result "Verified" ;
+    ex:hasVerification_Logic "Contract ±3% match" ;
+    ex:hasSource "DOMESTIC_DELIVERY_APRIL_VERIFICATION.md" .
+
+ex:rate_0165 a ex:InlandTruckingRate ;
+    ex:hasRef_No. "14"^^xsd:decimal ;
+    ex:hasS/N "7"^^xsd:decimal ;
+    ex:hasShipment_Reference "HVDC-ADOPT-SCT-0053" ;
+    ex:hasPlace_of_Loading "DSV Mussafah Yard" ;
+    ex:hasPlace_of_Delivery "Shuweihat" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasRate_(USD) "600"^^xsd:decimal ;
+    ex:hasAmount_(USD) "600"^^xsd:decimal ;
+    ex:hasVerification_Result "Verified" ;
+    ex:hasVerification_Logic "Contract ±3% match" ;
+    ex:hasSource "DOMESTIC_DELIVERY_APRIL_VERIFICATION.md" .
+
+ex:rate_0166 a ex:InlandTruckingRate ;
+    ex:hasRef_No. "15"^^xsd:decimal ;
+    ex:hasS/N "7"^^xsd:decimal ;
+    ex:hasShipment_Reference "HVDC-ADOPT-SCT-0053" ;
+    ex:hasPlace_of_Loading "DSV Mussafah Yard" ;
+    ex:hasPlace_of_Delivery "MOSB" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasRate_(USD) "200"^^xsd:decimal ;
+    ex:hasAmount_(USD) "400"^^xsd:decimal ;
+    ex:hasVerification_Result "Verified" ;
+    ex:hasVerification_Logic "Contract ±3% match" ;
+    ex:hasSource "DOMESTIC_DELIVERY_APRIL_VERIFICATION.md" .
+
+ex:rate_0167 a ex:InlandTruckingRate ;
+    ex:hasRef_No. "16"^^xsd:decimal ;
+    ex:hasS/N "8"^^xsd:decimal ;
+    ex:hasShipment_Reference "HVDC-DSV-PRE-MIR-109" ;
+    ex:hasPlace_of_Loading "Prestige Mussafah" ;
+    ex:hasPlace_of_Delivery "MIRFA" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasRate_(USD) "420"^^xsd:decimal ;
+    ex:hasAmount_(USD) "420"^^xsd:decimal ;
+    ex:hasVerification_Result "Verified" ;
+    ex:hasVerification_Logic "Contract ±3% match" ;
+    ex:hasSource "DOMESTIC_DELIVERY_APRIL_VERIFICATION.md" .
+
+ex:rate_0168 a ex:InlandTruckingRate ;
+    ex:hasRef_No. "17"^^xsd:decimal ;
+    ex:hasS/N "8"^^xsd:decimal ;
+    ex:hasShipment_Reference "HVDC-DSV-PRE-MIR-109" ;
+    ex:hasPlace_of_Loading "Prestige Mussafah" ;
+    ex:hasPlace_of_Delivery "Shuweihat" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasRate_(USD) "600"^^xsd:decimal ;
+    ex:hasAmount_(USD) "600"^^xsd:decimal ;
+    ex:hasVerification_Result "Verified" ;
+    ex:hasVerification_Logic "Contract ±3% match" ;
+    ex:hasSource "DOMESTIC_DELIVERY_APRIL_VERIFICATION.md" .
+
+ex:rate_0169 a ex:InlandTruckingRate ;
+    ex:hasRef_No. "18"^^xsd:decimal ;
+    ex:hasS/N "9"^^xsd:decimal ;
+    ex:hasShipment_Reference "HVDC-DSV-MOSB-MIR-100" ;
+    ex:hasPlace_of_Loading "MOSB" ;
+    ex:hasPlace_of_Delivery "MIRFA" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasRate_(USD) "420"^^xsd:decimal ;
+    ex:hasAmount_(USD) "420"^^xsd:decimal ;
+    ex:hasVerification_Result "Verified" ;
+    ex:hasVerification_Logic "Contract ±3% match" ;
+    ex:hasSource "DOMESTIC_DELIVERY_APRIL_VERIFICATION.md" .
+
+ex:rate_0170 a ex:InlandTruckingRate ;
+    ex:hasRef_No. "19"^^xsd:decimal ;
+    ex:hasS/N "10"^^xsd:decimal ;
+    ex:hasShipment_Reference "HVDC-DSV-SIM/KEC-MOSB-098" ;
+    ex:hasPlace_of_Loading "KEC DIP DUBAI" ;
+    ex:hasPlace_of_Delivery "Shuweihat" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasRate_(USD) "980"^^xsd:decimal ;
+    ex:hasAmount_(USD) "980"^^xsd:decimal ;
+    ex:hasVerification_Result "Verified" ;
+    ex:hasVerification_Logic "Contract ±3% match" ;
+    ex:hasSource "DOMESTIC_DELIVERY_APRIL_VERIFICATION.md" .
+
+ex:rate_0171 a ex:InlandTruckingRate ;
+    ex:hasRef_No. "20"^^xsd:decimal ;
+    ex:hasS/N "11"^^xsd:decimal ;
+    ex:hasShipment_Reference "HVDC-DSV-MOSB-DSV-112" ;
+    ex:hasPlace_of_Loading "MOSB" ;
+    ex:hasPlace_of_Delivery "DSV Mussafah Yard" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasRate_(USD) "200"^^xsd:decimal ;
+    ex:hasAmount_(USD) "200"^^xsd:decimal ;
+    ex:hasVerification_Result "Verified" ;
+    ex:hasVerification_Logic "Contract ±3% match" ;
+    ex:hasSource "DOMESTIC_DELIVERY_APRIL_VERIFICATION.md" .
+
+ex:rate_0172 a ex:InlandTruckingRate ;
+    ex:hasRef_No. "21"^^xsd:decimal ;
+    ex:hasS/N "11"^^xsd:decimal ;
+    ex:hasShipment_Reference "HVDC-DSV-MOSB-DSV-112" ;
+    ex:hasPlace_of_Loading "M44 Warehouse" ;
+    ex:hasPlace_of_Delivery "DSV Mussafah Yard" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasRate_(USD) "200"^^xsd:decimal ;
+    ex:hasAmount_(USD) "200"^^xsd:decimal ;
+    ex:hasVerification_Result "Verified" ;
+    ex:hasVerification_Logic "Contract ±3% match" ;
+    ex:hasSource "DOMESTIC_DELIVERY_APRIL_VERIFICATION.md" .
+
+ex:rate_0173 a ex:InlandTruckingRate ;
+    ex:hasRef_No. "22"^^xsd:decimal ;
+    ex:hasS/N "11"^^xsd:decimal ;
+    ex:hasShipment_Reference "HVDC-DSV-MOSB-DSV-112" ;
+    ex:hasPlace_of_Loading "DSV Mussafah Yard" ;
+    ex:hasPlace_of_Delivery "MOSB" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasRate_(USD) "200"^^xsd:decimal ;
+    ex:hasAmount_(USD) "400"^^xsd:decimal ;
+    ex:hasVerification_Result "Verified" ;
+    ex:hasVerification_Logic "Contract ±3% match" ;
+    ex:hasSource "DOMESTIC_DELIVERY_APRIL_VERIFICATION.md" .
+
+ex:rate_0174 a ex:InlandTruckingRate ;
+    ex:hasRef_No. "23"^^xsd:decimal ;
+    ex:hasS/N "12"^^xsd:decimal ;
+    ex:hasShipment_Reference "HVDC-SCT,DSV-ALM-MOSB-DSV-110" ;
+    ex:hasPlace_of_Loading "Al Masaood" ;
+    ex:hasPlace_of_Delivery "MOSB" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasRate_(USD) "200"^^xsd:decimal ;
+    ex:hasAmount_(USD) "200"^^xsd:decimal ;
+    ex:hasVerification_Result "Verified" ;
+    ex:hasVerification_Logic "Contract ±3% match" ;
+    ex:hasSource "DOMESTIC_DELIVERY_APRIL_VERIFICATION.md" .
+
+ex:rate_0175 a ex:InlandTruckingRate ;
+    ex:hasShipment_Reference "HVDC-DSV-ALM-MOSB-111" ;
+    ex:hasSource "DOMESTIC_DELIVERY_APRIL_VERIFICATION.md" .
+
+ex:rate_0176 a ex:InlandTruckingRate ;
+    ex:hasRef_No. "24"^^xsd:decimal ;
+    ex:hasS/N "12"^^xsd:decimal ;
+    ex:hasShipment_Reference "HVDC-SCT,DSV-ALM-MOSB-DSV-110" ;
+    ex:hasPlace_of_Loading "MOSB" ;
+    ex:hasPlace_of_Delivery "DSV Mussafah Yard" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasRate_(USD) "200"^^xsd:decimal ;
+    ex:hasAmount_(USD) "200"^^xsd:decimal ;
+    ex:hasVerification_Result "Verified" ;
+    ex:hasVerification_Logic "Contract ±3% match" ;
+    ex:hasSource "DOMESTIC_DELIVERY_APRIL_VERIFICATION.md" .
+
+ex:rate_0177 a ex:InlandTruckingRate ;
+    ex:hasShipment_Reference "HVDC-DSV-ALM-MOSB-111" ;
+    ex:hasSource "DOMESTIC_DELIVERY_APRIL_VERIFICATION.md" .
+
+ex:rate_0178 a ex:InlandTruckingRate ;
+    ex:hasRef_No. "25"^^xsd:decimal ;
+    ex:hasS/N "12"^^xsd:decimal ;
+    ex:hasShipment_Reference "HVDC-SCT,DSV-ALM-MOSB-DSV-110" ;
+    ex:hasPlace_of_Loading "M44 Warehouse" ;
+    ex:hasPlace_of_Delivery "DSV Mussafah Yard" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasRate_(USD) "200"^^xsd:decimal ;
+    ex:hasAmount_(USD) "200"^^xsd:decimal ;
+    ex:hasVerification_Result "Verified" ;
+    ex:hasVerification_Logic "Contract ±3% match" ;
+    ex:hasSource "DOMESTIC_DELIVERY_APRIL_VERIFICATION.md" .
+
+ex:rate_0179 a ex:InlandTruckingRate ;
+    ex:hasShipment_Reference "HVDC-DSV-ALM-MOSB-111" ;
+    ex:hasSource "DOMESTIC_DELIVERY_APRIL_VERIFICATION.md" .
+
+ex:rate_0180 a ex:InlandTruckingRate ;
+    ex:hasRef_No. "26"^^xsd:decimal ;
+    ex:hasS/N "12"^^xsd:decimal ;
+    ex:hasShipment_Reference "HVDC-SCT,DSV-ALM-MOSB-DSV-110" ;
+    ex:hasPlace_of_Loading "DSV Mussafah Yard" ;
+    ex:hasPlace_of_Delivery "MOSB" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasRate_(USD) "200"^^xsd:decimal ;
+    ex:hasAmount_(USD) "200"^^xsd:decimal ;
+    ex:hasVerification_Result "Verified" ;
+    ex:hasVerification_Logic "Contract ±3% match" ;
+    ex:hasSource "DOMESTIC_DELIVERY_APRIL_VERIFICATION.md" .
+
+ex:rate_0181 a ex:InlandTruckingRate ;
+    ex:hasShipment_Reference "HVDC-DSV-ALM-MOSB-111" ;
+    ex:hasSource "DOMESTIC_DELIVERY_APRIL_VERIFICATION.md" .
+
+ex:rate_0182 a ex:InlandTruckingRate ;
+    ex:hasRef_No. "27"^^xsd:decimal ;
+    ex:hasS/N "12"^^xsd:decimal ;
+    ex:hasShipment_Reference "HVDC-SCT,DSV-ALM-MOSB-DSV-110" ;
+    ex:hasPlace_of_Loading "Al Masaood" ;
+    ex:hasPlace_of_Delivery "MOSB" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasRate_(USD) "200"^^xsd:decimal ;
+    ex:hasAmount_(USD) "400"^^xsd:decimal ;
+    ex:hasVerification_Result "Verified" ;
+    ex:hasVerification_Logic "Contract ±3% match" ;
+    ex:hasSource "DOMESTIC_DELIVERY_APRIL_VERIFICATION.md" .
+
+ex:rate_0183 a ex:InlandTruckingRate ;
+    ex:hasShipment_Reference "HVDC-DSV-ALM-MOSB-111" ;
+    ex:hasSource "DOMESTIC_DELIVERY_APRIL_VERIFICATION.md" .
+
+ex:rate_0184 a ex:InlandTruckingRate ;
+    ex:hasRef_No. "28"^^xsd:decimal ;
+    ex:hasS/N "12"^^xsd:decimal ;
+    ex:hasShipment_Reference "HVDC-SCT,DSV-ALM-MOSB-DSV-110" ;
+    ex:hasPlace_of_Loading "MOSB" ;
+    ex:hasPlace_of_Delivery "Al Masaood" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasRate_(USD) "200"^^xsd:decimal ;
+    ex:hasAmount_(USD) "400"^^xsd:decimal ;
+    ex:hasVerification_Result "Verified" ;
+    ex:hasVerification_Logic "Contract ±3% match" ;
+    ex:hasSource "DOMESTIC_DELIVERY_APRIL_VERIFICATION.md" .
+
+ex:rate_0185 a ex:InlandTruckingRate ;
+    ex:hasShipment_Reference "HVDC-DSV-ALM-MOSB-111" ;
+    ex:hasSource "DOMESTIC_DELIVERY_APRIL_VERIFICATION.md" .
+
+ex:rate_0186 a ex:InlandTruckingRate ;
+    ex:hasRef_No. "29"^^xsd:decimal ;
+    ex:hasS/N "13"^^xsd:decimal ;
+    ex:hasShipment_Reference "HVDC-ADOPT-SIM-0074_Local,HVDC-DSV-PRE-MOSB-106" ;
+    ex:hasPlace_of_Loading "Prestige Mussafah" ;
+    ex:hasPlace_of_Delivery "MOSB" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasRate_(USD) "200"^^xsd:decimal ;
+    ex:hasAmount_(USD) "200"^^xsd:decimal ;
+    ex:hasVerification_Result "Verified" ;
+    ex:hasVerification_Logic "Contract ±3% match" ;
+    ex:hasSource "DOMESTIC_DELIVERY_APRIL_VERIFICATION.md" .
+
+ex:rate_0187 a ex:InlandTruckingRate ;
+    ex:hasRef_No. "30"^^xsd:decimal ;
+    ex:hasS/N "14"^^xsd:decimal ;
+    ex:hasShipment_Reference "HVDC-DSV-F3-MIR-096,HVDC-DSV-F3-MOSB-113" ;
+    ex:hasPlace_of_Loading "F3 Fujairah" ;
+    ex:hasPlace_of_Delivery "Mirfa" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasRate_(USD) "1217.7"^^xsd:decimal ;
+    ex:hasAmount_(USD) "4870.8"^^xsd:decimal ;
+    ex:hasVerification_Result "Pending Review" ;
+    ex:hasVerification_Logic "Rate not found in reference list ±3%" ;
+    ex:hasSource "DOMESTIC_DELIVERY_APRIL_VERIFICATION.md" .
+
+ex:rate_0188 a ex:InlandTruckingRate ;
+    ex:hasRef_No. "31"^^xsd:decimal ;
+    ex:hasS/N "14"^^xsd:decimal ;
+    ex:hasShipment_Reference "HVDC-DSV-F3-MIR-096,HVDC-DSV-F3-MOSB-113" ;
+    ex:hasPlace_of_Loading "F3 Fujairah" ;
+    ex:hasPlace_of_Delivery "Mirfa" ;
+    ex:hasVehicle_Type "Lowbed" ;
+    ex:hasRate_(USD) "2500"^^xsd:decimal ;
+    ex:hasAmount_(USD) "2500"^^xsd:decimal ;
+    ex:hasVerification_Result "Pending Review" ;
+    ex:hasVerification_Logic "Rate not found in reference list ±3%" ;
+    ex:hasSource "DOMESTIC_DELIVERY_APRIL_VERIFICATION.md" .
+
+ex:rate_0189 a ex:InlandTruckingRate ;
+    ex:hasRef_No. "32"^^xsd:decimal ;
+    ex:hasS/N "14"^^xsd:decimal ;
+    ex:hasShipment_Reference "HVDC-DSV-F3-MIR-096,HVDC-DSV-F3-MOSB-113" ;
+    ex:hasPlace_of_Loading "F3 Fujairah" ;
+    ex:hasPlace_of_Delivery "MOSB" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasRate_(USD) "836"^^xsd:decimal ;
+    ex:hasAmount_(USD) "836"^^xsd:decimal ;
+    ex:hasVerification_Result "Verified" ;
+    ex:hasVerification_Logic "Contract ±3% match" ;
+    ex:hasSource "DOMESTIC_DELIVERY_APRIL_VERIFICATION.md" .
+
+ex:rate_0190 a ex:InlandTruckingRate ;
+    ex:hasRef_No. "33"^^xsd:decimal ;
+    ex:hasS/N "15"^^xsd:decimal ;
+    ex:hasShipment_Reference "HVDC-ADOPT-SCT-0050,HVDC-ADOPT-SCT-0051,HVDC-ADOPT-SCT-0052,HVDC-ADOPT-SCT-0054,HVDC-ADOPT-SCT-0055,HVDC-ADOPT-SCT-0065" ;
+    ex:hasPlace_of_Loading "DSV Mussafah Yard" ;
+    ex:hasPlace_of_Delivery "MIRFA" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasRate_(USD) "420"^^xsd:decimal ;
+    ex:hasAmount_(USD) "2100"^^xsd:decimal ;
+    ex:hasVerification_Result "Verified" ;
+    ex:hasVerification_Logic "Contract ±3% match" ;
+    ex:hasSource "DOMESTIC_DELIVERY_APRIL_VERIFICATION.md" .
+
+ex:rate_0191 a ex:InlandTruckingRate ;
+    ex:hasRef_No. "34"^^xsd:decimal ;
+    ex:hasS/N "16"^^xsd:decimal ;
+    ex:hasShipment_Reference "HVDC-DSV-HE-SHU-114" ;
+    ex:hasPlace_of_Loading "DSV Markaz" ;
+    ex:hasPlace_of_Delivery "Shuweihat" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasRate_(USD) "600"^^xsd:decimal ;
+    ex:hasAmount_(USD) "2400"^^xsd:decimal ;
+    ex:hasVerification_Result "Verified" ;
+    ex:hasVerification_Logic "Contract ±3% match" ;
+    ex:hasSource "DOMESTIC_DELIVERY_APRIL_VERIFICATION.md" .
+
+ex:rate_0192 a ex:InlandTruckingRate ;
+    ex:hasRef_No. "35"^^xsd:decimal ;
+    ex:hasS/N "17"^^xsd:decimal ;
+    ex:hasShipment_Reference "HVDC-DSV-MOSB-104" ;
+    ex:hasPlace_of_Loading "DSV Mussafah Yard" ;
+    ex:hasPlace_of_Delivery "MOSB" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasRate_(USD) "200"^^xsd:decimal ;
+    ex:hasAmount_(USD) "1600"^^xsd:decimal ;
+    ex:hasVerification_Result "Verified" ;
+    ex:hasVerification_Logic "Contract ±3% match" ;
+    ex:hasSource "DOMESTIC_DELIVERY_APRIL_VERIFICATION.md" .
+
+ex:rate_0193 a ex:InlandTruckingRate ;
+    ex:hasRef_No. "36"^^xsd:decimal ;
+    ex:hasS/N "18"^^xsd:decimal ;
+    ex:hasShipment_Reference "HVDC-ADOPT-SCT-0069" ;
+    ex:hasPlace_of_Loading "DSV Mussafah Yard" ;
+    ex:hasPlace_of_Delivery "Shuweihat" ;
+    ex:hasVehicle_Type "3 Ton Pickup" ;
+    ex:hasRate_(USD) "250"^^xsd:decimal ;
+    ex:hasAmount_(USD) "250"^^xsd:decimal ;
+    ex:hasVerification_Result "Pending Review" ;
+    ex:hasVerification_Logic "Rate not found in reference list ±3%" ;
+    ex:hasSource "DOMESTIC_DELIVERY_APRIL_VERIFICATION.md" .
+
+ex:rate_0194 a ex:InlandTruckingRate ;
+    ex:hasRef_No. "37"^^xsd:decimal ;
+    ex:hasS/N "19"^^xsd:decimal ;
+    ex:hasShipment_Reference "HVDC-ADOPT-SCT-0050,HVDC-ADOPT-SCT-0051,HVDC-ADOPT-SCT-0052,HVDC-ADOPT-SCT-0054,HVDC-ADOPT-SCT-0055,HVDC-ADOPT-SCT-0065,HVDC-ADOPT-SCT-0069" ;
+    ex:hasPlace_of_Loading "DSV Mussafah Yard" ;
+    ex:hasPlace_of_Delivery "Shuweihat" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasRate_(USD) "600"^^xsd:decimal ;
+    ex:hasAmount_(USD) "3600"^^xsd:decimal ;
+    ex:hasVerification_Result "Verified" ;
+    ex:hasVerification_Logic "Contract ±3% match" ;
+    ex:hasSource "DOMESTIC_DELIVERY_APRIL_VERIFICATION.md" .
+
+ex:rate_0195 a ex:InlandTruckingRate ;
+    ex:hasRef_No. "38"^^xsd:decimal ;
+    ex:hasS/N "20"^^xsd:decimal ;
+    ex:hasShipment_Reference "HVDC-DSV-MOSB-MIR-116" ;
+    ex:hasPlace_of_Loading "MOSB" ;
+    ex:hasPlace_of_Delivery "MIRFA" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasRate_(USD) "420"^^xsd:decimal ;
+    ex:hasAmount_(USD) "420"^^xsd:decimal ;
+    ex:hasVerification_Result "Verified" ;
+    ex:hasVerification_Logic "Contract ±3% match" ;
+    ex:hasSource "DOMESTIC_DELIVERY_APRIL_VERIFICATION.md" .
+
+ex:rate_0196 a ex:InlandTruckingRate ;
+    ex:hasRef_No. "39"^^xsd:decimal ;
+    ex:hasS/N "21"^^xsd:decimal ;
+    ex:hasShipment_Reference "HVDC-DAS-ALS-257" ;
+    ex:hasPlace_of_Loading "DSV Mussafah Yard" ;
+    ex:hasPlace_of_Delivery "Al Masaood" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasRate_(USD) "200"^^xsd:decimal ;
+    ex:hasAmount_(USD) "1200"^^xsd:decimal ;
+    ex:hasVerification_Result "Verified" ;
+    ex:hasVerification_Logic "Contract ±3% match" ;
+    ex:hasSource "DOMESTIC_DELIVERY_APRIL_VERIFICATION.md" .
+
+ex:rate_0197 a ex:InlandTruckingRate ;
+    ex:hasRef_No. "40"^^xsd:decimal ;
+    ex:hasS/N "21"^^xsd:decimal ;
+    ex:hasShipment_Reference "HVDC-DAS-ALS-257" ;
+    ex:hasPlace_of_Loading "DSV Mussafah Yard" ;
+    ex:hasPlace_of_Delivery "Al Masaood" ;
+    ex:hasVehicle_Type "Lowbed" ;
+    ex:hasRate_(USD) "580"^^xsd:decimal ;
+    ex:hasAmount_(USD) "3480"^^xsd:decimal ;
+    ex:hasVerification_Result "Pending Review" ;
+    ex:hasVerification_Logic "Rate not found in reference list ±3%" ;
+    ex:hasSource "DOMESTIC_DELIVERY_APRIL_VERIFICATION.md" .
+
+ex:rate_0198 a ex:InlandTruckingRate ;
+    ex:hasRef_No. "41"^^xsd:decimal ;
+    ex:hasS/N "22"^^xsd:decimal ;
+    ex:hasShipment_Reference "HVDC-ADOPT-SIM-0056" ;
+    ex:hasPlace_of_Loading "DSV Mussafah Yard" ;
+    ex:hasPlace_of_Delivery "Shuweihat" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasRate_(USD) "600"^^xsd:decimal ;
+    ex:hasAmount_(USD) "4200"^^xsd:decimal ;
+    ex:hasVerification_Result "Verified" ;
+    ex:hasVerification_Logic "Contract ±3% match" ;
+    ex:hasSource "DOMESTIC_DELIVERY_APRIL_VERIFICATION.md" .
+
+ex:rate_0199 a ex:InlandTruckingRate ;
+    ex:hasRef_No. "42"^^xsd:decimal ;
+    ex:hasS/N "23"^^xsd:decimal ;
+    ex:hasShipment_Reference "HVDC-DSV-GEO-MOSB-102" ;
+    ex:hasPlace_of_Loading "Prime Geotextile Mussafah" ;
+    ex:hasPlace_of_Delivery "MOSB" ;
+    ex:hasVehicle_Type "3 Ton Pickup" ;
+    ex:hasRate_(USD) "120"^^xsd:decimal ;
+    ex:hasAmount_(USD) "120"^^xsd:decimal ;
+    ex:hasVerification_Result "Pending Review" ;
+    ex:hasVerification_Logic "Rate not found in reference list ±3%" ;
+    ex:hasSource "DOMESTIC_DELIVERY_APRIL_VERIFICATION.md" .
+
+ex:rate_0200 a ex:InlandTruckingRate ;
+    ex:hasRef_No. "43"^^xsd:decimal ;
+    ex:hasS/N "23"^^xsd:decimal ;
+    ex:hasShipment_Reference "HVDC-DSV-GEO-MOSB-102" ;
+    ex:hasPlace_of_Loading "Prime Geotextile Mussafah" ;
+    ex:hasPlace_of_Delivery "MOSB" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasRate_(USD) "200"^^xsd:decimal ;
+    ex:hasAmount_(USD) "200"^^xsd:decimal ;
+    ex:hasVerification_Result "Verified" ;
+    ex:hasVerification_Logic "Contract ±3% match" ;
+    ex:hasSource "DOMESTIC_DELIVERY_APRIL_VERIFICATION.md" .
+
+ex:rate_0201 a ex:InlandTruckingRate ;
+    ex:hasRef_No. "44"^^xsd:decimal ;
+    ex:hasS/N "24"^^xsd:decimal ;
+    ex:hasShipment_Reference "HVDC-DSV-MOSB-SHU-101" ;
+    ex:hasPlace_of_Loading "MOSB" ;
+    ex:hasPlace_of_Delivery "Shuweihat" ;
+    ex:hasVehicle_Type "3 Ton Pickup" ;
+    ex:hasRate_(USD) "250"^^xsd:decimal ;
+    ex:hasAmount_(USD) "250"^^xsd:decimal ;
+    ex:hasVerification_Result "Pending Review" ;
+    ex:hasVerification_Logic "Rate not found in reference list ±3%" ;
+    ex:hasSource "DOMESTIC_DELIVERY_APRIL_VERIFICATION.md" .
+
+ex:rate_0202 a ex:InlandTruckingRate ;
+    ex:hasRef_No. "45"^^xsd:decimal ;
+    ex:hasS/N "25"^^xsd:decimal ;
+    ex:hasShipment_Reference "HVDC-DSV-MOSB-ALM-117" ;
+    ex:hasPlace_of_Loading "MOSB" ;
+    ex:hasPlace_of_Delivery "Al Masaood" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasRate_(USD) "200"^^xsd:decimal ;
+    ex:hasAmount_(USD) "200"^^xsd:decimal ;
+    ex:hasVerification_Result "Verified" ;
+    ex:hasVerification_Logic "Contract ±3% match" ;
+    ex:hasSource "DOMESTIC_DELIVERY_APRIL_VERIFICATION.md" .
+
+ex:rate_0203 a ex:InlandTruckingRate ;
+    ex:hasShipment_Reference "HVDC-DSV-MOSB-SHU-MOSB-116" ;
+    ex:hasSource "DOMESTIC_DELIVERY_APRIL_VERIFICATION.md" .
+
+ex:rate_0204 a ex:InlandTruckingRate ;
+    ex:hasRef_No. "46"^^xsd:decimal ;
+    ex:hasS/N "25"^^xsd:decimal ;
+    ex:hasShipment_Reference "HVDC-DSV-MOSB-ALM-117" ;
+    ex:hasPlace_of_Loading "Shuweihat" ;
+    ex:hasPlace_of_Delivery "MOSB" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasRate_(USD) "600"^^xsd:decimal ;
+    ex:hasAmount_(USD) "600"^^xsd:decimal ;
+    ex:hasVerification_Result "Verified" ;
+    ex:hasVerification_Logic "Contract ±3% match" ;
+    ex:hasSource "DOMESTIC_DELIVERY_APRIL_VERIFICATION.md" .
+
+ex:rate_0205 a ex:InlandTruckingRate ;
+    ex:hasShipment_Reference "HVDC-DSV-MOSB-SHU-MOSB-116" ;
+    ex:hasSource "DOMESTIC_DELIVERY_APRIL_VERIFICATION.md" .
+
+ex:rate_0206 a ex:InlandTruckingRate ;
+    ex:hasRef_No. "47"^^xsd:decimal ;
+    ex:hasS/N "26"^^xsd:decimal ;
+    ex:hasShipment_Reference "HVDC-DSV-MIR-MMT-107" ;
+    ex:hasPlace_of_Loading "Mirfa" ;
+    ex:hasPlace_of_Delivery "Mammoet Jebel Ali" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasRate_(USD) "770"^^xsd:decimal ;
+    ex:hasAmount_(USD) "770"^^xsd:decimal ;
+    ex:hasVerification_Result "Pending Review" ;
+    ex:hasVerification_Logic "Rate not found in reference list ±3%" ;
+    ex:hasSource "DOMESTIC_DELIVERY_APRIL_VERIFICATION.md" .
+
+ex:rate_0207 a ex:InlandTruckingRate ;
+    ex:hasRef_No. "48"^^xsd:decimal ;
+    ex:hasS/N "27"^^xsd:decimal ;
+    ex:hasShipment_Reference "HVDC-ADOPT-HE-0195" ;
+    ex:hasPlace_of_Loading "M44 Warehouse" ;
+    ex:hasPlace_of_Delivery "Shuweihat" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasRate_(USD) "600"^^xsd:decimal ;
+    ex:hasAmount_(USD) "600"^^xsd:decimal ;
+    ex:hasVerification_Result "Verified" ;
+    ex:hasVerification_Logic "Contract ±3% match" ;
+    ex:hasSource "DOMESTIC_DELIVERY_APRIL_VERIFICATION.md" .
+
+ex:rate_0208 a ex:InlandTruckingRate ;
+    ex:hasRef_No. "49"^^xsd:decimal ;
+    ex:hasS/N "28"^^xsd:decimal ;
+    ex:hasShipment_Reference "HVDC-JPTW,71" ;
+    ex:hasPlace_of_Loading "Mina Freeport" ;
+    ex:hasPlace_of_Delivery "Mina Freeport" ;
+    ex:hasVehicle_Type "Lowbed" ;
+    ex:hasRate_(USD) "980.26"^^xsd:decimal ;
+    ex:hasAmount_(USD) "980.26"^^xsd:decimal ;
+    ex:hasVerification_Result "Verified" ;
+    ex:hasVerification_Logic "Contract ±3% match" ;
+    ex:hasSource "DOMESTIC_DELIVERY_APRIL_VERIFICATION.md" .
+
+ex:rate_0209 a ex:InlandTruckingRate ;
+    ex:hasRef_No. "50"^^xsd:decimal ;
+    ex:hasS/N "28"^^xsd:decimal ;
+    ex:hasShipment_Reference "HVDC-JPTW,71" ;
+    ex:hasPlace_of_Loading "Mina Freeport" ;
+    ex:hasPlace_of_Delivery "Mina Freeport" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasRate_(USD) "171"^^xsd:decimal ;
+    ex:hasAmount_(USD) "171"^^xsd:decimal ;
+    ex:hasVerification_Result "Verified" ;
+    ex:hasVerification_Logic "Contract ±3% match" ;
+    ex:hasSource "DOMESTIC_DELIVERY_APRIL_VERIFICATION.md" .
+
+ex:rate_0210 a ex:InlandTruckingRate ;
+    ex:hasRef_No. "51"^^xsd:decimal ;
+    ex:hasS/N "29"^^xsd:decimal ;
+    ex:hasShipment_Reference "HVDC-DSV-MMT-MIR-105" ;
+    ex:hasPlace_of_Loading "Mirfa" ;
+    ex:hasPlace_of_Delivery "Mammoet Jebel Ali" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasRate_(USD) "770"^^xsd:decimal ;
+    ex:hasAmount_(USD) "770"^^xsd:decimal ;
+    ex:hasVerification_Result "Pending Review" ;
+    ex:hasVerification_Logic "Rate not found in reference list ±3%" ;
+    ex:hasSource "DOMESTIC_DELIVERY_APRIL_VERIFICATION.md" .
+
+ex:rate_0211 a ex:InlandTruckingRate ;
+    ex:hasRef_No. "52"^^xsd:decimal ;
+    ex:hasS/N "30"^^xsd:decimal ;
+    ex:hasShipment_Reference "HVDC-ADOPT-HE-0012, 0013" ;
+    ex:hasPlace_of_Loading "MOSB" ;
+    ex:hasPlace_of_Delivery "Al Masaood" ;
+    ex:hasVehicle_Type "Lowbed" ;
+    ex:hasRate_(USD) "953.03"^^xsd:decimal ;
+    ex:hasAmount_(USD) "953.03"^^xsd:decimal ;
+    ex:hasVerification_Result "Verified" ;
+    ex:hasVerification_Logic "Contract ±3% match" ;
+    ex:hasSource "DOMESTIC_DELIVERY_APRIL_VERIFICATION.md" .
+
+ex:rate_0212 a ex:InlandTruckingRate ;
+    ex:hasRef_No. "53"^^xsd:decimal ;
+    ex:hasS/N "31"^^xsd:decimal ;
+    ex:hasShipment_Reference "HVDC-ADOPT-HE-0311-1,HVDC-ADOPT-HE-0311-2" ;
+    ex:hasPlace_of_Loading "DSV Markaz" ;
+    ex:hasPlace_of_Delivery "Shuweihat" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasRate_(USD) "600"^^xsd:decimal ;
+    ex:hasAmount_(USD) "2400"^^xsd:decimal ;
+    ex:hasVerification_Result "Verified" ;
+    ex:hasVerification_Logic "Contract ±3% match" ;
+    ex:hasSource "DOMESTIC_DELIVERY_APRIL_VERIFICATION.md" .
+
+ex:rate_0213 a ex:InlandTruckingRate ;
+    ex:hasRef_No. "54"^^xsd:decimal ;
+    ex:hasS/N "32"^^xsd:decimal ;
+    ex:hasShipment_Reference "HVDC-ADOPT-HE-0005, 0200, 0192, 0187" ;
+    ex:hasPlace_of_Loading "DSV Mussafah Yard" ;
+    ex:hasPlace_of_Delivery "MOSB" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasRate_(USD) "200"^^xsd:decimal ;
+    ex:hasAmount_(USD) "400"^^xsd:decimal ;
+    ex:hasVerification_Result "Verified" ;
+    ex:hasVerification_Logic "Contract ±3% match" ;
+    ex:hasSource "DOMESTIC_DELIVERY_APRIL_VERIFICATION.md" .
+
+ex:rate_0214 a ex:InlandTruckingRate ;
+    ex:hasRef_No. "55"^^xsd:decimal ;
+    ex:hasS/N "33"^^xsd:decimal ;
+    ex:hasShipment_Reference "HVDC-DSV-KEC-MIR-SHU-132" ;
+    ex:hasPlace_of_Loading "KEC Towers LLC Office" ;
+    ex:hasPlace_of_Delivery "MIRFA PMO SAMSUNG, Shuweihat Power Station" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasRate_(USD) "1750"^^xsd:decimal ;
+    ex:hasAmount_(USD) "1750"^^xsd:decimal ;
+    ex:hasVerification_Result "Pending Review" ;
+    ex:hasVerification_Logic "Rate not found in reference list ±3%" ;
+    ex:hasSource "DOMESTIC_DELIVERY_APRIL_VERIFICATION.md" .
+
+ex:rate_0215 a ex:InlandTruckingRate ;
+    ex:hasRef_No. "56"^^xsd:decimal ;
+    ex:hasS/N "34"^^xsd:decimal ;
+    ex:hasShipment_Reference "HVDC-DSV-HE-MOSB-130, HVDC-DSV-HE-MOSB-131" ;
+    ex:hasPlace_of_Loading "DSV Mussafah Yard" ;
+    ex:hasPlace_of_Delivery "MOSB" ;
+    ex:hasVehicle_Type "Lowbed" ;
+    ex:hasRate_(USD) "953.03"^^xsd:decimal ;
+    ex:hasAmount_(USD) "953.03"^^xsd:decimal ;
+    ex:hasVerification_Result "Verified" ;
+    ex:hasVerification_Logic "Contract ±3% match" ;
+    ex:hasSource "DOMESTIC_DELIVERY_APRIL_VERIFICATION.md" .
+
+ex:rate_0216 a ex:InlandTruckingRate ;
+    ex:hasRef_No. "57"^^xsd:decimal ;
+    ex:hasS/N "34"^^xsd:decimal ;
+    ex:hasShipment_Reference "HVDC-DSV-HE-MOSB-130, HVDC-DSV-HE-MOSB-131" ;
+    ex:hasPlace_of_Loading "DSV Mussafah Yard" ;
+    ex:hasPlace_of_Delivery "MOSB" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasRate_(USD) "200"^^xsd:decimal ;
+    ex:hasAmount_(USD) "600"^^xsd:decimal ;
+    ex:hasVerification_Result "Verified" ;
+    ex:hasVerification_Logic "Contract ±3% match" ;
+    ex:hasSource "DOMESTIC_DELIVERY_APRIL_VERIFICATION.md" .
+
+ex:rate_0217 a ex:InlandTruckingRate ;
+    ex:hasRef_No. "58"^^xsd:decimal ;
+    ex:hasS/N "34"^^xsd:decimal ;
+    ex:hasShipment_Reference "HVDC-DSV-HE-MOSB-130, HVDC-DSV-HE-MOSB-131" ;
+    ex:hasPlace_of_Loading "M44 Warehouse" ;
+    ex:hasPlace_of_Delivery "DSV Mussafah Yard" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasRate_(USD) "200"^^xsd:decimal ;
+    ex:hasAmount_(USD) "400"^^xsd:decimal ;
+    ex:hasVerification_Result "Verified" ;
+    ex:hasVerification_Logic "Contract ±3% match" ;
+    ex:hasSource "DOMESTIC_DELIVERY_APRIL_VERIFICATION.md" .
+
+ex:rate_0218 a ex:InlandTruckingRate ;
+    ex:hasRef_No. "59"^^xsd:decimal ;
+    ex:hasS/N "34"^^xsd:decimal ;
+    ex:hasShipment_Reference "HVDC-DSV-HE-MOSB-130, HVDC-DSV-HE-MOSB-131" ;
+    ex:hasPlace_of_Loading "MOSB" ;
+    ex:hasPlace_of_Delivery "DSV Mussafah Yard" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasRate_(USD) "200"^^xsd:decimal ;
+    ex:hasAmount_(USD) "200"^^xsd:decimal ;
+    ex:hasVerification_Result "Verified" ;
+    ex:hasVerification_Logic "Contract ±3% match" ;
+    ex:hasSource "DOMESTIC_DELIVERY_APRIL_VERIFICATION.md" .
+
+ex:rate_0219 a ex:InlandTruckingRate ;
+    ex:hasRef_No. "60"^^xsd:decimal ;
+    ex:hasS/N "35"^^xsd:decimal ;
+    ex:hasShipment_Reference "HVDC-DSV-HE-MOSB-134" ;
+    ex:hasPlace_of_Loading "M44 Warehouse" ;
+    ex:hasPlace_of_Delivery "MOSB" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasRate_(USD) "200"^^xsd:decimal ;
+    ex:hasAmount_(USD) "400"^^xsd:decimal ;
+    ex:hasVerification_Result "Verified" ;
+    ex:hasVerification_Logic "Contract ±3% match" ;
+    ex:hasSource "DOMESTIC_DELIVERY_APRIL_VERIFICATION.md" .
+
+ex:rate_0220 a ex:InlandTruckingRate ;
+    ex:hasRef_No. "61"^^xsd:decimal ;
+    ex:hasS/N "36"^^xsd:decimal ;
+    ex:hasShipment_Reference "HVDC-DSV-PRE-MIR-SHU-127" ;
+    ex:hasPlace_of_Loading "Prestige Mussafah" ;
+    ex:hasPlace_of_Delivery "Mirfa, Shuweihat" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasRate_(USD) "810"^^xsd:decimal ;
+    ex:hasAmount_(USD) "810"^^xsd:decimal ;
+    ex:hasVerification_Result "Pending Review" ;
+    ex:hasVerification_Logic "Rate not found in reference list ±3%" ;
+    ex:hasSource "DOMESTIC_DELIVERY_APRIL_VERIFICATION.md" .
+
+ex:rate_0221 a ex:InlandTruckingRate ;
+    ex:hasRef_No. "62"^^xsd:decimal ;
+    ex:hasS/N "36"^^xsd:decimal ;
+    ex:hasShipment_Reference "HVDC-DSV-PRE-MIR-SHU-127" ;
+    ex:hasPlace_of_Loading "Prestige Mussafah" ;
+    ex:hasPlace_of_Delivery "Shuweihat" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasRate_(USD) "600"^^xsd:decimal ;
+    ex:hasAmount_(USD) "600"^^xsd:decimal ;
+    ex:hasVerification_Result "Verified" ;
+    ex:hasVerification_Logic "Contract ±3% match" ;
+    ex:hasSource "DOMESTIC_DELIVERY_APRIL_VERIFICATION.md" .
+
+ex:rate_0222 a ex:InlandTruckingRate ;
+    ex:hasRef_No. "63"^^xsd:decimal ;
+    ex:hasS/N "36"^^xsd:decimal ;
+    ex:hasShipment_Reference "HVDC-DSV-PRE-MIR-SHU-127" ;
+    ex:hasPlace_of_Loading "Prestige Mussafah" ;
+    ex:hasPlace_of_Delivery "Mirfa" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasRate_(USD) "420"^^xsd:decimal ;
+    ex:hasAmount_(USD) "420"^^xsd:decimal ;
+    ex:hasVerification_Result "Verified" ;
+    ex:hasVerification_Logic "Contract ±3% match" ;
+    ex:hasSource "DOMESTIC_DELIVERY_APRIL_VERIFICATION.md" .
+
+ex:rate_0223 a ex:InlandTruckingRate ;
+    ex:hasRef_No. "64"^^xsd:decimal ;
+    ex:hasS/N "37"^^xsd:decimal ;
+    ex:hasShipment_Reference "HVDC-ADOPT-SCT-0062" ;
+    ex:hasPlace_of_Loading "DSV Mussafah Yard" ;
+    ex:hasPlace_of_Delivery "Mirfa" ;
+    ex:hasVehicle_Type "Flatbed (CICPA)" ;
+    ex:hasRate_(USD) "420"^^xsd:decimal ;
+    ex:hasAmount_(USD) "420"^^xsd:decimal ;
+    ex:hasVerification_Result "Verified" ;
+    ex:hasVerification_Logic "Contract ±3% match" ;
+    ex:hasSource "DOMESTIC_DELIVERY_APRIL_VERIFICATION.md" .
+
+ex:rate_0224 a ex:InlandTruckingRate ;
+    ex:hasRef_No. "65"^^xsd:decimal ;
+    ex:hasS/N "37"^^xsd:decimal ;
+    ex:hasShipment_Reference "HVDC-ADOPT-SCT-0062" ;
+    ex:hasPlace_of_Loading "DSV Mussafah Yard" ;
+    ex:hasPlace_of_Delivery "MOSB" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasRate_(USD) "200"^^xsd:decimal ;
+    ex:hasAmount_(USD) "400"^^xsd:decimal ;
+    ex:hasVerification_Result "Verified" ;
+    ex:hasVerification_Logic "Contract ±3% match" ;
+    ex:hasSource "DOMESTIC_DELIVERY_APRIL_VERIFICATION.md" .
+
+ex:rate_0225 a ex:InlandTruckingRate ;
+    ex:hasRef_No. "66"^^xsd:decimal ;
+    ex:hasS/N "37"^^xsd:decimal ;
+    ex:hasShipment_Reference "HVDC-ADOPT-SCT-0062" ;
+    ex:hasPlace_of_Loading "DSV Mussafah Yard" ;
+    ex:hasPlace_of_Delivery "Shuweihat" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasRate_(USD) "600"^^xsd:decimal ;
+    ex:hasAmount_(USD) "600"^^xsd:decimal ;
+    ex:hasVerification_Result "Verified" ;
+    ex:hasVerification_Logic "Contract ±3% match" ;
+    ex:hasSource "DOMESTIC_DELIVERY_APRIL_VERIFICATION.md" .
+
+ex:rate_0226 a ex:InlandTruckingRate ;
+    ex:hasRef_No. "67"^^xsd:decimal ;
+    ex:hasS/N "38"^^xsd:decimal ;
+    ex:hasShipment_Reference "HVDC-DSV-HE-MOSB-130" ;
+    ex:hasPlace_of_Loading "Prestige Mussafah" ;
+    ex:hasPlace_of_Delivery "MIRFA PMO SAMSUNG, Shuweihat Power Station" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasRate_(USD) "810"^^xsd:decimal ;
+    ex:hasAmount_(USD) "810"^^xsd:decimal ;
+    ex:hasVerification_Result "Pending Review" ;
+    ex:hasVerification_Logic "Rate not found in reference list ±3%" ;
+    ex:hasSource "DOMESTIC_DELIVERY_APRIL_VERIFICATION.md" .
+
+ex:rate_0227 a ex:InlandTruckingRate ;
+    ex:hasRef_No. "68"^^xsd:decimal ;
+    ex:hasS/N "39"^^xsd:decimal ;
+    ex:hasShipment_Reference "HVDC-DSV-MOSB-ALM-130" ;
+    ex:hasPlace_of_Loading "MOSB" ;
+    ex:hasPlace_of_Delivery "Al Masaood" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasRate_(USD) "200"^^xsd:decimal ;
+    ex:hasAmount_(USD) "200"^^xsd:decimal ;
+    ex:hasVerification_Result "Verified" ;
+    ex:hasVerification_Logic "Contract ±3% match" ;
+    ex:hasSource "DOMESTIC_DELIVERY_APRIL_VERIFICATION.md" .
+
+ex:rate_0228 a ex:InlandTruckingRate ;
+    ex:hasRef_No. "69"^^xsd:decimal ;
+    ex:hasS/N "40"^^xsd:decimal ;
+    ex:hasShipment_Reference "HVDC-ADOPT-SCT-0076 / HVDC-ADOPT-SCT-0081" ;
+    ex:hasPlace_of_Loading "DSV Mussafah Yard" ;
+    ex:hasPlace_of_Delivery "Mirfa" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasRate_(USD) "420"^^xsd:decimal ;
+    ex:hasAmount_(USD) "420"^^xsd:decimal ;
+    ex:hasVerification_Result "Verified" ;
+    ex:hasVerification_Logic "Contract ±3% match" ;
+    ex:hasSource "DOMESTIC_DELIVERY_APRIL_VERIFICATION.md" .
+
+ex:rate_0229 a ex:InlandTruckingRate ;
+    ex:hasRef_No. "70"^^xsd:decimal ;
+    ex:hasS/N "40"^^xsd:decimal ;
+    ex:hasShipment_Reference "HVDC-ADOPT-SCT-0076 / HVDC-ADOPT-SCT-0081" ;
+    ex:hasPlace_of_Loading "DSV Mussafah Yard" ;
+    ex:hasPlace_of_Delivery "Shuweihat" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasRate_(USD) "600"^^xsd:decimal ;
+    ex:hasAmount_(USD) "600"^^xsd:decimal ;
+    ex:hasVerification_Result "Verified" ;
+    ex:hasVerification_Logic "Contract ±3% match" ;
+    ex:hasSource "DOMESTIC_DELIVERY_APRIL_VERIFICATION.md" .
+
+ex:rate_0230 a ex:InlandTruckingRate ;
+    ex:hasRef_No. "71"^^xsd:decimal ;
+    ex:hasS/N "40"^^xsd:decimal ;
+    ex:hasShipment_Reference "HVDC-ADOPT-SCT-0076 / HVDC-ADOPT-SCT-0081" ;
+    ex:hasPlace_of_Loading "DSV Mussafah Yard" ;
+    ex:hasPlace_of_Delivery "MOSB" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasRate_(USD) "200"^^xsd:decimal ;
+    ex:hasAmount_(USD) "200"^^xsd:decimal ;
+    ex:hasVerification_Result "Verified" ;
+    ex:hasVerification_Logic "Contract ±3% match" ;
+    ex:hasSource "DOMESTIC_DELIVERY_APRIL_VERIFICATION.md" .
+
+ex:rate_0231 a ex:InlandTruckingRate ;
+    ex:hasRef_No. "72"^^xsd:decimal ;
+    ex:hasS/N "40"^^xsd:decimal ;
+    ex:hasShipment_Reference "HVDC-ADOPT-SCT-0076 / HVDC-ADOPT-SCT-0081" ;
+    ex:hasPlace_of_Loading "MOSB" ;
+    ex:hasPlace_of_Delivery "DSV Mussafah Yard" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasRate_(USD) "200"^^xsd:decimal ;
+    ex:hasAmount_(USD) "200"^^xsd:decimal ;
+    ex:hasVerification_Result "Verified" ;
+    ex:hasVerification_Logic "Contract ±3% match" ;
+    ex:hasSource "DOMESTIC_DELIVERY_APRIL_VERIFICATION.md" .
+
+ex:rate_0232 a ex:InlandTruckingRate ;
+    ex:hasRef_No. "73"^^xsd:decimal ;
+    ex:hasS/N "41"^^xsd:decimal ;
+    ex:hasShipment_Reference "HVDC-ADOPT-SIM-0061" ;
+    ex:hasPlace_of_Loading "DSV Mussafah Yard" ;
+    ex:hasPlace_of_Delivery "Mirfa" ;
+    ex:hasVehicle_Type "Lowbed" ;
+    ex:hasRate_(USD) "953.03"^^xsd:decimal ;
+    ex:hasAmount_(USD) "953.03"^^xsd:decimal ;
+    ex:hasVerification_Result "Verified" ;
+    ex:hasVerification_Logic "Contract ±3% match" ;
+    ex:hasSource "DOMESTIC_DELIVERY_APRIL_VERIFICATION.md" .
+
+ex:rate_0233 a ex:InlandTruckingRate ;
+    ex:hasRef_No. "74"^^xsd:decimal ;
+    ex:hasS/N "41"^^xsd:decimal ;
+    ex:hasShipment_Reference "HVDC-ADOPT-SIM-0061" ;
+    ex:hasPlace_of_Loading "DSV Mussafah Yard" ;
+    ex:hasPlace_of_Delivery "Mirfa" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasRate_(USD) "420"^^xsd:decimal ;
+    ex:hasAmount_(USD) "2520"^^xsd:decimal ;
+    ex:hasVerification_Result "Verified" ;
+    ex:hasVerification_Logic "Contract ±3% match" ;
+    ex:hasSource "DOMESTIC_DELIVERY_APRIL_VERIFICATION.md" .
+
+ex:rate_0234 a ex:InlandTruckingRate ;
+    ex:hasRef_No. "75"^^xsd:decimal ;
+    ex:hasS/N "42"^^xsd:decimal ;
+    ex:hasShipment_Reference "HVDC-DSV-HE-MOSB-126" ;
+    ex:hasPlace_of_Loading "M44 Warehouse" ;
+    ex:hasPlace_of_Delivery "DSV Mussafah Yard" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasRate_(USD) "200"^^xsd:decimal ;
+    ex:hasAmount_(USD) "400"^^xsd:decimal ;
+    ex:hasVerification_Result "Verified" ;
+    ex:hasVerification_Logic "Contract ±3% match" ;
+    ex:hasSource "DOMESTIC_DELIVERY_APRIL_VERIFICATION.md" .
+
+ex:rate_0235 a ex:InlandTruckingRate ;
+    ex:hasRef_No. "76"^^xsd:decimal ;
+    ex:hasS/N "42"^^xsd:decimal ;
+    ex:hasShipment_Reference "HVDC-DSV-HE-MOSB-126" ;
+    ex:hasPlace_of_Loading "DSV Mussafah Yard" ;
+    ex:hasPlace_of_Delivery "MOSB" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasRate_(USD) "200"^^xsd:decimal ;
+    ex:hasAmount_(USD) "200"^^xsd:decimal ;
+    ex:hasVerification_Result "Verified" ;
+    ex:hasVerification_Logic "Contract ±3% match" ;
+    ex:hasSource "DOMESTIC_DELIVERY_APRIL_VERIFICATION.md" .
+
+ex:rate_0236 a ex:InlandTruckingRate ;
+    ex:hasRef_No. "77"^^xsd:decimal ;
+    ex:hasS/N "43"^^xsd:decimal ;
+    ex:hasShipment_Reference "HVDC-DAS-ALS-272" ;
+    ex:hasPlace_of_Loading "DSV Mussafah Yard" ;
+    ex:hasPlace_of_Delivery "Al Masaood" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasRate_(USD) "200"^^xsd:decimal ;
+    ex:hasAmount_(USD) "2800"^^xsd:decimal ;
+    ex:hasVerification_Result "Verified" ;
+    ex:hasVerification_Logic "Contract ±3% match" ;
+    ex:hasSource "DOMESTIC_DELIVERY_APRIL_VERIFICATION.md" .
+
+ex:rate_0237 a ex:InlandTruckingRate ;
+    ex:hasRef_No. "78"^^xsd:decimal ;
+    ex:hasS/N "44"^^xsd:decimal ;
+    ex:hasShipment_Reference "HVDC-DSV-HE-MOSB-129" ;
+    ex:hasPlace_of_Loading "MOSB" ;
+    ex:hasPlace_of_Delivery "DSV Mussafah Yard" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasRate_(USD) "200"^^xsd:decimal ;
+    ex:hasAmount_(USD) "200"^^xsd:decimal ;
+    ex:hasVerification_Result "Verified" ;
+    ex:hasVerification_Logic "Contract ±3% match" ;
+    ex:hasSource "DOMESTIC_DELIVERY_APRIL_VERIFICATION.md" .
+
+ex:rate_0238 a ex:InlandTruckingRate ;
+    ex:hasRef_No. "79"^^xsd:decimal ;
+    ex:hasS/N "45"^^xsd:decimal ;
+    ex:hasShipment_Reference "HVDC-DAS-ALS-278" ;
+    ex:hasPlace_of_Loading "DSV Mussafah Yard" ;
+    ex:hasPlace_of_Delivery "Al Masaood" ;
+    ex:hasVehicle_Type "Lowbed" ;
+    ex:hasRate_(USD) "953.03"^^xsd:decimal ;
+    ex:hasAmount_(USD) "953.03"^^xsd:decimal ;
+    ex:hasVerification_Result "Verified" ;
+    ex:hasVerification_Logic "Contract ±3% match" ;
+    ex:hasSource "DOMESTIC_DELIVERY_APRIL_VERIFICATION.md" .
+
+ex:rate_0239 a ex:InlandTruckingRate ;
+    ex:hasRef_No. "80"^^xsd:decimal ;
+    ex:hasS/N "45"^^xsd:decimal ;
+    ex:hasShipment_Reference "HVDC-DAS-ALS-278" ;
+    ex:hasPlace_of_Loading "DSV Mussafah Yard" ;
+    ex:hasPlace_of_Delivery "Al Masaood" ;
+    ex:hasVehicle_Type "Lowbed (23m)" ;
+    ex:hasRate_(USD) "408.44"^^xsd:decimal ;
+    ex:hasAmount_(USD) "816.88"^^xsd:decimal ;
+    ex:hasVerification_Result "Verified" ;
+    ex:hasVerification_Logic "Contract ±3% match" ;
+    ex:hasSource "DOMESTIC_DELIVERY_APRIL_VERIFICATION.md" .
+
+ex:rate_0240 a ex:InlandTruckingRate ;
+    ex:hasRef_No. "81"^^xsd:decimal ;
+    ex:hasS/N "45"^^xsd:decimal ;
+    ex:hasShipment_Reference "HVDC-DAS-ALS-278" ;
+    ex:hasPlace_of_Loading "DSV Mussafah Yard" ;
+    ex:hasPlace_of_Delivery "Al Masaood" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasRate_(USD) "200"^^xsd:decimal ;
+    ex:hasAmount_(USD) "1000"^^xsd:decimal ;
+    ex:hasVerification_Result "Verified" ;
+    ex:hasVerification_Logic "Contract ±3% match" ;
+    ex:hasSource "DOMESTIC_DELIVERY_APRIL_VERIFICATION.md" .
+
+ex:rate_0241 a ex:InlandTruckingRate ;
+    ex:hasRef_No. "82"^^xsd:decimal ;
+    ex:hasS/N "46"^^xsd:decimal ;
+    ex:hasShipment_Reference "HVDC-DSV-SHU-MOSB-128" ;
+    ex:hasPlace_of_Loading "Shuweihat" ;
+    ex:hasPlace_of_Delivery "MOSB" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasRate_(USD) "600"^^xsd:decimal ;
+    ex:hasAmount_(USD) "600"^^xsd:decimal ;
+    ex:hasVerification_Result "Verified" ;
+    ex:hasVerification_Logic "Contract ±3% match" ;
+    ex:hasSource "DOMESTIC_DELIVERY_APRIL_VERIFICATION.md" .
+
+ex:rate_0242 a ex:InlandTruckingRate ;
+    ex:hasRef_No. "83"^^xsd:decimal ;
+    ex:hasS/N "47"^^xsd:decimal ;
+    ex:hasShipment_Reference "HVDC-DSV-HE-MOSB-121" ;
+    ex:hasPlace_of_Loading "DSV Mussafah Yard" ;
+    ex:hasPlace_of_Delivery "MOSB" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasRate_(USD) "200"^^xsd:decimal ;
+    ex:hasAmount_(USD) "800"^^xsd:decimal ;
+    ex:hasVerification_Result "Verified" ;
+    ex:hasVerification_Logic "Contract ±3% match" ;
+    ex:hasSource "DOMESTIC_DELIVERY_APRIL_VERIFICATION.md" .
+
+ex:rate_0243 a ex:InlandTruckingRate ;
+    ex:hasRef_No. "84"^^xsd:decimal ;
+    ex:hasS/N "48"^^xsd:decimal ;
+    ex:hasShipment_Reference "HVDC-ADOPT-SIM-0081_Local" ;
+    ex:hasPlace_of_Loading "Siemens Masdar" ;
+    ex:hasPlace_of_Delivery "Shuweihat" ;
+    ex:hasVehicle_Type "3 Ton Pickup" ;
+    ex:hasRate_(USD) "250"^^xsd:decimal ;
+    ex:hasAmount_(USD) "250"^^xsd:decimal ;
+    ex:hasVerification_Result "Pending Review" ;
+    ex:hasVerification_Logic "Rate not found in reference list ±3%" ;
+    ex:hasSource "DOMESTIC_DELIVERY_APRIL_VERIFICATION.md" .
+
+ex:rate_0244 a ex:InlandTruckingRate ;
+    ex:hasRef_No. "85"^^xsd:decimal ;
+    ex:hasS/N "49"^^xsd:decimal ;
+    ex:hasShipment_Reference "HVDC-ADOPT-SIM-0077" ;
+    ex:hasPlace_of_Loading "Power Max Jebel Ali" ;
+    ex:hasPlace_of_Delivery "MOSB" ;
+    ex:hasVehicle_Type "3 Ton Pickup" ;
+    ex:hasRate_(USD) "400"^^xsd:decimal ;
+    ex:hasAmount_(USD) "400"^^xsd:decimal ;
+    ex:hasVerification_Result "Verified" ;
+    ex:hasVerification_Logic "Contract ±3% match" ;
+    ex:hasSource "DOMESTIC_DELIVERY_APRIL_VERIFICATION.md" .
+
+ex:rate_0245 a ex:InlandTruckingRate ;
+    ex:hasRef_No. "86"^^xsd:decimal ;
+    ex:hasS/N "50"^^xsd:decimal ;
+    ex:hasShipment_Reference "HVDC-DSV-UPC-FP-MOSB-122" ;
+    ex:hasPlace_of_Loading "Mina Freeport" ;
+    ex:hasPlace_of_Delivery "MOSB" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasRate_(USD) "171"^^xsd:decimal ;
+    ex:hasAmount_(USD) "171"^^xsd:decimal ;
+    ex:hasVerification_Result "Verified" ;
+    ex:hasVerification_Logic "Contract ±3% match" ;
+    ex:hasSource "DOMESTIC_DELIVERY_APRIL_VERIFICATION.md" .
+
+ex:rate_0246 a ex:InlandTruckingRate ;
+    ex:hasRef_No. "87"^^xsd:decimal ;
+    ex:hasS/N "51"^^xsd:decimal ;
+    ex:hasShipment_Reference "HVDC-DSV-MOSB-ALM-120" ;
+    ex:hasPlace_of_Loading "MOSB" ;
+    ex:hasPlace_of_Delivery "Al Masaood" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasRate_(USD) "200"^^xsd:decimal ;
+    ex:hasAmount_(USD) "200"^^xsd:decimal ;
+    ex:hasVerification_Result "Verified" ;
+    ex:hasVerification_Logic "Contract ±3% match" ;
+    ex:hasSource "DOMESTIC_DELIVERY_APRIL_VERIFICATION.md" .
+
+ex:rate_0247 a ex:InlandTruckingRate ;
+    ex:hasRef_No. "88"^^xsd:decimal ;
+    ex:hasS/N "52"^^xsd:decimal ;
+    ex:hasShipment_Reference "HVDC-DAS-ALS-270" ;
+    ex:hasPlace_of_Loading "DSV Mussafah Yard" ;
+    ex:hasPlace_of_Delivery "Al Masaood" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasRate_(USD) "200"^^xsd:decimal ;
+    ex:hasAmount_(USD) "2800"^^xsd:decimal ;
+    ex:hasVerification_Result "Verified" ;
+    ex:hasVerification_Logic "Contract ±3% match" ;
+    ex:hasSource "DOMESTIC_DELIVERY_APRIL_VERIFICATION.md" .
+
+ex:rate_0248 a ex:InlandTruckingRate ;
+    ex:hasRef_No. "89"^^xsd:decimal ;
+    ex:hasS/N "53"^^xsd:decimal ;
+    ex:hasShipment_Reference "HVDC-SHU-MIRFA-PRESTIGE, HVDC-ADOPT-SIM-0065" ;
+    ex:hasPlace_of_Loading "Prestige Mussafah" ;
+    ex:hasPlace_of_Delivery "Mirfa" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasRate_(USD) "420"^^xsd:decimal ;
+    ex:hasAmount_(USD) "420"^^xsd:decimal ;
+    ex:hasVerification_Result "Verified" ;
+    ex:hasVerification_Logic "Contract ±3% match" ;
+    ex:hasSource "DOMESTIC_DELIVERY_APRIL_VERIFICATION.md" .
+
+ex:rate_0249 a ex:InlandTruckingRate ;
+    ex:hasRef_No. "90"^^xsd:decimal ;
+    ex:hasS/N "53"^^xsd:decimal ;
+    ex:hasShipment_Reference "HVDC-SHU-MIRFA-PRESTIGE, HVDC-ADOPT-SIM-0065" ;
+    ex:hasPlace_of_Loading "Prestige Mussafah" ;
+    ex:hasPlace_of_Delivery "Shuweihat" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasRate_(USD) "600"^^xsd:decimal ;
+    ex:hasAmount_(USD) "600"^^xsd:decimal ;
+    ex:hasVerification_Result "Verified" ;
+    ex:hasVerification_Logic "Contract ±3% match" ;
+    ex:hasSource "DOMESTIC_DELIVERY_APRIL_VERIFICATION.md" .
+
+ex:rate_0250 a ex:InlandTruckingRate ;
+    ex:hasRef_No. "91"^^xsd:decimal ;
+    ex:hasS/N "53"^^xsd:decimal ;
+    ex:hasShipment_Reference "HVDC-SHU-MIRFA-PRESTIGE, HVDC-ADOPT-SIM-0065" ;
+    ex:hasPlace_of_Loading "DSV Mussafah Yard" ;
+    ex:hasPlace_of_Delivery "Mirfa" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasRate_(USD) "420"^^xsd:decimal ;
+    ex:hasAmount_(USD) "420"^^xsd:decimal ;
+    ex:hasVerification_Result "Verified" ;
+    ex:hasVerification_Logic "Contract ±3% match" ;
+    ex:hasSource "DOMESTIC_DELIVERY_APRIL_VERIFICATION.md" .
+
+ex:rate_0251 a ex:InlandTruckingRate ;
+    ex:hasRef_No. "92"^^xsd:decimal ;
+    ex:hasS/N "54"^^xsd:decimal ;
+    ex:hasShipment_Reference "HVDC-AGI-NOVATECH (PJC-PO-014_NOVA/RFQ/JJ/24)" ;
+    ex:hasPlace_of_Loading "DSV Mussafah Yard" ;
+    ex:hasPlace_of_Delivery "MOSB" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasRate_(USD) "200"^^xsd:decimal ;
+    ex:hasAmount_(USD) "600"^^xsd:decimal ;
+    ex:hasVerification_Result "Verified" ;
+    ex:hasVerification_Logic "Contract ±3% match" ;
+    ex:hasSource "DOMESTIC_DELIVERY_APRIL_VERIFICATION.md" .
+
+ex:rate_0252 a ex:InlandTruckingRate ;
+    ex:hasUnnamed:_0 "count" ;
+    ex:hasValue "130"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Additional_Analysis.md" .
+
+ex:rate_0253 a ex:InlandTruckingRate ;
+    ex:hasUnnamed:_0 "mean" ;
+    ex:hasValue "39.3012"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Additional_Analysis.md" .
+
+ex:rate_0254 a ex:InlandTruckingRate ;
+    ex:hasUnnamed:_0 "std" ;
+    ex:hasValue "145.486"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Additional_Analysis.md" .
+
+ex:rate_0255 a ex:InlandTruckingRate ;
+    ex:hasUnnamed:_0 "min" ;
+    ex:hasValue "0.833333"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Additional_Analysis.md" .
+
+ex:rate_0256 a ex:InlandTruckingRate ;
+    ex:hasUnnamed:_0 "25%" ;
+    ex:hasValue "2.4"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Additional_Analysis.md" .
+
+ex:rate_0257 a ex:InlandTruckingRate ;
+    ex:hasUnnamed:_0 "50%" ;
+    ex:hasValue "3.75"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Additional_Analysis.md" .
+
+ex:rate_0258 a ex:InlandTruckingRate ;
+    ex:hasUnnamed:_0 "75%" ;
+    ex:hasValue "20"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Additional_Analysis.md" .
+
+ex:rate_0259 a ex:InlandTruckingRate ;
+    ex:hasUnnamed:_0 "max" ;
+    ex:hasValue "1500"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Additional_Analysis.md" .
+
+ex:rate_0260 a ex:InlandTruckingRate ;
+    ex:hasVehicle_Type "3 TON PU" ;
+    ex:hascount "14"^^xsd:decimal ;
+    ex:hasmean "5.33902"^^xsd:decimal ;
+    ex:hasmin "1"^^xsd:decimal ;
+    ex:hasmax "24"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Additional_Analysis.md" .
+
+ex:rate_0261 a ex:InlandTruckingRate ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hascount "100"^^xsd:decimal ;
+    ex:hasmean "26.0588"^^xsd:decimal ;
+    ex:hasmin "0.833333"^^xsd:decimal ;
+    ex:hasmax "529.081"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Additional_Analysis.md" .
+
+ex:rate_0262 a ex:InlandTruckingRate ;
+    ex:hasVehicle_Type "Flatbed - CICPA" ;
+    ex:hascount "1"^^xsd:decimal ;
+    ex:hasmean "4.61538"^^xsd:decimal ;
+    ex:hasmin "4.61538"^^xsd:decimal ;
+    ex:hasmax "4.61538"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Additional_Analysis.md" .
+
+ex:rate_0263 a ex:InlandTruckingRate ;
+    ex:hasVehicle_Type "Flatbed HAZMAT" ;
+    ex:hascount "1"^^xsd:decimal ;
+    ex:hasmean "47.651"^^xsd:decimal ;
+    ex:hasmin "47.651"^^xsd:decimal ;
+    ex:hasmax "47.651"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Additional_Analysis.md" .
+
+ex:rate_0264 a ex:InlandTruckingRate ;
+    ex:hasVehicle_Type "Flatbed(Side Grilled)" ;
+    ex:hascount "2"^^xsd:decimal ;
+    ex:hasmean "2.4"^^xsd:decimal ;
+    ex:hasmin "2.4"^^xsd:decimal ;
+    ex:hasmax "2.4"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Additional_Analysis.md" .
+
+ex:rate_0265 a ex:InlandTruckingRate ;
+    ex:hasVehicle_Type "Lowbed" ;
+    ex:hascount "9"^^xsd:decimal ;
+    ex:hasmean "236.77"^^xsd:decimal ;
+    ex:hasmin "6.78857"^^xsd:decimal ;
+    ex:hasmax "1500"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Additional_Analysis.md" .
+
+ex:rate_0266 a ex:InlandTruckingRate ;
+    ex:hasVehicle_Type "Lowbed(1 X 14m)" ;
+    ex:hascount "1"^^xsd:decimal ;
+    ex:hasmean "57.5"^^xsd:decimal ;
+    ex:hasmin "57.5"^^xsd:decimal ;
+    ex:hasmax "57.5"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Additional_Analysis.md" .
+
+ex:rate_0267 a ex:InlandTruckingRate ;
+    ex:hasVehicle_Type "Lowbed(2 X 23m)" ;
+    ex:hascount "1"^^xsd:decimal ;
+    ex:hasmean "80"^^xsd:decimal ;
+    ex:hasmin "80"^^xsd:decimal ;
+    ex:hasmax "80"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Additional_Analysis.md" .
+
+ex:rate_0268 a ex:InlandTruckingRate ;
+    ex:hasNo. "2"^^xsd:decimal ;
+    ex:hasdate "2024-10-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-ADOPT-SIM-0005" ;
+    ex:hasPlace_of_Loading "DSV MUSSAFAH YARD" ;
+    ex:hasPlace_of_Delivery "ESNAAD (MOSB)" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "10"^^xsd:decimal ;
+    ex:hasRate_(USD) "200"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "20"^^xsd:decimal ;
+    ex:hasFlag "Suspected Fixed Cost" ;
+    ex:hasSource "Domestic_Rate_Additional_Analysis.md" .
+
+ex:rate_0269 a ex:InlandTruckingRate ;
+    ex:hasNo. "10"^^xsd:decimal ;
+    ex:hasdate "2024-10-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-DSV-MOSB-JETTY" ;
+    ex:hasPlace_of_Loading "ESNAAD (MOSB)" ;
+    ex:hasPlace_of_Delivery "JETTY" ;
+    ex:hasVehicle_Type "Lowbed" ;
+    ex:hasDistance(km) "5"^^xsd:decimal ;
+    ex:hasRate_(USD) "1500"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "300"^^xsd:decimal ;
+    ex:hasFlag "Suspected Fixed Cost" ;
+    ex:hasSource "Domestic_Rate_Additional_Analysis.md" .
+
+ex:rate_0270 a ex:InlandTruckingRate ;
+    ex:hasNo. "12"^^xsd:decimal ;
+    ex:hasdate "2024-10-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-DSV-MOSB-050" ;
+    ex:hasPlace_of_Loading "ESNAAD (MOSB)" ;
+    ex:hasPlace_of_Delivery "ESNAAD (MOSB)" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "1"^^xsd:decimal ;
+    ex:hasRate_(USD) "200"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "200"^^xsd:decimal ;
+    ex:hasFlag "Suspected Fixed Cost" ;
+    ex:hasSource "Domestic_Rate_Additional_Analysis.md" .
+
+ex:rate_0271 a ex:InlandTruckingRate ;
+    ex:hasNo. "13"^^xsd:decimal ;
+    ex:hasdate "2024-10-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-DSV-MOSB-050" ;
+    ex:hasPlace_of_Loading "ESNAAD (MOSB)" ;
+    ex:hasPlace_of_Delivery "DSV MUSSAFAH YARD" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "5"^^xsd:decimal ;
+    ex:hasRate_(USD) "200"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "40"^^xsd:decimal ;
+    ex:hasFlag "Suspected Fixed Cost" ;
+    ex:hasSource "Domestic_Rate_Additional_Analysis.md" .
+
+ex:rate_0272 a ex:InlandTruckingRate ;
+    ex:hasNo. "14"^^xsd:decimal ;
+    ex:hasdate "2024-10-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-DSV-MOSB-050" ;
+    ex:hasPlace_of_Loading "DSV MUSSAFAH YARD" ;
+    ex:hasPlace_of_Delivery "ESNAAD (MOSB)" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "10"^^xsd:decimal ;
+    ex:hasRate_(USD) "200"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "20"^^xsd:decimal ;
+    ex:hasFlag "Suspected Fixed Cost" ;
+    ex:hasSource "Domestic_Rate_Additional_Analysis.md" .
+
+ex:rate_0273 a ex:InlandTruckingRate ;
+    ex:hasNo. "22"^^xsd:decimal ;
+    ex:hasdate "2024-11-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-DSV-MOSB-052" ;
+    ex:hasPlace_of_Loading "MOSB" ;
+    ex:hasPlace_of_Delivery "DSV MUSSAFAH AYRD" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "5"^^xsd:decimal ;
+    ex:hasRate_(USD) "200"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "40"^^xsd:decimal ;
+    ex:hasFlag "Suspected Fixed Cost" ;
+    ex:hasSource "Domestic_Rate_Additional_Analysis.md" .
+
+ex:rate_0274 a ex:InlandTruckingRate ;
+    ex:hasNo. "23"^^xsd:decimal ;
+    ex:hasdate "2024-11-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-DSV-MOSB-052" ;
+    ex:hasPlace_of_Loading "DSV MUSSAFAH AYRD" ;
+    ex:hasPlace_of_Delivery "MOSB" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "5"^^xsd:decimal ;
+    ex:hasRate_(USD) "200"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "40"^^xsd:decimal ;
+    ex:hasFlag "Suspected Fixed Cost" ;
+    ex:hasSource "Domestic_Rate_Additional_Analysis.md" .
+
+ex:rate_0275 a ex:InlandTruckingRate ;
+    ex:hasNo. "24"^^xsd:decimal ;
+    ex:hasdate "2024-11-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-DSV-MOSB-057" ;
+    ex:hasPlace_of_Loading "DSV MUSSAFAH AYRD" ;
+    ex:hasPlace_of_Delivery "MOSB" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "5"^^xsd:decimal ;
+    ex:hasRate_(USD) "200"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "40"^^xsd:decimal ;
+    ex:hasFlag "Suspected Fixed Cost" ;
+    ex:hasSource "Domestic_Rate_Additional_Analysis.md" .
+
+ex:rate_0276 a ex:InlandTruckingRate ;
+    ex:hasNo. "26"^^xsd:decimal ;
+    ex:hasdate "2024-11-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-ADOPT-SIM-0005-2-MOSB" ;
+    ex:hasPlace_of_Loading "DSV MUSAFFAH YARD" ;
+    ex:hasPlace_of_Delivery "MOSB" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "10"^^xsd:decimal ;
+    ex:hasRate_(USD) "200"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "20"^^xsd:decimal ;
+    ex:hasFlag "Suspected Fixed Cost" ;
+    ex:hasSource "Domestic_Rate_Additional_Analysis.md" .
+
+ex:rate_0277 a ex:InlandTruckingRate ;
+    ex:hasNo. "27"^^xsd:decimal ;
+    ex:hasdate "2024-11-01 00:00:00" ;
+    ex:hasShipment_Reference "Shifting of Basket" ;
+    ex:hasPlace_of_Loading "MOSB" ;
+    ex:hasPlace_of_Delivery "MOSB" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "1"^^xsd:decimal ;
+    ex:hasRate_(USD) "200"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "200"^^xsd:decimal ;
+    ex:hasFlag "Suspected Fixed Cost" ;
+    ex:hasSource "Domestic_Rate_Additional_Analysis.md" .
+
+ex:rate_0278 a ex:InlandTruckingRate ;
+    ex:hasNo. "28"^^xsd:decimal ;
+    ex:hasdate "2024-11-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-DSV-DAS-SHIFTING" ;
+    ex:hasPlace_of_Loading "DSV Musaffah Yard" ;
+    ex:hasPlace_of_Delivery "DSV MUSAFFAH YARD" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "2"^^xsd:decimal ;
+    ex:hasRate_(USD) "200"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "100"^^xsd:decimal ;
+    ex:hasFlag "Suspected Fixed Cost" ;
+    ex:hasSource "Domestic_Rate_Additional_Analysis.md" .
+
+ex:rate_0279 a ex:InlandTruckingRate ;
+    ex:hasNo. "29"^^xsd:decimal ;
+    ex:hasdate "2024-11-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-DSV-SOC-CNT" ;
+    ex:hasPlace_of_Loading "MOSB" ;
+    ex:hasPlace_of_Delivery "MOSB" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "1"^^xsd:decimal ;
+    ex:hasRate_(USD) "200"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "200"^^xsd:decimal ;
+    ex:hasFlag "Suspected Fixed Cost" ;
+    ex:hasSource "Domestic_Rate_Additional_Analysis.md" .
+
+ex:rate_0280 a ex:InlandTruckingRate ;
+    ex:hasNo. "37"^^xsd:decimal ;
+    ex:hasdate "2024-11-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-DSV-MIR-0031" ;
+    ex:hasPlace_of_Loading "DSV Musaffah Yard" ;
+    ex:hasPlace_of_Delivery "MOSB" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "10"^^xsd:decimal ;
+    ex:hasRate_(USD) "420"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "42"^^xsd:decimal ;
+    ex:hasFlag "Suspected Fixed Cost" ;
+    ex:hasSource "Domestic_Rate_Additional_Analysis.md" .
+
+ex:rate_0281 a ex:InlandTruckingRate ;
+    ex:hasNo. "50"^^xsd:decimal ;
+    ex:hasdate "2024-11-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-DSV-MOSB-059" ;
+    ex:hasPlace_of_Loading "MOSB" ;
+    ex:hasPlace_of_Delivery "MOSB" ;
+    ex:hasVehicle_Type "Lowbed" ;
+    ex:hasDistance(km) "1"^^xsd:decimal ;
+    ex:hasRate_(USD) "1500"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "1500"^^xsd:decimal ;
+    ex:hasFlag "Suspected Fixed Cost" ;
+    ex:hasSource "Domestic_Rate_Additional_Analysis.md" .
+
+ex:rate_0282 a ex:InlandTruckingRate ;
+    ex:hasNo. "56"^^xsd:decimal ;
+    ex:hasdate "2024-11-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-SCT-RE-0001" ;
+    ex:hasPlace_of_Loading "Sharjah" ;
+    ex:hasPlace_of_Delivery "Jubail" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "10"^^xsd:decimal ;
+    ex:hasRate_(USD) "5290.81"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "529.081"^^xsd:decimal ;
+    ex:hasFlag "Suspected Fixed Cost" ;
+    ex:hasSource "Domestic_Rate_Additional_Analysis.md" .
+
+ex:rate_0283 a ex:InlandTruckingRate ;
+    ex:hasNo. "57"^^xsd:decimal ;
+    ex:hasdate "2024-12-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-ADOPT-SIM-0005-2-MOSB" ;
+    ex:hasPlace_of_Loading "DSV MUSAFFAH YARD" ;
+    ex:hasPlace_of_Delivery "MOSB" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "10"^^xsd:decimal ;
+    ex:hasRate_(USD) "200"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "20"^^xsd:decimal ;
+    ex:hasFlag "Suspected Fixed Cost" ;
+    ex:hasSource "Domestic_Rate_Additional_Analysis.md" .
+
+ex:rate_0284 a ex:InlandTruckingRate ;
+    ex:hasNo. "58"^^xsd:decimal ;
+    ex:hasdate "2024-12-01 00:00:00" ;
+    ex:hasShipment_Reference "Shifting of Basket" ;
+    ex:hasPlace_of_Loading "MOSB" ;
+    ex:hasPlace_of_Delivery "MOSB" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "1"^^xsd:decimal ;
+    ex:hasRate_(USD) "200"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "200"^^xsd:decimal ;
+    ex:hasFlag "Suspected Fixed Cost" ;
+    ex:hasSource "Domestic_Rate_Additional_Analysis.md" .
+
+ex:rate_0285 a ex:InlandTruckingRate ;
+    ex:hasNo. "66"^^xsd:decimal ;
+    ex:hasdate "2024-12-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-DSV-DAS-SHIFTING" ;
+    ex:hasPlace_of_Loading "DSV Musaffah Yard" ;
+    ex:hasPlace_of_Delivery "DSV MUSAFFAH YARD" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "2"^^xsd:decimal ;
+    ex:hasRate_(USD) "200"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "100"^^xsd:decimal ;
+    ex:hasFlag "Suspected Fixed Cost" ;
+    ex:hasSource "Domestic_Rate_Additional_Analysis.md" .
+
+ex:rate_0286 a ex:InlandTruckingRate ;
+    ex:hasNo. "67"^^xsd:decimal ;
+    ex:hasdate "2024-12-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-DSV-SOC-CNT" ;
+    ex:hasPlace_of_Loading "MOSB" ;
+    ex:hasPlace_of_Delivery "MOSB" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "1"^^xsd:decimal ;
+    ex:hasRate_(USD) "200"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "200"^^xsd:decimal ;
+    ex:hasFlag "Suspected Fixed Cost" ;
+    ex:hasSource "Domestic_Rate_Additional_Analysis.md" .
+
+ex:rate_0287 a ex:InlandTruckingRate ;
+    ex:hasNo. "70"^^xsd:decimal ;
+    ex:hasdate "2024-12-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-DSV-MIR-0031" ;
+    ex:hasPlace_of_Loading "DSV Musaffah Yard" ;
+    ex:hasPlace_of_Delivery "MOSB" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "10"^^xsd:decimal ;
+    ex:hasRate_(USD) "420"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "42"^^xsd:decimal ;
+    ex:hasFlag "Suspected Fixed Cost" ;
+    ex:hasSource "Domestic_Rate_Additional_Analysis.md" .
+
+ex:rate_0288 a ex:InlandTruckingRate ;
+    ex:hasNo. "80"^^xsd:decimal ;
+    ex:hasdate "2025-02-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-ADOPT-SIM-0006-AAA" ;
+    ex:hasPlace_of_Loading "AAA WAREHOUSE" ;
+    ex:hasPlace_of_Delivery "MOSB" ;
+    ex:hasVehicle_Type "Flatbed HAZMAT" ;
+    ex:hasDistance(km) "10"^^xsd:decimal ;
+    ex:hasRate_(USD) "476.51"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "47.651"^^xsd:decimal ;
+    ex:hasFlag "Suspected Fixed Cost" ;
+    ex:hasSource "Domestic_Rate_Additional_Analysis.md" .
+
+ex:rate_0289 a ex:InlandTruckingRate ;
+    ex:hasNo. "82"^^xsd:decimal ;
+    ex:hasdate "2025-02-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-DAS-DSV-086" ;
+    ex:hasPlace_of_Loading "MINA FREEPORT" ;
+    ex:hasPlace_of_Delivery "MINA FREEPORT" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "5"^^xsd:decimal ;
+    ex:hasRate_(USD) "171"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "34.2"^^xsd:decimal ;
+    ex:hasFlag "Suspected Fixed Cost" ;
+    ex:hasSource "Domestic_Rate_Additional_Analysis.md" .
+
+ex:rate_0290 a ex:InlandTruckingRate ;
+    ex:hasNo. "83"^^xsd:decimal ;
+    ex:hasdate "2025-02-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-ADOPT-SCT-0029-MOSB" ;
+    ex:hasPlace_of_Loading "DSV MUSSAFAH YARD" ;
+    ex:hasPlace_of_Delivery "MOSB" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "5"^^xsd:decimal ;
+    ex:hasRate_(USD) "200"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "40"^^xsd:decimal ;
+    ex:hasFlag "Suspected Fixed Cost" ;
+    ex:hasSource "Domestic_Rate_Additional_Analysis.md" .
+
+ex:rate_0291 a ex:InlandTruckingRate ;
+    ex:hasNo. "87"^^xsd:decimal ;
+    ex:hasdate "2025-02-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-ADOPT-SCT-0037-MOSB" ;
+    ex:hasPlace_of_Loading "DSV MUSSAFAH YARD" ;
+    ex:hasPlace_of_Delivery "MOSB" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "5"^^xsd:decimal ;
+    ex:hasRate_(USD) "200"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "40"^^xsd:decimal ;
+    ex:hasFlag "Suspected Fixed Cost" ;
+    ex:hasSource "Domestic_Rate_Additional_Analysis.md" .
+
+ex:rate_0292 a ex:InlandTruckingRate ;
+    ex:hasNo. "90"^^xsd:decimal ;
+    ex:hasdate "2025-02-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-DAS-NIE-MOSB-004" ;
+    ex:hasPlace_of_Loading "DSV MUSSAFAH YARD" ;
+    ex:hasPlace_of_Delivery "MOSB" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "5"^^xsd:decimal ;
+    ex:hasRate_(USD) "200"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "40"^^xsd:decimal ;
+    ex:hasFlag "Suspected Fixed Cost" ;
+    ex:hasSource "Domestic_Rate_Additional_Analysis.md" .
+
+ex:rate_0293 a ex:InlandTruckingRate ;
+    ex:hasNo. "107"^^xsd:decimal ;
+    ex:hasdate "2025-02-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-DSV-FP-093" ;
+    ex:hasPlace_of_Loading "MINA FREEPORT" ;
+    ex:hasPlace_of_Delivery "MINA FREEPORT" ;
+    ex:hasVehicle_Type "Lowbed" ;
+    ex:hasDistance(km) "5"^^xsd:decimal ;
+    ex:hasRate_(USD) "980.26"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "196.052"^^xsd:decimal ;
+    ex:hasFlag "Suspected Fixed Cost" ;
+    ex:hasSource "Domestic_Rate_Additional_Analysis.md" .
+
+ex:rate_0294 a ex:InlandTruckingRate ;
+    ex:hasNo. "113"^^xsd:decimal ;
+    ex:hasdate "2025-03-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-ADOPT-SCT-0043, 0045, 0047-MOSB" ;
+    ex:hasPlace_of_Loading "DSV MUSSAFAH YARD" ;
+    ex:hasPlace_of_Delivery "MOSB" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "5"^^xsd:decimal ;
+    ex:hasRate_(USD) "200"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "40"^^xsd:decimal ;
+    ex:hasFlag "Suspected Fixed Cost" ;
+    ex:hasSource "Domestic_Rate_Additional_Analysis.md" .
+
+ex:rate_0295 a ex:InlandTruckingRate ;
+    ex:hasNo. "114"^^xsd:decimal ;
+    ex:hasdate "2025-03-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-ADOPT-SCT-0038,0039-MOSB" ;
+    ex:hasPlace_of_Loading "DSV MUSSAFAH YARD" ;
+    ex:hasPlace_of_Delivery "MOSB" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "5"^^xsd:decimal ;
+    ex:hasRate_(USD) "200"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "40"^^xsd:decimal ;
+    ex:hasFlag "Suspected Fixed Cost" ;
+    ex:hasSource "Domestic_Rate_Additional_Analysis.md" .
+
+ex:rate_0296 a ex:InlandTruckingRate ;
+    ex:hasNo. "118"^^xsd:decimal ;
+    ex:hasdate "2025-03-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-DSV-MOSB-SHU-097" ;
+    ex:hasPlace_of_Loading "MOSB" ;
+    ex:hasPlace_of_Delivery "DSV MUSSAFAH YARD" ;
+    ex:hasVehicle_Type "3 TON PU" ;
+    ex:hasDistance(km) "5"^^xsd:decimal ;
+    ex:hasRate_(USD) "120"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "24"^^xsd:decimal ;
+    ex:hasFlag "Suspected Fixed Cost" ;
+    ex:hasSource "Domestic_Rate_Additional_Analysis.md" .
+
+ex:rate_0297 a ex:InlandTruckingRate ;
+    ex:hasNo. "1"^^xsd:decimal ;
+    ex:hasdate "2024-10-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-ADOPT-SIM-0009-2-SHU" ;
+    ex:hasPlace_of_Loading "DSV MUSSAFAH YARD" ;
+    ex:hasPlace_of_Delivery "SHUWEIHAT POWER STATION" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "240"^^xsd:decimal ;
+    ex:hasRate_(USD) "600"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "2.5"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0298 a ex:InlandTruckingRate ;
+    ex:hasNo. "2"^^xsd:decimal ;
+    ex:hasdate "2024-10-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-ADOPT-SIM-0005" ;
+    ex:hasPlace_of_Loading "DSV MUSSAFAH YARD" ;
+    ex:hasPlace_of_Delivery "ESNAAD (MOSB)" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "10"^^xsd:decimal ;
+    ex:hasRate_(USD) "200"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "20"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0299 a ex:InlandTruckingRate ;
+    ex:hasNo. "3"^^xsd:decimal ;
+    ex:hasdate "2024-10-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-ADOPT-SIM-0017-SHU" ;
+    ex:hasPlace_of_Loading "DSV MUSSAFAH YARD" ;
+    ex:hasPlace_of_Delivery "SHUWEIHAT POWER STATION" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "240"^^xsd:decimal ;
+    ex:hasRate_(USD) "600"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "2.5"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0300 a ex:InlandTruckingRate ;
+    ex:hasNo. "4"^^xsd:decimal ;
+    ex:hasdate "2024-10-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-DSV-MIR-MOSB-046" ;
+    ex:hasPlace_of_Loading "MIRFA PMO SAMSUNG" ;
+    ex:hasPlace_of_Delivery "ESNAAD (MOSB)" ;
+    ex:hasVehicle_Type "3 TON PU" ;
+    ex:hasDistance(km) "120"^^xsd:decimal ;
+    ex:hasRate_(USD) "150"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "1.25"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0301 a ex:InlandTruckingRate ;
+    ex:hasNo. "5"^^xsd:decimal ;
+    ex:hasdate "2024-10-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-DSV-MIR-MOSB-046" ;
+    ex:hasPlace_of_Loading "MIRFA PMO SAMSUNG" ;
+    ex:hasPlace_of_Delivery "ESNAAD (MOSB)" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "120"^^xsd:decimal ;
+    ex:hasRate_(USD) "420"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "3.5"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0302 a ex:InlandTruckingRate ;
+    ex:hasNo. "6"^^xsd:decimal ;
+    ex:hasdate "2024-10-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-ADOPT-SCT-0010-SHU" ;
+    ex:hasPlace_of_Loading "DSV MUSSAFAH YARD" ;
+    ex:hasPlace_of_Delivery "SHUWEIHAT POWER STATION" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "240"^^xsd:decimal ;
+    ex:hasRate_(USD) "600"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "2.5"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0303 a ex:InlandTruckingRate ;
+    ex:hasNo. "7"^^xsd:decimal ;
+    ex:hasdate "2024-10-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-DSV-SHJ-MIR-047" ;
+    ex:hasPlace_of_Loading "TAREEJ (SHARJAH)" ;
+    ex:hasPlace_of_Delivery "MIRFA Site" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "270"^^xsd:decimal ;
+    ex:hasRate_(USD) "1170"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "4.33333"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0304 a ex:InlandTruckingRate ;
+    ex:hasNo. "8"^^xsd:decimal ;
+    ex:hasdate "2024-10-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-DSV-MOSB-MIR-SHU-048" ;
+    ex:hasPlace_of_Loading "ESNAAD (MOSB)" ;
+    ex:hasPlace_of_Delivery "MIRFA Site" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "120"^^xsd:decimal ;
+    ex:hasRate_(USD) "420"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "3.5"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0305 a ex:InlandTruckingRate ;
+    ex:hasNo. "9"^^xsd:decimal ;
+    ex:hasdate "2024-10-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-DSV-MOSB-MIR-SHU-048" ;
+    ex:hasPlace_of_Loading "MIRFA Site" ;
+    ex:hasPlace_of_Delivery "SHUWEIHAT POWER STATION" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "130"^^xsd:decimal ;
+    ex:hasRate_(USD) "600"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "4.61538"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0306 a ex:InlandTruckingRate ;
+    ex:hasNo. "10"^^xsd:decimal ;
+    ex:hasdate "2024-10-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-DSV-MOSB-JETTY" ;
+    ex:hasPlace_of_Loading "ESNAAD (MOSB)" ;
+    ex:hasPlace_of_Delivery "JETTY" ;
+    ex:hasVehicle_Type "Lowbed" ;
+    ex:hasDistance(km) "5"^^xsd:decimal ;
+    ex:hasRate_(USD) "1500"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "300"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0307 a ex:InlandTruckingRate ;
+    ex:hasNo. "11"^^xsd:decimal ;
+    ex:hasdate "2024-10-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-ADOPT-SIM-0012-MIR" ;
+    ex:hasPlace_of_Loading "DSV MUSSAFAH YARD" ;
+    ex:hasPlace_of_Delivery "MIRFA Site" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "120"^^xsd:decimal ;
+    ex:hasRate_(USD) "420"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "3.5"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0308 a ex:InlandTruckingRate ;
+    ex:hasNo. "12"^^xsd:decimal ;
+    ex:hasdate "2024-10-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-DSV-MOSB-050" ;
+    ex:hasPlace_of_Loading "ESNAAD (MOSB)" ;
+    ex:hasPlace_of_Delivery "ESNAAD (MOSB)" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "1"^^xsd:decimal ;
+    ex:hasRate_(USD) "200"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "200"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0309 a ex:InlandTruckingRate ;
+    ex:hasNo. "13"^^xsd:decimal ;
+    ex:hasdate "2024-10-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-DSV-MOSB-050" ;
+    ex:hasPlace_of_Loading "ESNAAD (MOSB)" ;
+    ex:hasPlace_of_Delivery "DSV MUSSAFAH YARD" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "5"^^xsd:decimal ;
+    ex:hasRate_(USD) "200"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "40"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0310 a ex:InlandTruckingRate ;
+    ex:hasNo. "14"^^xsd:decimal ;
+    ex:hasdate "2024-10-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-DSV-MOSB-050" ;
+    ex:hasPlace_of_Loading "DSV MUSSAFAH YARD" ;
+    ex:hasPlace_of_Delivery "ESNAAD (MOSB)" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "10"^^xsd:decimal ;
+    ex:hasRate_(USD) "200"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "20"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0311 a ex:InlandTruckingRate ;
+    ex:hasNo. "15"^^xsd:decimal ;
+    ex:hasdate "2024-10-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-ADOPT-SCT-0017-DSV-MIR-MOSB" ;
+    ex:hasPlace_of_Loading "DSV MUSSAFAH YARD" ;
+    ex:hasPlace_of_Delivery "MIRFA Site" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "120"^^xsd:decimal ;
+    ex:hasRate_(USD) "420"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "3.5"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0312 a ex:InlandTruckingRate ;
+    ex:hasNo. "16"^^xsd:decimal ;
+    ex:hasdate "2024-10-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-ADOPT-SCT-0017-DSV-MIR-MOSB" ;
+    ex:hasPlace_of_Loading "MIRFA Site" ;
+    ex:hasPlace_of_Delivery "ESNAAD (MOSB)" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "120"^^xsd:decimal ;
+    ex:hasRate_(USD) "420"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "3.5"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0313 a ex:InlandTruckingRate ;
+    ex:hasNo. "17"^^xsd:decimal ;
+    ex:hasdate "2024-11-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-DSV-PRI-MOSB-071" ;
+    ex:hasPlace_of_Loading "Prestige ICAD" ;
+    ex:hasPlace_of_Delivery "MOSB" ;
+    ex:hasVehicle_Type "3 TON PU" ;
+    ex:hasDistance(km) "25"^^xsd:decimal ;
+    ex:hasRate_(USD) "100"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "4"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0314 a ex:InlandTruckingRate ;
+    ex:hasNo. "18"^^xsd:decimal ;
+    ex:hasdate "2024-11-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-ADOPT-HE-0205, 0213" ;
+    ex:hasPlace_of_Loading "MINA ZAYED" ;
+    ex:hasPlace_of_Delivery "DSV MUSSAFAH AYRD" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "40"^^xsd:decimal ;
+    ex:hasRate_(USD) "171"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "4.275"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0315 a ex:InlandTruckingRate ;
+    ex:hasNo. "19"^^xsd:decimal ;
+    ex:hasdate "2024-11-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-DSV-MOSB-MZD-062" ;
+    ex:hasPlace_of_Loading "MOSB" ;
+    ex:hasPlace_of_Delivery "MINA ZAYED FREEPORT" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "40"^^xsd:decimal ;
+    ex:hasRate_(USD) "171"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "4.275"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0316 a ex:InlandTruckingRate ;
+    ex:hasNo. "20"^^xsd:decimal ;
+    ex:hasdate "2024-11-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-DSV-MOSB-MZD-062" ;
+    ex:hasPlace_of_Loading "MINA ZAYED FREEPORT" ;
+    ex:hasPlace_of_Delivery "MOSB" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "40"^^xsd:decimal ;
+    ex:hasRate_(USD) "171"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "4.275"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0317 a ex:InlandTruckingRate ;
+    ex:hasNo. "21"^^xsd:decimal ;
+    ex:hasdate "2024-11-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-DAS-DSV-067" ;
+    ex:hasPlace_of_Loading "MOSB" ;
+    ex:hasPlace_of_Delivery "MINA ZAYED PORT" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "15"^^xsd:decimal ;
+    ex:hasRate_(USD) "171"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "11.4"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0318 a ex:InlandTruckingRate ;
+    ex:hasNo. "22"^^xsd:decimal ;
+    ex:hasdate "2024-11-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-DSV-MOSB-052" ;
+    ex:hasPlace_of_Loading "MOSB" ;
+    ex:hasPlace_of_Delivery "DSV MUSSAFAH AYRD" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "5"^^xsd:decimal ;
+    ex:hasRate_(USD) "200"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "40"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0319 a ex:InlandTruckingRate ;
+    ex:hasNo. "23"^^xsd:decimal ;
+    ex:hasdate "2024-11-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-DSV-MOSB-052" ;
+    ex:hasPlace_of_Loading "DSV MUSSAFAH AYRD" ;
+    ex:hasPlace_of_Delivery "MOSB" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "5"^^xsd:decimal ;
+    ex:hasRate_(USD) "200"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "40"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0320 a ex:InlandTruckingRate ;
+    ex:hasNo. "24"^^xsd:decimal ;
+    ex:hasdate "2024-11-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-DSV-MOSB-057" ;
+    ex:hasPlace_of_Loading "DSV MUSSAFAH AYRD" ;
+    ex:hasPlace_of_Delivery "MOSB" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "5"^^xsd:decimal ;
+    ex:hasRate_(USD) "200"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "40"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0321 a ex:InlandTruckingRate ;
+    ex:hasNo. "25"^^xsd:decimal ;
+    ex:hasdate "2024-11-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-DSV-USG-MOSB-063" ;
+    ex:hasPlace_of_Loading "USG Middle East Dubai Investment Park" ;
+    ex:hasPlace_of_Delivery "MOSB" ;
+    ex:hasVehicle_Type "3 TON PU" ;
+    ex:hasDistance(km) "120"^^xsd:decimal ;
+    ex:hasRate_(USD) "200"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "1.66667"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0322 a ex:InlandTruckingRate ;
+    ex:hasNo. "26"^^xsd:decimal ;
+    ex:hasdate "2024-11-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-ADOPT-SIM-0005-2-MOSB" ;
+    ex:hasPlace_of_Loading "DSV MUSAFFAH YARD" ;
+    ex:hasPlace_of_Delivery "MOSB" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "10"^^xsd:decimal ;
+    ex:hasRate_(USD) "200"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "20"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0323 a ex:InlandTruckingRate ;
+    ex:hasNo. "27"^^xsd:decimal ;
+    ex:hasdate "2024-11-01 00:00:00" ;
+    ex:hasShipment_Reference "Shifting of Basket" ;
+    ex:hasPlace_of_Loading "MOSB" ;
+    ex:hasPlace_of_Delivery "MOSB" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "1"^^xsd:decimal ;
+    ex:hasRate_(USD) "200"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "200"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0324 a ex:InlandTruckingRate ;
+    ex:hasNo. "28"^^xsd:decimal ;
+    ex:hasdate "2024-11-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-DSV-DAS-SHIFTING" ;
+    ex:hasPlace_of_Loading "DSV Musaffah Yard" ;
+    ex:hasPlace_of_Delivery "DSV MUSAFFAH YARD" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "2"^^xsd:decimal ;
+    ex:hasRate_(USD) "200"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "100"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0325 a ex:InlandTruckingRate ;
+    ex:hasNo. "29"^^xsd:decimal ;
+    ex:hasdate "2024-11-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-DSV-SOC-CNT" ;
+    ex:hasPlace_of_Loading "MOSB" ;
+    ex:hasPlace_of_Delivery "MOSB" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "1"^^xsd:decimal ;
+    ex:hasRate_(USD) "200"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "200"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0326 a ex:InlandTruckingRate ;
+    ex:hasNo. "30"^^xsd:decimal ;
+    ex:hasdate "2024-11-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-DSV-MOSB-SHU-0002" ;
+    ex:hasPlace_of_Loading "DSV Musaffah Yard" ;
+    ex:hasPlace_of_Delivery "SHUWEIHAT" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "240"^^xsd:decimal ;
+    ex:hasRate_(USD) "200"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "0.833333"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0327 a ex:InlandTruckingRate ;
+    ex:hasNo. "31"^^xsd:decimal ;
+    ex:hasdate "2024-11-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-DSV-MOSB-SHU-0002" ;
+    ex:hasPlace_of_Loading "DSV Musaffah Yard" ;
+    ex:hasPlace_of_Delivery "SHUWEIHAT" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "240"^^xsd:decimal ;
+    ex:hasRate_(USD) "200"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "0.833333"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0328 a ex:InlandTruckingRate ;
+    ex:hasNo. "32"^^xsd:decimal ;
+    ex:hasdate "2024-11-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-ADOPT-SIM-0046" ;
+    ex:hasPlace_of_Loading "Bint Hamid Dubai" ;
+    ex:hasPlace_of_Delivery "DSV M44 WAREHOUSE" ;
+    ex:hasVehicle_Type "3 TON PU" ;
+    ex:hasDistance(km) "45"^^xsd:decimal ;
+    ex:hasRate_(USD) "400"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "8.88889"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0329 a ex:InlandTruckingRate ;
+    ex:hasNo. "33"^^xsd:decimal ;
+    ex:hasdate "2024-11-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-DSV-SIM-068" ;
+    ex:hasPlace_of_Loading "DSV M44 WAREHOUSE" ;
+    ex:hasPlace_of_Delivery "Bani Yas" ;
+    ex:hasVehicle_Type "3 TON PU" ;
+    ex:hasDistance(km) "55"^^xsd:decimal ;
+    ex:hasRate_(USD) "400"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "7.27273"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0330 a ex:InlandTruckingRate ;
+    ex:hasNo. "34"^^xsd:decimal ;
+    ex:hasdate "2024-11-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-DSV-RAK-SHJ-075" ;
+    ex:hasPlace_of_Loading "HANMAEK RAK" ;
+    ex:hasPlace_of_Delivery "TAREEQ AL KHALEEJ SHARJAH" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "85"^^xsd:decimal ;
+    ex:hasRate_(USD) "400"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "4.70588"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0331 a ex:InlandTruckingRate ;
+    ex:hasNo. "35"^^xsd:decimal ;
+    ex:hasdate "2024-11-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-ADOPT-SCT-0016-MIR" ;
+    ex:hasPlace_of_Loading "DSV MUSSAFAH YARD" ;
+    ex:hasPlace_of_Delivery "MIRFA PMO SAMSUNG" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "120"^^xsd:decimal ;
+    ex:hasRate_(USD) "420"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "3.5"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0332 a ex:InlandTruckingRate ;
+    ex:hasNo. "36"^^xsd:decimal ;
+    ex:hasdate "2024-11-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-ADOPT-SIM-0019-MIRFA" ;
+    ex:hasPlace_of_Loading "DSV MUSAFFAH YARD" ;
+    ex:hasPlace_of_Delivery "MIRFA" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "120"^^xsd:decimal ;
+    ex:hasRate_(USD) "420"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "3.5"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0333 a ex:InlandTruckingRate ;
+    ex:hasNo. "37"^^xsd:decimal ;
+    ex:hasdate "2024-11-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-DSV-MIR-0031" ;
+    ex:hasPlace_of_Loading "DSV Musaffah Yard" ;
+    ex:hasPlace_of_Delivery "MOSB" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "10"^^xsd:decimal ;
+    ex:hasRate_(USD) "420"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "42"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0334 a ex:InlandTruckingRate ;
+    ex:hasNo. "38"^^xsd:decimal ;
+    ex:hasdate "2024-11-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-ADOPT-SIM-0011-MRKZ-SHU" ;
+    ex:hasPlace_of_Loading "AL MARKAZ" ;
+    ex:hasPlace_of_Delivery "SHUWEIHAT SITE" ;
+    ex:hasVehicle_Type "Flatbed(Side Grilled)" ;
+    ex:hasDistance(km) "250"^^xsd:decimal ;
+    ex:hasRate_(USD) "600"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "2.4"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0335 a ex:InlandTruckingRate ;
+    ex:hasNo. "39"^^xsd:decimal ;
+    ex:hasdate "2024-11-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-ADOPT-SIM-0004-M44-SHU" ;
+    ex:hasPlace_of_Loading "M44 WAREHOUSE" ;
+    ex:hasPlace_of_Delivery "SHUWEIHAT SITE" ;
+    ex:hasVehicle_Type "Flatbed(Side Grilled)" ;
+    ex:hasDistance(km) "250"^^xsd:decimal ;
+    ex:hasRate_(USD) "600"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "2.4"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0336 a ex:InlandTruckingRate ;
+    ex:hasNo. "40"^^xsd:decimal ;
+    ex:hasdate "2024-11-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-DSV-SHU-MIR-055" ;
+    ex:hasPlace_of_Loading "SHUWEIHAT SITE" ;
+    ex:hasPlace_of_Delivery "MIRFA PMO SAMSUNG" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "130"^^xsd:decimal ;
+    ex:hasRate_(USD) "600"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "4.61538"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0337 a ex:InlandTruckingRate ;
+    ex:hasNo. "41"^^xsd:decimal ;
+    ex:hasdate "2024-11-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-DSV-INDOOR-HE-SHU" ;
+    ex:hasPlace_of_Loading "AL MARKAZ" ;
+    ex:hasPlace_of_Delivery "SHUWEIHAT SITE" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "250"^^xsd:decimal ;
+    ex:hasRate_(USD) "600"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "2.4"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0338 a ex:InlandTruckingRate ;
+    ex:hasNo. "42"^^xsd:decimal ;
+    ex:hasdate "2024-11-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-DSV-INDOOR-HE-SHU" ;
+    ex:hasPlace_of_Loading "M44 WAREHOUSE" ;
+    ex:hasPlace_of_Delivery "SHUWEIHAT SITE" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "250"^^xsd:decimal ;
+    ex:hasRate_(USD) "600"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "2.4"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0339 a ex:InlandTruckingRate ;
+    ex:hasNo. "43"^^xsd:decimal ;
+    ex:hasdate "2024-11-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-ADOPT-HE-0165,0166,0169" ;
+    ex:hasPlace_of_Loading "DSV M44 WAREHOUSE" ;
+    ex:hasPlace_of_Delivery "SHUWEIHAT SITE" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "250"^^xsd:decimal ;
+    ex:hasRate_(USD) "600"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "2.4"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0340 a ex:InlandTruckingRate ;
+    ex:hasNo. "44"^^xsd:decimal ;
+    ex:hasdate "2024-11-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-ADOPT-HE-0116 & 0144" ;
+    ex:hasPlace_of_Loading "DSV AL MARKAZ WH" ;
+    ex:hasPlace_of_Delivery "SHUWEIHAT" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "260"^^xsd:decimal ;
+    ex:hasRate_(USD) "600"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "2.30769"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0341 a ex:InlandTruckingRate ;
+    ex:hasNo. "45"^^xsd:decimal ;
+    ex:hasdate "2024-11-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-DSV-SHU-MMT-074" ;
+    ex:hasPlace_of_Loading "SHUWEIHAT SITE" ;
+    ex:hasPlace_of_Delivery "MAMMOET RAK" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "235"^^xsd:decimal ;
+    ex:hasRate_(USD) "679"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "2.88936"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0342 a ex:InlandTruckingRate ;
+    ex:hasNo. "46"^^xsd:decimal ;
+    ex:hasdate "2024-11-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-DSV-SHU-MIR-056" ;
+    ex:hasPlace_of_Loading "SHUWEIHAT SITE" ;
+    ex:hasPlace_of_Delivery "MIRFA PMO SAMSUNG" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "130"^^xsd:decimal ;
+    ex:hasRate_(USD) "836"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "6.43077"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0343 a ex:InlandTruckingRate ;
+    ex:hasNo. "47"^^xsd:decimal ;
+    ex:hasdate "2024-11-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-DSV-BAR-MIR-MIR-054" ;
+    ex:hasPlace_of_Loading "BARAKA" ;
+    ex:hasPlace_of_Delivery "SHUWEIHAT" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "20"^^xsd:decimal ;
+    ex:hasRate_(USD) "836"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "41.8"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0344 a ex:InlandTruckingRate ;
+    ex:hasNo. "48"^^xsd:decimal ;
+    ex:hasdate "2024-11-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-DAS-DSV-067" ;
+    ex:hasPlace_of_Loading "MOSB" ;
+    ex:hasPlace_of_Delivery "MINA ZAYED FREE PORT" ;
+    ex:hasVehicle_Type "Lowbed" ;
+    ex:hasDistance(km) "17"^^xsd:decimal ;
+    ex:hasRate_(USD) "871.34"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "51.2553"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0345 a ex:InlandTruckingRate ;
+    ex:hasNo. "49"^^xsd:decimal ;
+    ex:hasdate "2024-11-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-ADOPT-SIM-0010-DG-AAA-SHU" ;
+    ex:hasPlace_of_Loading "AAA WAREHOUSE , ICAD-3" ;
+    ex:hasPlace_of_Delivery "SHUWEIHAT SITE" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "250"^^xsd:decimal ;
+    ex:hasRate_(USD) "1170.86"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "4.68344"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0346 a ex:InlandTruckingRate ;
+    ex:hasNo. "50"^^xsd:decimal ;
+    ex:hasdate "2024-11-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-DSV-MOSB-059" ;
+    ex:hasPlace_of_Loading "MOSB" ;
+    ex:hasPlace_of_Delivery "MOSB" ;
+    ex:hasVehicle_Type "Lowbed" ;
+    ex:hasDistance(km) "1"^^xsd:decimal ;
+    ex:hasRate_(USD) "1500"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "1500"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0347 a ex:InlandTruckingRate ;
+    ex:hasNo. "51"^^xsd:decimal ;
+    ex:hasdate "2024-11-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-DSV-F3-SHU-MIR-053" ;
+    ex:hasPlace_of_Loading "FUJAIRAH" ;
+    ex:hasPlace_of_Delivery "MIRFA PMO SAMSUNG" ;
+    ex:hasVehicle_Type "Lowbed" ;
+    ex:hasDistance(km) "300"^^xsd:decimal ;
+    ex:hasRate_(USD) "2076"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "6.92"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0348 a ex:InlandTruckingRate ;
+    ex:hasNo. "52"^^xsd:decimal ;
+    ex:hasdate "2024-11-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-DSV-MOSB-MZD-062" ;
+    ex:hasPlace_of_Loading "MOSB" ;
+    ex:hasPlace_of_Delivery "MINA ZAYED FREEPORT" ;
+    ex:hasVehicle_Type "Lowbed(1 X 14m)" ;
+    ex:hasDistance(km) "40"^^xsd:decimal ;
+    ex:hasRate_(USD) "2300"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "57.5"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0349 a ex:InlandTruckingRate ;
+    ex:hasNo. "53"^^xsd:decimal ;
+    ex:hasdate "2024-11-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-DSV-F3-SHU-MIR-053" ;
+    ex:hasPlace_of_Loading "FUJAIRAH" ;
+    ex:hasPlace_of_Delivery "SHUWEIHAT SITE" ;
+    ex:hasVehicle_Type "Lowbed" ;
+    ex:hasDistance(km) "350"^^xsd:decimal ;
+    ex:hasRate_(USD) "2376"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "6.78857"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0350 a ex:InlandTruckingRate ;
+    ex:hasNo. "54"^^xsd:decimal ;
+    ex:hasdate "2024-11-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-DSV-F3-SHU-MIR-053" ;
+    ex:hasPlace_of_Loading "FUJAIRAH" ;
+    ex:hasPlace_of_Delivery "SHUWEIHAT SITE" ;
+    ex:hasVehicle_Type "Lowbed" ;
+    ex:hasDistance(km) "350"^^xsd:decimal ;
+    ex:hasRate_(USD) "2718"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "7.76571"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0351 a ex:InlandTruckingRate ;
+    ex:hasNo. "55"^^xsd:decimal ;
+    ex:hasdate "2024-11-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-DSV-MOSB-MZD-062" ;
+    ex:hasPlace_of_Loading "MOSB" ;
+    ex:hasPlace_of_Delivery "MINA ZAYED FREEPORT" ;
+    ex:hasVehicle_Type "Lowbed(2 X 23m)" ;
+    ex:hasDistance(km) "40"^^xsd:decimal ;
+    ex:hasRate_(USD) "3200"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "80"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0352 a ex:InlandTruckingRate ;
+    ex:hasNo. "56"^^xsd:decimal ;
+    ex:hasdate "2024-11-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-SCT-RE-0001" ;
+    ex:hasPlace_of_Loading "Sharjah" ;
+    ex:hasPlace_of_Delivery "Jubail" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "10"^^xsd:decimal ;
+    ex:hasRate_(USD) "5290.81"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "529.081"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0353 a ex:InlandTruckingRate ;
+    ex:hasNo. "57"^^xsd:decimal ;
+    ex:hasdate "2024-12-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-ADOPT-SIM-0005-2-MOSB" ;
+    ex:hasPlace_of_Loading "DSV MUSAFFAH YARD" ;
+    ex:hasPlace_of_Delivery "MOSB" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "10"^^xsd:decimal ;
+    ex:hasRate_(USD) "200"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "20"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0354 a ex:InlandTruckingRate ;
+    ex:hasNo. "58"^^xsd:decimal ;
+    ex:hasdate "2024-12-01 00:00:00" ;
+    ex:hasShipment_Reference "Shifting of Basket" ;
+    ex:hasPlace_of_Loading "MOSB" ;
+    ex:hasPlace_of_Delivery "MOSB" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "1"^^xsd:decimal ;
+    ex:hasRate_(USD) "200"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "200"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0355 a ex:InlandTruckingRate ;
+    ex:hasNo. "59"^^xsd:decimal ;
+    ex:hasdate "2024-12-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-ADOPT-SIM-0046" ;
+    ex:hasPlace_of_Loading "Bint Hamid Dubai" ;
+    ex:hasPlace_of_Delivery "DSV M44 WAREHOUSE" ;
+    ex:hasVehicle_Type "3 TON PU" ;
+    ex:hasDistance(km) "45"^^xsd:decimal ;
+    ex:hasRate_(USD) "400"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "8.88889"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0356 a ex:InlandTruckingRate ;
+    ex:hasNo. "60"^^xsd:decimal ;
+    ex:hasdate "2024-12-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-ADOPT-HE-0165,0166,0169" ;
+    ex:hasPlace_of_Loading "DSV M44 WAREHOUSE" ;
+    ex:hasPlace_of_Delivery "SHUWEIHAT SITE" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "250"^^xsd:decimal ;
+    ex:hasRate_(USD) "600"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "2.4"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0357 a ex:InlandTruckingRate ;
+    ex:hasNo. "61"^^xsd:decimal ;
+    ex:hasdate "2024-12-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-ADOPT-SIM-0019-MIRFA" ;
+    ex:hasPlace_of_Loading "DSV MUSAFFAH YARD" ;
+    ex:hasPlace_of_Delivery "MIRFA" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "120"^^xsd:decimal ;
+    ex:hasRate_(USD) "420"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "3.5"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0358 a ex:InlandTruckingRate ;
+    ex:hasNo. "62"^^xsd:decimal ;
+    ex:hasdate "2024-12-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-DSV-SIM-068" ;
+    ex:hasPlace_of_Loading "DSV M44 WAREHOUSE" ;
+    ex:hasPlace_of_Delivery "Bani Yas" ;
+    ex:hasVehicle_Type "3 TON PU" ;
+    ex:hasDistance(km) "55"^^xsd:decimal ;
+    ex:hasRate_(USD) "400"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "7.27273"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0359 a ex:InlandTruckingRate ;
+    ex:hasNo. "63"^^xsd:decimal ;
+    ex:hasdate "2024-12-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-DAS-DSV-067" ;
+    ex:hasPlace_of_Loading "MOSB" ;
+    ex:hasPlace_of_Delivery "MINA ZAYED PORT" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "15"^^xsd:decimal ;
+    ex:hasRate_(USD) "171"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "11.4"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0360 a ex:InlandTruckingRate ;
+    ex:hasNo. "64"^^xsd:decimal ;
+    ex:hasdate "2024-12-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-DAS-DSV-067" ;
+    ex:hasPlace_of_Loading "MOSB" ;
+    ex:hasPlace_of_Delivery "MINA ZAYED FREE PORT" ;
+    ex:hasVehicle_Type "Lowbed" ;
+    ex:hasDistance(km) "17"^^xsd:decimal ;
+    ex:hasRate_(USD) "871.34"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "51.2553"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0361 a ex:InlandTruckingRate ;
+    ex:hasNo. "65"^^xsd:decimal ;
+    ex:hasdate "2024-12-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-DSV-PRI-MOSB-071" ;
+    ex:hasPlace_of_Loading "Prestige ICAD" ;
+    ex:hasPlace_of_Delivery "MOSB" ;
+    ex:hasVehicle_Type "3 TON PU" ;
+    ex:hasDistance(km) "25"^^xsd:decimal ;
+    ex:hasRate_(USD) "100"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "4"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0362 a ex:InlandTruckingRate ;
+    ex:hasNo. "66"^^xsd:decimal ;
+    ex:hasdate "2024-12-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-DSV-DAS-SHIFTING" ;
+    ex:hasPlace_of_Loading "DSV Musaffah Yard" ;
+    ex:hasPlace_of_Delivery "DSV MUSAFFAH YARD" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "2"^^xsd:decimal ;
+    ex:hasRate_(USD) "200"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "100"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0363 a ex:InlandTruckingRate ;
+    ex:hasNo. "67"^^xsd:decimal ;
+    ex:hasdate "2024-12-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-DSV-SOC-CNT" ;
+    ex:hasPlace_of_Loading "MOSB" ;
+    ex:hasPlace_of_Delivery "MOSB" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "1"^^xsd:decimal ;
+    ex:hasRate_(USD) "200"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "200"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0364 a ex:InlandTruckingRate ;
+    ex:hasNo. "68"^^xsd:decimal ;
+    ex:hasdate "2024-12-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-DSV-SHU-MMT-074" ;
+    ex:hasPlace_of_Loading "SHUWEIHAT SITE" ;
+    ex:hasPlace_of_Delivery "MAMMOET RAK" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "235"^^xsd:decimal ;
+    ex:hasRate_(USD) "679"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "2.88936"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0365 a ex:InlandTruckingRate ;
+    ex:hasNo. "69"^^xsd:decimal ;
+    ex:hasdate "2024-12-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-DSV-RAK-SHJ-075" ;
+    ex:hasPlace_of_Loading "HANMAEK RAK" ;
+    ex:hasPlace_of_Delivery "TAREEQ AL KHALEEJ SHARJAH" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "85"^^xsd:decimal ;
+    ex:hasRate_(USD) "400"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "4.70588"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0366 a ex:InlandTruckingRate ;
+    ex:hasNo. "70"^^xsd:decimal ;
+    ex:hasdate "2024-12-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-DSV-MIR-0031" ;
+    ex:hasPlace_of_Loading "DSV Musaffah Yard" ;
+    ex:hasPlace_of_Delivery "MOSB" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "10"^^xsd:decimal ;
+    ex:hasRate_(USD) "420"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "42"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0367 a ex:InlandTruckingRate ;
+    ex:hasNo. "71"^^xsd:decimal ;
+    ex:hasdate "2024-12-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-DSV-MOSB-SHU-0002" ;
+    ex:hasPlace_of_Loading "DSV Musaffah Yard" ;
+    ex:hasPlace_of_Delivery "SHUWEIHAT" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "240"^^xsd:decimal ;
+    ex:hasRate_(USD) "200"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "0.833333"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0368 a ex:InlandTruckingRate ;
+    ex:hasNo. "72"^^xsd:decimal ;
+    ex:hasdate "2024-12-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-DSV-MOSB-SHU-0002" ;
+    ex:hasPlace_of_Loading "DSV Musaffah Yard" ;
+    ex:hasPlace_of_Delivery "SHUWEIHAT" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "240"^^xsd:decimal ;
+    ex:hasRate_(USD) "200"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "0.833333"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0369 a ex:InlandTruckingRate ;
+    ex:hasNo. "73"^^xsd:decimal ;
+    ex:hasdate "2024-12-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-ADOPT-HE-0116 & 0144" ;
+    ex:hasPlace_of_Loading "DSV AL MARKAZ WH" ;
+    ex:hasPlace_of_Delivery "SHUWEIHAT" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "260"^^xsd:decimal ;
+    ex:hasRate_(USD) "600"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "2.30769"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0370 a ex:InlandTruckingRate ;
+    ex:hasNo. "74"^^xsd:decimal ;
+    ex:hasdate "2025-02-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-DSV-MOSB-NOV-085" ;
+    ex:hasPlace_of_Loading "MOSB" ;
+    ex:hasPlace_of_Delivery "Novatech (Jebel Ali)" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "120"^^xsd:decimal ;
+    ex:hasRate_(USD) "400"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "3.33333"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0371 a ex:InlandTruckingRate ;
+    ex:hasNo. "75"^^xsd:decimal ;
+    ex:hasdate "2025-02-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-DSV-MIR-SHU-084" ;
+    ex:hasPlace_of_Loading "Bin Dasmal General Trading" ;
+    ex:hasPlace_of_Delivery "MIRFA" ;
+    ex:hasVehicle_Type "3 TON PU" ;
+    ex:hasDistance(km) "120"^^xsd:decimal ;
+    ex:hasRate_(USD) "180"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "1.5"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0372 a ex:InlandTruckingRate ;
+    ex:hasNo. "76"^^xsd:decimal ;
+    ex:hasdate "2025-02-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-DSV-MIR-SHU-084" ;
+    ex:hasPlace_of_Loading "Bin Dasmal General Trading" ;
+    ex:hasPlace_of_Delivery "SHUWEIHAT" ;
+    ex:hasVehicle_Type "3 TON PU" ;
+    ex:hasDistance(km) "250"^^xsd:decimal ;
+    ex:hasRate_(USD) "250"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "1"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0373 a ex:InlandTruckingRate ;
+    ex:hasNo. "77"^^xsd:decimal ;
+    ex:hasdate "2025-02-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-MIRFA-CONSOLE" ;
+    ex:hasPlace_of_Loading "DSV MUSSAFAH YARD" ;
+    ex:hasPlace_of_Delivery "MIRFA" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "120"^^xsd:decimal ;
+    ex:hasRate_(USD) "420"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "3.5"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0374 a ex:InlandTruckingRate ;
+    ex:hasNo. "78"^^xsd:decimal ;
+    ex:hasdate "2025-02-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-MIRFA-CONSOLE" ;
+    ex:hasPlace_of_Loading "DSV MUSSAFAH YARD" ;
+    ex:hasPlace_of_Delivery "MIRFA" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "120"^^xsd:decimal ;
+    ex:hasRate_(USD) "420"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "3.5"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0375 a ex:InlandTruckingRate ;
+    ex:hasNo. "79"^^xsd:decimal ;
+    ex:hasdate "2025-02-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-SHUWEIHAT-CONSOLE" ;
+    ex:hasPlace_of_Loading "DSV MUSSAFAH YARD" ;
+    ex:hasPlace_of_Delivery "SHUWEIHAT" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "250"^^xsd:decimal ;
+    ex:hasRate_(USD) "600"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "2.4"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0376 a ex:InlandTruckingRate ;
+    ex:hasNo. "80"^^xsd:decimal ;
+    ex:hasdate "2025-02-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-ADOPT-SIM-0006-AAA" ;
+    ex:hasPlace_of_Loading "AAA WAREHOUSE" ;
+    ex:hasPlace_of_Delivery "MOSB" ;
+    ex:hasVehicle_Type "Flatbed HAZMAT" ;
+    ex:hasDistance(km) "10"^^xsd:decimal ;
+    ex:hasRate_(USD) "476.51"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "47.651"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0377 a ex:InlandTruckingRate ;
+    ex:hasNo. "81"^^xsd:decimal ;
+    ex:hasdate "2025-02-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-DAS-DSV-086" ;
+    ex:hasPlace_of_Loading "MOSB" ;
+    ex:hasPlace_of_Delivery "MINA FREEPORT" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "40"^^xsd:decimal ;
+    ex:hasRate_(USD) "171"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "4.275"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0378 a ex:InlandTruckingRate ;
+    ex:hasNo. "82"^^xsd:decimal ;
+    ex:hasdate "2025-02-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-DAS-DSV-086" ;
+    ex:hasPlace_of_Loading "MINA FREEPORT" ;
+    ex:hasPlace_of_Delivery "MINA FREEPORT" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "5"^^xsd:decimal ;
+    ex:hasRate_(USD) "171"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "34.2"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0379 a ex:InlandTruckingRate ;
+    ex:hasNo. "83"^^xsd:decimal ;
+    ex:hasdate "2025-02-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-ADOPT-SCT-0029-MOSB" ;
+    ex:hasPlace_of_Loading "DSV MUSSAFAH YARD" ;
+    ex:hasPlace_of_Delivery "MOSB" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "5"^^xsd:decimal ;
+    ex:hasRate_(USD) "200"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "40"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0380 a ex:InlandTruckingRate ;
+    ex:hasNo. "84"^^xsd:decimal ;
+    ex:hasdate "2025-02-01 00:00:00" ;
+    ex:hasShipment_Reference "KZD-MOSB-087" ;
+    ex:hasPlace_of_Loading "GAC KIZAD" ;
+    ex:hasPlace_of_Delivery "MOSB" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "30"^^xsd:decimal ;
+    ex:hasRate_(USD) "252"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "8.4"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0381 a ex:InlandTruckingRate ;
+    ex:hasNo. "85"^^xsd:decimal ;
+    ex:hasdate "2025-02-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-ADOPT-SCT-0037-MIRFA" ;
+    ex:hasPlace_of_Loading "DSV MUSSAFAH YARD" ;
+    ex:hasPlace_of_Delivery "MIRFA" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "120"^^xsd:decimal ;
+    ex:hasRate_(USD) "420"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "3.5"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0382 a ex:InlandTruckingRate ;
+    ex:hasNo. "86"^^xsd:decimal ;
+    ex:hasdate "2025-02-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-ADOPT-SCT-0037-SHU" ;
+    ex:hasPlace_of_Loading "DSV MUSSAFAH YARD" ;
+    ex:hasPlace_of_Delivery "SHUWEIHAT" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "250"^^xsd:decimal ;
+    ex:hasRate_(USD) "600"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "2.4"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0383 a ex:InlandTruckingRate ;
+    ex:hasNo. "87"^^xsd:decimal ;
+    ex:hasdate "2025-02-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-ADOPT-SCT-0037-MOSB" ;
+    ex:hasPlace_of_Loading "DSV MUSSAFAH YARD" ;
+    ex:hasPlace_of_Delivery "MOSB" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "5"^^xsd:decimal ;
+    ex:hasRate_(USD) "200"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "40"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0384 a ex:InlandTruckingRate ;
+    ex:hasNo. "88"^^xsd:decimal ;
+    ex:hasdate "2025-02-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-ADOPT-SIM-0067_local" ;
+    ex:hasPlace_of_Loading "TESLA DUBAI" ;
+    ex:hasPlace_of_Delivery "DSV M44 WAREHOUSE" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "40"^^xsd:decimal ;
+    ex:hasRate_(USD) "400"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "10"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0385 a ex:InlandTruckingRate ;
+    ex:hasNo. "89"^^xsd:decimal ;
+    ex:hasdate "2025-02-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-ADOPT-SIM-0035-MIRFA" ;
+    ex:hasPlace_of_Loading "DSV MUSSAFAH YARD" ;
+    ex:hasPlace_of_Delivery "MIRFA" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "120"^^xsd:decimal ;
+    ex:hasRate_(USD) "420"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "3.5"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0386 a ex:InlandTruckingRate ;
+    ex:hasNo. "90"^^xsd:decimal ;
+    ex:hasdate "2025-02-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-DAS-NIE-MOSB-004" ;
+    ex:hasPlace_of_Loading "DSV MUSSAFAH YARD" ;
+    ex:hasPlace_of_Delivery "MOSB" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "5"^^xsd:decimal ;
+    ex:hasRate_(USD) "200"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "40"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0387 a ex:InlandTruckingRate ;
+    ex:hasNo. "91"^^xsd:decimal ;
+    ex:hasdate "2025-02-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-DSV-MOSB-FP-089" ;
+    ex:hasPlace_of_Loading "MOSB" ;
+    ex:hasPlace_of_Delivery "MINA FREEPORT" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "40"^^xsd:decimal ;
+    ex:hasRate_(USD) "171"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "4.275"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0388 a ex:InlandTruckingRate ;
+    ex:hasNo. "92"^^xsd:decimal ;
+    ex:hasdate "2025-02-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-ADOPT-SIM-0019-MIRFA" ;
+    ex:hasPlace_of_Loading "DSV MUSSAFAH YARD" ;
+    ex:hasPlace_of_Delivery "MIRFA" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "120"^^xsd:decimal ;
+    ex:hasRate_(USD) "420"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "3.5"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0389 a ex:InlandTruckingRate ;
+    ex:hasNo. "93"^^xsd:decimal ;
+    ex:hasdate "2025-02-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-ADOPT-SIM-0019-MIRFA" ;
+    ex:hasPlace_of_Loading "DSV MUSSAFAH YARD" ;
+    ex:hasPlace_of_Delivery "MIRFA" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "120"^^xsd:decimal ;
+    ex:hasRate_(USD) "420"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "3.5"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0390 a ex:InlandTruckingRate ;
+    ex:hasNo. "94"^^xsd:decimal ;
+    ex:hasdate "2025-02-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-ADOPT-SIM-0019-MIRFA" ;
+    ex:hasPlace_of_Loading "DSV MUSSAFAH YARD" ;
+    ex:hasPlace_of_Delivery "MIRFA" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "120"^^xsd:decimal ;
+    ex:hasRate_(USD) "420"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "3.5"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0391 a ex:InlandTruckingRate ;
+    ex:hasNo. "95"^^xsd:decimal ;
+    ex:hasdate "2025-02-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-ADOPT-SIM-0019-MIRFA" ;
+    ex:hasPlace_of_Loading "DSV MUSSAFAH YARD" ;
+    ex:hasPlace_of_Delivery "MIRFA" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "120"^^xsd:decimal ;
+    ex:hasRate_(USD) "420"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "3.5"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0392 a ex:InlandTruckingRate ;
+    ex:hasNo. "96"^^xsd:decimal ;
+    ex:hasdate "2025-02-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-DSV-MOSB-MIR-090" ;
+    ex:hasPlace_of_Loading "MOSB" ;
+    ex:hasPlace_of_Delivery "MIRFA" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "120"^^xsd:decimal ;
+    ex:hasRate_(USD) "420"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "3.5"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0393 a ex:InlandTruckingRate ;
+    ex:hasNo. "97"^^xsd:decimal ;
+    ex:hasdate "2025-02-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-ADOPT-SEI-0017-1" ;
+    ex:hasPlace_of_Loading "DSV MUSSAFAH YARD" ;
+    ex:hasPlace_of_Delivery "JDN MINA ZAYED" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "40"^^xsd:decimal ;
+    ex:hasRate_(USD) "171"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "4.275"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0394 a ex:InlandTruckingRate ;
+    ex:hasNo. "98"^^xsd:decimal ;
+    ex:hasdate "2025-02-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-SCT-RE-0003" ;
+    ex:hasPlace_of_Loading "MOSB" ;
+    ex:hasPlace_of_Delivery "Al Gurg Automation (JEBEL ALI)" ;
+    ex:hasVehicle_Type "3 TON PU" ;
+    ex:hasDistance(km) "120"^^xsd:decimal ;
+    ex:hasRate_(USD) "250"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "2.08333"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0395 a ex:InlandTruckingRate ;
+    ex:hasNo. "99"^^xsd:decimal ;
+    ex:hasdate "2025-02-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-ADOPT-SIM-0068_Local" ;
+    ex:hasPlace_of_Loading "TESLA DUBAI" ;
+    ex:hasPlace_of_Delivery "DSV M44 WAREHOUSE" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "40"^^xsd:decimal ;
+    ex:hasRate_(USD) "400"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "10"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0396 a ex:InlandTruckingRate ;
+    ex:hasNo. "100"^^xsd:decimal ;
+    ex:hasdate "2025-02-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-DSV-PRI-MIR-091" ;
+    ex:hasPlace_of_Loading "Prestige ICAD III Mussafah" ;
+    ex:hasPlace_of_Delivery "MIRFA" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "120"^^xsd:decimal ;
+    ex:hasRate_(USD) "420"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "3.5"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0397 a ex:InlandTruckingRate ;
+    ex:hasNo. "101"^^xsd:decimal ;
+    ex:hasdate "2025-02-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-DSV-PRI-SHU-092" ;
+    ex:hasPlace_of_Loading "Prestige ICAD III Mussafah" ;
+    ex:hasPlace_of_Delivery "SHUWEIHAT" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "250"^^xsd:decimal ;
+    ex:hasRate_(USD) "600"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "2.4"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0398 a ex:InlandTruckingRate ;
+    ex:hasNo. "102"^^xsd:decimal ;
+    ex:hasdate "2025-02-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-ADOPT-SCT-0038, 0039-MIRFA" ;
+    ex:hasPlace_of_Loading "DSV MUSSAFAH YARD" ;
+    ex:hasPlace_of_Delivery "MIRFA" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "120"^^xsd:decimal ;
+    ex:hasRate_(USD) "420"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "3.5"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0399 a ex:InlandTruckingRate ;
+    ex:hasNo. "103"^^xsd:decimal ;
+    ex:hasdate "2025-02-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-ADOPT-SCT-0038-SHU" ;
+    ex:hasPlace_of_Loading "DSV MUSSAFAH YARD" ;
+    ex:hasPlace_of_Delivery "SHUWEIHAT" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "250"^^xsd:decimal ;
+    ex:hasRate_(USD) "600"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "2.4"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0400 a ex:InlandTruckingRate ;
+    ex:hasNo. "104"^^xsd:decimal ;
+    ex:hasdate "2025-02-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-ADOPT-SCT-0038-MIRFA" ;
+    ex:hasPlace_of_Loading "MOSB" ;
+    ex:hasPlace_of_Delivery "MIRFA" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "120"^^xsd:decimal ;
+    ex:hasRate_(USD) "420"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "3.5"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0401 a ex:InlandTruckingRate ;
+    ex:hasNo. "105"^^xsd:decimal ;
+    ex:hasdate "2025-02-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-ADOPT-SCT-0038-MIRFA" ;
+    ex:hasPlace_of_Loading "DSV MUSSAFAH YARD" ;
+    ex:hasPlace_of_Delivery "MIRFA" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "120"^^xsd:decimal ;
+    ex:hasRate_(USD) "420"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "3.5"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0402 a ex:InlandTruckingRate ;
+    ex:hasNo. "106"^^xsd:decimal ;
+    ex:hasdate "2025-02-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-MIR-SCT-0014_HDPE" ;
+    ex:hasPlace_of_Loading "MIRFA" ;
+    ex:hasPlace_of_Delivery "SHUWEIHAT" ;
+    ex:hasVehicle_Type "3 TON PU" ;
+    ex:hasDistance(km) "130"^^xsd:decimal ;
+    ex:hasRate_(USD) "250"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "1.92308"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0403 a ex:InlandTruckingRate ;
+    ex:hasNo. "107"^^xsd:decimal ;
+    ex:hasdate "2025-02-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-DSV-FP-093" ;
+    ex:hasPlace_of_Loading "MINA FREEPORT" ;
+    ex:hasPlace_of_Delivery "MINA FREEPORT" ;
+    ex:hasVehicle_Type "Lowbed" ;
+    ex:hasDistance(km) "5"^^xsd:decimal ;
+    ex:hasRate_(USD) "980.26"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "196.052"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0404 a ex:InlandTruckingRate ;
+    ex:hasNo. "108"^^xsd:decimal ;
+    ex:hasdate "2025-02-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-DSV-FP-093" ;
+    ex:hasPlace_of_Loading "MOSB" ;
+    ex:hasPlace_of_Delivery "MINA FREEPORT" ;
+    ex:hasVehicle_Type "Lowbed" ;
+    ex:hasDistance(km) "40"^^xsd:decimal ;
+    ex:hasRate_(USD) "435.67"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "10.8918"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0405 a ex:InlandTruckingRate ;
+    ex:hasNo. "109"^^xsd:decimal ;
+    ex:hasdate "2025-03-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-DSV-MOSB-SHU-095" ;
+    ex:hasPlace_of_Loading "ALPHAMED MAFRAQ" ;
+    ex:hasPlace_of_Delivery "SHUWEIHAT" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "250"^^xsd:decimal ;
+    ex:hasRate_(USD) "600"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "2.4"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0406 a ex:InlandTruckingRate ;
+    ex:hasNo. "110"^^xsd:decimal ;
+    ex:hasdate "2025-03-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-DSV-SHU-MIR-094" ;
+    ex:hasPlace_of_Loading "SHUWEIHAT SITE" ;
+    ex:hasPlace_of_Delivery "MIRFA SITE" ;
+    ex:hasVehicle_Type "Flatbed - CICPA" ;
+    ex:hasDistance(km) "130"^^xsd:decimal ;
+    ex:hasRate_(USD) "600"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "4.61538"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0407 a ex:InlandTruckingRate ;
+    ex:hasNo. "111"^^xsd:decimal ;
+    ex:hasdate "2025-03-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-ADOPT-SCT-0043, 0045, 0047-MIRFA" ;
+    ex:hasPlace_of_Loading "DSV MUSSAFAH YARD" ;
+    ex:hasPlace_of_Delivery "MIRFA SITE" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "120"^^xsd:decimal ;
+    ex:hasRate_(USD) "420"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "3.5"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0408 a ex:InlandTruckingRate ;
+    ex:hasNo. "112"^^xsd:decimal ;
+    ex:hasdate "2025-03-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-ADOPT-SCT-0043, 0045, 0047-SHU" ;
+    ex:hasPlace_of_Loading "DSV MUSSAFAH YARD" ;
+    ex:hasPlace_of_Delivery "SHUWEIHAT" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "250"^^xsd:decimal ;
+    ex:hasRate_(USD) "600"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "2.4"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0409 a ex:InlandTruckingRate ;
+    ex:hasNo. "113"^^xsd:decimal ;
+    ex:hasdate "2025-03-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-ADOPT-SCT-0043, 0045, 0047-MOSB" ;
+    ex:hasPlace_of_Loading "DSV MUSSAFAH YARD" ;
+    ex:hasPlace_of_Delivery "MOSB" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "5"^^xsd:decimal ;
+    ex:hasRate_(USD) "200"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "40"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0410 a ex:InlandTruckingRate ;
+    ex:hasNo. "114"^^xsd:decimal ;
+    ex:hasdate "2025-03-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-ADOPT-SCT-0038,0039-MOSB" ;
+    ex:hasPlace_of_Loading "DSV MUSSAFAH YARD" ;
+    ex:hasPlace_of_Delivery "MOSB" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "5"^^xsd:decimal ;
+    ex:hasRate_(USD) "200"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "40"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0411 a ex:InlandTruckingRate ;
+    ex:hasNo. "115"^^xsd:decimal ;
+    ex:hasdate "2025-03-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-ADOPT-SIM-0035-MIRFA" ;
+    ex:hasPlace_of_Loading "DSV MUSSAFAH YARD" ;
+    ex:hasPlace_of_Delivery "MIRFA SITE" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "120"^^xsd:decimal ;
+    ex:hasRate_(USD) "420"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "3.5"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0412 a ex:InlandTruckingRate ;
+    ex:hasNo. "116"^^xsd:decimal ;
+    ex:hasdate "2025-03-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-ADOPT-SIM-0031-MIR" ;
+    ex:hasPlace_of_Loading "DSV M44 WAREHOUSE" ;
+    ex:hasPlace_of_Delivery "MIRFA SITE" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "150"^^xsd:decimal ;
+    ex:hasRate_(USD) "420"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "2.8"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0413 a ex:InlandTruckingRate ;
+    ex:hasNo. "117"^^xsd:decimal ;
+    ex:hasdate "2025-03-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-ADOPT-SIM-0031-SHU" ;
+    ex:hasPlace_of_Loading "DSV M44 WAREHOUSE" ;
+    ex:hasPlace_of_Delivery "SHUWEIHAT" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "250"^^xsd:decimal ;
+    ex:hasRate_(USD) "600"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "2.4"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0414 a ex:InlandTruckingRate ;
+    ex:hasNo. "118"^^xsd:decimal ;
+    ex:hasdate "2025-03-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-DSV-MOSB-SHU-097" ;
+    ex:hasPlace_of_Loading "MOSB" ;
+    ex:hasPlace_of_Delivery "DSV MUSSAFAH YARD" ;
+    ex:hasVehicle_Type "3 TON PU" ;
+    ex:hasDistance(km) "5"^^xsd:decimal ;
+    ex:hasRate_(USD) "120"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "24"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0415 a ex:InlandTruckingRate ;
+    ex:hasNo. "119"^^xsd:decimal ;
+    ex:hasdate "2025-03-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-DSV-MOSB-SHU-097" ;
+    ex:hasPlace_of_Loading "DSV MUSSAFAH YARD" ;
+    ex:hasPlace_of_Delivery "SHUWEIHAT" ;
+    ex:hasVehicle_Type "3 TON PU" ;
+    ex:hasDistance(km) "250"^^xsd:decimal ;
+    ex:hasRate_(USD) "250"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "1"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0416 a ex:InlandTruckingRate ;
+    ex:hasNo. "120"^^xsd:decimal ;
+    ex:hasdate "2025-03-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-ADOPT-SIM-0071" ;
+    ex:hasPlace_of_Loading "TESLA DUBAI" ;
+    ex:hasPlace_of_Delivery "DSV M44 WAREHOUSE" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "40"^^xsd:decimal ;
+    ex:hasRate_(USD) "400"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "10"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0417 a ex:InlandTruckingRate ;
+    ex:hasNo. "121"^^xsd:decimal ;
+    ex:hasdate "2025-03-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-DSV-SHU-EVAC-MARKAZ" ;
+    ex:hasPlace_of_Loading "AL MARKAZ WAREHOUSE" ;
+    ex:hasPlace_of_Delivery "SHUWEIHAT" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "250"^^xsd:decimal ;
+    ex:hasRate_(USD) "600"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "2.4"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0418 a ex:InlandTruckingRate ;
+    ex:hasNo. "122"^^xsd:decimal ;
+    ex:hasdate "2025-03-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-DSV-SHU-EVAC-MARKAZ" ;
+    ex:hasPlace_of_Loading "AL MARKAZ WAREHOUSE" ;
+    ex:hasPlace_of_Delivery "SHUWEIHAT" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "250"^^xsd:decimal ;
+    ex:hasRate_(USD) "600"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "2.4"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0419 a ex:InlandTruckingRate ;
+    ex:hasNo. "123"^^xsd:decimal ;
+    ex:hasdate "2025-03-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-DSV-SHU-EVAC-MARKAZ" ;
+    ex:hasPlace_of_Loading "AL MARKAZ WAREHOUSE" ;
+    ex:hasPlace_of_Delivery "SHUWEIHAT" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "250"^^xsd:decimal ;
+    ex:hasRate_(USD) "600"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "2.4"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0420 a ex:InlandTruckingRate ;
+    ex:hasNo. "124"^^xsd:decimal ;
+    ex:hasdate "2025-03-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-DSV-SHU-EVAC-MARKAZ" ;
+    ex:hasPlace_of_Loading "AL MARKAZ WAREHOUSE" ;
+    ex:hasPlace_of_Delivery "SHUWEIHAT" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "250"^^xsd:decimal ;
+    ex:hasRate_(USD) "600"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "2.4"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0421 a ex:InlandTruckingRate ;
+    ex:hasNo. "125"^^xsd:decimal ;
+    ex:hasdate "2025-03-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-DSV-SHU-EVAC-MARKAZ" ;
+    ex:hasPlace_of_Loading "AL MARKAZ WAREHOUSE" ;
+    ex:hasPlace_of_Delivery "SHUWEIHAT" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "250"^^xsd:decimal ;
+    ex:hasRate_(USD) "600"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "2.4"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0422 a ex:InlandTruckingRate ;
+    ex:hasNo. "126"^^xsd:decimal ;
+    ex:hasdate "2025-03-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-DSV-SHU-EVAC-MARKAZ" ;
+    ex:hasPlace_of_Loading "AL MARKAZ WAREHOUSE" ;
+    ex:hasPlace_of_Delivery "SHUWEIHAT" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "250"^^xsd:decimal ;
+    ex:hasRate_(USD) "600"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "2.4"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0423 a ex:InlandTruckingRate ;
+    ex:hasNo. "127"^^xsd:decimal ;
+    ex:hasdate "2025-03-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-DSV-SHU-EVAC-MARKAZ" ;
+    ex:hasPlace_of_Loading "AL MARKAZ WAREHOUSE" ;
+    ex:hasPlace_of_Delivery "SHUWEIHAT" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "250"^^xsd:decimal ;
+    ex:hasRate_(USD) "600"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "2.4"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0424 a ex:InlandTruckingRate ;
+    ex:hasNo. "128"^^xsd:decimal ;
+    ex:hasdate "2025-03-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-DSV-SHU-EVAC-MARKAZ" ;
+    ex:hasPlace_of_Loading "AL MARKAZ WAREHOUSE" ;
+    ex:hasPlace_of_Delivery "SHUWEIHAT" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "250"^^xsd:decimal ;
+    ex:hasRate_(USD) "600"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "2.4"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
+
+ex:rate_0425 a ex:InlandTruckingRate ;
+    ex:hasNo. "129"^^xsd:decimal ;
+    ex:hasdate "2025-03-01 00:00:00" ;
+    ex:hasShipment_Reference "HVDC-DSV-SHU-EVAC-MARKAZ" ;
+    ex:hasPlace_of_Loading "AL MARKAZ WAREHOUSE" ;
+    ex:hasPlace_of_Delivery "SHUWEIHAT" ;
+    ex:hasVehicle_Type "Flatbed" ;
+    ex:hasDistance(km) "250"^^xsd:decimal ;
+    ex:hasRate_(USD) "600"^^xsd:decimal ;
+    ex:hasper_kilometer_/_usd "2.4"^^xsd:decimal ;
+    ex:hasSource "Domestic_Rate_Reference_Summary.md" .
