@@ -1,0 +1,3240 @@
+{
+  "safety_issues": [
+    {
+      "group": 1,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\hvdc_ontology_system\\add_warehouse_example.py",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "add_warehouse_example.py",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 2,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\hvdc_ontology_system\\check_installation.py",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "check_installation.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\INSTALLATION_GUIDE_COMPLETE.md",
+          "pattern": "check_installation.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\integrated_system.py",
+          "pattern": "check_installation.py",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 3,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_ontology_system\\database_init.py",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "database_init.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\README.md",
+          "pattern": "database_init.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\README.md",
+          "pattern": "database_init.py",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 4,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\hvdc_ontology_system\\folder_structure.txt",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "folder_structure.txt",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 5,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\Mapping\\test_v282_simple.py",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "test_v282_simple.py",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 5,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\hvdc_logi_master_integrated.py",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "hvdc_logi_master_integrated.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\HVDC_PROJECT_COMPREHENSIVE_REPORT_v283.md",
+          "pattern": "hvdc_logi_master_integrated.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\HVDC_PROJECT_WORK_SESSION_LOG_20250103.json",
+          "pattern": "hvdc_logi_master_integrated.py",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 5,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\test_mapping_rule_patch.py",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "test_mapping_rule_patch.py",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 5,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\test_v282_simple.py",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "test_v282_simple.py",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 5,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_Excel_Reporter_v282_검증완료보고서.md",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "HVDC_Excel_Reporter_v282_검증완료보고서.md",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 5,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\cleanup_files\\README_CLEANUP.md",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "README_CLEANUP.md",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 5,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\core\\__init__.py",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\check_installation.py",
+          "pattern": "__init__",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "__init__.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\flow_code_exact_match.py",
+          "pattern": "__init__",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 5,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_Clean_Project_Backup_v2.6_20250626\\core\\__init__.py",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\check_installation.py",
+          "pattern": "__init__",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "__init__.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\flow_code_exact_match.py",
+          "pattern": "__init__",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 5,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\backup_20250626_144500\\core\\__init__.py",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\check_installation.py",
+          "pattern": "__init__",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "__init__.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\flow_code_exact_match.py",
+          "pattern": "__init__",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 6,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\hvdc_ontology_system\\INSTALLATION_GUIDE.md",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\check_installation.py",
+          "pattern": "INSTALLATION_GUIDE.md",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "INSTALLATION_GUIDE.md",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\HVDC_PROJECT_COMPREHENSIVE_REPORT_v283.md",
+          "pattern": "INSTALLATION_GUIDE",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 7,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\hvdc_ontology_system\\INSTALLATION_GUIDE_summary.txt",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "INSTALLATION_GUIDE_summary.txt",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 8,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\hvdc_ontology_system\\integrated_system.py",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "integrated_system.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\integrated_system.py",
+          "pattern": "integrated_system.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\integrated_system.py",
+          "pattern": "integrated_system.py",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 9,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\macho_flow_code_validation.py",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "macho_flow_code_validation.py",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 10,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\hvdc_ontology_system\\README_summary.txt",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "README_summary.txt",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 11,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\hvdc_ontology_system\\requirements.txt",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\check_installation.py",
+          "pattern": "requirements.txt",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "requirements.txt",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\INSTALLATION_GUIDE.md",
+          "pattern": "requirements.txt",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 12,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\hvdc_ontology_system\\run_hvdc.bat",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "run_hvdc.bat",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\INSTALLATION_GUIDE.md",
+          "pattern": "run_hvdc.bat",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\INSTALLATION_GUIDE_COMPLETE.md",
+          "pattern": "run_hvdc.bat",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 13,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\hvdc_ontology_system\\test_mcp_automation.txt",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "test_mcp_automation.txt",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 14,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\hvdc_ontology_system\\tree_output.txt",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "tree_output.txt",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 15,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\HVDC STATUS\\deploy-MintLight\\theme_MintLight.json",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "theme_MintLight.json",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\HVDC STATUS\\README.md",
+          "pattern": "theme_MintLight.json",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 16,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\hvdc_ontology_system\\hvdc_cli.py",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "hvdc_cli.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\README.md",
+          "pattern": "hvdc_cli.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\README.md",
+          "pattern": "hvdc_cli.py",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 17,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\hvdc_ontology_system\\hvdc_engine.py",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\add_warehouse_example.py",
+          "pattern": "hvdc_engine",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "hvdc_engine.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\README.md",
+          "pattern": "hvdc_engine.py",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 18,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\hvdc_ontology_system\\run_example.py",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "run_example.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\hvdc_ontology_system\\oneclick_installer.py",
+          "pattern": "run_example.py",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 19,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\hvdc_ontology_system\\config\\settings.json",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "settings.json",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\hvdc_ontology_system\\oneclick_installer.py",
+          "pattern": "settings.json",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\validate_ontology.py",
+          "pattern": "settings",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 20,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\hvdc_ontology_system\\src\\logi_meta_fixed.py",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\check_installation.py",
+          "pattern": "logi_meta_fixed.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "logi_meta_fixed.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\INSTALLATION_GUIDE.md",
+          "pattern": "logi_meta_fixed.py",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 21,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\contract_inland_trucking_charge_rates_v1.1.md",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "contract_inland_trucking_charge_rates_v1.1.md",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_project_management_framework.md",
+          "pattern": "contract_inland_trucking_charge_rates_v1.1.md",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\hvdc_project_management_framework.md",
+          "pattern": "contract_inland_trucking_charge_rates_v1.1.md",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 21,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\inland invoice\\contract_inland_trucking_charge_rates_v1.1.md",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "contract_inland_trucking_charge_rates_v1.1.md",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_project_management_framework.md",
+          "pattern": "contract_inland_trucking_charge_rates_v1.1.md",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\hvdc_project_management_framework.md",
+          "pattern": "contract_inland_trucking_charge_rates_v1.1.md",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 22,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\inland invoice\\DOMESTIC_DELIVERY_APRIL_VERIFICATION.md",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "DOMESTIC_DELIVERY_APRIL_VERIFICATION.md",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\HVDC_MAPPING_SYSTEM_GUIDE.md",
+          "pattern": "DOMESTIC_DELIVERY_APRIL_VERIFICATION.md",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\Mapping\\HVDC_MAPPING_SYSTEM_GUIDE.md",
+          "pattern": "DOMESTIC_DELIVERY_APRIL_VERIFICATION.md",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 23,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\inland invoice\\Domestic_Rate_Additional_Analysis.md",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "Domestic_Rate_Additional_Analysis.md",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\inland invoice\\DOMESTIC_DELIVERY_APRIL_VERIFICATION.md",
+          "pattern": "Domestic_Rate_Additional_Analysis.md",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\DOMESTIC_DELIVERY_APRIL_VERIFICATION.md",
+          "pattern": "Domestic_Rate_Additional_Analysis.md",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 24,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\inland invoice\\Domestic_Rate_Reference_Summary.md",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "Domestic_Rate_Reference_Summary.md",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\inland invoice\\DOMESTIC_DELIVERY_APRIL_VERIFICATION.md",
+          "pattern": "Domestic_Rate_Reference_Summary.md",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\DOMESTIC_DELIVERY_APRIL_VERIFICATION.md",
+          "pattern": "Domestic_Rate_Reference_Summary.md",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 25,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\inland invoice\\hvdc_inland_trucking_mapping_v27.ttl",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "hvdc_inland_trucking_mapping_v27.ttl",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\analyze_inland_trucking_v27.py",
+          "pattern": "hvdc_inland_trucking_mapping_v27.ttl",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\HVDC_MAPPING_BACKUP_SUMMARY_v2.7.md",
+          "pattern": "hvdc_inland_trucking_mapping_v27.ttl",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 26,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\inland invoice\\inland_trucking_charge_rates.md",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "inland_trucking_charge_rates.md",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_project_management_framework.md",
+          "pattern": "inland_trucking_charge_rates",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\hvdc_project_management_framework.md",
+          "pattern": "inland_trucking_charge_rates",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 27,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\analyze_hvdc_status.py",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "analyze_hvdc_status.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\HVDC_MAPPING_SYSTEM_GUIDE.md",
+          "pattern": "analyze_hvdc_status.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\analyze_hvdc_status.py",
+          "pattern": "analyze_hvdc_status",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 27,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\analyze_hvdc_status.py",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "analyze_hvdc_status.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\analyze_hvdc_status.py",
+          "pattern": "analyze_hvdc_status",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\HVDC_MAPPING_SYSTEM_GUIDE.md",
+          "pattern": "analyze_hvdc_status.py",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 28,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\analyze_inland_trucking_v27.py",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "analyze_inland_trucking_v27.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\HVDC_MAPPING_BACKUP_SUMMARY_v2.7.md",
+          "pattern": "analyze_inland_trucking_v27.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\HVDC_MAPPING_SYSTEM_GUIDE.md",
+          "pattern": "analyze_inland_trucking_v27.py",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 29,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\analyze_scnt_invoice_fixed.py",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "analyze_scnt_invoice_fixed.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\HVDC_MAPPING_SYSTEM_GUIDE.md",
+          "pattern": "analyze_scnt_invoice_fixed.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\scnt_query_executor.py",
+          "pattern": "analyze_scnt_invoice_fixed.py",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 29,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\analyze_scnt_invoice_fixed.py",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "analyze_scnt_invoice_fixed.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\analyze_scnt_invoice_fixed.py",
+          "pattern": "analyze_scnt_invoice_fixed",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\HVDC_MAPPING_SYSTEM_GUIDE.md",
+          "pattern": "analyze_scnt_invoice_fixed.py",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 30,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\apply_v281_patch.py",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "apply_v281_patch.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\HVDC_v282_Project_Final_Report.md",
+          "pattern": "apply_v281_patch.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\HVDC_v282_Work_Log.md",
+          "pattern": "apply_v281_patch.py",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 31,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\Mapping\\backup_v2.8.1_1751267433\\calc_flow_code_v2.py",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "calc_flow_code_v2.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\simple_flow_test.py",
+          "pattern": "calc_flow_code_v2",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\apply_v281_patch.py",
+          "pattern": "calc_flow_code_v2.py",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 31,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\calc_flow_code_v2.py",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "calc_flow_code_v2.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\simple_flow_test.py",
+          "pattern": "calc_flow_code_v2",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\apply_v281_patch.py",
+          "pattern": "calc_flow_code_v2.py",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 31,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\backup_v2.8.1_1751267433\\calc_flow_code_v2.py",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "calc_flow_code_v2.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\simple_flow_test.py",
+          "pattern": "calc_flow_code_v2",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\apply_v281_patch.py",
+          "pattern": "calc_flow_code_v2.py",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 32,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\diagnose_mosb_issue.py",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "diagnose_mosb_issue.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\HVDC_v282_Project_Final_Report.md",
+          "pattern": "diagnose_mosb_issue.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\Mapping\\HVDC_v282_Project_Final_Report.md",
+          "pattern": "diagnose_mosb_issue.py",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 33,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\expected_stock.yml",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "expected_stock.yml",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\INSTALLATION_GUIDE.md",
+          "pattern": "expected_stock.yml",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\INSTALLATION_GUIDE_summary.txt",
+          "pattern": "expected_stock.yml",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 33,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\expected_stock.yml",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "expected_stock.yml",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\INSTALLATION_GUIDE.md",
+          "pattern": "expected_stock.yml",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\INSTALLATION_GUIDE_summary.txt",
+          "pattern": "expected_stock.yml",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 33,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_Clean_Project_Backup_v2.6_20250626\\expected_stock.yml",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "expected_stock.yml",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\INSTALLATION_GUIDE.md",
+          "pattern": "expected_stock.yml",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\INSTALLATION_GUIDE_summary.txt",
+          "pattern": "expected_stock.yml",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 34,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\flow_code_gap_analysis.py",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "flow_code_gap_analysis.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\apply_v281_patch.py",
+          "pattern": "flow_code_gap_analysis.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\HVDC_v282_Project_Final_Report.md",
+          "pattern": "flow_code_gap_analysis.py",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 35,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\full_data_ontology_mapping.py",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "full_data_ontology_mapping.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\HVDC_MAPPING_BACKUP_SUMMARY_v2.7.md",
+          "pattern": "full_data_ontology_mapping.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\HVDC_MAPPING_SYSTEM_GUIDE.md",
+          "pattern": "full_data_ontology_mapping.py",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 35,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\full_data_ontology_mapping.py",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "full_data_ontology_mapping.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\HVDC_MAPPING_BACKUP_SUMMARY_v2.7.md",
+          "pattern": "full_data_ontology_mapping.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\HVDC_MAPPING_SYSTEM_GUIDE.md",
+          "pattern": "full_data_ontology_mapping.py",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 36,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\HVDC_Invoice_Mapping_Integration_Report.md",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "HVDC_Invoice_Mapping_Integration_Report.md",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\verify_invoice_integration.py",
+          "pattern": "HVDC_Invoice_Mapping_Integration_Report.md",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\Mapping\\verify_invoice_integration.py",
+          "pattern": "HVDC_Invoice_Mapping_Integration_Report.md",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 37,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\HVDC_Logistics_Flow_Report.md",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "HVDC_Logistics_Flow_Report.md",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\HVDC_MAPPING_BACKUP_SUMMARY_v2.7.md",
+          "pattern": "HVDC_Logistics_Flow_Report.md",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\mapping_utils.py",
+          "pattern": "HVDC_Logistics_Flow_Report.md",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 38,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\HVDC_MAPPING_BACKUP_SUMMARY_v2.7.md",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "HVDC_MAPPING_BACKUP_SUMMARY_v2.7.md",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\Mapping\\HVDC_MAPPING_BACKUP_SUMMARY_v2.7.md",
+          "pattern": "HVDC_MAPPING_BACKUP_SUMMARY_v2.7.md",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 39,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\HVDC_Real_Data_Validation_Report.md",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "HVDC_Real_Data_Validation_Report.md",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\real_data_validation.py",
+          "pattern": "HVDC_Real_Data_Validation_Report.md",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\Mapping\\real_data_validation.py",
+          "pattern": "HVDC_Real_Data_Validation_Report.md",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 40,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\hvdc_status_637records_20250629_043157.ttl",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "hvdc_status_637records_20250629_043157.ttl",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\HVDC_MAPPING_SYSTEM_GUIDE.md",
+          "pattern": "hvdc_status_637records_20250629_043157.ttl",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\rdf_output\\hvdc_status_stats_20250629_043157.md",
+          "pattern": "hvdc_status_637records_20250629_043157.ttl",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 40,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\rdf_output\\hvdc_status_637records_20250629_043157.ttl",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "hvdc_status_637records_20250629_043157.ttl",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\HVDC_MAPPING_SYSTEM_GUIDE.md",
+          "pattern": "hvdc_status_637records_20250629_043157.ttl",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\rdf_output\\hvdc_status_stats_20250629_043157.md",
+          "pattern": "hvdc_status_637records_20250629_043157.ttl",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 41,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\HVDC_v282_Patch_Summary.md",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "HVDC_v282_Patch_Summary.md",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 42,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\HVDC_v282_Project_Final_Report.md",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "HVDC_v282_Project_Final_Report.md",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\HVDC_v282_Work_Log.md",
+          "pattern": "HVDC_v282_Project_Final_Report.md",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\Mapping\\HVDC_v282_Work_Log.md",
+          "pattern": "HVDC_v282_Project_Final_Report.md",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 43,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\HVDC_v282_VERIFICATION_COMPLETE.md",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "HVDC_v282_VERIFICATION_COMPLETE.md",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 44,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\HVDC_v282_Work_Log.md",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "HVDC_v282_Work_Log.md",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\Mapping\\HVDC_v282_Work_Log.md",
+          "pattern": "HVDC_v282_Work_Log.md",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 45,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\HVDC_v28_UPGRADE_GUIDE.md",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "HVDC_v28_UPGRADE_GUIDE.md",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 46,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\invoice_mapping_integration_v283.ttl",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "invoice_mapping_integration_v283.ttl",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\HVDC_Invoice_Mapping_Integration_Report.md",
+          "pattern": "invoice_mapping_integration_v283.ttl",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\verify_invoice_integration.py",
+          "pattern": "invoice_mapping_integration_v283.ttl",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 47,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\mapping_rules_v2.4_backup.json",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "mapping_rules_v2.4_backup.json",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\HVDC_MAPPING_SYSTEM_GUIDE.md",
+          "pattern": "mapping_rules_v2.4_backup.json",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\Mapping\\HVDC_MAPPING_SYSTEM_GUIDE.md",
+          "pattern": "mapping_rules_v2.4_backup.json",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 47,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\backup_20250626_144500\\mapping_rules_v2.4.json",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "mapping_rules_v2.4.json",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\HVDC_MAPPING_SYSTEM_GUIDE.md",
+          "pattern": "mapping_rules_v2.4",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\ontology_mapping_v2.4.md",
+          "pattern": "mapping_rules_v2.4.json",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 47,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\cleanup_files\\old_versions\\mapping_rules_v2.4.json",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "mapping_rules_v2.4.json",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\HVDC_MAPPING_SYSTEM_GUIDE.md",
+          "pattern": "mapping_rules_v2.4",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\ontology_mapping_v2.4.md",
+          "pattern": "mapping_rules_v2.4.json",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 48,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\mapping_rules_v2.6.json",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "mapping_rules_v2.6.json",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_project_management_framework.md",
+          "pattern": "mapping_rules_v2.6.json",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\hvdc_project_management_framework.md",
+          "pattern": "mapping_rules_v2.6.json",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 48,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\mapping_rules_v2.6.json",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "mapping_rules_v2.6.json",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_project_management_framework.md",
+          "pattern": "mapping_rules_v2.6.json",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\hvdc_project_management_framework.md",
+          "pattern": "mapping_rules_v2.6.json",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 49,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\mapping_rules_v2.8.json",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "mapping_rules_v2.8.json",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\HVDC_PROJECT_COMPREHENSIVE_REPORT_v283.md",
+          "pattern": "mapping_rules_v2.8.json",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\README.md",
+          "pattern": "mapping_rules_v2.8.json",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 50,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_ontology_system\\mapping_utils.py",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "mapping_utils.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\README.md",
+          "pattern": "mapping_utils.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\report_hvdc_v283_upgrade_complete_20250103.md",
+          "pattern": "mapping_utils.py",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 50,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\mapping_utils.py",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "mapping_utils.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\README.md",
+          "pattern": "mapping_utils.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\report_hvdc_v283_upgrade_complete_20250103.md",
+          "pattern": "mapping_utils.py",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 51,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\ontology_mapper.py",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "ontology_mapper.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\HVDC_MAPPING_SYSTEM_GUIDE.md",
+          "pattern": "ontology_mapper.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\hvdc_automation_pipeline_v2.6.py",
+          "pattern": "ontology_mapper",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 51,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\ontology_mapper.py",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "ontology_mapper.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\HVDC_MAPPING_SYSTEM_GUIDE.md",
+          "pattern": "ontology_mapper.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\hvdc_automation_pipeline_v2.6.py",
+          "pattern": "ontology_mapper",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 52,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\ontology_mapping_example.py",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "ontology_mapping_example.py",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 52,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\ontology_mapping_example.py",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "ontology_mapping_example.py",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 53,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\ontology_mapping_v2.4.md",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "ontology_mapping_v2.4.md",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\HVDC_MAPPING_SYSTEM_GUIDE.md",
+          "pattern": "ontology_mapping_v2.4.md",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\Mapping\\HVDC_MAPPING_SYSTEM_GUIDE.md",
+          "pattern": "ontology_mapping_v2.4.md",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 53,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\docs\\ontology_mapping_v2.4.md",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "ontology_mapping_v2.4.md",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\HVDC_MAPPING_SYSTEM_GUIDE.md",
+          "pattern": "ontology_mapping_v2.4.md",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\Mapping\\HVDC_MAPPING_SYSTEM_GUIDE.md",
+          "pattern": "ontology_mapping_v2.4.md",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 54,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\ontology_reasoning_engine.py",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "ontology_reasoning_engine.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\HVDC_MAPPING_BACKUP_SUMMARY_v2.7.md",
+          "pattern": "ontology_reasoning_engine.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\HVDC_MAPPING_SYSTEM_GUIDE.md",
+          "pattern": "ontology_reasoning_engine.py",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 54,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\ontology_reasoning_engine.py",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "ontology_reasoning_engine.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\HVDC_MAPPING_BACKUP_SUMMARY_v2.7.md",
+          "pattern": "ontology_reasoning_engine.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\HVDC_MAPPING_SYSTEM_GUIDE.md",
+          "pattern": "ontology_reasoning_engine.py",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 55,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\quick_test_v282.py",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "quick_test_v282.py",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 56,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\real_data_analysis_summary.md",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "real_data_analysis_summary.md",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 57,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\real_data_ontology_mapping.py",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "real_data_ontology_mapping.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\HVDC_MAPPING_SYSTEM_GUIDE.md",
+          "pattern": "real_data_ontology_mapping.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\Mapping\\HVDC_MAPPING_SYSTEM_GUIDE.md",
+          "pattern": "real_data_ontology_mapping.py",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 57,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\real_data_ontology_mapping.py",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "real_data_ontology_mapping.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\HVDC_MAPPING_SYSTEM_GUIDE.md",
+          "pattern": "real_data_ontology_mapping.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\Mapping\\HVDC_MAPPING_SYSTEM_GUIDE.md",
+          "pattern": "real_data_ontology_mapping.py",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 58,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\real_data_validation.py",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "real_data_validation.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\apply_v281_patch.py",
+          "pattern": "real_data_validation.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\HVDC_v282_Project_Final_Report.md",
+          "pattern": "real_data_validation.py",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 59,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\repair_columns_tool.py",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "repair_columns_tool.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\HVDC_v282_Project_Final_Report.md",
+          "pattern": "repair_columns_tool.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\HVDC_v282_Work_Log.md",
+          "pattern": "repair_columns_tool.py",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 60,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\scnt_invoice_fixed_37records_20250629_044010.ttl",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "scnt_invoice_fixed_37records_20250629_044010.ttl",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\HVDC_MAPPING_SYSTEM_GUIDE.md",
+          "pattern": "scnt_invoice_fixed_37records_20250629_044010.ttl",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\Mapping\\HVDC_MAPPING_SYSTEM_GUIDE.md",
+          "pattern": "scnt_invoice_fixed_37records_20250629_044010.ttl",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 60,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\rdf_output\\scnt_invoice_fixed_37records_20250629_044010.ttl",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "scnt_invoice_fixed_37records_20250629_044010.ttl",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\HVDC_MAPPING_SYSTEM_GUIDE.md",
+          "pattern": "scnt_invoice_fixed_37records_20250629_044010.ttl",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\Mapping\\HVDC_MAPPING_SYSTEM_GUIDE.md",
+          "pattern": "scnt_invoice_fixed_37records_20250629_044010.ttl",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 61,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\scnt_query_executor.py",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "scnt_query_executor.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\HVDC_MAPPING_SYSTEM_GUIDE.md",
+          "pattern": "scnt_query_executor.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\Mapping\\HVDC_MAPPING_SYSTEM_GUIDE.md",
+          "pattern": "scnt_query_executor.py",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 61,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\scnt_query_executor.py",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "scnt_query_executor.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\HVDC_MAPPING_SYSTEM_GUIDE.md",
+          "pattern": "scnt_query_executor.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\Mapping\\HVDC_MAPPING_SYSTEM_GUIDE.md",
+          "pattern": "scnt_query_executor.py",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 62,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\test_v282_verification.py",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "test_v282_verification.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\HVDC_v282_Project_Final_Report.md",
+          "pattern": "test_v282_verification.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\HVDC_v282_Work_Log.md",
+          "pattern": "test_v282_verification.py",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 63,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\test_v283_patch.py",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "test_v283_patch.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\test_excel_reporter.py",
+          "pattern": "test_v283_patch",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\Mapping\\test_v283_patch.py",
+          "pattern": "test_v283_patch",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 64,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\test_v28_upgrade.py",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "test_v28_upgrade.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\apply_v281_patch.py",
+          "pattern": "test_v28_upgrade",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\HVDC_v28_UPGRADE_GUIDE.md",
+          "pattern": "test_v28_upgrade.py",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 65,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\test_v28_upgrade_large.py",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "test_v28_upgrade_large.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\apply_v281_patch.py",
+          "pattern": "test_v28_upgrade_large.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\Mapping\\apply_v281_patch.py",
+          "pattern": "test_v28_upgrade_large.py",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 66,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\tools_ontology_mapper.py",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "tools_ontology_mapper.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\HVDC_MAPPING_SYSTEM_GUIDE.md",
+          "pattern": "tools_ontology_mapper.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\Mapping\\HVDC_MAPPING_SYSTEM_GUIDE.md",
+          "pattern": "tools_ontology_mapper.py",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 66,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\tools\\ontology_mapper.py",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "ontology_mapper.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\HVDC_MAPPING_SYSTEM_GUIDE.md",
+          "pattern": "ontology_mapper.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\hvdc_automation_pipeline_v2.6.py",
+          "pattern": "ontology_mapper",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 66,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_Clean_Project_Backup_v2.6_20250626\\tools\\ontology_mapper.py",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "ontology_mapper.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\HVDC_MAPPING_SYSTEM_GUIDE.md",
+          "pattern": "ontology_mapper.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\hvdc_automation_pipeline_v2.6.py",
+          "pattern": "ontology_mapper",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 67,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\tools_update_expected_yaml.py",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "tools_update_expected_yaml.py",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 67,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\tools\\update_expected_yaml.py",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "update_expected_yaml.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\tools_update_expected_yaml.py",
+          "pattern": "update_expected_yaml.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\Mapping\\tools_update_expected_yaml.py",
+          "pattern": "update_expected_yaml.py",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 67,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_Clean_Project_Backup_v2.6_20250626\\tools\\update_expected_yaml.py",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "update_expected_yaml.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\tools_update_expected_yaml.py",
+          "pattern": "update_expected_yaml.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\tools\\update_expected_yaml.py",
+          "pattern": "update_expected_yaml.py",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 68,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\tools_validate_yaml_ontology.py",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "tools_validate_yaml_ontology.py",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 68,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\tools\\validate_yaml_ontology.py",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "validate_yaml_ontology.py",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 68,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_Clean_Project_Backup_v2.6_20250626\\tools\\validate_yaml_ontology.py",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "validate_yaml_ontology.py",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 69,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\validate_ontology.py",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "validate_ontology.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\logi_master_ontology.py",
+          "pattern": "validate_ontology",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\logi_master_ontology.py",
+          "pattern": "validate_ontology",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 69,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\validate_ontology.py",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "validate_ontology.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\logi_master_ontology.py",
+          "pattern": "validate_ontology",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\logi_master_ontology.py",
+          "pattern": "validate_ontology",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 70,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\verify_invoice_integration.py",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "verify_invoice_integration.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\Mapping\\verify_invoice_integration.py",
+          "pattern": "verify_invoice_integration",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 71,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\backup_v2.8.1_1751267433\\mapping_utils.py",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "mapping_utils.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\README.md",
+          "pattern": "mapping_utils.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\report_hvdc_v283_upgrade_complete_20250103.md",
+          "pattern": "mapping_utils.py",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 72,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\reasoning_output\\validation\\validation_hvdc_graph_20250630_102016.json",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "validation_hvdc_graph_20250630_102016.json",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 72,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\reasoning_output\\validation\\validation_hvdc_graph_20250629_015915.json",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "validation_hvdc_graph_20250629_015915.json",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 72,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\reasoning_output\\validation\\validation_hvdc_graph_20250629_015933.json",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "validation_hvdc_graph_20250629_015933.json",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 72,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\reasoning_output\\validation\\validation_hvdc_graph_20250629_015955.json",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "validation_hvdc_graph_20250629_015955.json",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 72,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\reasoning_output\\validation\\validation_hvdc_graph_20250629_020436.json",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "validation_hvdc_graph_20250629_020436.json",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 73,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_Clean_Project_Backup_v2.6_20250626\\bi_dashboard.py",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "bi_dashboard.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_Clean_Project_Backup_v2.6_20250626_154000_README.md",
+          "pattern": "bi_dashboard.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_정리된_프로젝트_구조_다이어그램.md",
+          "pattern": "bi_dashboard.py",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 74,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_Clean_Project_Backup_v2.6_20250626\\config.py",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\check_installation.py",
+          "pattern": "config",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "config.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\INSTALLATION_GUIDE.md",
+          "pattern": "config",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 74,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\backup_20250626_144500\\config.py",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\check_installation.py",
+          "pattern": "config",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "config.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\INSTALLATION_GUIDE.md",
+          "pattern": "config",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 75,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_Clean_Project_Backup_v2.6_20250626\\data_validation_engine.py",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "data_validation_engine.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_Clean_Project_Backup_v2.6_20250626_154000_README.md",
+          "pattern": "data_validation_engine.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_정리된_프로젝트_구조_다이어그램.md",
+          "pattern": "data_validation_engine.py",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 76,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\backup_20250626_144500\\debug_handling_fee.py",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "debug_handling_fee.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_정리된_프로젝트_구조_다이어그램.md",
+          "pattern": "debug_handling_fee.py",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 77,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_Clean_Project_Backup_v2.6_20250626\\HVDC_v2.6_실행가이드.md",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "HVDC_v2.6_실행가이드.md",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_Clean_Project_Backup_v2.6_20250626_154000_README.md",
+          "pattern": "HVDC_v2.6_실행가이드.md",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_정리된_프로젝트_구조_다이어그램.md",
+          "pattern": "HVDC_v2.6_실행가이드.md",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 78,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_Clean_Project_Backup_v2.6_20250626\\HVDC_정리된_프로젝트_구조_다이어그램.md",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "HVDC_정리된_프로젝트_구조_다이어그램.md",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_Clean_Project_Backup_v2.6_20250626_154000_README.md",
+          "pattern": "HVDC_정리된_프로젝트_구조_다이어그램.md",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 79,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_Clean_Project_Backup_v2.6_20250626\\HVDC_코드구조_시각화_다이어그램.md",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "HVDC_코드구조_시각화_다이어그램.md",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_Clean_Project_Backup_v2.6_20250626_154000_README.md",
+          "pattern": "HVDC_코드구조_시각화_다이어그램.md",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_정리된_프로젝트_구조_다이어그램.md",
+          "pattern": "HVDC_코드구조_시각화_다이어그램.md",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 80,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_Clean_Project_Backup_v2.6_20250626\\HVDC_프로젝트_전체구조_요약보고서.md",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "HVDC_프로젝트_전체구조_요약보고서.md",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_Clean_Project_Backup_v2.6_20250626_154000_README.md",
+          "pattern": "HVDC_프로젝트_전체구조_요약보고서.md",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_정리된_프로젝트_구조_다이어그램.md",
+          "pattern": "HVDC_프로젝트_전체구조_요약보고서.md",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 81,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_Clean_Project_Backup_v2.6_20250626\\integrated_automation_pipeline.py",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "integrated_automation_pipeline.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_Clean_Project_Backup_v2.6_20250626_154000_README.md",
+          "pattern": "integrated_automation_pipeline.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_정리된_프로젝트_구조_다이어그램.md",
+          "pattern": "integrated_automation_pipeline.py",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 81,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\backup_20250626_144500\\integrated_automation_pipeline.py",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "integrated_automation_pipeline.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_Clean_Project_Backup_v2.6_20250626_154000_README.md",
+          "pattern": "integrated_automation_pipeline.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_정리된_프로젝트_구조_다이어그램.md",
+          "pattern": "integrated_automation_pipeline.py",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 82,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_Clean_Project_Backup_v2.6_20250626\\README.md",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "README.md",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\INSTALLATION_GUIDE.md",
+          "pattern": "README.md",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\INSTALLATION_GUIDE_COMPLETE.md",
+          "pattern": "README.md",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 83,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_Clean_Project_Backup_v2.6_20250626\\requirements.txt",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\check_installation.py",
+          "pattern": "requirements.txt",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "requirements.txt",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\INSTALLATION_GUIDE.md",
+          "pattern": "requirements.txt",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 84,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_Clean_Project_Backup_v2.6_20250626\\run_data_validation.py",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "run_data_validation.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_Clean_Project_Backup_v2.6_20250626_154000_README.md",
+          "pattern": "run_data_validation.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_정리된_프로젝트_구조_다이어그램.md",
+          "pattern": "run_data_validation.py",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 85,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\backup_20250626_144500\\test_end_to_end.py",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "test_end_to_end.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_정리된_프로젝트_구조_다이어그램.md",
+          "pattern": "test_end_to_end.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\test_end_to_end.py",
+          "pattern": "test_end_to_end",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 86,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\backup_20250626_144500\\test_integration.py",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "test_integration.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_정리된_프로젝트_구조_다이어그램.md",
+          "pattern": "test_integration.py",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 87,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\backup_20250626_144500\\test_inventory_amount.py",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "test_inventory_amount.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_정리된_프로젝트_구조_다이어그램.md",
+          "pattern": "test_inventory_amount.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\cleanup_files\\temporary_files\\WORK_PROGRESS_SUMMARY.md",
+          "pattern": "test_inventory_amount.py",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 88,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\backup_20250626_144500\\test_location_normalization.py",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "test_location_normalization.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_정리된_프로젝트_구조_다이어그램.md",
+          "pattern": "test_location_normalization.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\test_location_normalization.py",
+          "pattern": "test_location_normalization",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 89,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\backup_20250626_144500\\test_system.py",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "test_system.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_정리된_프로젝트_구조_다이어그램.md",
+          "pattern": "test_system.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\cleanup_files\\temporary_files\\BACKUP_SUMMARY_20250624_1620.md",
+          "pattern": "test_system.py",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 90,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_Clean_Project_Backup_v2.6_20250626\\test_variance_analysis.py",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "test_variance_analysis.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_Clean_Project_Backup_v2.6_20250626_154000_README.md",
+          "pattern": "test_variance_analysis.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_정리된_프로젝트_구조_다이어그램.md",
+          "pattern": "test_variance_analysis.py",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 91,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_Clean_Project_Backup_v2.6_20250626\\valid_warehouse_ids.json",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "valid_warehouse_ids.json",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\tools_validate_yaml_ontology.py",
+          "pattern": "valid_warehouse_ids.json",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_Clean_Project_Backup_v2.6_20250626_154000_README.md",
+          "pattern": "valid_warehouse_ids.json",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 91,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\backup_20250626_144500\\valid_warehouse_ids.json",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "valid_warehouse_ids.json",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\tools_validate_yaml_ontology.py",
+          "pattern": "valid_warehouse_ids.json",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_Clean_Project_Backup_v2.6_20250626_154000_README.md",
+          "pattern": "valid_warehouse_ids.json",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 92,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_Clean_Project_Backup_v2.6_20250626\\variance_analyzer.py",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "variance_analyzer.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\bi_dashboard.py",
+          "pattern": "variance_analyzer",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_Clean_Project_Backup_v2.6_20250626_154000_README.md",
+          "pattern": "variance_analyzer.py",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 93,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\backup_20250626_144500\\visualize_out_transactions.py",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "visualize_out_transactions.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\excel_reporter.py",
+          "pattern": "visualize_out_transactions",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_정리된_프로젝트_구조_다이어그램.md",
+          "pattern": "visualize_out_transactions.py",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 94,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\backup_20250626_144500\\excel_reporter.py",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "excel_reporter.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\integrated_system.py",
+          "pattern": "excel_reporter.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\integrated_system.py",
+          "pattern": "excel_reporter.py",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 95,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\backup_20250626_144500\\main.py",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\case_count_validator.py",
+          "pattern": "main",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\check_data_structure.py",
+          "pattern": "main",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\check_installation.py",
+          "pattern": "main",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 96,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\backup_20250626_144500\\mapping_rules_v2.6.json",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "mapping_rules_v2.6.json",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_project_management_framework.md",
+          "pattern": "mapping_rules_v2.6.json",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\hvdc_project_management_framework.md",
+          "pattern": "mapping_rules_v2.6.json",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 97,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\backup_20250626_144500\\mapping_utils.py",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "mapping_utils.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\README.md",
+          "pattern": "mapping_utils.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\report_hvdc_v283_upgrade_complete_20250103.md",
+          "pattern": "mapping_utils.py",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 98,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\backup_20250626_144500\\ontology_mapper.py",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "ontology_mapper.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\HVDC_MAPPING_SYSTEM_GUIDE.md",
+          "pattern": "ontology_mapper.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\hvdc_automation_pipeline_v2.6.py",
+          "pattern": "ontology_mapper",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 99,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_Clean_Project_Backup_v2.6_20250626\\core\\config_manager.py",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "config_manager.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_Clean_Project_Backup_v2.6_20250626_154000_README.md",
+          "pattern": "config_manager.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_정리된_프로젝트_구조_다이어그램.md",
+          "pattern": "config_manager.py",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 99,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\backup_20250626_144500\\core\\config_manager.py",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "config_manager.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_Clean_Project_Backup_v2.6_20250626_154000_README.md",
+          "pattern": "config_manager.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_정리된_프로젝트_구조_다이어그램.md",
+          "pattern": "config_manager.py",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 100,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_Clean_Project_Backup_v2.6_20250626\\core\\deduplication.py",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "deduplication.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\mapping_rules_v2.8.json",
+          "pattern": "deduplication",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\debug_deduplication.py",
+          "pattern": "deduplication",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 100,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\backup_20250626_144500\\core\\deduplication.py",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "deduplication.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\mapping_rules_v2.8.json",
+          "pattern": "deduplication",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\debug_deduplication.py",
+          "pattern": "deduplication",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 101,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_Clean_Project_Backup_v2.6_20250626\\core\\helpers.py",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "helpers.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_Clean_Project_Backup_v2.6_20250626_154000_README.md",
+          "pattern": "helpers.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_정리된_프로젝트_구조_다이어그램.md",
+          "pattern": "helpers.py",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 101,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\backup_20250626_144500\\core\\helpers.py",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "helpers.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_Clean_Project_Backup_v2.6_20250626_154000_README.md",
+          "pattern": "helpers.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_정리된_프로젝트_구조_다이어그램.md",
+          "pattern": "helpers.py",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 102,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_Clean_Project_Backup_v2.6_20250626\\core\\inventory_engine.py",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "inventory_engine.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_주요함수_실행가이드_20250627.md",
+          "pattern": "inventory_engine.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\test_end_to_end.py",
+          "pattern": "inventory_engine",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 102,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\backup_20250626_144500\\core\\inventory_engine.py",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "inventory_engine.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_주요함수_실행가이드_20250627.md",
+          "pattern": "inventory_engine.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\test_end_to_end.py",
+          "pattern": "inventory_engine",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 103,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\backup_20250626_144500\\core\\loader.py",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\debug_columns.py",
+          "pattern": "loader",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "loader.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\report_hvdc_v283_upgrade_complete_20250103.md",
+          "pattern": "loader.py",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 104,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_Clean_Project_Backup_v2.6_20250626\\core\\logger.py",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "logger.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\flow_code_exact_match.py",
+          "pattern": "logger",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_exact_flow_calculator.py",
+          "pattern": "logger",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 104,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\backup_20250626_144500\\core\\logger.py",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "logger.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\flow_code_exact_match.py",
+          "pattern": "logger",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_exact_flow_calculator.py",
+          "pattern": "logger",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 105,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_Clean_Project_Backup_v2.6_20250626\\core\\schemas.py",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "schemas.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\hvdc_ontology_system\\oneclick_installer.py",
+          "pattern": "schemas",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 105,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\backup_20250626_144500\\core\\schemas.py",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "schemas.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\hvdc_ontology_system\\oneclick_installer.py",
+          "pattern": "schemas",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 106,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_Clean_Project_Backup_v2.6_20250626\\core\\timeline.py",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "timeline.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\HVDC_PROJECT_WORK_SESSION_LOG_20250103.json",
+          "pattern": "timeline",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\HVDC_PROJECT_WORK_SESSION_LOG_20250103.json",
+          "pattern": "timeline",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 106,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\backup_20250626_144500\\core\\timeline.py",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "timeline.py",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\HVDC_PROJECT_WORK_SESSION_LOG_20250103.json",
+          "pattern": "timeline",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\HVDC_PROJECT_WORK_SESSION_LOG_20250103.json",
+          "pattern": "timeline",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 107,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\test_output\\hvdc_data_20250626_142806.ttl",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "hvdc_data_20250626_142806.ttl",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 107,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\backup_20250626_144500\\test_output\\basic_output.ttl",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "basic_output.ttl",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\test_integration.py",
+          "pattern": "basic_output.ttl",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 107,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\backup_20250626_144500\\test_output\\hvdc_data_20250626_142806.ttl",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "hvdc_data_20250626_142806.ttl",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 108,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\backup_20250626_144500\\test_output\\enhanced_output.ttl",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "enhanced_output.ttl",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\ontology_mapper.py",
+          "pattern": "enhanced_output.ttl",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\ontology_mapper.py",
+          "pattern": "enhanced_output.ttl",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 109,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\test_output\\schema.ttl",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\database_init.py",
+          "pattern": "schema",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "schema.ttl",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_ontology_engine.py",
+          "pattern": "schema",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 109,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\test_output\\schema_20250626_142806.ttl",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "schema_20250626_142806.ttl",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 109,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\backup_20250626_144500\\test_output\\schema.ttl",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\database_init.py",
+          "pattern": "schema",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "schema.ttl",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_ontology_engine.py",
+          "pattern": "schema",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 109,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\backup_20250626_144500\\test_output\\schema_20250626_142806.ttl",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "schema_20250626_142806.ttl",
+          "type": "reference"
+        }
+      ]
+    },
+    {
+      "group": 110,
+      "issue": "file_referenced",
+      "details": "다른 파일에서 참조됨: C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\reasoning_output\\hvdc_graph.ttl",
+      "references": [
+        {
+          "file": "C:\\HVDC PJT\\duplicate_cleanup_suggestions.json",
+          "pattern": "hvdc_graph.ttl",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\validate_ontology.py",
+          "pattern": "hvdc_graph.ttl",
+          "type": "reference"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\convert_to_rdf_graph.py",
+          "pattern": "hvdc_graph.ttl",
+          "type": "reference"
+        }
+      ]
+    }
+  ],
+  "hash_verification_failed": [],
+  "verified_safe_groups": [],
+  "total_groups": 110
+}

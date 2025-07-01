@@ -1,0 +1,54 @@
+{
+  "deployment_info": {
+    "version": "2.8.4",
+    "timestamp": "20250702_013445",
+    "deployment_id": "MACHO_v2.8.4_20250702_013445",
+    "system_name": "HVDC Project MACHO Flow Code System",
+    "organization": "Samsung C&T Logistics"
+  },
+  "performance_metrics": {
+    "total_processed": 8615,
+    "hitachi_count": 5346,
+    "simense_count": 2227,
+    "invoice_count": 465,
+    "hvdc_status_count": 577,
+    "excel_match_rate": 100.0,
+    "system_reliability": 100.0,
+    "flow_code_accuracy": 100.0
+  },
+  "wh_handling_results": {
+    "HITACHI": {
+      "0": 1819,
+      "1": 2561,
+      "2": 886,
+      "3": 80
+    },
+    "SIMENSE": {
+      "0": 1026,
+      "1": 956,
+      "2": 245,
+      "3": 0
+    }
+  },
+  "system_components": {
+    "enhanced_data_sync": "enhanced_data_sync_v284.py",
+    "flow_corrector": "macho_flow_corrected_v284.py",
+    "database": "hvdc_ontology_system/data/hvdc.db",
+    "reports_dir": "reports"
+  },
+  "deployment_features": [
+    "WH HANDLING 기반 정확한 Flow Code 분류",
+    "Excel 피벗 테이블 100% 매칭",
+    "다중 벤더 통합 처리",
+    "실시간 검증 및 모니터링",
+    "자동 보고서 생성",
+    "SQLite 데이터베이스 통합"
+  ],
+  "quality_assurance": {
+    "testing_status": "PASSED",
+    "excel_validation": "PERFECT_MATCH",
+    "data_integrity": "VERIFIED",
+    "performance_validation": "EXCELLENT",
+    "production_readiness": "APPROVED"
+  }
+}

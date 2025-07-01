@@ -1,0 +1,2645 @@
+{
+  "safe_to_delete": [],
+  "risky_to_delete": [],
+  "backup_only_references": [],
+  "active_references": [
+    {
+      "group_id": 1,
+      "keep_file": "C:\\HVDC PJT\\hvdc_macho_gpt\\add_warehouse_example.py",
+      "delete_files": [
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\hvdc_ontology_system\\add_warehouse_example.py",
+          "active_refs": 2,
+          "backup_refs": 0,
+          "import_refs": 0,
+          "total_refs": 2,
+          "is_backup_file": false,
+          "safety_assessment": "DANGEROUS"
+        }
+      ],
+      "safety_level": "DANGEROUS",
+      "reasons": [
+        "add_warehouse_example.py: 활성 파일에서 2회 참조"
+      ]
+    },
+    {
+      "group_id": 2,
+      "keep_file": "C:\\HVDC PJT\\hvdc_macho_gpt\\check_installation.py",
+      "delete_files": [
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\hvdc_ontology_system\\check_installation.py",
+          "active_refs": 14,
+          "backup_refs": 0,
+          "import_refs": 0,
+          "total_refs": 14,
+          "is_backup_file": false,
+          "safety_assessment": "DANGEROUS"
+        }
+      ],
+      "safety_level": "DANGEROUS",
+      "reasons": [
+        "check_installation.py: 활성 파일에서 14회 참조"
+      ]
+    },
+    {
+      "group_id": 3,
+      "keep_file": "C:\\HVDC PJT\\hvdc_macho_gpt\\database_init.py",
+      "delete_files": [
+        {
+          "file": "C:\\HVDC PJT\\hvdc_ontology_system\\database_init.py",
+          "active_refs": 4,
+          "backup_refs": 0,
+          "import_refs": 0,
+          "total_refs": 4,
+          "is_backup_file": false,
+          "safety_assessment": "DANGEROUS"
+        }
+      ],
+      "safety_level": "DANGEROUS",
+      "reasons": [
+        "database_init.py: 활성 파일에서 4회 참조"
+      ]
+    },
+    {
+      "group_id": 4,
+      "keep_file": "C:\\HVDC PJT\\hvdc_macho_gpt\\folder_structure.txt",
+      "delete_files": [
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\hvdc_ontology_system\\folder_structure.txt",
+          "active_refs": 2,
+          "backup_refs": 0,
+          "import_refs": 0,
+          "total_refs": 2,
+          "is_backup_file": true,
+          "safety_assessment": "DANGEROUS"
+        }
+      ],
+      "safety_level": "DANGEROUS",
+      "reasons": [
+        "folder_structure.txt: 활성 파일에서 2회 참조"
+      ]
+    },
+    {
+      "group_id": 5,
+      "keep_file": "C:\\HVDC PJT\\Mapping\\test_mapping_rule_patch.py",
+      "delete_files": [
+        {
+          "file": "C:\\HVDC PJT\\Mapping\\test_v282_simple.py",
+          "active_refs": 2,
+          "backup_refs": 0,
+          "import_refs": 0,
+          "total_refs": 2,
+          "is_backup_file": false,
+          "safety_assessment": "DANGEROUS"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\hvdc_logi_master_integrated.py",
+          "active_refs": 9,
+          "backup_refs": 0,
+          "import_refs": 0,
+          "total_refs": 9,
+          "is_backup_file": false,
+          "safety_assessment": "DANGEROUS"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\test_mapping_rule_patch.py",
+          "active_refs": 2,
+          "backup_refs": 0,
+          "import_refs": 0,
+          "total_refs": 2,
+          "is_backup_file": false,
+          "safety_assessment": "DANGEROUS"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\test_v282_simple.py",
+          "active_refs": 2,
+          "backup_refs": 0,
+          "import_refs": 0,
+          "total_refs": 2,
+          "is_backup_file": false,
+          "safety_assessment": "DANGEROUS"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_Excel_Reporter_v282_검증완료보고서.md",
+          "active_refs": 2,
+          "backup_refs": 0,
+          "import_refs": 0,
+          "total_refs": 2,
+          "is_backup_file": false,
+          "safety_assessment": "DANGEROUS"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\cleanup_files\\README_CLEANUP.md",
+          "active_refs": 2,
+          "backup_refs": 0,
+          "import_refs": 0,
+          "total_refs": 2,
+          "is_backup_file": false,
+          "safety_assessment": "DANGEROUS"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\core\\__init__.py",
+          "active_refs": 80,
+          "backup_refs": 24,
+          "import_refs": 0,
+          "total_refs": 104,
+          "is_backup_file": false,
+          "safety_assessment": "DANGEROUS"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_Clean_Project_Backup_v2.6_20250626\\core\\__init__.py",
+          "active_refs": 80,
+          "backup_refs": 24,
+          "import_refs": 0,
+          "total_refs": 104,
+          "is_backup_file": true,
+          "safety_assessment": "DANGEROUS"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\backup_20250626_144500\\core\\__init__.py",
+          "active_refs": 80,
+          "backup_refs": 24,
+          "import_refs": 0,
+          "total_refs": 104,
+          "is_backup_file": true,
+          "safety_assessment": "DANGEROUS"
+        }
+      ],
+      "safety_level": "DANGEROUS",
+      "reasons": [
+        "test_v282_simple.py: 활성 파일에서 2회 참조",
+        "hvdc_logi_master_integrated.py: 활성 파일에서 9회 참조",
+        "test_mapping_rule_patch.py: 활성 파일에서 2회 참조",
+        "test_v282_simple.py: 활성 파일에서 2회 참조",
+        "HVDC_Excel_Reporter_v282_검증완료보고서.md: 활성 파일에서 2회 참조",
+        "README_CLEANUP.md: 활성 파일에서 2회 참조",
+        "__init__.py: 활성 파일에서 80회 참조",
+        "__init__.py: 활성 파일에서 80회 참조",
+        "__init__.py: 활성 파일에서 80회 참조"
+      ]
+    },
+    {
+      "group_id": 6,
+      "keep_file": "C:\\HVDC PJT\\hvdc_macho_gpt\\INSTALLATION_GUIDE.md",
+      "delete_files": [
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\hvdc_ontology_system\\INSTALLATION_GUIDE.md",
+          "active_refs": 22,
+          "backup_refs": 0,
+          "import_refs": 0,
+          "total_refs": 22,
+          "is_backup_file": false,
+          "safety_assessment": "DANGEROUS"
+        }
+      ],
+      "safety_level": "DANGEROUS",
+      "reasons": [
+        "INSTALLATION_GUIDE.md: 활성 파일에서 22회 참조"
+      ]
+    },
+    {
+      "group_id": 7,
+      "keep_file": "C:\\HVDC PJT\\hvdc_macho_gpt\\INSTALLATION_GUIDE_summary.txt",
+      "delete_files": [
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\hvdc_ontology_system\\INSTALLATION_GUIDE_summary.txt",
+          "active_refs": 2,
+          "backup_refs": 0,
+          "import_refs": 0,
+          "total_refs": 2,
+          "is_backup_file": false,
+          "safety_assessment": "DANGEROUS"
+        }
+      ],
+      "safety_level": "DANGEROUS",
+      "reasons": [
+        "INSTALLATION_GUIDE_summary.txt: 활성 파일에서 2회 참조"
+      ]
+    },
+    {
+      "group_id": 8,
+      "keep_file": "C:\\HVDC PJT\\hvdc_macho_gpt\\integrated_system.py",
+      "delete_files": [
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\hvdc_ontology_system\\integrated_system.py",
+          "active_refs": 4,
+          "backup_refs": 0,
+          "import_refs": 0,
+          "total_refs": 4,
+          "is_backup_file": false,
+          "safety_assessment": "DANGEROUS"
+        }
+      ],
+      "safety_level": "DANGEROUS",
+      "reasons": [
+        "integrated_system.py: 활성 파일에서 4회 참조"
+      ]
+    },
+    {
+      "group_id": 9,
+      "keep_file": "C:\\HVDC PJT\\hvdc_macho_gpt\\macho_flow_code_validation.py",
+      "delete_files": [
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\macho_flow_code_validation.py",
+          "active_refs": 2,
+          "backup_refs": 0,
+          "import_refs": 0,
+          "total_refs": 2,
+          "is_backup_file": false,
+          "safety_assessment": "DANGEROUS"
+        }
+      ],
+      "safety_level": "DANGEROUS",
+      "reasons": [
+        "macho_flow_code_validation.py: 활성 파일에서 2회 참조"
+      ]
+    },
+    {
+      "group_id": 10,
+      "keep_file": "C:\\HVDC PJT\\hvdc_macho_gpt\\README_summary.txt",
+      "delete_files": [
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\hvdc_ontology_system\\README_summary.txt",
+          "active_refs": 2,
+          "backup_refs": 0,
+          "import_refs": 0,
+          "total_refs": 2,
+          "is_backup_file": false,
+          "safety_assessment": "DANGEROUS"
+        }
+      ],
+      "safety_level": "DANGEROUS",
+      "reasons": [
+        "README_summary.txt: 활성 파일에서 2회 참조"
+      ]
+    },
+    {
+      "group_id": 11,
+      "keep_file": "C:\\HVDC PJT\\hvdc_macho_gpt\\requirements.txt",
+      "delete_files": [
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\hvdc_ontology_system\\requirements.txt",
+          "active_refs": 27,
+          "backup_refs": 5,
+          "import_refs": 0,
+          "total_refs": 32,
+          "is_backup_file": false,
+          "safety_assessment": "DANGEROUS"
+        }
+      ],
+      "safety_level": "DANGEROUS",
+      "reasons": [
+        "requirements.txt: 활성 파일에서 27회 참조"
+      ]
+    },
+    {
+      "group_id": 12,
+      "keep_file": "C:\\HVDC PJT\\hvdc_macho_gpt\\run_hvdc.bat",
+      "delete_files": [
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\hvdc_ontology_system\\run_hvdc.bat",
+          "active_refs": 15,
+          "backup_refs": 0,
+          "import_refs": 0,
+          "total_refs": 15,
+          "is_backup_file": false,
+          "safety_assessment": "DANGEROUS"
+        }
+      ],
+      "safety_level": "DANGEROUS",
+      "reasons": [
+        "run_hvdc.bat: 활성 파일에서 15회 참조"
+      ]
+    },
+    {
+      "group_id": 13,
+      "keep_file": "C:\\HVDC PJT\\hvdc_macho_gpt\\test_mcp_automation.txt",
+      "delete_files": [
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\hvdc_ontology_system\\test_mcp_automation.txt",
+          "active_refs": 2,
+          "backup_refs": 0,
+          "import_refs": 0,
+          "total_refs": 2,
+          "is_backup_file": false,
+          "safety_assessment": "DANGEROUS"
+        }
+      ],
+      "safety_level": "DANGEROUS",
+      "reasons": [
+        "test_mcp_automation.txt: 활성 파일에서 2회 참조"
+      ]
+    },
+    {
+      "group_id": 14,
+      "keep_file": "C:\\HVDC PJT\\hvdc_macho_gpt\\tree_output.txt",
+      "delete_files": [
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\hvdc_ontology_system\\tree_output.txt",
+          "active_refs": 2,
+          "backup_refs": 0,
+          "import_refs": 0,
+          "total_refs": 2,
+          "is_backup_file": false,
+          "safety_assessment": "DANGEROUS"
+        }
+      ],
+      "safety_level": "DANGEROUS",
+      "reasons": [
+        "tree_output.txt: 활성 파일에서 2회 참조"
+      ]
+    },
+    {
+      "group_id": 15,
+      "keep_file": "C:\\HVDC PJT\\hvdc_macho_gpt\\HVDC STATUS\\deploy-MintLight\\README.md",
+      "delete_files": [
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\HVDC STATUS\\deploy-MintLight\\theme_MintLight.json",
+          "active_refs": 3,
+          "backup_refs": 0,
+          "import_refs": 0,
+          "total_refs": 3,
+          "is_backup_file": false,
+          "safety_assessment": "DANGEROUS"
+        }
+      ],
+      "safety_level": "DANGEROUS",
+      "reasons": [
+        "theme_MintLight.json: 활성 파일에서 3회 참조"
+      ]
+    },
+    {
+      "group_id": 16,
+      "keep_file": "C:\\HVDC PJT\\hvdc_ontology_system\\hvdc_cli.py",
+      "delete_files": [
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\hvdc_ontology_system\\hvdc_cli.py",
+          "active_refs": 5,
+          "backup_refs": 0,
+          "import_refs": 0,
+          "total_refs": 5,
+          "is_backup_file": false,
+          "safety_assessment": "DANGEROUS"
+        }
+      ],
+      "safety_level": "DANGEROUS",
+      "reasons": [
+        "hvdc_cli.py: 활성 파일에서 5회 참조"
+      ]
+    },
+    {
+      "group_id": 17,
+      "keep_file": "C:\\HVDC PJT\\hvdc_ontology_system\\hvdc_engine.py",
+      "delete_files": [
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\hvdc_ontology_system\\hvdc_engine.py",
+          "active_refs": 13,
+          "backup_refs": 0,
+          "import_refs": 9,
+          "total_refs": 13,
+          "is_backup_file": false,
+          "safety_assessment": "DANGEROUS"
+        }
+      ],
+      "safety_level": "DANGEROUS",
+      "reasons": [
+        "hvdc_engine.py: 활성 파일에서 13회 참조"
+      ]
+    },
+    {
+      "group_id": 18,
+      "keep_file": "C:\\HVDC PJT\\hvdc_ontology_system\\run_example.py",
+      "delete_files": [
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\hvdc_ontology_system\\run_example.py",
+          "active_refs": 3,
+          "backup_refs": 0,
+          "import_refs": 0,
+          "total_refs": 3,
+          "is_backup_file": false,
+          "safety_assessment": "DANGEROUS"
+        }
+      ],
+      "safety_level": "DANGEROUS",
+      "reasons": [
+        "run_example.py: 활성 파일에서 3회 참조"
+      ]
+    },
+    {
+      "group_id": 19,
+      "keep_file": "C:\\HVDC PJT\\hvdc_ontology_system\\config\\settings.json",
+      "delete_files": [
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\hvdc_ontology_system\\config\\settings.json",
+          "active_refs": 8,
+          "backup_refs": 2,
+          "import_refs": 0,
+          "total_refs": 10,
+          "is_backup_file": false,
+          "safety_assessment": "DANGEROUS"
+        }
+      ],
+      "safety_level": "DANGEROUS",
+      "reasons": [
+        "settings.json: 활성 파일에서 8회 참조"
+      ]
+    },
+    {
+      "group_id": 20,
+      "keep_file": "C:\\HVDC PJT\\hvdc_macho_gpt\\src\\logi_meta_fixed.py",
+      "delete_files": [
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\hvdc_ontology_system\\src\\logi_meta_fixed.py",
+          "active_refs": 31,
+          "backup_refs": 0,
+          "import_refs": 6,
+          "total_refs": 31,
+          "is_backup_file": false,
+          "safety_assessment": "DANGEROUS"
+        }
+      ],
+      "safety_level": "DANGEROUS",
+      "reasons": [
+        "logi_meta_fixed.py: 활성 파일에서 31회 참조"
+      ]
+    },
+    {
+      "group_id": 21,
+      "keep_file": "C:\\HVDC PJT\\Mapping\\contract_inland_trucking_charge_rates_v1.1.md",
+      "delete_files": [
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\contract_inland_trucking_charge_rates_v1.1.md",
+          "active_refs": 7,
+          "backup_refs": 2,
+          "import_refs": 0,
+          "total_refs": 9,
+          "is_backup_file": false,
+          "safety_assessment": "DANGEROUS"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\inland invoice\\contract_inland_trucking_charge_rates_v1.1.md",
+          "active_refs": 7,
+          "backup_refs": 2,
+          "import_refs": 0,
+          "total_refs": 9,
+          "is_backup_file": false,
+          "safety_assessment": "DANGEROUS"
+        }
+      ],
+      "safety_level": "DANGEROUS",
+      "reasons": [
+        "contract_inland_trucking_charge_rates_v1.1.md: 활성 파일에서 7회 참조",
+        "contract_inland_trucking_charge_rates_v1.1.md: 활성 파일에서 7회 참조"
+      ]
+    },
+    {
+      "group_id": 22,
+      "keep_file": "C:\\HVDC PJT\\Mapping\\DOMESTIC_DELIVERY_APRIL_VERIFICATION.md",
+      "delete_files": [
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\inland invoice\\DOMESTIC_DELIVERY_APRIL_VERIFICATION.md",
+          "active_refs": 4,
+          "backup_refs": 0,
+          "import_refs": 0,
+          "total_refs": 4,
+          "is_backup_file": false,
+          "safety_assessment": "DANGEROUS"
+        }
+      ],
+      "safety_level": "DANGEROUS",
+      "reasons": [
+        "DOMESTIC_DELIVERY_APRIL_VERIFICATION.md: 활성 파일에서 4회 참조"
+      ]
+    },
+    {
+      "group_id": 23,
+      "keep_file": "C:\\HVDC PJT\\Mapping\\Domestic_Rate_Additional_Analysis.md",
+      "delete_files": [
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\inland invoice\\Domestic_Rate_Additional_Analysis.md",
+          "active_refs": 5,
+          "backup_refs": 0,
+          "import_refs": 0,
+          "total_refs": 5,
+          "is_backup_file": false,
+          "safety_assessment": "DANGEROUS"
+        }
+      ],
+      "safety_level": "DANGEROUS",
+      "reasons": [
+        "Domestic_Rate_Additional_Analysis.md: 활성 파일에서 5회 참조"
+      ]
+    },
+    {
+      "group_id": 24,
+      "keep_file": "C:\\HVDC PJT\\Mapping\\Domestic_Rate_Reference_Summary.md",
+      "delete_files": [
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\inland invoice\\Domestic_Rate_Reference_Summary.md",
+          "active_refs": 7,
+          "backup_refs": 0,
+          "import_refs": 0,
+          "total_refs": 7,
+          "is_backup_file": false,
+          "safety_assessment": "DANGEROUS"
+        }
+      ],
+      "safety_level": "DANGEROUS",
+      "reasons": [
+        "Domestic_Rate_Reference_Summary.md: 활성 파일에서 7회 참조"
+      ]
+    },
+    {
+      "group_id": 25,
+      "keep_file": "C:\\HVDC PJT\\Mapping\\hvdc_inland_trucking_mapping_v27.ttl",
+      "delete_files": [
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\inland invoice\\hvdc_inland_trucking_mapping_v27.ttl",
+          "active_refs": 6,
+          "backup_refs": 2,
+          "import_refs": 0,
+          "total_refs": 8,
+          "is_backup_file": false,
+          "safety_assessment": "DANGEROUS"
+        }
+      ],
+      "safety_level": "DANGEROUS",
+      "reasons": [
+        "hvdc_inland_trucking_mapping_v27.ttl: 활성 파일에서 6회 참조"
+      ]
+    },
+    {
+      "group_id": 26,
+      "keep_file": "C:\\HVDC PJT\\Mapping\\inland_trucking_charge_rates.md",
+      "delete_files": [
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\inland invoice\\inland_trucking_charge_rates.md",
+          "active_refs": 7,
+          "backup_refs": 2,
+          "import_refs": 0,
+          "total_refs": 9,
+          "is_backup_file": false,
+          "safety_assessment": "DANGEROUS"
+        }
+      ],
+      "safety_level": "DANGEROUS",
+      "reasons": [
+        "inland_trucking_charge_rates.md: 활성 파일에서 7회 참조"
+      ]
+    },
+    {
+      "group_id": 27,
+      "keep_file": "C:\\HVDC PJT\\Mapping\\analyze_hvdc_status.py",
+      "delete_files": [
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\analyze_hvdc_status.py",
+          "active_refs": 6,
+          "backup_refs": 0,
+          "import_refs": 0,
+          "total_refs": 6,
+          "is_backup_file": false,
+          "safety_assessment": "DANGEROUS"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\analyze_hvdc_status.py",
+          "active_refs": 6,
+          "backup_refs": 0,
+          "import_refs": 0,
+          "total_refs": 6,
+          "is_backup_file": false,
+          "safety_assessment": "DANGEROUS"
+        }
+      ],
+      "safety_level": "DANGEROUS",
+      "reasons": [
+        "analyze_hvdc_status.py: 활성 파일에서 6회 참조",
+        "analyze_hvdc_status.py: 활성 파일에서 6회 참조"
+      ]
+    },
+    {
+      "group_id": 28,
+      "keep_file": "C:\\HVDC PJT\\Mapping\\analyze_inland_trucking_v27.py",
+      "delete_files": [
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\analyze_inland_trucking_v27.py",
+          "active_refs": 4,
+          "backup_refs": 2,
+          "import_refs": 0,
+          "total_refs": 6,
+          "is_backup_file": false,
+          "safety_assessment": "DANGEROUS"
+        }
+      ],
+      "safety_level": "DANGEROUS",
+      "reasons": [
+        "analyze_inland_trucking_v27.py: 활성 파일에서 4회 참조"
+      ]
+    },
+    {
+      "group_id": 29,
+      "keep_file": "C:\\HVDC PJT\\Mapping\\analyze_scnt_invoice_fixed.py",
+      "delete_files": [
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\analyze_scnt_invoice_fixed.py",
+          "active_refs": 9,
+          "backup_refs": 0,
+          "import_refs": 0,
+          "total_refs": 9,
+          "is_backup_file": false,
+          "safety_assessment": "DANGEROUS"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\analyze_scnt_invoice_fixed.py",
+          "active_refs": 9,
+          "backup_refs": 0,
+          "import_refs": 0,
+          "total_refs": 9,
+          "is_backup_file": false,
+          "safety_assessment": "DANGEROUS"
+        }
+      ],
+      "safety_level": "DANGEROUS",
+      "reasons": [
+        "analyze_scnt_invoice_fixed.py: 활성 파일에서 9회 참조",
+        "analyze_scnt_invoice_fixed.py: 활성 파일에서 9회 참조"
+      ]
+    },
+    {
+      "group_id": 30,
+      "keep_file": "C:\\HVDC PJT\\Mapping\\apply_v281_patch.py",
+      "delete_files": [
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\apply_v281_patch.py",
+          "active_refs": 6,
+          "backup_refs": 0,
+          "import_refs": 0,
+          "total_refs": 6,
+          "is_backup_file": false,
+          "safety_assessment": "DANGEROUS"
+        }
+      ],
+      "safety_level": "DANGEROUS",
+      "reasons": [
+        "apply_v281_patch.py: 활성 파일에서 6회 참조"
+      ]
+    },
+    {
+      "group_id": 31,
+      "keep_file": "C:\\HVDC PJT\\Mapping\\calc_flow_code_v2.py",
+      "delete_files": [
+        {
+          "file": "C:\\HVDC PJT\\Mapping\\backup_v2.8.1_1751267433\\calc_flow_code_v2.py",
+          "active_refs": 30,
+          "backup_refs": 3,
+          "import_refs": 17,
+          "total_refs": 33,
+          "is_backup_file": true,
+          "safety_assessment": "DANGEROUS"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\calc_flow_code_v2.py",
+          "active_refs": 29,
+          "backup_refs": 4,
+          "import_refs": 17,
+          "total_refs": 33,
+          "is_backup_file": false,
+          "safety_assessment": "DANGEROUS"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\backup_v2.8.1_1751267433\\calc_flow_code_v2.py",
+          "active_refs": 30,
+          "backup_refs": 3,
+          "import_refs": 17,
+          "total_refs": 33,
+          "is_backup_file": true,
+          "safety_assessment": "DANGEROUS"
+        }
+      ],
+      "safety_level": "DANGEROUS",
+      "reasons": [
+        "calc_flow_code_v2.py: 활성 파일에서 30회 참조",
+        "calc_flow_code_v2.py: 활성 파일에서 29회 참조",
+        "calc_flow_code_v2.py: 활성 파일에서 30회 참조"
+      ]
+    },
+    {
+      "group_id": 32,
+      "keep_file": "C:\\HVDC PJT\\Mapping\\diagnose_mosb_issue.py",
+      "delete_files": [
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\diagnose_mosb_issue.py",
+          "active_refs": 4,
+          "backup_refs": 0,
+          "import_refs": 0,
+          "total_refs": 4,
+          "is_backup_file": false,
+          "safety_assessment": "DANGEROUS"
+        }
+      ],
+      "safety_level": "DANGEROUS",
+      "reasons": [
+        "diagnose_mosb_issue.py: 활성 파일에서 4회 참조"
+      ]
+    },
+    {
+      "group_id": 33,
+      "keep_file": "C:\\HVDC PJT\\Mapping\\expected_stock.yml",
+      "delete_files": [
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\expected_stock.yml",
+          "active_refs": 39,
+          "backup_refs": 26,
+          "import_refs": 0,
+          "total_refs": 65,
+          "is_backup_file": false,
+          "safety_assessment": "DANGEROUS"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\expected_stock.yml",
+          "active_refs": 39,
+          "backup_refs": 26,
+          "import_refs": 0,
+          "total_refs": 65,
+          "is_backup_file": false,
+          "safety_assessment": "DANGEROUS"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_Clean_Project_Backup_v2.6_20250626\\expected_stock.yml",
+          "active_refs": 39,
+          "backup_refs": 26,
+          "import_refs": 0,
+          "total_refs": 65,
+          "is_backup_file": true,
+          "safety_assessment": "DANGEROUS"
+        }
+      ],
+      "safety_level": "DANGEROUS",
+      "reasons": [
+        "expected_stock.yml: 활성 파일에서 39회 참조",
+        "expected_stock.yml: 활성 파일에서 39회 참조",
+        "expected_stock.yml: 활성 파일에서 39회 참조"
+      ]
+    },
+    {
+      "group_id": 34,
+      "keep_file": "C:\\HVDC PJT\\Mapping\\flow_code_gap_analysis.py",
+      "delete_files": [
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\flow_code_gap_analysis.py",
+          "active_refs": 10,
+          "backup_refs": 0,
+          "import_refs": 4,
+          "total_refs": 10,
+          "is_backup_file": false,
+          "safety_assessment": "DANGEROUS"
+        }
+      ],
+      "safety_level": "DANGEROUS",
+      "reasons": [
+        "flow_code_gap_analysis.py: 활성 파일에서 10회 참조"
+      ]
+    },
+    {
+      "group_id": 35,
+      "keep_file": "C:\\HVDC PJT\\Mapping\\full_data_ontology_mapping.py",
+      "delete_files": [
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\full_data_ontology_mapping.py",
+          "active_refs": 4,
+          "backup_refs": 2,
+          "import_refs": 0,
+          "total_refs": 6,
+          "is_backup_file": false,
+          "safety_assessment": "DANGEROUS"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\full_data_ontology_mapping.py",
+          "active_refs": 4,
+          "backup_refs": 2,
+          "import_refs": 0,
+          "total_refs": 6,
+          "is_backup_file": false,
+          "safety_assessment": "DANGEROUS"
+        }
+      ],
+      "safety_level": "DANGEROUS",
+      "reasons": [
+        "full_data_ontology_mapping.py: 활성 파일에서 4회 참조",
+        "full_data_ontology_mapping.py: 활성 파일에서 4회 참조"
+      ]
+    },
+    {
+      "group_id": 36,
+      "keep_file": "C:\\HVDC PJT\\Mapping\\HVDC_Invoice_Mapping_Integration_Report.md",
+      "delete_files": [
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\HVDC_Invoice_Mapping_Integration_Report.md",
+          "active_refs": 4,
+          "backup_refs": 0,
+          "import_refs": 0,
+          "total_refs": 4,
+          "is_backup_file": false,
+          "safety_assessment": "DANGEROUS"
+        }
+      ],
+      "safety_level": "DANGEROUS",
+      "reasons": [
+        "HVDC_Invoice_Mapping_Integration_Report.md: 활성 파일에서 4회 참조"
+      ]
+    },
+    {
+      "group_id": 37,
+      "keep_file": "C:\\HVDC PJT\\Mapping\\HVDC_Logistics_Flow_Report.md",
+      "delete_files": [
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\HVDC_Logistics_Flow_Report.md",
+          "active_refs": 6,
+          "backup_refs": 4,
+          "import_refs": 0,
+          "total_refs": 10,
+          "is_backup_file": false,
+          "safety_assessment": "DANGEROUS"
+        }
+      ],
+      "safety_level": "DANGEROUS",
+      "reasons": [
+        "HVDC_Logistics_Flow_Report.md: 활성 파일에서 6회 참조"
+      ]
+    },
+    {
+      "group_id": 38,
+      "keep_file": "C:\\HVDC PJT\\Mapping\\HVDC_MAPPING_BACKUP_SUMMARY_v2.7.md",
+      "delete_files": [
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\HVDC_MAPPING_BACKUP_SUMMARY_v2.7.md",
+          "active_refs": 2,
+          "backup_refs": 1,
+          "import_refs": 0,
+          "total_refs": 3,
+          "is_backup_file": true,
+          "safety_assessment": "DANGEROUS"
+        }
+      ],
+      "safety_level": "DANGEROUS",
+      "reasons": [
+        "HVDC_MAPPING_BACKUP_SUMMARY_v2.7.md: 활성 파일에서 2회 참조"
+      ]
+    },
+    {
+      "group_id": 39,
+      "keep_file": "C:\\HVDC PJT\\Mapping\\HVDC_Real_Data_Validation_Report.md",
+      "delete_files": [
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\HVDC_Real_Data_Validation_Report.md",
+          "active_refs": 4,
+          "backup_refs": 0,
+          "import_refs": 0,
+          "total_refs": 4,
+          "is_backup_file": false,
+          "safety_assessment": "DANGEROUS"
+        }
+      ],
+      "safety_level": "DANGEROUS",
+      "reasons": [
+        "HVDC_Real_Data_Validation_Report.md: 활성 파일에서 4회 참조"
+      ]
+    },
+    {
+      "group_id": 40,
+      "keep_file": "C:\\HVDC PJT\\Mapping\\hvdc_status_637records_20250629_043157.ttl",
+      "delete_files": [
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\hvdc_status_637records_20250629_043157.ttl",
+          "active_refs": 5,
+          "backup_refs": 0,
+          "import_refs": 0,
+          "total_refs": 5,
+          "is_backup_file": false,
+          "safety_assessment": "DANGEROUS"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\rdf_output\\hvdc_status_637records_20250629_043157.ttl",
+          "active_refs": 5,
+          "backup_refs": 0,
+          "import_refs": 0,
+          "total_refs": 5,
+          "is_backup_file": false,
+          "safety_assessment": "DANGEROUS"
+        }
+      ],
+      "safety_level": "DANGEROUS",
+      "reasons": [
+        "hvdc_status_637records_20250629_043157.ttl: 활성 파일에서 5회 참조",
+        "hvdc_status_637records_20250629_043157.ttl: 활성 파일에서 5회 참조"
+      ]
+    },
+    {
+      "group_id": 41,
+      "keep_file": "C:\\HVDC PJT\\Mapping\\HVDC_v282_Patch_Summary.md",
+      "delete_files": [
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\HVDC_v282_Patch_Summary.md",
+          "active_refs": 2,
+          "backup_refs": 0,
+          "import_refs": 0,
+          "total_refs": 2,
+          "is_backup_file": false,
+          "safety_assessment": "DANGEROUS"
+        }
+      ],
+      "safety_level": "DANGEROUS",
+      "reasons": [
+        "HVDC_v282_Patch_Summary.md: 활성 파일에서 2회 참조"
+      ]
+    },
+    {
+      "group_id": 42,
+      "keep_file": "C:\\HVDC PJT\\Mapping\\HVDC_v282_Project_Final_Report.md",
+      "delete_files": [
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\HVDC_v282_Project_Final_Report.md",
+          "active_refs": 4,
+          "backup_refs": 0,
+          "import_refs": 0,
+          "total_refs": 4,
+          "is_backup_file": false,
+          "safety_assessment": "DANGEROUS"
+        }
+      ],
+      "safety_level": "DANGEROUS",
+      "reasons": [
+        "HVDC_v282_Project_Final_Report.md: 활성 파일에서 4회 참조"
+      ]
+    },
+    {
+      "group_id": 43,
+      "keep_file": "C:\\HVDC PJT\\Mapping\\HVDC_v282_VERIFICATION_COMPLETE.md",
+      "delete_files": [
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\HVDC_v282_VERIFICATION_COMPLETE.md",
+          "active_refs": 2,
+          "backup_refs": 0,
+          "import_refs": 0,
+          "total_refs": 2,
+          "is_backup_file": false,
+          "safety_assessment": "DANGEROUS"
+        }
+      ],
+      "safety_level": "DANGEROUS",
+      "reasons": [
+        "HVDC_v282_VERIFICATION_COMPLETE.md: 활성 파일에서 2회 참조"
+      ]
+    },
+    {
+      "group_id": 44,
+      "keep_file": "C:\\HVDC PJT\\Mapping\\HVDC_v282_Work_Log.md",
+      "delete_files": [
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\HVDC_v282_Work_Log.md",
+          "active_refs": 3,
+          "backup_refs": 0,
+          "import_refs": 0,
+          "total_refs": 3,
+          "is_backup_file": false,
+          "safety_assessment": "DANGEROUS"
+        }
+      ],
+      "safety_level": "DANGEROUS",
+      "reasons": [
+        "HVDC_v282_Work_Log.md: 활성 파일에서 3회 참조"
+      ]
+    },
+    {
+      "group_id": 45,
+      "keep_file": "C:\\HVDC PJT\\Mapping\\HVDC_v28_UPGRADE_GUIDE.md",
+      "delete_files": [
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\HVDC_v28_UPGRADE_GUIDE.md",
+          "active_refs": 2,
+          "backup_refs": 0,
+          "import_refs": 0,
+          "total_refs": 2,
+          "is_backup_file": false,
+          "safety_assessment": "DANGEROUS"
+        }
+      ],
+      "safety_level": "DANGEROUS",
+      "reasons": [
+        "HVDC_v28_UPGRADE_GUIDE.md: 활성 파일에서 2회 참조"
+      ]
+    },
+    {
+      "group_id": 46,
+      "keep_file": "C:\\HVDC PJT\\Mapping\\invoice_mapping_integration_v283.ttl",
+      "delete_files": [
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\invoice_mapping_integration_v283.ttl",
+          "active_refs": 6,
+          "backup_refs": 0,
+          "import_refs": 0,
+          "total_refs": 6,
+          "is_backup_file": false,
+          "safety_assessment": "DANGEROUS"
+        }
+      ],
+      "safety_level": "DANGEROUS",
+      "reasons": [
+        "invoice_mapping_integration_v283.ttl: 활성 파일에서 6회 참조"
+      ]
+    },
+    {
+      "group_id": 47,
+      "keep_file": "C:\\HVDC PJT\\Mapping\\mapping_rules_v2.4_backup.json",
+      "delete_files": [
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\mapping_rules_v2.4_backup.json",
+          "active_refs": 4,
+          "backup_refs": 0,
+          "import_refs": 0,
+          "total_refs": 4,
+          "is_backup_file": true,
+          "safety_assessment": "DANGEROUS"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\backup_20250626_144500\\mapping_rules_v2.4.json",
+          "active_refs": 14,
+          "backup_refs": 8,
+          "import_refs": 0,
+          "total_refs": 22,
+          "is_backup_file": true,
+          "safety_assessment": "DANGEROUS"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\cleanup_files\\old_versions\\mapping_rules_v2.4.json",
+          "active_refs": 14,
+          "backup_refs": 8,
+          "import_refs": 0,
+          "total_refs": 22,
+          "is_backup_file": true,
+          "safety_assessment": "DANGEROUS"
+        }
+      ],
+      "safety_level": "DANGEROUS",
+      "reasons": [
+        "mapping_rules_v2.4_backup.json: 활성 파일에서 4회 참조",
+        "mapping_rules_v2.4.json: 활성 파일에서 14회 참조",
+        "mapping_rules_v2.4.json: 활성 파일에서 14회 참조"
+      ]
+    },
+    {
+      "group_id": 48,
+      "keep_file": "C:\\HVDC PJT\\Mapping\\mapping_rules_v2.6.json",
+      "delete_files": [
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\mapping_rules_v2.6.json",
+          "active_refs": 48,
+          "backup_refs": 23,
+          "import_refs": 0,
+          "total_refs": 71,
+          "is_backup_file": false,
+          "safety_assessment": "DANGEROUS"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\mapping_rules_v2.6.json",
+          "active_refs": 48,
+          "backup_refs": 23,
+          "import_refs": 0,
+          "total_refs": 71,
+          "is_backup_file": false,
+          "safety_assessment": "DANGEROUS"
+        }
+      ],
+      "safety_level": "DANGEROUS",
+      "reasons": [
+        "mapping_rules_v2.6.json: 활성 파일에서 48회 참조",
+        "mapping_rules_v2.6.json: 활성 파일에서 48회 참조"
+      ]
+    },
+    {
+      "group_id": 49,
+      "keep_file": "C:\\HVDC PJT\\Mapping\\mapping_rules_v2.8.json",
+      "delete_files": [
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\mapping_rules_v2.8.json",
+          "active_refs": 42,
+          "backup_refs": 2,
+          "import_refs": 0,
+          "total_refs": 44,
+          "is_backup_file": false,
+          "safety_assessment": "DANGEROUS"
+        }
+      ],
+      "safety_level": "DANGEROUS",
+      "reasons": [
+        "mapping_rules_v2.8.json: 활성 파일에서 42회 참조"
+      ]
+    },
+    {
+      "group_id": 50,
+      "keep_file": "C:\\HVDC PJT\\Mapping\\mapping_utils.py",
+      "delete_files": [
+        {
+          "file": "C:\\HVDC PJT\\hvdc_ontology_system\\mapping_utils.py",
+          "active_refs": 55,
+          "backup_refs": 18,
+          "import_refs": 42,
+          "total_refs": 73,
+          "is_backup_file": false,
+          "safety_assessment": "DANGEROUS"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\mapping_utils.py",
+          "active_refs": 55,
+          "backup_refs": 18,
+          "import_refs": 42,
+          "total_refs": 73,
+          "is_backup_file": false,
+          "safety_assessment": "DANGEROUS"
+        }
+      ],
+      "safety_level": "DANGEROUS",
+      "reasons": [
+        "mapping_utils.py: 활성 파일에서 55회 참조",
+        "mapping_utils.py: 활성 파일에서 55회 참조"
+      ]
+    },
+    {
+      "group_id": 51,
+      "keep_file": "C:\\HVDC PJT\\Mapping\\ontology_mapper.py",
+      "delete_files": [
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\ontology_mapper.py",
+          "active_refs": 12,
+          "backup_refs": 12,
+          "import_refs": 10,
+          "total_refs": 24,
+          "is_backup_file": false,
+          "safety_assessment": "DANGEROUS"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\ontology_mapper.py",
+          "active_refs": 12,
+          "backup_refs": 12,
+          "import_refs": 10,
+          "total_refs": 24,
+          "is_backup_file": false,
+          "safety_assessment": "DANGEROUS"
+        }
+      ],
+      "safety_level": "DANGEROUS",
+      "reasons": [
+        "ontology_mapper.py: 활성 파일에서 12회 참조",
+        "ontology_mapper.py: 활성 파일에서 12회 참조"
+      ]
+    },
+    {
+      "group_id": 52,
+      "keep_file": "C:\\HVDC PJT\\Mapping\\ontology_mapping_example.py",
+      "delete_files": [
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\ontology_mapping_example.py",
+          "active_refs": 2,
+          "backup_refs": 0,
+          "import_refs": 0,
+          "total_refs": 2,
+          "is_backup_file": false,
+          "safety_assessment": "DANGEROUS"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\ontology_mapping_example.py",
+          "active_refs": 2,
+          "backup_refs": 0,
+          "import_refs": 0,
+          "total_refs": 2,
+          "is_backup_file": false,
+          "safety_assessment": "DANGEROUS"
+        }
+      ],
+      "safety_level": "DANGEROUS",
+      "reasons": [
+        "ontology_mapping_example.py: 활성 파일에서 2회 참조",
+        "ontology_mapping_example.py: 활성 파일에서 2회 참조"
+      ]
+    },
+    {
+      "group_id": 53,
+      "keep_file": "C:\\HVDC PJT\\Mapping\\ontology_mapping_v2.4.md",
+      "delete_files": [
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\ontology_mapping_v2.4.md",
+          "active_refs": 4,
+          "backup_refs": 0,
+          "import_refs": 0,
+          "total_refs": 4,
+          "is_backup_file": false,
+          "safety_assessment": "DANGEROUS"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\docs\\ontology_mapping_v2.4.md",
+          "active_refs": 4,
+          "backup_refs": 0,
+          "import_refs": 0,
+          "total_refs": 4,
+          "is_backup_file": false,
+          "safety_assessment": "DANGEROUS"
+        }
+      ],
+      "safety_level": "DANGEROUS",
+      "reasons": [
+        "ontology_mapping_v2.4.md: 활성 파일에서 4회 참조",
+        "ontology_mapping_v2.4.md: 활성 파일에서 4회 참조"
+      ]
+    },
+    {
+      "group_id": 54,
+      "keep_file": "C:\\HVDC PJT\\Mapping\\ontology_reasoning_engine.py",
+      "delete_files": [
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\ontology_reasoning_engine.py",
+          "active_refs": 5,
+          "backup_refs": 2,
+          "import_refs": 0,
+          "total_refs": 7,
+          "is_backup_file": false,
+          "safety_assessment": "DANGEROUS"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\ontology_reasoning_engine.py",
+          "active_refs": 5,
+          "backup_refs": 2,
+          "import_refs": 0,
+          "total_refs": 7,
+          "is_backup_file": false,
+          "safety_assessment": "DANGEROUS"
+        }
+      ],
+      "safety_level": "DANGEROUS",
+      "reasons": [
+        "ontology_reasoning_engine.py: 활성 파일에서 5회 참조",
+        "ontology_reasoning_engine.py: 활성 파일에서 5회 참조"
+      ]
+    },
+    {
+      "group_id": 55,
+      "keep_file": "C:\\HVDC PJT\\Mapping\\quick_test_v282.py",
+      "delete_files": [
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\quick_test_v282.py",
+          "active_refs": 2,
+          "backup_refs": 0,
+          "import_refs": 0,
+          "total_refs": 2,
+          "is_backup_file": false,
+          "safety_assessment": "DANGEROUS"
+        }
+      ],
+      "safety_level": "DANGEROUS",
+      "reasons": [
+        "quick_test_v282.py: 활성 파일에서 2회 참조"
+      ]
+    },
+    {
+      "group_id": 56,
+      "keep_file": "C:\\HVDC PJT\\Mapping\\real_data_analysis_summary.md",
+      "delete_files": [
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\real_data_analysis_summary.md",
+          "active_refs": 2,
+          "backup_refs": 0,
+          "import_refs": 0,
+          "total_refs": 2,
+          "is_backup_file": false,
+          "safety_assessment": "DANGEROUS"
+        }
+      ],
+      "safety_level": "DANGEROUS",
+      "reasons": [
+        "real_data_analysis_summary.md: 활성 파일에서 2회 참조"
+      ]
+    },
+    {
+      "group_id": 57,
+      "keep_file": "C:\\HVDC PJT\\Mapping\\real_data_ontology_mapping.py",
+      "delete_files": [
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\real_data_ontology_mapping.py",
+          "active_refs": 4,
+          "backup_refs": 0,
+          "import_refs": 0,
+          "total_refs": 4,
+          "is_backup_file": false,
+          "safety_assessment": "DANGEROUS"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\real_data_ontology_mapping.py",
+          "active_refs": 4,
+          "backup_refs": 0,
+          "import_refs": 0,
+          "total_refs": 4,
+          "is_backup_file": false,
+          "safety_assessment": "DANGEROUS"
+        }
+      ],
+      "safety_level": "DANGEROUS",
+      "reasons": [
+        "real_data_ontology_mapping.py: 활성 파일에서 4회 참조",
+        "real_data_ontology_mapping.py: 활성 파일에서 4회 참조"
+      ]
+    },
+    {
+      "group_id": 58,
+      "keep_file": "C:\\HVDC PJT\\Mapping\\real_data_validation.py",
+      "delete_files": [
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\real_data_validation.py",
+          "active_refs": 6,
+          "backup_refs": 0,
+          "import_refs": 0,
+          "total_refs": 6,
+          "is_backup_file": false,
+          "safety_assessment": "DANGEROUS"
+        }
+      ],
+      "safety_level": "DANGEROUS",
+      "reasons": [
+        "real_data_validation.py: 활성 파일에서 6회 참조"
+      ]
+    },
+    {
+      "group_id": 59,
+      "keep_file": "C:\\HVDC PJT\\Mapping\\repair_columns_tool.py",
+      "delete_files": [
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\repair_columns_tool.py",
+          "active_refs": 11,
+          "backup_refs": 0,
+          "import_refs": 7,
+          "total_refs": 11,
+          "is_backup_file": false,
+          "safety_assessment": "DANGEROUS"
+        }
+      ],
+      "safety_level": "DANGEROUS",
+      "reasons": [
+        "repair_columns_tool.py: 활성 파일에서 11회 참조"
+      ]
+    },
+    {
+      "group_id": 60,
+      "keep_file": "C:\\HVDC PJT\\Mapping\\scnt_invoice_fixed_37records_20250629_044010.ttl",
+      "delete_files": [
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\scnt_invoice_fixed_37records_20250629_044010.ttl",
+          "active_refs": 4,
+          "backup_refs": 0,
+          "import_refs": 0,
+          "total_refs": 4,
+          "is_backup_file": false,
+          "safety_assessment": "DANGEROUS"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\rdf_output\\scnt_invoice_fixed_37records_20250629_044010.ttl",
+          "active_refs": 4,
+          "backup_refs": 0,
+          "import_refs": 0,
+          "total_refs": 4,
+          "is_backup_file": false,
+          "safety_assessment": "DANGEROUS"
+        }
+      ],
+      "safety_level": "DANGEROUS",
+      "reasons": [
+        "scnt_invoice_fixed_37records_20250629_044010.ttl: 활성 파일에서 4회 참조",
+        "scnt_invoice_fixed_37records_20250629_044010.ttl: 활성 파일에서 4회 참조"
+      ]
+    },
+    {
+      "group_id": 61,
+      "keep_file": "C:\\HVDC PJT\\Mapping\\scnt_query_executor.py",
+      "delete_files": [
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\scnt_query_executor.py",
+          "active_refs": 4,
+          "backup_refs": 0,
+          "import_refs": 0,
+          "total_refs": 4,
+          "is_backup_file": false,
+          "safety_assessment": "DANGEROUS"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\scnt_query_executor.py",
+          "active_refs": 4,
+          "backup_refs": 0,
+          "import_refs": 0,
+          "total_refs": 4,
+          "is_backup_file": false,
+          "safety_assessment": "DANGEROUS"
+        }
+      ],
+      "safety_level": "DANGEROUS",
+      "reasons": [
+        "scnt_query_executor.py: 활성 파일에서 4회 참조",
+        "scnt_query_executor.py: 활성 파일에서 4회 참조"
+      ]
+    },
+    {
+      "group_id": 62,
+      "keep_file": "C:\\HVDC PJT\\Mapping\\test_v282_verification.py",
+      "delete_files": [
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\test_v282_verification.py",
+          "active_refs": 6,
+          "backup_refs": 0,
+          "import_refs": 0,
+          "total_refs": 6,
+          "is_backup_file": false,
+          "safety_assessment": "DANGEROUS"
+        }
+      ],
+      "safety_level": "DANGEROUS",
+      "reasons": [
+        "test_v282_verification.py: 활성 파일에서 6회 참조"
+      ]
+    },
+    {
+      "group_id": 63,
+      "keep_file": "C:\\HVDC PJT\\Mapping\\test_v283_patch.py",
+      "delete_files": [
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\test_v283_patch.py",
+          "active_refs": 4,
+          "backup_refs": 0,
+          "import_refs": 0,
+          "total_refs": 4,
+          "is_backup_file": false,
+          "safety_assessment": "DANGEROUS"
+        }
+      ],
+      "safety_level": "DANGEROUS",
+      "reasons": [
+        "test_v283_patch.py: 활성 파일에서 4회 참조"
+      ]
+    },
+    {
+      "group_id": 64,
+      "keep_file": "C:\\HVDC PJT\\Mapping\\test_v28_upgrade.py",
+      "delete_files": [
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\test_v28_upgrade.py",
+          "active_refs": 6,
+          "backup_refs": 0,
+          "import_refs": 0,
+          "total_refs": 6,
+          "is_backup_file": false,
+          "safety_assessment": "DANGEROUS"
+        }
+      ],
+      "safety_level": "DANGEROUS",
+      "reasons": [
+        "test_v28_upgrade.py: 활성 파일에서 6회 참조"
+      ]
+    },
+    {
+      "group_id": 65,
+      "keep_file": "C:\\HVDC PJT\\Mapping\\test_v28_upgrade_large.py",
+      "delete_files": [
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\test_v28_upgrade_large.py",
+          "active_refs": 4,
+          "backup_refs": 0,
+          "import_refs": 0,
+          "total_refs": 4,
+          "is_backup_file": false,
+          "safety_assessment": "DANGEROUS"
+        }
+      ],
+      "safety_level": "DANGEROUS",
+      "reasons": [
+        "test_v28_upgrade_large.py: 활성 파일에서 4회 참조"
+      ]
+    },
+    {
+      "group_id": 66,
+      "keep_file": "C:\\HVDC PJT\\Mapping\\tools_ontology_mapper.py",
+      "delete_files": [
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\tools_ontology_mapper.py",
+          "active_refs": 4,
+          "backup_refs": 0,
+          "import_refs": 0,
+          "total_refs": 4,
+          "is_backup_file": false,
+          "safety_assessment": "DANGEROUS"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\tools\\ontology_mapper.py",
+          "active_refs": 12,
+          "backup_refs": 12,
+          "import_refs": 10,
+          "total_refs": 24,
+          "is_backup_file": false,
+          "safety_assessment": "DANGEROUS"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_Clean_Project_Backup_v2.6_20250626\\tools\\ontology_mapper.py",
+          "active_refs": 12,
+          "backup_refs": 12,
+          "import_refs": 10,
+          "total_refs": 24,
+          "is_backup_file": true,
+          "safety_assessment": "DANGEROUS"
+        }
+      ],
+      "safety_level": "DANGEROUS",
+      "reasons": [
+        "tools_ontology_mapper.py: 활성 파일에서 4회 참조",
+        "ontology_mapper.py: 활성 파일에서 12회 참조",
+        "ontology_mapper.py: 활성 파일에서 12회 참조"
+      ]
+    },
+    {
+      "group_id": 67,
+      "keep_file": "C:\\HVDC PJT\\Mapping\\tools_update_expected_yaml.py",
+      "delete_files": [
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\tools_update_expected_yaml.py",
+          "active_refs": 2,
+          "backup_refs": 0,
+          "import_refs": 0,
+          "total_refs": 2,
+          "is_backup_file": false,
+          "safety_assessment": "DANGEROUS"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\tools\\update_expected_yaml.py",
+          "active_refs": 4,
+          "backup_refs": 1,
+          "import_refs": 0,
+          "total_refs": 5,
+          "is_backup_file": false,
+          "safety_assessment": "DANGEROUS"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_Clean_Project_Backup_v2.6_20250626\\tools\\update_expected_yaml.py",
+          "active_refs": 5,
+          "backup_refs": 0,
+          "import_refs": 0,
+          "total_refs": 5,
+          "is_backup_file": true,
+          "safety_assessment": "DANGEROUS"
+        }
+      ],
+      "safety_level": "DANGEROUS",
+      "reasons": [
+        "tools_update_expected_yaml.py: 활성 파일에서 2회 참조",
+        "update_expected_yaml.py: 활성 파일에서 4회 참조",
+        "update_expected_yaml.py: 활성 파일에서 5회 참조"
+      ]
+    },
+    {
+      "group_id": 68,
+      "keep_file": "C:\\HVDC PJT\\Mapping\\tools_validate_yaml_ontology.py",
+      "delete_files": [
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\tools_validate_yaml_ontology.py",
+          "active_refs": 2,
+          "backup_refs": 0,
+          "import_refs": 0,
+          "total_refs": 2,
+          "is_backup_file": false,
+          "safety_assessment": "DANGEROUS"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\tools\\validate_yaml_ontology.py",
+          "active_refs": 2,
+          "backup_refs": 1,
+          "import_refs": 0,
+          "total_refs": 3,
+          "is_backup_file": false,
+          "safety_assessment": "DANGEROUS"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_Clean_Project_Backup_v2.6_20250626\\tools\\validate_yaml_ontology.py",
+          "active_refs": 2,
+          "backup_refs": 1,
+          "import_refs": 0,
+          "total_refs": 3,
+          "is_backup_file": true,
+          "safety_assessment": "DANGEROUS"
+        }
+      ],
+      "safety_level": "DANGEROUS",
+      "reasons": [
+        "tools_validate_yaml_ontology.py: 활성 파일에서 2회 참조",
+        "validate_yaml_ontology.py: 활성 파일에서 2회 참조",
+        "validate_yaml_ontology.py: 활성 파일에서 2회 참조"
+      ]
+    },
+    {
+      "group_id": 69,
+      "keep_file": "C:\\HVDC PJT\\Mapping\\validate_ontology.py",
+      "delete_files": [
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\validate_ontology.py",
+          "active_refs": 13,
+          "backup_refs": 0,
+          "import_refs": 0,
+          "total_refs": 13,
+          "is_backup_file": false,
+          "safety_assessment": "DANGEROUS"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\validate_ontology.py",
+          "active_refs": 13,
+          "backup_refs": 0,
+          "import_refs": 0,
+          "total_refs": 13,
+          "is_backup_file": false,
+          "safety_assessment": "DANGEROUS"
+        }
+      ],
+      "safety_level": "DANGEROUS",
+      "reasons": [
+        "validate_ontology.py: 활성 파일에서 13회 참조",
+        "validate_ontology.py: 활성 파일에서 13회 참조"
+      ]
+    },
+    {
+      "group_id": 70,
+      "keep_file": "C:\\HVDC PJT\\Mapping\\verify_invoice_integration.py",
+      "delete_files": [
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\verify_invoice_integration.py",
+          "active_refs": 3,
+          "backup_refs": 0,
+          "import_refs": 0,
+          "total_refs": 3,
+          "is_backup_file": false,
+          "safety_assessment": "DANGEROUS"
+        }
+      ],
+      "safety_level": "DANGEROUS",
+      "reasons": [
+        "verify_invoice_integration.py: 활성 파일에서 3회 참조"
+      ]
+    },
+    {
+      "group_id": 71,
+      "keep_file": "C:\\HVDC PJT\\Mapping\\backup_v2.8.1_1751267433\\mapping_utils.py",
+      "delete_files": [
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\backup_v2.8.1_1751267433\\mapping_utils.py",
+          "active_refs": 56,
+          "backup_refs": 17,
+          "import_refs": 42,
+          "total_refs": 73,
+          "is_backup_file": true,
+          "safety_assessment": "DANGEROUS"
+        }
+      ],
+      "safety_level": "DANGEROUS",
+      "reasons": [
+        "mapping_utils.py: 활성 파일에서 56회 참조"
+      ]
+    },
+    {
+      "group_id": 72,
+      "keep_file": "C:\\HVDC PJT\\Mapping\\reasoning_output\\validation\\validation_hvdc_graph_20250630_102016.json",
+      "delete_files": [
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\reasoning_output\\validation\\validation_hvdc_graph_20250630_102016.json",
+          "active_refs": 2,
+          "backup_refs": 0,
+          "import_refs": 0,
+          "total_refs": 2,
+          "is_backup_file": false,
+          "safety_assessment": "DANGEROUS"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\reasoning_output\\validation\\validation_hvdc_graph_20250629_015915.json",
+          "active_refs": 2,
+          "backup_refs": 0,
+          "import_refs": 0,
+          "total_refs": 2,
+          "is_backup_file": false,
+          "safety_assessment": "DANGEROUS"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\reasoning_output\\validation\\validation_hvdc_graph_20250629_015933.json",
+          "active_refs": 2,
+          "backup_refs": 0,
+          "import_refs": 0,
+          "total_refs": 2,
+          "is_backup_file": false,
+          "safety_assessment": "DANGEROUS"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\reasoning_output\\validation\\validation_hvdc_graph_20250629_015955.json",
+          "active_refs": 2,
+          "backup_refs": 0,
+          "import_refs": 0,
+          "total_refs": 2,
+          "is_backup_file": false,
+          "safety_assessment": "DANGEROUS"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\reasoning_output\\validation\\validation_hvdc_graph_20250629_020436.json",
+          "active_refs": 2,
+          "backup_refs": 0,
+          "import_refs": 0,
+          "total_refs": 2,
+          "is_backup_file": false,
+          "safety_assessment": "DANGEROUS"
+        }
+      ],
+      "safety_level": "DANGEROUS",
+      "reasons": [
+        "validation_hvdc_graph_20250630_102016.json: 활성 파일에서 2회 참조",
+        "validation_hvdc_graph_20250629_015915.json: 활성 파일에서 2회 참조",
+        "validation_hvdc_graph_20250629_015933.json: 활성 파일에서 2회 참조",
+        "validation_hvdc_graph_20250629_015955.json: 활성 파일에서 2회 참조",
+        "validation_hvdc_graph_20250629_020436.json: 활성 파일에서 2회 참조"
+      ]
+    },
+    {
+      "group_id": 73,
+      "keep_file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\bi_dashboard.py",
+      "delete_files": [
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_Clean_Project_Backup_v2.6_20250626\\bi_dashboard.py",
+          "active_refs": 6,
+          "backup_refs": 7,
+          "import_refs": 3,
+          "total_refs": 13,
+          "is_backup_file": true,
+          "safety_assessment": "DANGEROUS"
+        }
+      ],
+      "safety_level": "DANGEROUS",
+      "reasons": [
+        "bi_dashboard.py: 활성 파일에서 6회 참조"
+      ]
+    },
+    {
+      "group_id": 74,
+      "keep_file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\config.py",
+      "delete_files": [
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_Clean_Project_Backup_v2.6_20250626\\config.py",
+          "active_refs": 47,
+          "backup_refs": 22,
+          "import_refs": 18,
+          "total_refs": 69,
+          "is_backup_file": true,
+          "safety_assessment": "DANGEROUS"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\backup_20250626_144500\\config.py",
+          "active_refs": 47,
+          "backup_refs": 22,
+          "import_refs": 18,
+          "total_refs": 69,
+          "is_backup_file": true,
+          "safety_assessment": "DANGEROUS"
+        }
+      ],
+      "safety_level": "DANGEROUS",
+      "reasons": [
+        "config.py: 활성 파일에서 47회 참조",
+        "config.py: 활성 파일에서 47회 참조"
+      ]
+    },
+    {
+      "group_id": 75,
+      "keep_file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\data_validation_engine.py",
+      "delete_files": [
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_Clean_Project_Backup_v2.6_20250626\\data_validation_engine.py",
+          "active_refs": 6,
+          "backup_refs": 5,
+          "import_refs": 2,
+          "total_refs": 11,
+          "is_backup_file": true,
+          "safety_assessment": "DANGEROUS"
+        }
+      ],
+      "safety_level": "DANGEROUS",
+      "reasons": [
+        "data_validation_engine.py: 활성 파일에서 6회 참조"
+      ]
+    },
+    {
+      "group_id": 76,
+      "keep_file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\debug_handling_fee.py",
+      "delete_files": [
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\backup_20250626_144500\\debug_handling_fee.py",
+          "active_refs": 3,
+          "backup_refs": 1,
+          "import_refs": 0,
+          "total_refs": 4,
+          "is_backup_file": true,
+          "safety_assessment": "DANGEROUS"
+        }
+      ],
+      "safety_level": "DANGEROUS",
+      "reasons": [
+        "debug_handling_fee.py: 활성 파일에서 3회 참조"
+      ]
+    },
+    {
+      "group_id": 77,
+      "keep_file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_v2.6_실행가이드.md",
+      "delete_files": [
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_Clean_Project_Backup_v2.6_20250626\\HVDC_v2.6_실행가이드.md",
+          "active_refs": 3,
+          "backup_refs": 2,
+          "import_refs": 0,
+          "total_refs": 5,
+          "is_backup_file": true,
+          "safety_assessment": "DANGEROUS"
+        }
+      ],
+      "safety_level": "DANGEROUS",
+      "reasons": [
+        "HVDC_v2.6_실행가이드.md: 활성 파일에서 3회 참조"
+      ]
+    },
+    {
+      "group_id": 78,
+      "keep_file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_정리된_프로젝트_구조_다이어그램.md",
+      "delete_files": [
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_Clean_Project_Backup_v2.6_20250626\\HVDC_정리된_프로젝트_구조_다이어그램.md",
+          "active_refs": 2,
+          "backup_refs": 1,
+          "import_refs": 0,
+          "total_refs": 3,
+          "is_backup_file": true,
+          "safety_assessment": "DANGEROUS"
+        }
+      ],
+      "safety_level": "DANGEROUS",
+      "reasons": [
+        "HVDC_정리된_프로젝트_구조_다이어그램.md: 활성 파일에서 2회 참조"
+      ]
+    },
+    {
+      "group_id": 79,
+      "keep_file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_코드구조_시각화_다이어그램.md",
+      "delete_files": [
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_Clean_Project_Backup_v2.6_20250626\\HVDC_코드구조_시각화_다이어그램.md",
+          "active_refs": 3,
+          "backup_refs": 2,
+          "import_refs": 0,
+          "total_refs": 5,
+          "is_backup_file": true,
+          "safety_assessment": "DANGEROUS"
+        }
+      ],
+      "safety_level": "DANGEROUS",
+      "reasons": [
+        "HVDC_코드구조_시각화_다이어그램.md: 활성 파일에서 3회 참조"
+      ]
+    },
+    {
+      "group_id": 80,
+      "keep_file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_프로젝트_전체구조_요약보고서.md",
+      "delete_files": [
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_Clean_Project_Backup_v2.6_20250626\\HVDC_프로젝트_전체구조_요약보고서.md",
+          "active_refs": 3,
+          "backup_refs": 2,
+          "import_refs": 0,
+          "total_refs": 5,
+          "is_backup_file": true,
+          "safety_assessment": "DANGEROUS"
+        }
+      ],
+      "safety_level": "DANGEROUS",
+      "reasons": [
+        "HVDC_프로젝트_전체구조_요약보고서.md: 활성 파일에서 3회 참조"
+      ]
+    },
+    {
+      "group_id": 81,
+      "keep_file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\integrated_automation_pipeline.py",
+      "delete_files": [
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_Clean_Project_Backup_v2.6_20250626\\integrated_automation_pipeline.py",
+          "active_refs": 5,
+          "backup_refs": 4,
+          "import_refs": 0,
+          "total_refs": 9,
+          "is_backup_file": true,
+          "safety_assessment": "DANGEROUS"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\backup_20250626_144500\\integrated_automation_pipeline.py",
+          "active_refs": 5,
+          "backup_refs": 4,
+          "import_refs": 0,
+          "total_refs": 9,
+          "is_backup_file": true,
+          "safety_assessment": "DANGEROUS"
+        }
+      ],
+      "safety_level": "DANGEROUS",
+      "reasons": [
+        "integrated_automation_pipeline.py: 활성 파일에서 5회 참조",
+        "integrated_automation_pipeline.py: 활성 파일에서 5회 참조"
+      ]
+    },
+    {
+      "group_id": 82,
+      "keep_file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\README.md",
+      "delete_files": [
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_Clean_Project_Backup_v2.6_20250626\\README.md",
+          "active_refs": 14,
+          "backup_refs": 4,
+          "import_refs": 0,
+          "total_refs": 18,
+          "is_backup_file": true,
+          "safety_assessment": "DANGEROUS"
+        }
+      ],
+      "safety_level": "DANGEROUS",
+      "reasons": [
+        "README.md: 활성 파일에서 14회 참조"
+      ]
+    },
+    {
+      "group_id": 83,
+      "keep_file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\requirements.txt",
+      "delete_files": [
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_Clean_Project_Backup_v2.6_20250626\\requirements.txt",
+          "active_refs": 27,
+          "backup_refs": 5,
+          "import_refs": 0,
+          "total_refs": 32,
+          "is_backup_file": true,
+          "safety_assessment": "DANGEROUS"
+        }
+      ],
+      "safety_level": "DANGEROUS",
+      "reasons": [
+        "requirements.txt: 활성 파일에서 27회 참조"
+      ]
+    },
+    {
+      "group_id": 84,
+      "keep_file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\run_data_validation.py",
+      "delete_files": [
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_Clean_Project_Backup_v2.6_20250626\\run_data_validation.py",
+          "active_refs": 5,
+          "backup_refs": 5,
+          "import_refs": 0,
+          "total_refs": 10,
+          "is_backup_file": true,
+          "safety_assessment": "DANGEROUS"
+        }
+      ],
+      "safety_level": "DANGEROUS",
+      "reasons": [
+        "run_data_validation.py: 활성 파일에서 5회 참조"
+      ]
+    },
+    {
+      "group_id": 85,
+      "keep_file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\test_end_to_end.py",
+      "delete_files": [
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\backup_20250626_144500\\test_end_to_end.py",
+          "active_refs": 4,
+          "backup_refs": 2,
+          "import_refs": 0,
+          "total_refs": 6,
+          "is_backup_file": true,
+          "safety_assessment": "DANGEROUS"
+        }
+      ],
+      "safety_level": "DANGEROUS",
+      "reasons": [
+        "test_end_to_end.py: 활성 파일에서 4회 참조"
+      ]
+    },
+    {
+      "group_id": 86,
+      "keep_file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\test_integration.py",
+      "delete_files": [
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\backup_20250626_144500\\test_integration.py",
+          "active_refs": 3,
+          "backup_refs": 2,
+          "import_refs": 0,
+          "total_refs": 5,
+          "is_backup_file": true,
+          "safety_assessment": "DANGEROUS"
+        }
+      ],
+      "safety_level": "DANGEROUS",
+      "reasons": [
+        "test_integration.py: 활성 파일에서 3회 참조"
+      ]
+    },
+    {
+      "group_id": 87,
+      "keep_file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\test_inventory_amount.py",
+      "delete_files": [
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\backup_20250626_144500\\test_inventory_amount.py",
+          "active_refs": 3,
+          "backup_refs": 2,
+          "import_refs": 0,
+          "total_refs": 5,
+          "is_backup_file": true,
+          "safety_assessment": "DANGEROUS"
+        }
+      ],
+      "safety_level": "DANGEROUS",
+      "reasons": [
+        "test_inventory_amount.py: 활성 파일에서 3회 참조"
+      ]
+    },
+    {
+      "group_id": 88,
+      "keep_file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\test_location_normalization.py",
+      "delete_files": [
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\backup_20250626_144500\\test_location_normalization.py",
+          "active_refs": 4,
+          "backup_refs": 1,
+          "import_refs": 0,
+          "total_refs": 5,
+          "is_backup_file": true,
+          "safety_assessment": "DANGEROUS"
+        }
+      ],
+      "safety_level": "DANGEROUS",
+      "reasons": [
+        "test_location_normalization.py: 활성 파일에서 4회 참조"
+      ]
+    },
+    {
+      "group_id": 89,
+      "keep_file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\test_system.py",
+      "delete_files": [
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\backup_20250626_144500\\test_system.py",
+          "active_refs": 3,
+          "backup_refs": 2,
+          "import_refs": 0,
+          "total_refs": 5,
+          "is_backup_file": true,
+          "safety_assessment": "DANGEROUS"
+        }
+      ],
+      "safety_level": "DANGEROUS",
+      "reasons": [
+        "test_system.py: 활성 파일에서 3회 참조"
+      ]
+    },
+    {
+      "group_id": 90,
+      "keep_file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\test_variance_analysis.py",
+      "delete_files": [
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_Clean_Project_Backup_v2.6_20250626\\test_variance_analysis.py",
+          "active_refs": 5,
+          "backup_refs": 6,
+          "import_refs": 0,
+          "total_refs": 11,
+          "is_backup_file": true,
+          "safety_assessment": "DANGEROUS"
+        }
+      ],
+      "safety_level": "DANGEROUS",
+      "reasons": [
+        "test_variance_analysis.py: 활성 파일에서 5회 참조"
+      ]
+    },
+    {
+      "group_id": 91,
+      "keep_file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\valid_warehouse_ids.json",
+      "delete_files": [
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_Clean_Project_Backup_v2.6_20250626\\valid_warehouse_ids.json",
+          "active_refs": 7,
+          "backup_refs": 4,
+          "import_refs": 0,
+          "total_refs": 11,
+          "is_backup_file": true,
+          "safety_assessment": "DANGEROUS"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\backup_20250626_144500\\valid_warehouse_ids.json",
+          "active_refs": 7,
+          "backup_refs": 4,
+          "import_refs": 0,
+          "total_refs": 11,
+          "is_backup_file": true,
+          "safety_assessment": "DANGEROUS"
+        }
+      ],
+      "safety_level": "DANGEROUS",
+      "reasons": [
+        "valid_warehouse_ids.json: 활성 파일에서 7회 참조",
+        "valid_warehouse_ids.json: 활성 파일에서 7회 참조"
+      ]
+    },
+    {
+      "group_id": 92,
+      "keep_file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\variance_analyzer.py",
+      "delete_files": [
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_Clean_Project_Backup_v2.6_20250626\\variance_analyzer.py",
+          "active_refs": 7,
+          "backup_refs": 8,
+          "import_refs": 5,
+          "total_refs": 15,
+          "is_backup_file": true,
+          "safety_assessment": "DANGEROUS"
+        }
+      ],
+      "safety_level": "DANGEROUS",
+      "reasons": [
+        "variance_analyzer.py: 활성 파일에서 7회 참조"
+      ]
+    },
+    {
+      "group_id": 93,
+      "keep_file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\visualize_out_transactions.py",
+      "delete_files": [
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\backup_20250626_144500\\visualize_out_transactions.py",
+          "active_refs": 7,
+          "backup_refs": 5,
+          "import_refs": 0,
+          "total_refs": 12,
+          "is_backup_file": true,
+          "safety_assessment": "DANGEROUS"
+        }
+      ],
+      "safety_level": "DANGEROUS",
+      "reasons": [
+        "visualize_out_transactions.py: 활성 파일에서 7회 참조"
+      ]
+    },
+    {
+      "group_id": 94,
+      "keep_file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_Clean_Project_Backup_v2.6_20250626\\excel_reporter.py",
+      "delete_files": [
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\backup_20250626_144500\\excel_reporter.py",
+          "active_refs": 27,
+          "backup_refs": 21,
+          "import_refs": 20,
+          "total_refs": 48,
+          "is_backup_file": true,
+          "safety_assessment": "DANGEROUS"
+        }
+      ],
+      "safety_level": "DANGEROUS",
+      "reasons": [
+        "excel_reporter.py: 활성 파일에서 27회 참조"
+      ]
+    },
+    {
+      "group_id": 95,
+      "keep_file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_Clean_Project_Backup_v2.6_20250626\\main.py",
+      "delete_files": [
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\backup_20250626_144500\\main.py",
+          "active_refs": 190,
+          "backup_refs": 33,
+          "import_refs": 7,
+          "total_refs": 223,
+          "is_backup_file": true,
+          "safety_assessment": "DANGEROUS"
+        }
+      ],
+      "safety_level": "DANGEROUS",
+      "reasons": [
+        "main.py: 활성 파일에서 190회 참조"
+      ]
+    },
+    {
+      "group_id": 96,
+      "keep_file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_Clean_Project_Backup_v2.6_20250626\\mapping_rules_v2.6.json",
+      "delete_files": [
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\backup_20250626_144500\\mapping_rules_v2.6.json",
+          "active_refs": 48,
+          "backup_refs": 23,
+          "import_refs": 0,
+          "total_refs": 71,
+          "is_backup_file": true,
+          "safety_assessment": "DANGEROUS"
+        }
+      ],
+      "safety_level": "DANGEROUS",
+      "reasons": [
+        "mapping_rules_v2.6.json: 활성 파일에서 48회 참조"
+      ]
+    },
+    {
+      "group_id": 97,
+      "keep_file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_Clean_Project_Backup_v2.6_20250626\\mapping_utils.py",
+      "delete_files": [
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\backup_20250626_144500\\mapping_utils.py",
+          "active_refs": 56,
+          "backup_refs": 18,
+          "import_refs": 42,
+          "total_refs": 74,
+          "is_backup_file": true,
+          "safety_assessment": "DANGEROUS"
+        }
+      ],
+      "safety_level": "DANGEROUS",
+      "reasons": [
+        "mapping_utils.py: 활성 파일에서 56회 참조"
+      ]
+    },
+    {
+      "group_id": 98,
+      "keep_file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_Clean_Project_Backup_v2.6_20250626\\ontology_mapper.py",
+      "delete_files": [
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\backup_20250626_144500\\ontology_mapper.py",
+          "active_refs": 12,
+          "backup_refs": 12,
+          "import_refs": 10,
+          "total_refs": 24,
+          "is_backup_file": true,
+          "safety_assessment": "DANGEROUS"
+        }
+      ],
+      "safety_level": "DANGEROUS",
+      "reasons": [
+        "ontology_mapper.py: 활성 파일에서 12회 참조"
+      ]
+    },
+    {
+      "group_id": 99,
+      "keep_file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\core\\config_manager.py",
+      "delete_files": [
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_Clean_Project_Backup_v2.6_20250626\\core\\config_manager.py",
+          "active_refs": 8,
+          "backup_refs": 7,
+          "import_refs": 3,
+          "total_refs": 15,
+          "is_backup_file": true,
+          "safety_assessment": "DANGEROUS"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\backup_20250626_144500\\core\\config_manager.py",
+          "active_refs": 8,
+          "backup_refs": 7,
+          "import_refs": 3,
+          "total_refs": 15,
+          "is_backup_file": true,
+          "safety_assessment": "DANGEROUS"
+        }
+      ],
+      "safety_level": "DANGEROUS",
+      "reasons": [
+        "config_manager.py: 활성 파일에서 8회 참조",
+        "config_manager.py: 활성 파일에서 8회 참조"
+      ]
+    },
+    {
+      "group_id": 100,
+      "keep_file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\core\\deduplication.py",
+      "delete_files": [
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_Clean_Project_Backup_v2.6_20250626\\core\\deduplication.py",
+          "active_refs": 27,
+          "backup_refs": 22,
+          "import_refs": 0,
+          "total_refs": 49,
+          "is_backup_file": true,
+          "safety_assessment": "DANGEROUS"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\backup_20250626_144500\\core\\deduplication.py",
+          "active_refs": 27,
+          "backup_refs": 22,
+          "import_refs": 0,
+          "total_refs": 49,
+          "is_backup_file": true,
+          "safety_assessment": "DANGEROUS"
+        }
+      ],
+      "safety_level": "DANGEROUS",
+      "reasons": [
+        "deduplication.py: 활성 파일에서 27회 참조",
+        "deduplication.py: 활성 파일에서 27회 참조"
+      ]
+    },
+    {
+      "group_id": 101,
+      "keep_file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\core\\helpers.py",
+      "delete_files": [
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_Clean_Project_Backup_v2.6_20250626\\core\\helpers.py",
+          "active_refs": 5,
+          "backup_refs": 4,
+          "import_refs": 0,
+          "total_refs": 9,
+          "is_backup_file": true,
+          "safety_assessment": "DANGEROUS"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\backup_20250626_144500\\core\\helpers.py",
+          "active_refs": 5,
+          "backup_refs": 4,
+          "import_refs": 0,
+          "total_refs": 9,
+          "is_backup_file": true,
+          "safety_assessment": "DANGEROUS"
+        }
+      ],
+      "safety_level": "DANGEROUS",
+      "reasons": [
+        "helpers.py: 활성 파일에서 5회 참조",
+        "helpers.py: 활성 파일에서 5회 참조"
+      ]
+    },
+    {
+      "group_id": 102,
+      "keep_file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\core\\inventory_engine.py",
+      "delete_files": [
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_Clean_Project_Backup_v2.6_20250626\\core\\inventory_engine.py",
+          "active_refs": 7,
+          "backup_refs": 6,
+          "import_refs": 1,
+          "total_refs": 13,
+          "is_backup_file": true,
+          "safety_assessment": "DANGEROUS"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\backup_20250626_144500\\core\\inventory_engine.py",
+          "active_refs": 7,
+          "backup_refs": 6,
+          "import_refs": 1,
+          "total_refs": 13,
+          "is_backup_file": true,
+          "safety_assessment": "DANGEROUS"
+        }
+      ],
+      "safety_level": "DANGEROUS",
+      "reasons": [
+        "inventory_engine.py: 활성 파일에서 7회 참조",
+        "inventory_engine.py: 활성 파일에서 7회 참조"
+      ]
+    },
+    {
+      "group_id": 103,
+      "keep_file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_Clean_Project_Backup_v2.6_20250626\\core\\loader.py",
+      "delete_files": [
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\backup_20250626_144500\\core\\loader.py",
+          "active_refs": 30,
+          "backup_refs": 21,
+          "import_refs": 0,
+          "total_refs": 51,
+          "is_backup_file": true,
+          "safety_assessment": "DANGEROUS"
+        }
+      ],
+      "safety_level": "DANGEROUS",
+      "reasons": [
+        "loader.py: 활성 파일에서 30회 참조"
+      ]
+    },
+    {
+      "group_id": 104,
+      "keep_file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\core\\logger.py",
+      "delete_files": [
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_Clean_Project_Backup_v2.6_20250626\\core\\logger.py",
+          "active_refs": 91,
+          "backup_refs": 32,
+          "import_refs": 0,
+          "total_refs": 123,
+          "is_backup_file": true,
+          "safety_assessment": "DANGEROUS"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\backup_20250626_144500\\core\\logger.py",
+          "active_refs": 91,
+          "backup_refs": 32,
+          "import_refs": 0,
+          "total_refs": 123,
+          "is_backup_file": true,
+          "safety_assessment": "DANGEROUS"
+        }
+      ],
+      "safety_level": "DANGEROUS",
+      "reasons": [
+        "logger.py: 활성 파일에서 91회 참조",
+        "logger.py: 활성 파일에서 91회 참조"
+      ]
+    },
+    {
+      "group_id": 105,
+      "keep_file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\core\\schemas.py",
+      "delete_files": [
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_Clean_Project_Backup_v2.6_20250626\\core\\schemas.py",
+          "active_refs": 3,
+          "backup_refs": 0,
+          "import_refs": 0,
+          "total_refs": 3,
+          "is_backup_file": true,
+          "safety_assessment": "DANGEROUS"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\backup_20250626_144500\\core\\schemas.py",
+          "active_refs": 3,
+          "backup_refs": 0,
+          "import_refs": 0,
+          "total_refs": 3,
+          "is_backup_file": true,
+          "safety_assessment": "DANGEROUS"
+        }
+      ],
+      "safety_level": "DANGEROUS",
+      "reasons": [
+        "schemas.py: 활성 파일에서 3회 참조",
+        "schemas.py: 활성 파일에서 3회 참조"
+      ]
+    },
+    {
+      "group_id": 106,
+      "keep_file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\core\\timeline.py",
+      "delete_files": [
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_Clean_Project_Backup_v2.6_20250626\\core\\timeline.py",
+          "active_refs": 6,
+          "backup_refs": 1,
+          "import_refs": 0,
+          "total_refs": 7,
+          "is_backup_file": true,
+          "safety_assessment": "DANGEROUS"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\backup_20250626_144500\\core\\timeline.py",
+          "active_refs": 6,
+          "backup_refs": 1,
+          "import_refs": 0,
+          "total_refs": 7,
+          "is_backup_file": true,
+          "safety_assessment": "DANGEROUS"
+        }
+      ],
+      "safety_level": "DANGEROUS",
+      "reasons": [
+        "timeline.py: 활성 파일에서 6회 참조",
+        "timeline.py: 활성 파일에서 6회 참조"
+      ]
+    },
+    {
+      "group_id": 107,
+      "keep_file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\test_output\\basic_output.ttl",
+      "delete_files": [
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\test_output\\hvdc_data_20250626_142806.ttl",
+          "active_refs": 2,
+          "backup_refs": 0,
+          "import_refs": 0,
+          "total_refs": 2,
+          "is_backup_file": false,
+          "safety_assessment": "DANGEROUS"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\backup_20250626_144500\\test_output\\basic_output.ttl",
+          "active_refs": 3,
+          "backup_refs": 1,
+          "import_refs": 0,
+          "total_refs": 4,
+          "is_backup_file": true,
+          "safety_assessment": "DANGEROUS"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\backup_20250626_144500\\test_output\\hvdc_data_20250626_142806.ttl",
+          "active_refs": 2,
+          "backup_refs": 0,
+          "import_refs": 0,
+          "total_refs": 2,
+          "is_backup_file": true,
+          "safety_assessment": "DANGEROUS"
+        }
+      ],
+      "safety_level": "DANGEROUS",
+      "reasons": [
+        "hvdc_data_20250626_142806.ttl: 활성 파일에서 2회 참조",
+        "basic_output.ttl: 활성 파일에서 3회 참조",
+        "hvdc_data_20250626_142806.ttl: 활성 파일에서 2회 참조"
+      ]
+    },
+    {
+      "group_id": 108,
+      "keep_file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\test_output\\enhanced_output.ttl",
+      "delete_files": [
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\backup_20250626_144500\\test_output\\enhanced_output.ttl",
+          "active_refs": 6,
+          "backup_refs": 3,
+          "import_refs": 0,
+          "total_refs": 9,
+          "is_backup_file": true,
+          "safety_assessment": "DANGEROUS"
+        }
+      ],
+      "safety_level": "DANGEROUS",
+      "reasons": [
+        "enhanced_output.ttl: 활성 파일에서 6회 참조"
+      ]
+    },
+    {
+      "group_id": 109,
+      "keep_file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\rdf_output\\schema_20250629_013023.ttl",
+      "delete_files": [
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\test_output\\schema.ttl",
+          "active_refs": 43,
+          "backup_refs": 6,
+          "import_refs": 0,
+          "total_refs": 49,
+          "is_backup_file": false,
+          "safety_assessment": "DANGEROUS"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\test_output\\schema_20250626_142806.ttl",
+          "active_refs": 2,
+          "backup_refs": 0,
+          "import_refs": 0,
+          "total_refs": 2,
+          "is_backup_file": false,
+          "safety_assessment": "DANGEROUS"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\backup_20250626_144500\\test_output\\schema.ttl",
+          "active_refs": 43,
+          "backup_refs": 6,
+          "import_refs": 0,
+          "total_refs": 49,
+          "is_backup_file": true,
+          "safety_assessment": "DANGEROUS"
+        },
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\backup_20250626_144500\\test_output\\schema_20250626_142806.ttl",
+          "active_refs": 2,
+          "backup_refs": 0,
+          "import_refs": 0,
+          "total_refs": 2,
+          "is_backup_file": true,
+          "safety_assessment": "DANGEROUS"
+        }
+      ],
+      "safety_level": "DANGEROUS",
+      "reasons": [
+        "schema.ttl: 활성 파일에서 43회 참조",
+        "schema_20250626_142806.ttl: 활성 파일에서 2회 참조",
+        "schema.ttl: 활성 파일에서 43회 참조",
+        "schema_20250626_142806.ttl: 활성 파일에서 2회 참조"
+      ]
+    },
+    {
+      "group_id": 110,
+      "keep_file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\rdf_output\\hvdc_full_data_8038records_20250629_013856.ttl",
+      "delete_files": [
+        {
+          "file": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\reasoning_output\\hvdc_graph.ttl",
+          "active_refs": 6,
+          "backup_refs": 0,
+          "import_refs": 0,
+          "total_refs": 6,
+          "is_backup_file": false,
+          "safety_assessment": "DANGEROUS"
+        }
+      ],
+      "safety_level": "DANGEROUS",
+      "reasons": [
+        "hvdc_graph.ttl: 활성 파일에서 6회 참조"
+      ]
+    }
+  ],
+  "summary": {
+    "total_groups": 110,
+    "safe_groups": 0,
+    "risky_groups": 0,
+    "dangerous_groups": 110,
+    "backup_directories": 13,
+    "active_directories": 92
+  }
+}
