@@ -1,0 +1,89 @@
+{
+  "timestamp": "2025-07-04T12:42:28.180384",
+  "tests": {
+    "schema_validation": {
+      "success": true,
+      "details": {
+        "has_namespace_declaration": true,
+        "has_ontology_declaration": true,
+        "has_transport_event_class": true,
+        "has_warehouse_class": true,
+        "has_basic_properties": true,
+        "has_korean_labels": true,
+        "has_class_hierarchy": true
+      },
+      "errors": []
+    },
+    "mapping_validation": {
+      "success": true,
+      "details": {
+        "has_namespace": true,
+        "has_version": true,
+        "has_field_mappings": true,
+        "has_property_mappings": true,
+        "has_class_mappings": true,
+        "has_warehouse_classification": true,
+        "has_logistics_flow_definition": true,
+        "has_ofco_mapping_rules": true,
+        "has_sparql_templates": true,
+        "has_validation_rules": true,
+        "has_case_mapping": true,
+        "has_date_mapping": true,
+        "has_location_mapping": true,
+        "has_quantity_mapping": true,
+        "has_ofco_cost_centers": true,
+        "correct_version": true
+      },
+      "errors": []
+    },
+    "data_integration": {
+      "success": true,
+      "details": {
+        "test_data_created": true,
+        "has_required_columns": true,
+        "mapping_coverage": true,
+        "data_types_valid": true,
+        "no_critical_nulls": true
+      },
+      "errors": []
+    },
+    "ofco_mapping": {
+      "success": true,
+      "details": {
+        "has_mapping_rules": true,
+        "has_cost_centers": true,
+        "rules_have_patterns": true,
+        "rules_have_priorities": true,
+        "rules_have_cost_centers": true,
+        "mapping_success_rate": true,
+        "matched_texts": 5,
+        "total_test_texts": 5
+      },
+      "errors": []
+    }
+  },
+  "summary": {
+    "total_tests": 4,
+    "passed_tests": 4,
+    "failed_tests": 0,
+    "success_rate": 100.0,
+    "test_details": {
+      "schema_validation": {
+        "status": "PASS",
+        "error_count": 0
+      },
+      "mapping_validation": {
+        "status": "PASS",
+        "error_count": 0
+      },
+      "data_integration": {
+        "status": "PASS",
+        "error_count": 0
+      },
+      "ofco_mapping": {
+        "status": "PASS",
+        "error_count": 0
+      }
+    }
+  }
+}
