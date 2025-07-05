@@ -374,7 +374,7 @@ def main():
         print(f"Fail-safe Rate: {status['fail_safe_rate']}")
         return 0
     
-    command = sys.argv[1]
+    command = " ".join(sys.argv[1:])
     
     if command == "--status":
         print("🚛 MACHO-GPT v3.4-mini System Status")
@@ -390,14 +390,18 @@ def main():
         print(f"Total Commands: {status['total_commands']}")
         print(f"Fail-safe Rate: {status['fail_safe_rate']}")
         
-    elif command == "--list":
-        if len(sys.argv) > 2:
-            category = sys.argv[2]
+    elif command.startswith("--list"):
+        parts = command.split()
+        if len(parts) > 1:
+            category = parts[1]
             commands = system.list_commands_by_category(category)
-            print(f"📋 Commands in category '{category}':")
-            print("=" * 50)
-            for cmd in commands.get(category, []):
-                print(f"• {cmd['name']}: {cmd['description']}")
+            if "error" in commands:
+                print(f"❌ {commands['error']}")
+            else:
+                print(f"📋 Commands in category '{category}':")
+                print("=" * 50)
+                for cmd in commands.get(category, []):
+                    print(f"• {cmd['name']}: {cmd['description']}")
         else:
             commands = system.list_commands_by_category()
             print("📋 All Available Commands:")
@@ -407,8 +411,9 @@ def main():
                 for cmd in cmds:
                     print(f"  • {cmd['name']}: {cmd['description']}")
     
-    elif command == "--export":
-        format_type = sys.argv[2] if len(sys.argv) > 2 else "json"
+    elif command.startswith("--export"):
+        parts = command.split()
+        format_type = parts[1] if len(parts) > 1 else "json"
         metadata = system.export_metadata(format_type)
         print(metadata)
     
