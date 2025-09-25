@@ -223,10 +223,14 @@ class CompleteHVDCAnalyzer:
                 summary_df.to_excel(writer, sheet_name="분석결과", index=False)
 
                 # 월별 분석 (가능한 경우)
-                if "monthly_data" in locals():
-                    monthly_data.to_frame("건수").to_excel(
-                        writer, sheet_name="월별분석"
-                    )
+                try:
+                    if 'monthly_data' in locals() and monthly_data is not None:
+                        monthly_data.to_frame("건수").to_excel(
+                            writer, sheet_name="월별분석"
+                        )
+                except NameError:
+                    # monthly_data가 정의되지 않은 경우 스킵
+                    pass
 
             print(f"✅ 분석 결과 저장 완료: {output_file}")
             return str(output_file)

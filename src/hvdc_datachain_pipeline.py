@@ -18,6 +18,9 @@ from pathlib import Path
 import pandas as pd
 import numpy as np
 
+# 로거 설정
+logger = logging.getLogger(__name__)
+
 # DataChain UDF 예외 처리
 try:
     import datachain.sql.functions  # SIMD UDFs
