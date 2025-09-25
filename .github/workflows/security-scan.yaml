@@ -1,0 +1,144 @@
+name: Security Scan - HVDC Project
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+  schedule:
+    - cron: '0 2 * * 1'  # Weekly on Monday at 2 AM
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  security-events: write
+  actions: read
+
+jobs:
+  security-scan:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install security tools
+        run: |
+          pip install -U pip
+          pip install bandit safety semgrep
+
+      - name: Run Bandit security scan
+        run: |
+          echo "Running Bandit security scan..."
+          bandit -r src/ tools/ -f json -o bandit-report.json
+          bandit -r src/ tools/ -f txt -o bandit-report.txt
+        continue-on-error: true
+
+      - name: Run Safety dependency scan
+        run: |
+          echo "Running Safety dependency scan..."
+          safety check --json --output safety-report.json
+          safety check --output safety-report.txt
+        continue-on-error: true
+
+      - name: Run Semgrep security scan
+        run: |
+          echo "Running Semgrep security scan..."
+          semgrep --config=auto --json --output=semgrep-report.json src/ tools/
+          semgrep --config=auto --output=semgrep-report.txt src/ tools/
+        continue-on-error: true
+
+      - name: Upload security reports
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: security-reports-${{ github.run_id }}
+          path: |
+            bandit-report.json
+            bandit-report.txt
+            safety-report.json
+            safety-report.txt
+            semgrep-report.json
+            semgrep-report.txt
+          retention-days: 30
+
+      - name: Comment PR with security results
+        if: github.event_name == 'pull_request'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            
+            let securityStatus = '✅ No security issues found';
+            let securityDetails = '';
+            
+            try {
+              // Check Bandit results
+              if (fs.existsSync('bandit-report.json')) {
+                const banditReport = JSON.parse(fs.readFileSync('bandit-report.json', 'utf8'));
+                if (banditReport.results && banditReport.results.length > 0) {
+                  securityStatus = '⚠️ Security issues detected';
+                  securityDetails += `\n**Bandit Issues:** ${banditReport.results.length}`;
+                }
+              }
+              
+              // Check Safety results
+              if (fs.existsSync('safety-report.json')) {
+                const safetyReport = JSON.parse(fs.readFileSync('safety-report.json', 'utf8'));
+                if (safetyReport.vulnerabilities && safetyReport.vulnerabilities.length > 0) {
+                  securityStatus = '⚠️ Security vulnerabilities detected';
+                  securityDetails += `\n**Safety Issues:** ${safetyReport.vulnerabilities.length}`;
+                }
+              }
+              
+              // Check Semgrep results
+              if (fs.existsSync('semgrep-report.json')) {
+                const semgrepReport = JSON.parse(fs.readFileSync('semgrep-report.json', 'utf8'));
+                if (semgrepReport.results && semgrepReport.results.length > 0) {
+                  securityStatus = '⚠️ Security issues detected';
+                  securityDetails += `\n**Semgrep Issues:** ${semgrepReport.results.length}`;
+                }
+              }
+            } catch (e) {
+              console.log('Error parsing security reports:', e);
+            }
+            
+            github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.payload.pull_request.number,
+              body: `## 🔒 Security Scan Results
+              
+              **Status:** ${securityStatus}
+              ${securityDetails}
+              
+              ### Security Tools Used:
+              - 🔍 Bandit (Python security linter)
+              - 🛡️ Safety (Dependency vulnerability scanner)
+              - 🔎 Semgrep (Static analysis security scanner)
+              
+              **Reports:** Available in workflow artifacts
+              
+              ${securityStatus.includes('⚠️') ? '**⚠️ Please review security issues before merging**' : '**✅ No security issues detected - safe to proceed**'}`
+            })
+
+  dependency-review:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request'
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Dependency Review
+        uses: actions/dependency-review-action@v4
+        with:
+          fail-on-severity: moderate
+          allow-licenses: MIT, Apache-2.0, BSD-3-Clause, BSD-2-Clause, ISC, GPL-2.0, GPL-3.0, LGPL-2.1, LGPL-3.0
+          deny-licenses: GPL-1.0, AGPL-3.0
