@@ -2,7 +2,7 @@
 # HVDC Project Logistics AI System Requirements
 
 # Core Python packages
-python>=3.8
+# Note: Python version is managed by actions/setup-python in GitHub Actions
 
 # Data processing and analysis
 pandas>=1.5.0
