@@ -54,7 +54,13 @@ jobs:
         run: mypy src/ --ignore-missing-imports
 
       - name: Security scan with Bandit
-        run: bandit -r src/ -f json -o bandit-report.json || true
+        run: |
+          if [ -d "src/" ]; then
+            bandit -r src/ -f json -o bandit-report.json || true
+          else
+            echo "src/ directory not found, skipping Bandit scan"
+            echo "{}" > bandit-report.json
+          fi
 
       - name: Dependency vulnerability check
         run: safety check --json --output safety-report.json || true
