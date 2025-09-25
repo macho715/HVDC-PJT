@@ -57,7 +57,7 @@ jobs:
           flake8 src/ --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
 
       - name: Type checking with MyPy
-        run: mypy src/ --config-file mypy.ini || true
+        run: mypy src/ --ignore-missing-imports --explicit-package-bases --no-error-summary || true
 
       - name: Security scan with Bandit
         run: |
