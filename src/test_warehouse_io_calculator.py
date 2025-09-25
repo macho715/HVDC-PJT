@@ -3,22 +3,24 @@ from datetime import datetime
 from warehouse_io_calculator import WarehouseIOCalculator
 
 # 테스트 데이터 - 모든 필수 창고 컬럼 포함
-test_data = pd.DataFrame({
-    'Item': ['T001', 'T002', 'T003', 'T004', 'T005'],
-    'DSV Indoor': [datetime(2024, 1, 15), None, datetime(2024, 2, 1), None, None],
-    'DSV Outdoor': [None, datetime(2024, 1, 20), None, None, None],
-    'DSV Al Markaz': [None, None, None, datetime(2024, 2, 5), None],
-    'DSV MZP': [None, None, None, None, None],
-    'AAA  Storage': [None, None, None, None, None],
-    'AAA Storage': [None, None, None, None, None],
-    'Hauler Indoor': [None, None, None, None, None],
-    'MOSB': [None, None, None, None, datetime(2024, 2, 10)],
-    'DHL Warehouse': [None, None, None, None, None],
-    'MIR': [None, None, None, None, datetime(2024, 3, 1)],
-    'SHU': [None, None, None, None, None],
-    'DAS': [None, None, None, None, None],
-    'AGI': [None, None, None, None, None]
-})
+test_data = pd.DataFrame(
+    {
+        "Item": ["T001", "T002", "T003", "T004", "T005"],
+        "DSV Indoor": [datetime(2024, 1, 15), None, datetime(2024, 2, 1), None, None],
+        "DSV Outdoor": [None, datetime(2024, 1, 20), None, None, None],
+        "DSV Al Markaz": [None, None, None, datetime(2024, 2, 5), None],
+        "DSV MZP": [None, None, None, None, None],
+        "AAA  Storage": [None, None, None, None, None],
+        "AAA Storage": [None, None, None, None, None],
+        "Hauler Indoor": [None, None, None, None, None],
+        "MOSB": [None, None, None, None, datetime(2024, 2, 10)],
+        "DHL Warehouse": [None, None, None, None, None],
+        "MIR": [None, None, None, None, datetime(2024, 3, 1)],
+        "SHU": [None, None, None, None, None],
+        "DAS": [None, None, None, None, None],
+        "AGI": [None, None, None, None, None],
+    }
+)
 
 calc = WarehouseIOCalculator()
 
@@ -58,17 +60,19 @@ print()
 
 # 직배송 테스트
 print("=== 직배송 테스트 ===")
-direct_test_data = pd.DataFrame({
-    'Item': ['D001', 'D002', 'D003', 'D004'],
-    'DSV Indoor': [None, datetime(2024, 1, 15), None, None],
-    'DSV Outdoor': [None, None, None, None],
-    'DSV Al Markaz': [None, None, None, None],
-    'MOSB': [None, None, None, None],
-    'MIR': [datetime(2024, 1, 10), datetime(2024, 1, 20), None, None],
-    'SHU': [None, None, datetime(2024, 1, 25), None],
-    'DAS': [None, None, None, None],
-    'AGI': [None, None, None, datetime(2024, 1, 30)]
-})
+direct_test_data = pd.DataFrame(
+    {
+        "Item": ["D001", "D002", "D003", "D004"],
+        "DSV Indoor": [None, datetime(2024, 1, 15), None, None],
+        "DSV Outdoor": [None, None, None, None],
+        "DSV Al Markaz": [None, None, None, None],
+        "MOSB": [None, None, None, None],
+        "MIR": [datetime(2024, 1, 10), datetime(2024, 1, 20), None, None],
+        "SHU": [None, None, datetime(2024, 1, 25), None],
+        "DAS": [None, None, None, None],
+        "AGI": [None, None, None, datetime(2024, 1, 30)],
+    }
+)
 
 direct_delivery = calc.calculate_direct_delivery(direct_test_data)
 print(f"총 직배송: {direct_delivery['total_direct']}건")

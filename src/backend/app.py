@@ -23,7 +23,7 @@ app = FastAPI(
     description="삼성물산 HVDC 프로젝트 물류 시스템 백엔드",
     version="3.4.0",
     docs_url="/docs",
-    redoc_url="/redoc"
+    redoc_url="/redoc",
 )
 
 # CORS 설정
@@ -38,9 +38,11 @@ app.add_middleware(
 # 보안 토큰
 security = HTTPBearer()
 
+
 # 데이터 모델
 class WarehouseData(BaseModel):
     """창고 데이터 모델"""
+
     warehouse_id: str
     zone: str
     capacity: float
@@ -49,8 +51,10 @@ class WarehouseData(BaseModel):
     humidity: float
     timestamp: datetime
 
+
 class ContainerData(BaseModel):
     """컨테이너 데이터 모델"""
+
     container_id: str
     weight: float
     volume: float
@@ -58,8 +62,10 @@ class ContainerData(BaseModel):
     location: str
     status: str
 
+
 class InvoiceData(BaseModel):
     """송장 데이터 모델"""
+
     invoice_id: str
     hs_code: str
     description: str
@@ -68,8 +74,10 @@ class InvoiceData(BaseModel):
     total_amount: float
     confidence: float  # OCR 신뢰도
 
+
 class KPIData(BaseModel):
     """KPI 데이터 모델"""
+
     metric_name: str
     value: float
     target: float
@@ -77,15 +85,19 @@ class KPIData(BaseModel):
     timestamp: datetime
     status: str  # SUCCESS, WARNING, CRITICAL
 
+
 class ModeSwitchRequest(BaseModel):
     """모드 전환 요청 모델"""
+
     mode: str
+
 
 # 상태 저장소 (실제로는 데이터베이스 사용)
 warehouse_store: Dict[str, WarehouseData] = {}
 container_store: Dict[str, ContainerData] = {}
 invoice_store: Dict[str, InvoiceData] = {}
 kpi_store: Dict[str, KPIData] = {}
+
 
 @app.get("/")
 async def root():
@@ -94,8 +106,9 @@ async def root():
         "message": "HVDC Logistics System API v3.4.0",
         "status": "operational",
         "timestamp": datetime.now().isoformat(),
-        "mode": "PRIME"
+        "mode": "PRIME",
     }
+
 
 @app.get("/health")
 async def health_check():
@@ -104,13 +117,15 @@ async def health_check():
         "status": "healthy",
         "timestamp": datetime.now().isoformat(),
         "version": "3.4.0",
-        "uptime": "operational"
+        "uptime": "operational",
     }
+
 
 @app.get("/api/v1/warehouses", response_model=List[WarehouseData])
 async def get_warehouses():
     """창고 목록 조회"""
     return list(warehouse_store.values())
+
 
 @app.post("/api/v1/warehouses", response_model=WarehouseData)
 async def create_warehouse(warehouse: WarehouseData):
@@ -119,10 +134,12 @@ async def create_warehouse(warehouse: WarehouseData):
     logger.info(f"창고 생성: {warehouse.warehouse_id}")
     return warehouse
 
+
 @app.get("/api/v1/containers", response_model=List[ContainerData])
 async def get_containers():
     """컨테이너 목록 조회"""
     return list(container_store.values())
+
 
 @app.post("/api/v1/containers", response_model=ContainerData)
 async def create_container(container: ContainerData):
@@ -130,18 +147,19 @@ async def create_container(container: ContainerData):
     # 압력 한계 검증 (4t/m²)
     if container.pressure > 4.0:
         raise HTTPException(
-            status_code=400, 
-            detail="압력 한계 초과: 4t/m² 이하여야 합니다"
+            status_code=400, detail="압력 한계 초과: 4t/m² 이하여야 합니다"
         )
-    
+
     container_store[container.container_id] = container
     logger.info(f"컨테이너 생성: {container.container_id}")
     return container
+
 
 @app.get("/api/v1/invoices", response_model=List[InvoiceData])
 async def get_invoices():
     """송장 목록 조회"""
     return list(invoice_store.values())
+
 
 @app.post("/api/v1/invoices", response_model=InvoiceData)
 async def create_invoice(invoice: InvoiceData):
@@ -149,18 +167,19 @@ async def create_invoice(invoice: InvoiceData):
     # OCR 신뢰도 검증 (≥0.90)
     if invoice.confidence < 0.90:
         raise HTTPException(
-            status_code=400,
-            detail="OCR 신뢰도 부족: 0.90 이상이어야 합니다"
+            status_code=400, detail="OCR 신뢰도 부족: 0.90 이상이어야 합니다"
         )
-    
+
     invoice_store[invoice.invoice_id] = invoice
     logger.info(f"송장 생성: {invoice.invoice_id}")
     return invoice
+
 
 @app.get("/api/v1/kpis", response_model=List[KPIData])
 async def get_kpis():
     """KPI 목록 조회"""
     return list(kpi_store.values())
+
 
 @app.post("/api/v1/kpis", response_model=KPIData)
 async def create_kpi(kpi: KPIData):
@@ -168,6 +187,7 @@ async def create_kpi(kpi: KPIData):
     kpi_store[kpi.metric_name] = kpi
     logger.info(f"KPI 생성: {kpi.metric_name}")
     return kpi
+
 
 @app.get("/api/v1/system/status")
 async def get_system_status():
@@ -179,8 +199,9 @@ async def get_system_status():
         "container_count": len(container_store),
         "invoice_count": len(invoice_store),
         "kpi_count": len(kpi_store),
-        "timestamp": datetime.now().isoformat()
+        "timestamp": datetime.now().isoformat(),
     }
+
 
 @app.post("/api/v1/system/switch-mode")
 async def switch_mode(request: ModeSwitchRequest):
@@ -189,17 +210,12 @@ async def switch_mode(request: ModeSwitchRequest):
     if request.mode not in valid_modes:
         raise HTTPException(
             status_code=400,
-            detail=f"유효하지 않은 모드: {request.mode}. 유효한 모드: {valid_modes}"
+            detail=f"유효하지 않은 모드: {request.mode}. 유효한 모드: {valid_modes}",
         )
-    
+
     logger.info(f"모드 전환: {request.mode}")
     return {"message": f"모드가 {request.mode}로 전환되었습니다", "mode": request.mode}
 
+
 if __name__ == "__main__":
-    uvicorn.run(
-        "app:app",
-        host="0.0.0.0",
-        port=8000,
-        reload=True,
-        log_level="info"
-    )
+    uvicorn.run("app:app", host="0.0.0.0", port=8000, reload=True, log_level="info")

@@ -23,18 +23,22 @@ from pathlib import Path
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
+
 @dataclass
 class APIConfig:
     """API 설정 데이터"""
+
     weather_api_key: str = "test_key"
     ocr_api_key: str = "test_key"
     shipping_api_key: str = "test_key"
     mcp_server_url: str = "http://localhost:3000"
     refresh_interval: int = 300
 
+
 @dataclass
 class WeatherData:
     """날씨 데이터 구조"""
+
     temperature: float
     humidity: float
     wind_speed: float
@@ -42,18 +46,22 @@ class WeatherData:
     timestamp: datetime
     location: str
 
+
 @dataclass
 class OCRResult:
     """OCR 결과 데이터"""
+
     text: str
     confidence: float
     bounding_boxes: List[Dict[str, Any]]
     document_type: str
     timestamp: datetime
 
+
 @dataclass
 class ShippingData:
     """선박 데이터 구조"""
+
     vessel_name: str
     mmsi: str
     latitude: float
@@ -63,15 +71,16 @@ class ShippingData:
     eta: datetime
     timestamp: datetime
 
+
 class RealAPIIntegration:
     """실제 API 통합 클래스"""
-    
+
     def __init__(self, config: APIConfig):
         self.config = config
         self.session = None
         self.cache = {}
         self.last_update = {}
-    
+
     async def initialize(self):
         """API 통합 초기화"""
         try:
@@ -81,12 +90,12 @@ class RealAPIIntegration:
         except Exception as e:
             logger.error(f"API Integration initialization failed: {e}")
             return False
-    
+
     async def close(self):
         """세션 종료"""
         if self.session:
             await self.session.close()
-    
+
     async def get_weather_data(self, location: str = "Abu Dhabi") -> WeatherData:
         """실제 날씨 데이터 조회"""
         try:
@@ -95,9 +104,9 @@ class RealAPIIntegration:
             params = {
                 "q": location,
                 "appid": self.config.weather_api_key,
-                "units": "metric"
+                "units": "metric",
             }
-            
+
             async with self.session.get(url, params=params) as response:
                 if response.status == 200:
                     data = await response.json()
@@ -107,18 +116,18 @@ class RealAPIIntegration:
                         wind_speed=data["wind"]["speed"],
                         description=data["weather"][0]["description"],
                         timestamp=datetime.now(),
-                        location=location
+                        location=location,
                     )
                     self.cache[f"weather_{location}"] = weather
                     return weather
                 else:
                     # 시뮬레이션 데이터 반환
                     return self._get_simulated_weather_data(location)
-                    
+
         except Exception as e:
             logger.warning(f"Weather API call failed, using simulation: {e}")
             return self._get_simulated_weather_data(location)
-    
+
     def _get_simulated_weather_data(self, location: str) -> WeatherData:
         """시뮬레이션 날씨 데이터"""
         return WeatherData(
@@ -127,28 +136,32 @@ class RealAPIIntegration:
             wind_speed=12.3,
             description="Partly cloudy",
             timestamp=datetime.now(),
-            location=location
+            location=location,
         )
-    
+
     async def process_ocr_document(self, image_path: str) -> OCRResult:
         """실제 OCR 처리"""
         try:
             # Google Vision API 호출 (실제 구현)
             url = "https://vision.googleapis.com/v1/images:annotate"
             headers = {"Authorization": f"Bearer {self.config.ocr_api_key}"}
-            
+
             # 이미지 파일 읽기
-            with open(image_path, 'rb') as f:
+            with open(image_path, "rb") as f:
                 image_content = f.read()
-            
+
             request_data = {
-                "requests": [{
-                    "image": {"content": image_content},
-                    "features": [{"type": "TEXT_DETECTION"}]
-                }]
+                "requests": [
+                    {
+                        "image": {"content": image_content},
+                        "features": [{"type": "TEXT_DETECTION"}],
+                    }
+                ]
             }
-            
-            async with self.session.post(url, json=request_data, headers=headers) as response:
+
+            async with self.session.post(
+                url, json=request_data, headers=headers
+            ) as response:
                 if response.status == 200:
                     data = await response.json()
                     # OCR 결과 파싱
@@ -159,21 +172,21 @@ class RealAPIIntegration:
                     else:
                         text = "No text detected"
                         confidence = 0.0
-                    
+
                     return OCRResult(
                         text=text,
                         confidence=confidence,
                         bounding_boxes=[],
                         document_type="invoice",
-                        timestamp=datetime.now()
+                        timestamp=datetime.now(),
                     )
                 else:
                     return self._get_simulated_ocr_result()
-                    
+
         except Exception as e:
             logger.warning(f"OCR API call failed, using simulation: {e}")
             return self._get_simulated_ocr_result()
-    
+
     def _get_simulated_ocr_result(self) -> OCRResult:
         """시뮬레이션 OCR 결과"""
         return OCRResult(
@@ -181,9 +194,9 @@ class RealAPIIntegration:
             confidence=0.92,
             bounding_boxes=[],
             document_type="invoice",
-            timestamp=datetime.now()
+            timestamp=datetime.now(),
         )
-    
+
     async def get_shipping_data(self, vessel_mmsi: str) -> ShippingData:
         """실제 선박 데이터 조회"""
         try:
@@ -192,9 +205,9 @@ class RealAPIIntegration:
             params = {
                 "v": 3,
                 "mmsi": vessel_mmsi,
-                "apikey": self.config.shipping_api_key
+                "apikey": self.config.shipping_api_key,
             }
-            
+
             async with self.session.get(url, params=params) as response:
                 if response.status == 200:
                     data = await response.json()
@@ -208,17 +221,17 @@ class RealAPIIntegration:
                             speed=float(vessel_data.get("SPEED", 0)),
                             course=float(vessel_data.get("COURSE", 0)),
                             eta=datetime.now() + timedelta(hours=24),
-                            timestamp=datetime.now()
+                            timestamp=datetime.now(),
                         )
                     else:
                         return self._get_simulated_shipping_data(vessel_mmsi)
                 else:
                     return self._get_simulated_shipping_data(vessel_mmsi)
-                    
+
         except Exception as e:
             logger.warning(f"Shipping API call failed, using simulation: {e}")
             return self._get_simulated_shipping_data(vessel_mmsi)
-    
+
     def _get_simulated_shipping_data(self, vessel_mmsi: str) -> ShippingData:
         """시뮬레이션 선박 데이터"""
         return ShippingData(
@@ -229,88 +242,103 @@ class RealAPIIntegration:
             speed=12.5,
             course=180.0,
             eta=datetime.now() + timedelta(hours=18),
-            timestamp=datetime.now()
+            timestamp=datetime.now(),
         )
-    
-    async def call_mcp_server(self, command: str, parameters: Dict[str, Any] = None) -> Dict[str, Any]:
+
+    async def call_mcp_server(
+        self, command: str, parameters: Dict[str, Any] = None
+    ) -> Dict[str, Any]:
         """MCP 서버 호출"""
         try:
             url = f"{self.config.mcp_server_url}/api/execute"
             payload = {
                 "command": command,
                 "parameters": parameters or {},
-                "timestamp": datetime.now().isoformat()
+                "timestamp": datetime.now().isoformat(),
             }
-            
+
             async with self.session.post(url, json=payload) as response:
                 if response.status == 200:
                     return await response.json()
                 else:
-                    return {"status": "ERROR", "message": f"MCP server error: {response.status}"}
-                    
+                    return {
+                        "status": "ERROR",
+                        "message": f"MCP server error: {response.status}",
+                    }
+
         except Exception as e:
             logger.warning(f"MCP server call failed: {e}")
             return {"status": "ERROR", "message": f"MCP server unavailable: {e}"}
-    
+
     async def get_real_time_dashboard_data(self) -> Dict[str, Any]:
         """실시간 대시보드 데이터 수집"""
         try:
             # 병렬로 모든 API 호출
             weather_task = self.get_weather_data("Abu Dhabi")
             shipping_task = self.get_shipping_data("123456789")
-            
+
             weather_data, shipping_data = await asyncio.gather(
                 weather_task, shipping_task, return_exceptions=True
             )
-            
+
             # OCR 처리 (샘플 이미지가 있다면)
             ocr_result = None
             sample_image_path = Path("data/sample_invoice.jpg")
             if sample_image_path.exists():
                 ocr_result = await self.process_ocr_document(str(sample_image_path))
-            
+
             return {
                 "status": "SUCCESS",
                 "timestamp": datetime.now().isoformat(),
-                "weather": weather_data if not isinstance(weather_data, Exception) else None,
-                "shipping": shipping_data if not isinstance(shipping_data, Exception) else None,
+                "weather": (
+                    weather_data if not isinstance(weather_data, Exception) else None
+                ),
+                "shipping": (
+                    shipping_data if not isinstance(shipping_data, Exception) else None
+                ),
                 "ocr": ocr_result,
                 "cache_status": {
-                    "weather_cache": len([k for k in self.cache.keys() if k.startswith("weather")]),
-                    "total_cache_entries": len(self.cache)
-                }
+                    "weather_cache": len(
+                        [k for k in self.cache.keys() if k.startswith("weather")]
+                    ),
+                    "total_cache_entries": len(self.cache),
+                },
             }
-            
+
         except Exception as e:
             logger.error(f"Real-time data collection failed: {e}")
             return {
                 "status": "ERROR",
                 "message": str(e),
-                "timestamp": datetime.now().isoformat()
+                "timestamp": datetime.now().isoformat(),
             }
-    
+
     async def create_enhanced_dashboard_with_real_data(self, dashboard_id: str) -> str:
         """실제 데이터를 포함한 강화된 대시보드 생성"""
         try:
             # 실시간 데이터 수집
             real_data = await self.get_real_time_dashboard_data()
-            
+
             # HTML 템플릿 생성
-            html_content = self._generate_enhanced_dashboard_html(dashboard_id, real_data)
-            
+            html_content = self._generate_enhanced_dashboard_html(
+                dashboard_id, real_data
+            )
+
             # 파일 저장
             file_path = f"logi_master_enhanced_{dashboard_id}_real_data.html"
-            with open(file_path, 'w', encoding='utf-8') as f:
+            with open(file_path, "w", encoding="utf-8") as f:
                 f.write(html_content)
-            
+
             logger.info(f"Enhanced dashboard with real data created: {file_path}")
             return file_path
-            
+
         except Exception as e:
             logger.error(f"Failed to create enhanced dashboard: {e}")
             return ""
-    
-    def _generate_enhanced_dashboard_html(self, dashboard_id: str, real_data: Dict[str, Any]) -> str:
+
+    def _generate_enhanced_dashboard_html(
+        self, dashboard_id: str, real_data: Dict[str, Any]
+    ) -> str:
         """실제 데이터를 포함한 HTML 생성"""
         weather_info = ""
         if real_data.get("weather"):
@@ -324,7 +352,7 @@ class RealAPIIntegration:
                 <p>📝 상태: {weather.description}</p>
             </div>
             """
-        
+
         shipping_info = ""
         if real_data.get("shipping"):
             shipping = real_data["shipping"]
@@ -337,7 +365,7 @@ class RealAPIIntegration:
                 <p>⏰ ETA: {shipping.eta.strftime('%Y-%m-%d %H:%M')}</p>
             </div>
             """
-        
+
         ocr_info = ""
         if real_data.get("ocr"):
             ocr = real_data["ocr"]
@@ -349,7 +377,7 @@ class RealAPIIntegration:
                 <p>📋 문서 유형: {ocr.document_type}</p>
             </div>
             """
-        
+
         return f"""
 <!DOCTYPE html>
 <html lang="ko">
@@ -455,26 +483,30 @@ class RealAPIIntegration:
 </html>
 """
 
+
 # 사용 예시
 async def main():
     """메인 실행 함수"""
     config = APIConfig()
     api_integration = RealAPIIntegration(config)
-    
+
     if await api_integration.initialize():
         print("🚀 Real API Integration 초기화 완료")
-        
+
         # 실시간 데이터 수집 테스트
         real_data = await api_integration.get_real_time_dashboard_data()
         print(f"📊 실시간 데이터: {real_data}")
-        
+
         # 강화된 대시보드 생성
-        dashboard_path = await api_integration.create_enhanced_dashboard_with_real_data("main")
+        dashboard_path = await api_integration.create_enhanced_dashboard_with_real_data(
+            "main"
+        )
         print(f"📁 생성된 대시보드: {dashboard_path}")
-        
+
         await api_integration.close()
     else:
         print("❌ API Integration 초기화 실패")
 
+
 if __name__ == "__main__":
-    asyncio.run(main()) 
+    asyncio.run(main())

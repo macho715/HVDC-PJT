@@ -4,7 +4,7 @@ LOGI MASTER Main Dashboard Integration System
 ============================================
 모든 대시보드를 하나의 메인 대시보드에서 연결하는 통합 시스템
 - HVDC Logistics System (index.html)
-- HVDC Dashboard Main (hvdc_dashboard_main.html)  
+- HVDC Dashboard Main (hvdc_dashboard_main.html)
 - MACHO Real-time KPI Dashboard (macho_realtime_kpi_dashboard.py)
 - TDD Progress Dashboard (tdd_progress_dashboard.html)
 - Enhanced Dashboard (logi_master_enhanced_dashboard.html)
@@ -29,9 +29,11 @@ import os
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
+
 @dataclass
 class DashboardInfo:
     """대시보드 정보"""
+
     id: str
     name: str
     description: str
@@ -41,24 +43,27 @@ class DashboardInfo:
     last_updated: datetime = field(default_factory=datetime.now)
     metrics: Dict[str, Any] = field(default_factory=dict)
 
+
 @dataclass
 class SystemStatus:
     """시스템 상태"""
+
     overall_confidence: float
     active_dashboards: int
     total_dashboards: int
     system_health: str
     last_sync: datetime = field(default_factory=datetime.now)
 
+
 class LogiMasterMainDashboard:
     """LOGI MASTER 메인 대시보드 통합 시스템"""
-    
+
     def __init__(self):
         self.dashboards: Dict[str, DashboardInfo] = {}
         self.system_status = SystemStatus(0.0, 0, 0, "UNKNOWN")
         self.dashboard_config = self._load_dashboard_config()
         self._init_dashboards()
-    
+
     def _load_dashboard_config(self) -> Dict[str, Any]:
         """대시보드 설정 로드"""
         return {
@@ -67,47 +72,47 @@ class LogiMasterMainDashboard:
                     "name": "HVDC Logistics System",
                     "description": "Samsung C&T | ADNOC·DSV Partnership 메인 대시보드",
                     "url": "index.html",
-                    "type": "main_entry"
+                    "type": "main_entry",
                 },
                 "hvdc_main": {
                     "name": "HVDC Dashboard Main",
                     "description": "HVDC 프로젝트 물류 운영 종합 개요",
                     "url": "hvdc_dashboard_main.html",
-                    "type": "overview"
+                    "type": "overview",
                 },
                 "warehouse_monitor": {
                     "name": "Warehouse Monitor",
                     "description": "실시간 창고 운영 모니터링",
                     "url": "hvdc_warehouse_monitor.html",
-                    "type": "monitoring"
+                    "type": "monitoring",
                 },
                 "inventory_tracking": {
                     "name": "Inventory Tracking",
                     "description": "종합 재고 관리 시스템",
                     "url": "hvdc_inventory_tracking.html",
-                    "type": "tracking"
+                    "type": "tracking",
                 },
                 "macho_kpi": {
                     "name": "MACHO Real-time KPI",
                     "description": "실시간 KPI 모니터링 대시보드",
                     "url": "macho_realtime_kpi_dashboard.py",
-                    "type": "kpi"
+                    "type": "kpi",
                 },
                 "tdd_progress": {
                     "name": "TDD Progress Dashboard",
                     "description": "TDD 개발 진행 상황 대시보드",
                     "url": "tdd_progress_dashboard.html",
-                    "type": "development"
+                    "type": "development",
                 },
                 "enhanced": {
                     "name": "LOGI MASTER Enhanced",
                     "description": "Heat-Stow & Weather Analysis 통합 대시보드",
                     "url": "logi_master_enhanced_dashboard.html",
-                    "type": "integrated"
-                }
+                    "type": "integrated",
+                },
             }
         }
-    
+
     def _init_dashboards(self):
         """대시보드 초기화"""
         for dashboard_id, config in self.dashboard_config["dashboards"].items():
@@ -116,11 +121,13 @@ class LogiMasterMainDashboard:
                 name=config["name"],
                 description=config["description"],
                 url=config["url"],
-                type=config["type"]
+                type=config["type"],
             )
             self.dashboards[dashboard_id] = dashboard
-    
-    def update_dashboard_status(self, dashboard_id: str, status: str, metrics: Dict[str, Any] = None):
+
+    def update_dashboard_status(
+        self, dashboard_id: str, status: str, metrics: Dict[str, Any] = None
+    ):
         """대시보드 상태 업데이트"""
         if dashboard_id in self.dashboards:
             dashboard = self.dashboards[dashboard_id]
@@ -129,16 +136,18 @@ class LogiMasterMainDashboard:
             if metrics:
                 dashboard.metrics = metrics
             logger.info(f"Dashboard {dashboard_id} status updated: {status}")
-    
+
     def get_dashboard_list(self) -> List[DashboardInfo]:
         """대시보드 목록 조회"""
         return list(self.dashboards.values())
-    
+
     def calculate_system_status(self) -> SystemStatus:
         """시스템 상태 계산"""
         total_dashboards = len(self.dashboards)
-        active_dashboards = len([d for d in self.dashboards.values() if d.status == "active"])
-        
+        active_dashboards = len(
+            [d for d in self.dashboards.values() if d.status == "active"]
+        )
+
         # 신뢰도 계산 (각 대시보드의 메트릭 기반)
         confidences = []
         for dashboard in self.dashboards.values():
@@ -146,9 +155,9 @@ class LogiMasterMainDashboard:
                 confidences.append(dashboard.metrics["confidence"])
             else:
                 confidences.append(0.85)  # 기본값
-        
+
         overall_confidence = np.mean(confidences) if confidences else 0.85
-        
+
         # 시스템 상태 평가
         if overall_confidence >= 0.9 and active_dashboards == total_dashboards:
             system_health = "EXCELLENT"
@@ -158,21 +167,21 @@ class LogiMasterMainDashboard:
             system_health = "FAIR"
         else:
             system_health = "NEEDS_ATTENTION"
-        
+
         self.system_status = SystemStatus(
             overall_confidence=overall_confidence,
             active_dashboards=active_dashboards,
             total_dashboards=total_dashboards,
-            system_health=system_health
+            system_health=system_health,
         )
-        
+
         return self.system_status
-    
+
     def create_main_dashboard_html(self) -> str:
         """메인 대시보드 HTML 생성"""
         system_status = self.calculate_system_status()
         dashboard_list = self.get_dashboard_list()
-        
+
         html_template = f"""
 <!DOCTYPE html>
 <html lang="ko">
@@ -519,15 +528,17 @@ class LogiMasterMainDashboard:
 </body>
 </html>
         """
-        
+
         return html_template
-    
-    def _generate_dashboard_cards_html(self, dashboard_list: List[DashboardInfo]) -> str:
+
+    def _generate_dashboard_cards_html(
+        self, dashboard_list: List[DashboardInfo]
+    ) -> str:
         """대시보드 카드 HTML 생성"""
         html = ""
         for dashboard in dashboard_list:
             metrics_html = self._generate_metrics_html(dashboard)
-            
+
             html += f"""
             <div class="dashboard-card {dashboard.type}">
                 <div class="dashboard-header">
@@ -542,57 +553,59 @@ class LogiMasterMainDashboard:
                 </div>
             </div>
             """
-        
+
         return html
-    
+
     def _generate_metrics_html(self, dashboard: DashboardInfo) -> str:
         """대시보드 메트릭 HTML 생성"""
         if not dashboard.metrics:
             return '<div class="dashboard-metrics"><div class="metric"><div class="metric-value">-</div><div class="metric-label">메트릭 없음</div></div></div>'
-        
+
         metrics_html = '<div class="dashboard-metrics">'
         for key, value in list(dashboard.metrics.items())[:4]:  # 최대 4개 메트릭
             if isinstance(value, float):
                 display_value = f"{value:.1f}"
             else:
                 display_value = str(value)
-            
+
             metrics_html += f"""
             <div class="metric">
                 <div class="metric-value">{display_value}</div>
                 <div class="metric-label">{key}</div>
             </div>
             """
-        metrics_html += '</div>'
-        
+        metrics_html += "</div>"
+
         return metrics_html
-    
+
     def update_all_dashboards(self):
         """모든 대시보드 상태 업데이트"""
         # 실제 파일 존재 여부 확인
         for dashboard_id, dashboard in self.dashboards.items():
             file_path = Path(dashboard.url)
             if file_path.exists():
-                self.update_dashboard_status(dashboard_id, "active", {
-                    "confidence": 0.95,
-                    "last_updated": datetime.now().isoformat()
-                })
+                self.update_dashboard_status(
+                    dashboard_id,
+                    "active",
+                    {"confidence": 0.95, "last_updated": datetime.now().isoformat()},
+                )
             else:
-                self.update_dashboard_status(dashboard_id, "inactive", {
-                    "confidence": 0.0,
-                    "error": "File not found"
-                })
-    
+                self.update_dashboard_status(
+                    dashboard_id,
+                    "inactive",
+                    {"confidence": 0.0, "error": "File not found"},
+                )
+
     def save_main_dashboard(self, filename: str = "logi_master_main_dashboard.html"):
         """메인 대시보드 저장"""
         html_content = self.create_main_dashboard_html()
-        
+
         with open(filename, "w", encoding="utf-8") as f:
             f.write(html_content)
-        
+
         logger.info(f"Main dashboard saved: {filename}")
         return filename
-    
+
     def open_main_dashboard(self, filename: str = "logi_master_main_dashboard.html"):
         """메인 대시보드 오픈"""
         try:
@@ -601,35 +614,39 @@ class LogiMasterMainDashboard:
         except Exception as e:
             logger.error(f"Failed to open dashboard: {e}")
 
+
 def main():
     """메인 실행 함수"""
     print("🚀 LOGI MASTER Main Dashboard Integration System")
     print("=" * 60)
-    
+
     # 메인 대시보드 시스템 초기화
     main_dashboard = LogiMasterMainDashboard()
-    
+
     # 모든 대시보드 상태 업데이트
     main_dashboard.update_all_dashboards()
-    
+
     # 메인 대시보드 생성 및 저장
     filename = main_dashboard.save_main_dashboard()
-    
+
     # 메인 대시보드 오픈
     main_dashboard.open_main_dashboard(filename)
-    
+
     print("✅ 메인 대시보드 생성 완료!")
     print(f"📁 파일 저장: {filename}")
     print("🌐 브라우저에서 자동 오픈됨")
     print("\n📊 연결된 대시보드:")
-    
+
     for dashboard in main_dashboard.get_dashboard_list():
         status_icon = "✅" if dashboard.status == "active" else "❌"
         print(f"  {status_icon} {dashboard.name} ({dashboard.type})")
-    
+
     print(f"\n⚙️ 시스템 상태: {main_dashboard.system_status.system_health}")
     print(f"📈 전체 신뢰도: {main_dashboard.system_status.overall_confidence*100:.1f}%")
-    print(f"🔗 활성 대시보드: {main_dashboard.system_status.active_dashboards}/{main_dashboard.system_status.total_dashboards}")
+    print(
+        f"🔗 활성 대시보드: {main_dashboard.system_status.active_dashboards}/{main_dashboard.system_status.total_dashboards}"
+    )
+
 
 if __name__ == "__main__":
-    main() 
+    main()

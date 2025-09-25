@@ -20,125 +20,130 @@ from pathlib import Path
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
+
 class Warehouse3DVisualizationSystem:
     """
     MACHO-GPT Warehouse 3D Visualization System
-    
+
     Mode: LATTICE - Advanced 3D warehouse modeling and visualization
     Focus: Automated 3D model generation from warehouse data
     """
-    
+
     def __init__(self, mode: str = "LATTICE"):
         self.mode = mode
         self.confidence_threshold = 0.90
         self.success_rate_target = 0.95
-        
+
         # 3D visualization parameters
         self.warehouse_dimensions = {
-            'zone_ab': {'length': 35, 'width': 15, 'height': 10},  # meters
-            'default_crate': {'length': 2.4, 'width': 1.2, 'height': 1.8},  # meters
-            'aisle_width': 3.0,  # meters
-            'stacking_height': 3.6  # meters (2 levels)
+            "zone_ab": {"length": 35, "width": 15, "height": 10},  # meters
+            "default_crate": {"length": 2.4, "width": 1.2, "height": 1.8},  # meters
+            "aisle_width": 3.0,  # meters
+            "stacking_height": 3.6,  # meters (2 levels)
         }
-        
+
         # KPI triggers for 3D visualization
         self.kpi_triggers = {
-            'utilization_threshold': 85,  # %
-            'pressure_limit': 4.0,  # t/m²
-            'stacking_limit': 2,  # levels
-            'aisle_clearance': 1.0  # meters
+            "utilization_threshold": 85,  # %
+            "pressure_limit": 4.0,  # t/m²
+            "stacking_limit": 2,  # levels
+            "aisle_clearance": 1.0,  # meters
         }
-        
+
         logger.info(f"🚀 MACHO-GPT 3D Visualization System initialized in {mode} mode")
-    
+
     def load_warehouse_data(self, file_path: str) -> pd.DataFrame:
         """
         Load warehouse data from Excel/CSV files
-        
+
         Args:
             file_path: Path to warehouse data file
-            
+
         Returns:
             DataFrame with warehouse layout data
-            
+
         Triggers:
             - Missing coordinates → Auto-generate from warehouse zones
             - Invalid dimensions → Apply safety defaults
             - Data quality <90% → Validation alert
         """
         try:
-            if file_path.endswith('.xlsx'):
+            if file_path.endswith(".xlsx"):
                 df = pd.read_excel(file_path)
-            elif file_path.endswith('.csv'):
+            elif file_path.endswith(".csv"):
                 df = pd.read_csv(file_path)
             else:
                 raise ValueError(f"Unsupported file format: {file_path}")
-            
+
             logger.info(f"✅ Loaded warehouse data: {len(df)} records")
-            
+
             # Validate and clean data
             df = self._validate_warehouse_data(df)
-            
+
             return df
-            
+
         except Exception as e:
             logger.error(f"❌ Failed to load warehouse data: {e}")
             if self.mode == "LATTICE":
                 logger.info("🔄 Switching to ZERO mode")
                 self.mode = "ZERO"
             raise
-    
+
     def _validate_warehouse_data(self, df: pd.DataFrame) -> pd.DataFrame:
         """Validate and clean warehouse data"""
-        
+
         # Check for required columns
-        required_columns = ['Case No.', 'L(CM)', 'W(CM)', 'H(CM)', 'G.W(kgs)']
+        required_columns = ["Case No.", "L(CM)", "W(CM)", "H(CM)", "G.W(kgs)"]
         missing_columns = [col for col in required_columns if col not in df.columns]
-        
+
         if missing_columns:
             logger.warning(f"⚠️ Missing columns: {missing_columns}")
             # Create default values for missing columns
             for col in missing_columns:
-                if col == 'L(CM)':
+                if col == "L(CM)":
                     df[col] = 240  # Default length 2.4m
-                elif col == 'W(CM)':
+                elif col == "W(CM)":
                     df[col] = 120  # Default width 1.2m
-                elif col == 'H(CM)':
+                elif col == "H(CM)":
                     df[col] = 180  # Default height 1.8m
-                elif col == 'G.W(kgs)':
+                elif col == "G.W(kgs)":
                     df[col] = 1000  # Default weight 1000kg
-        
+
         # Convert dimensions to meters
-        dimension_columns = ['L(CM)', 'W(CM)', 'H(CM)']
+        dimension_columns = ["L(CM)", "W(CM)", "H(CM)"]
         for col in dimension_columns:
             if col in df.columns:
-                df[col.replace('(CM)', '(M)')] = df[col] / 100
-        
+                df[col.replace("(CM)", "(M)")] = df[col] / 100
+
         # Calculate volume and pressure
-        if all(col in df.columns for col in ['L(M)', 'W(M)', 'H(M)', 'G.W(kgs)']):
-            df['Volume_M3'] = df['L(M)'] * df['W(M)'] * df['H(M)']
+        if all(col in df.columns for col in ["L(M)", "W(M)", "H(M)", "G.W(kgs)"]):
+            df["Volume_M3"] = df["L(M)"] * df["W(M)"] * df["H(M)"]
             # 압력 계산: 무게(kg) / 1000 = 톤, 면적(m²)으로 나누기
-            df['Pressure_T_M2'] = (df['G.W(kgs)'] / 1000) / (df['L(M)'] * df['W(M)'])
-        
+            df["Pressure_T_M2"] = (df["G.W(kgs)"] / 1000) / (df["L(M)"] * df["W(M)"])
+
         # Validate pressure limits
-        if 'Pressure_T_M2' in df.columns:
-            high_pressure = df[df['Pressure_T_M2'] > self.kpi_triggers['pressure_limit']]
+        if "Pressure_T_M2" in df.columns:
+            high_pressure = df[
+                df["Pressure_T_M2"] > self.kpi_triggers["pressure_limit"]
+            ]
             if len(high_pressure) > 0:
                 logger.warning(f"⚠️ {len(high_pressure)} items exceed pressure limit")
-        
+
         return df
-    
-    def generate_zoneab_layout_csv(self, df: pd.DataFrame, output_path: str = "zoneAB_layout.csv") -> str:
+
+    def generate_zoneab_layout_csv(
+        self, df: pd.DataFrame, output_path: str = "zoneAB_layout.csv"
+    ) -> str:
         """
         Generate CSV layout file for Zone AB (35m × 15m × 10m)
-        
+
         Args:
             df: Warehouse data DataFrame
             output_path: Output CSV file path
-            
+
         Returns:
             Path to generated CSV file
-            
+
         Triggers:
             - Layout optimization → Auto-arrange for maximum utilization
             - Safety violations → Apply clearance requirements
@@ -147,93 +152,108 @@ class Warehouse3DVisualizationSystem:
         try:
             # Filter items for Zone AB (example criteria)
             zone_items = df.head(39)  # Limit to 39 items for Zone AB
-            
+
             # Generate layout coordinates
             layout_data = []
             x_offset = 0
             y_offset = 0
             max_x = 0
-            
+
             for idx, row in zone_items.iterrows():
                 # Get dimensions
-                length = row.get('L(M)', 2.4)
-                width = row.get('W(M)', 1.2)
-                height = row.get('H(M)', 1.8)
-                
+                length = row.get("L(M)", 2.4)
+                width = row.get("W(M)", 1.2)
+                height = row.get("H(M)", 1.8)
+
                 # Check if item fits in current row
-                if x_offset + length > self.warehouse_dimensions['zone_ab']['length']:
+                if x_offset + length > self.warehouse_dimensions["zone_ab"]["length"]:
                     x_offset = 0
-                    y_offset += max_x + self.warehouse_dimensions['aisle_width']
+                    y_offset += max_x + self.warehouse_dimensions["aisle_width"]
                     max_x = 0
-                
+
                 # Check if item fits in warehouse height
-                if y_offset + width > self.warehouse_dimensions['zone_ab']['width']:
-                    logger.warning(f"⚠️ Item {row.get('Case No.', idx)} exceeds warehouse width")
+                if y_offset + width > self.warehouse_dimensions["zone_ab"]["width"]:
+                    logger.warning(
+                        f"⚠️ Item {row.get('Case No.', idx)} exceeds warehouse width"
+                    )
                     continue
-                
-                layout_data.append({
-                    'Case_No': row.get('Case No.', f'CASE_{idx:03d}'),
-                    'X': round(x_offset, 2),
-                    'Y': round(y_offset, 2),
-                    'L': round(length, 2),
-                    'W': round(width, 2),
-                    'H': round(height, 2),
-                    'Weight_kg': row.get('G.W(kgs)', 1000),
-                    'Pressure_T_M2': row.get('Pressure_T_M2', 0),
-                    'Stackable': row.get('Stack', 1)
-                })
-                
+
+                layout_data.append(
+                    {
+                        "Case_No": row.get("Case No.", f"CASE_{idx:03d}"),
+                        "X": round(x_offset, 2),
+                        "Y": round(y_offset, 2),
+                        "L": round(length, 2),
+                        "W": round(width, 2),
+                        "H": round(height, 2),
+                        "Weight_kg": row.get("G.W(kgs)", 1000),
+                        "Pressure_T_M2": row.get("Pressure_T_M2", 0),
+                        "Stackable": row.get("Stack", 1),
+                    }
+                )
+
                 x_offset += length + 0.5  # 0.5m clearance
                 max_x = max(max_x, width)
-            
+
             # Create DataFrame and save to CSV
             layout_df = pd.DataFrame(layout_data)
             layout_df.to_csv(output_path, index=False)
-            
+
             logger.info(f"✅ Generated Zone AB layout: {len(layout_df)} items")
             logger.info(f"📁 CSV file saved: {output_path}")
-            
+
             # Generate utilization report
             self._generate_utilization_report(layout_df)
-            
+
             return output_path
-            
+
         except Exception as e:
             logger.error(f"❌ Failed to generate layout: {e}")
             raise
-    
+
     def _generate_utilization_report(self, layout_df: pd.DataFrame):
         """Generate warehouse utilization report"""
-        
-        total_area = self.warehouse_dimensions['zone_ab']['length'] * self.warehouse_dimensions['zone_ab']['width']
-        used_area = sum(layout_df['L'] * layout_df['W'])
+
+        total_area = (
+            self.warehouse_dimensions["zone_ab"]["length"]
+            * self.warehouse_dimensions["zone_ab"]["width"]
+        )
+        used_area = sum(layout_df["L"] * layout_df["W"])
         utilization = (used_area / total_area) * 100
-        
-        total_volume = self.warehouse_dimensions['zone_ab']['length'] * self.warehouse_dimensions['zone_ab']['width'] * self.warehouse_dimensions['zone_ab']['height']
-        used_volume = sum(layout_df['L'] * layout_df['W'] * layout_df['H'])
+
+        total_volume = (
+            self.warehouse_dimensions["zone_ab"]["length"]
+            * self.warehouse_dimensions["zone_ab"]["width"]
+            * self.warehouse_dimensions["zone_ab"]["height"]
+        )
+        used_volume = sum(layout_df["L"] * layout_df["W"] * layout_df["H"])
         volume_utilization = (used_volume / total_volume) * 100
-        
+
         logger.info(f"📊 Warehouse Utilization Report:")
         logger.info(f"   Area Utilization: {utilization:.1f}%")
         logger.info(f"   Volume Utilization: {volume_utilization:.1f}%")
         logger.info(f"   Total Items: {len(layout_df)}")
-        
-        if utilization > self.kpi_triggers['utilization_threshold']:
-            logger.warning(f"⚠️ High utilization: {utilization:.1f}% > {self.kpi_triggers['utilization_threshold']}%")
-    
-    def generate_sketchup_ruby_script(self, csv_path: str, output_path: str = "sketchup_import.rb") -> str:
+
+        if utilization > self.kpi_triggers["utilization_threshold"]:
+            logger.warning(
+                f"⚠️ High utilization: {utilization:.1f}% > {self.kpi_triggers['utilization_threshold']}%"
+            )
+
+    def generate_sketchup_ruby_script(
+        self, csv_path: str, output_path: str = "sketchup_import.rb"
+    ) -> str:
         """
         Generate SketchUp Ruby script for automatic CSV import
-        
+
         Args:
             csv_path: Path to CSV layout file
             output_path: Output Ruby script path
-            
+
         Returns:
             Path to generated Ruby script
         """
         try:
-            ruby_script = f'''# MACHO-GPT Warehouse 3D Import Script
+            ruby_script = f"""# MACHO-GPT Warehouse 3D Import Script
 # HVDC PROJECT | Samsung C&T | ADNOC·DSV Partnership
 # Generated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}
 
@@ -307,26 +327,28 @@ end
 
 # Run import
 import_warehouse_layout
-'''
-            
-            with open(output_path, 'w', encoding='utf-8') as f:
+"""
+
+            with open(output_path, "w", encoding="utf-8") as f:
                 f.write(ruby_script)
-            
+
             logger.info(f"✅ Generated SketchUp Ruby script: {output_path}")
             return output_path
-            
+
         except Exception as e:
             logger.error(f"❌ Failed to generate Ruby script: {e}")
             raise
-    
-    def generate_blender_python_script(self, csv_path: str, output_path: str = "blender_import.py") -> str:
+
+    def generate_blender_python_script(
+        self, csv_path: str, output_path: str = "blender_import.py"
+    ) -> str:
         """
         Generate Blender Python script for 3D rendering
-        
+
         Args:
             csv_path: Path to CSV layout file
             output_path: Output Python script path
-            
+
         Returns:
             Path to generated Python script
         """
@@ -454,26 +476,28 @@ def main():
 if __name__ == "__main__":
     main()
 '''
-            
-            with open(output_path, 'w', encoding='utf-8') as f:
+
+            with open(output_path, "w", encoding="utf-8") as f:
                 f.write(blender_script)
-            
+
             logger.info(f"✅ Generated Blender Python script: {output_path}")
             return output_path
-            
+
         except Exception as e:
             logger.error(f"❌ Failed to generate Blender script: {e}")
             raise
-    
-    def generate_workflow_guide(self, csv_path: str, sketchup_script: str, blender_script: str) -> str:
+
+    def generate_workflow_guide(
+        self, csv_path: str, sketchup_script: str, blender_script: str
+    ) -> str:
         """
         Generate comprehensive workflow guide
-        
+
         Args:
             csv_path: Path to CSV layout file
             sketchup_script: Path to SketchUp Ruby script
             blender_script: Path to Blender Python script
-            
+
         Returns:
             Path to generated workflow guide
         """
@@ -562,147 +586,147 @@ if __name__ == "__main__":
 /3d_visualization export_sketchfab [Sketchfab 업로드 자동화]
 /animation_creator forklift_path [포크리프트 동선 애니메이션 생성]
 """
-            
+
             guide_path = "warehouse_3d_workflow_guide.md"
-            with open(guide_path, 'w', encoding='utf-8') as f:
+            with open(guide_path, "w", encoding="utf-8") as f:
                 f.write(guide_content)
-            
+
             logger.info(f"✅ Generated workflow guide: {guide_path}")
             return guide_path
-            
+
         except Exception as e:
             logger.error(f"❌ Failed to generate workflow guide: {e}")
             raise
-    
+
     def run_complete_workflow(self, warehouse_data_path: str) -> Dict[str, str]:
         """
         Run complete 3D visualization workflow
-        
+
         Args:
             warehouse_data_path: Path to warehouse data file
-            
+
         Returns:
             Dictionary with generated file paths
         """
         try:
             logger.info("🚀 Starting complete 3D visualization workflow...")
-            
+
             # Step 1: Load and process warehouse data
             df = self.load_warehouse_data(warehouse_data_path)
-            
+
             # Step 2: Generate Zone AB layout CSV
             csv_path = self.generate_zoneab_layout_csv(df)
-            
+
             # Step 3: Generate SketchUp Ruby script
             sketchup_script = self.generate_sketchup_ruby_script(csv_path)
-            
+
             # Step 4: Generate Blender Python script
             blender_script = self.generate_blender_python_script(csv_path)
-            
+
             # Step 5: Generate workflow guide
-            workflow_guide = self.generate_workflow_guide(csv_path, sketchup_script, blender_script)
-            
+            workflow_guide = self.generate_workflow_guide(
+                csv_path, sketchup_script, blender_script
+            )
+
             # Generate summary report
             summary = {
-                'status': 'SUCCESS',
-                'confidence': 0.95,
-                'mode': self.mode,
-                'generated_files': {
-                    'csv_layout': csv_path,
-                    'sketchup_script': sketchup_script,
-                    'blender_script': blender_script,
-                    'workflow_guide': workflow_guide
+                "status": "SUCCESS",
+                "confidence": 0.95,
+                "mode": self.mode,
+                "generated_files": {
+                    "csv_layout": csv_path,
+                    "sketchup_script": sketchup_script,
+                    "blender_script": blender_script,
+                    "workflow_guide": workflow_guide,
                 },
-                'warehouse_stats': {
-                    'total_items': len(df),
-                    'zone_ab_items': 39,
-                    'utilization': '85%',
-                    'pressure_compliance': '100%'
+                "warehouse_stats": {
+                    "total_items": len(df),
+                    "zone_ab_items": 39,
+                    "utilization": "85%",
+                    "pressure_compliance": "100%",
                 },
-                'next_commands': [
-                    '/warehouse_optimizer capacity_check',
-                    '/3d_visualization export_sketchfab',
-                    '/animation_creator forklift_path'
-                ]
+                "next_commands": [
+                    "/warehouse_optimizer capacity_check",
+                    "/3d_visualization export_sketchfab",
+                    "/animation_creator forklift_path",
+                ],
             }
-            
+
             logger.info("✅ Complete 3D visualization workflow finished successfully!")
             return summary
-            
+
         except Exception as e:
             logger.error(f"❌ Workflow failed: {e}")
-            return {
-                'status': 'FAIL',
-                'error': str(e),
-                'mode': self.mode
-            }
+            return {"status": "FAIL", "error": str(e), "mode": self.mode}
 
 
 def main():
     """Main execution function"""
     print("🏭 MACHO-GPT Warehouse 3D Visualization System")
     print("=" * 60)
-    
+
     # Initialize system
     viz_system = Warehouse3DVisualizationSystem(mode="LATTICE")
-    
+
     # Example usage with sample data
     try:
         # Check if warehouse data exists
         warehouse_files = [
             "HVDC_Monthly_Warehouse_Report_v1.1_전체_트랜잭션_데이터.csv",
             "HVDC WAREHOUSE_HITACHI(HE).xlsx",
-            "HVDC WAREHOUSE_SIMENSE(SIM).xlsx"
+            "HVDC WAREHOUSE_SIMENSE(SIM).xlsx",
         ]
-        
+
         data_file = None
         for file in warehouse_files:
             if os.path.exists(file):
                 data_file = file
                 break
-        
+
         if data_file:
             print(f"📁 Using warehouse data: {data_file}")
             result = viz_system.run_complete_workflow(data_file)
-            
-            if result['status'] == 'SUCCESS':
+
+            if result["status"] == "SUCCESS":
                 print("\n✅ Workflow completed successfully!")
                 print(f"📊 Generated files:")
-                for file_type, file_path in result['generated_files'].items():
+                for file_type, file_path in result["generated_files"].items():
                     print(f"   - {file_type}: {file_path}")
-                
+
                 print(f"\n📈 Warehouse Statistics:")
-                for stat, value in result['warehouse_stats'].items():
+                for stat, value in result["warehouse_stats"].items():
                     print(f"   - {stat}: {value}")
-                
+
                 print(f"\n🔧 Recommended Commands:")
-                for cmd in result['next_commands']:
+                for cmd in result["next_commands"]:
                     print(f"   - {cmd}")
             else:
                 print(f"❌ Workflow failed: {result.get('error', 'Unknown error')}")
         else:
             print("⚠️ No warehouse data files found. Creating sample workflow...")
             # Create sample data for demonstration
-            sample_data = pd.DataFrame({
-                'Case No.': [f'CASE_{i:03d}' for i in range(1, 40)],
-                'L(CM)': np.random.uniform(200, 300, 39),
-                'W(CM)': np.random.uniform(100, 150, 39),
-                'H(CM)': np.random.uniform(150, 200, 39),
-                'G.W(kgs)': np.random.uniform(500, 2000, 39),
-                'Stack': np.random.choice([0, 1, 2], 39)
-            })
-            
+            sample_data = pd.DataFrame(
+                {
+                    "Case No.": [f"CASE_{i:03d}" for i in range(1, 40)],
+                    "L(CM)": np.random.uniform(200, 300, 39),
+                    "W(CM)": np.random.uniform(100, 150, 39),
+                    "H(CM)": np.random.uniform(150, 200, 39),
+                    "G.W(kgs)": np.random.uniform(500, 2000, 39),
+                    "Stack": np.random.choice([0, 1, 2], 39),
+                }
+            )
+
             sample_file = "sample_warehouse_data.csv"
             sample_data.to_csv(sample_file, index=False)
-            
+
             result = viz_system.run_complete_workflow(sample_file)
-            
-            if result['status'] == 'SUCCESS':
+
+            if result["status"] == "SUCCESS":
                 print("✅ Sample workflow completed successfully!")
-    
+
     except Exception as e:
         print(f"❌ Error: {e}")
 
 
 if __name__ == "__main__":
-    main() 
+    main()

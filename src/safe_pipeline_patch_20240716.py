@@ -1,11 +1,13 @@
 import pandas as pd
 import numpy as np
 
+
 # 1. Robust 날짜 변환(중복키/이상 방지)
 def safe_to_datetime(series: pd.Series) -> pd.Series:
     s = series.copy()
     s.name = None
     return pd.to_datetime(s, errors="coerce")
+
 
 # 2. 컬럼 표준화 + 중복/매핑 진단
 def normalize_and_debug_columns(df: pd.DataFrame, standard_cols: list) -> pd.DataFrame:
@@ -21,6 +23,7 @@ def normalize_and_debug_columns(df: pd.DataFrame, standard_cols: list) -> pd.Dat
         print("⚠️ 중복 컬럼:", list(dups))
     return df.loc[:, ~df.columns.duplicated()]
 
+
 # 3. 집계/누계 컬럼 자동 동기화(없으면 0으로 보장)
 def ensure_totals(df: pd.DataFrame, totals: list) -> pd.DataFrame:
     for col in totals:
@@ -28,11 +31,20 @@ def ensure_totals(df: pd.DataFrame, totals: list) -> pd.DataFrame:
             df[col] = 0
     return df
 
+
 # 4. 전체 파이프라인 자동화 예시
 def run_full_pipeline(raw_df: pd.DataFrame):
     # 표준 창고 컬럼명(실제 프로젝트용 리스트로 교체)
     WAREHOUSE_LIST = [
-        "AAA  Storage", "AAA Storage", "DSV Al Markaz", "DSV Indoor", "DSV MZP", "DSV MZD", "DSV Outdoor", "Hauler Indoor", "MOSB"
+        "AAA  Storage",
+        "AAA Storage",
+        "DSV Al Markaz",
+        "DSV Indoor",
+        "DSV MZP",
+        "DSV MZD",
+        "DSV Outdoor",
+        "Hauler Indoor",
+        "MOSB",
     ]
     SITE_LIST = ["AGI", "DAS", "MIR", "SHU"]
 
@@ -61,15 +73,18 @@ def run_full_pipeline(raw_df: pd.DataFrame):
             print(f"{col} notna: {df[col].notna().sum()}")
     return df
 
+
 # 실제 파일/데이터로 일괄 적용 실행 예시
 if __name__ == "__main__":
     # 원본 데이터 예시: pd.read_excel, pd.read_csv 등
     # df = pd.read_excel('yourfile.xlsx')
     # 아래는 빈 예시
-    df = pd.DataFrame({
-        "AAA  Storage": ["2024-01-01", np.nan, "2024-02-05"],
-        "DSV Indoor": [np.nan, "2024-03-15", "2024-03-20"],
-        "AGI": ["2024-04-01", np.nan, np.nan],
-    })
+    df = pd.DataFrame(
+        {
+            "AAA  Storage": ["2024-01-01", np.nan, "2024-02-05"],
+            "DSV Indoor": [np.nan, "2024-03-15", "2024-03-20"],
+            "AGI": ["2024-04-01", np.nan, np.nan],
+        }
+    )
     # 전체 자동화 파이프라인 실행
-    out_df = run_full_pipeline(df) 
+    out_df = run_full_pipeline(df)
