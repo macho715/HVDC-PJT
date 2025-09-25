@@ -1,5 +1,10 @@
 # 🚛 MACHO-GPT v3.4-mini | HVDC Project Logistics AI
 
+[![CI/CD Pipeline](https://github.com/macho715/HVDC-PJT/actions/workflows/ci.yml/badge.svg)](https://github.com/macho715/HVDC-PJT/actions/workflows/ci.yml)
+[![Security Scan](https://github.com/macho715/HVDC-PJT/actions/workflows/security.yml/badge.svg)](https://github.com/macho715/HVDC-PJT/actions/workflows/security.yml)
+[![Python 3.11](https://img.shields.io/badge/python-3.11-blue.svg)](https://www.python.org/downloads/release/python-3110/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 **Samsung C&T × ADNOC·DSV Partnership | Enhanced Cursor IDE Integration**
 
 ## 📋 System Overview
@@ -83,6 +88,38 @@ python logi_meta.py --export json
 | | `health_check` | System health monitoring |
 | **Visualization** | `visualize_data --type=dashboard` | Executive KPI dashboard |
 | | `visualize_data --type=heatmap` | Heat-Stow pressure map |
+
+## ⚙️ GitHub Actions CI/CD
+
+이 프로젝트는 GitHub Actions를 사용하여 자동화된 CI/CD 파이프라인을 구축했습니다:
+
+### 🔄 자동화된 워크플로우
+
+- **CI/CD Pipeline** (`ci.yml`): 코드 품질 검사, 보안 스캔, 다중 버전 Python 테스트, 통합 테스트, 성능 벤치마킹
+- **Security Scan** (`security.yml`): 주간 보안 분석 (Bandit, Safety, Semgrep)
+- **Dependabot** (`dependabot.yml`): 자동 의존성 업데이트 관리
+
+### 🐳 Docker 지원
+
+```bash
+# Docker 이미지 빌드
+docker build -t hvdc-logistics .
+
+# Docker 컨테이너 실행
+docker run -p 8000:8000 hvdc-logistics
+```
+
+### 🧪 테스트 실행
+
+```bash
+# 전체 테스트 실행
+pytest tests/ -v --tb=short
+
+# 특정 테스트 단계 실행
+pytest tests/core -v --tb=short
+pytest tests/integration -v --tb=short
+pytest tests/performance -v --tb=short
+```
 
 ## 🎯 Containment Modes
 
