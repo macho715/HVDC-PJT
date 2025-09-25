@@ -1,0 +1,61 @@
+{
+  "timestamp": "2025-07-09T20:13:09.810074",
+  "validation_type": "post_cleaning",
+  "files_validated": {
+    "HITACHI": {
+      "file_name": "HITACHI_CLEANED",
+      "file_path": "data_cleaned\\HVDC_WAREHOUSE_HITACHI_CLEANED_20250709_201121.xlsx",
+      "total_records": 5552,
+      "missing_data_rate": 15.52,
+      "duplicate_rate": 0.0,
+      "outlier_rate": 0.0,
+      "type_consistency": 100.0,
+      "quality_score": 84.48,
+      "validation_status": "PASSED"
+    },
+    "SIMENSE": {
+      "file_name": "SIMENSE_CLEANED",
+      "file_path": "data_cleaned\\HVDC_WAREHOUSE_SIMENSE_CLEANED_20250709_201121.xlsx",
+      "total_records": 2227,
+      "missing_data_rate": 0.87,
+      "duplicate_rate": 0.0,
+      "cbm_compliance_rate": 100.0,
+      "pkg_compliance_rate": 100,
+      "type_consistency": 98.28,
+      "quality_score": 99.65,
+      "validation_status": "PASSED"
+    },
+    "INVOICE": {
+      "file_name": "INVOICE_CLEANED",
+      "file_path": "data_cleaned\\HVDC_WAREHOUSE_INVOICE_CLEANED_20250709_201121.xlsx",
+      "total_records": 465,
+      "missing_data_rate": 0.96,
+      "duplicate_rate": 0.0,
+      "amount_compliance": 100.0,
+      "type_consistency": 100.0,
+      "quality_score": 99.71,
+      "validation_status": "PASSED"
+    }
+  },
+  "overall_quality_score": 94.61,
+  "improvement_metrics": {
+    "quality_before": 54.4,
+    "quality_after": 94.61,
+    "improvement_percentage": 40.21,
+    "improvement_factor": 1.74
+  },
+  "sparql_compliance": {
+    "HITACHI": {
+      "compliance_score": 100.0,
+      "status": "COMPLIANT"
+    },
+    "SIMENSE": {
+      "compliance_score": 100.0,
+      "status": "COMPLIANT"
+    },
+    "INVOICE": {
+      "compliance_score": 100.0,
+      "status": "COMPLIANT"
+    }
+  }
+}

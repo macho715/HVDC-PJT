@@ -1,0 +1,158 @@
+{
+  "warehouses": [
+    {
+      "warehouse_code": "DSV Outdoor",
+      "name": "DSV Outdoor Warehouse",
+      "longitude": 55.3781,
+      "latitude": 25.1172,
+      "capacity": 15996.25,
+      "utilization": 36.8,
+      "packages": 1024,
+      "zone_type": "outdoor",
+      "elevation": 10,
+      "color": [
+        100,
+        100,
+        100,
+        160
+      ]
+    },
+    {
+      "warehouse_code": "DSV Indoor",
+      "name": "DSV Indoor Warehouse",
+      "longitude": 55.3845,
+      "latitude": 25.1204,
+      "capacity": 12500.0,
+      "utilization": 45.2,
+      "packages": 1297,
+      "zone_type": "indoor",
+      "elevation": 12,
+      "color": [
+        100,
+        100,
+        100,
+        160
+      ]
+    },
+    {
+      "warehouse_code": "DSV Al Markaz",
+      "name": "DSV Al Markaz",
+      "longitude": 55.3912,
+      "latitude": 25.1156,
+      "capacity": 8000.0,
+      "utilization": 42.1,
+      "packages": 1066,
+      "zone_type": "indoor",
+      "elevation": 10,
+      "color": [
+        100,
+        100,
+        100,
+        160
+      ]
+    },
+    {
+      "warehouse_code": "DSV MZP",
+      "name": "DSV MZP Hub",
+      "longitude": 55.3723,
+      "latitude": 25.1098,
+      "capacity": 20000.0,
+      "utilization": 55.8,
+      "packages": 5552,
+      "zone_type": "hub",
+      "elevation": 55,
+      "color": [
+        255,
+        100,
+        100,
+        160
+      ]
+    },
+    {
+      "warehouse_code": "AAA Storage",
+      "name": "AAA Storage Facility",
+      "longitude": 55.3654,
+      "latitude": 25.1234,
+      "capacity": 6000.0,
+      "utilization": 28.5,
+      "packages": 392,
+      "zone_type": "storage",
+      "elevation": 3,
+      "color": [
+        100,
+        255,
+        100,
+        160
+      ]
+    }
+  ],
+  "routes": [
+    {
+      "source": "DSV MZP",
+      "target": "DSV Outdoor",
+      "movements": 1300,
+      "path": [
+        [
+          55.3723,
+          25.1098
+        ],
+        [
+          55.3781,
+          25.1172
+        ]
+      ]
+    },
+    {
+      "source": "DSV MZP",
+      "target": "DSV Indoor",
+      "movements": 1297,
+      "path": [
+        [
+          55.3723,
+          25.1098
+        ],
+        [
+          55.3845,
+          25.1204
+        ]
+      ]
+    },
+    {
+      "source": "DSV Indoor",
+      "target": "DSV Al Markaz",
+      "movements": 636,
+      "path": [
+        [
+          55.3845,
+          25.1204
+        ],
+        [
+          55.3912,
+          25.1156
+        ]
+      ]
+    },
+    {
+      "source": "DSV MZP",
+      "target": "AAA Storage",
+      "movements": 392,
+      "path": [
+        [
+          55.3723,
+          25.1098
+        ],
+        [
+          55.3654,
+          25.1234
+        ]
+      ]
+    }
+  ],
+  "center_coordinates": [
+    55.3783,
+    25.11728
+  ],
+  "total_capacity": 62496.25,
+  "average_utilization": 41.67999999999999,
+  "total_packages": 9331
+}

@@ -1,0 +1,108 @@
+{
+  "timestamp": "2025-07-09T20:00:52.377893",
+  "total_files": 2,
+  "validation_results": {
+    "HVDC WAREHOUSE_HITACHI(HE).xlsx": {
+      "file_name": "HVDC WAREHOUSE_HITACHI(HE).xlsx",
+      "total_records": 5552,
+      "sparql_validation": {
+        "cbm_positive": {
+          "violations": "0",
+          "passed": "True",
+          "description": "CBM 양수 검증"
+        },
+        "wh_handling_range": {
+          "violations": "0",
+          "passed": "True",
+          "description": "WH Handling 범위 검증 (0-3)"
+        }
+      },
+      "data_quality": {
+        "completeness": {
+          "missing_rate": 0.23483239799787653,
+          "critical_missing": "14",
+          "score": 76.51676020021235
+        },
+        "consistency": {
+          "score": 100,
+          "issues": []
+        },
+        "accuracy": {
+          "score": 36.86959654178674,
+          "outliers": "3505"
+        }
+      },
+      "business_rules": {
+        "vendor_classification": {
+          "classification_accuracy": 0
+        },
+        "warehouse_specialization": {
+          "specialization_score": 0
+        },
+        "temporal_consistency": {
+          "temporal_consistency_score": 90.0,
+          "temporal_issues": []
+        }
+      },
+      "score": 62.955028060063704,
+      "issues": []
+    },
+    "HVDC WAREHOUSE_SIMENSE(SIM).xlsx": {
+      "file_name": "HVDC WAREHOUSE_SIMENSE(SIM).xlsx",
+      "total_records": 2227,
+      "sparql_validation": {
+        "cbm_positive": {
+          "violations": "383",
+          "passed": "False",
+          "description": "CBM 양수 검증"
+        },
+        "wh_handling_range": {
+          "violations": "0",
+          "passed": "True",
+          "description": "WH Handling 범위 검증 (0-3)"
+        }
+      },
+      "data_quality": {
+        "completeness": {
+          "missing_rate": 0.13565655269741486,
+          "critical_missing": "1",
+          "score": 86.43434473025852
+        },
+        "consistency": {
+          "score": 100,
+          "issues": []
+        },
+        "accuracy": {
+          "score": 91.3336326897171,
+          "outliers": "193"
+        }
+      },
+      "business_rules": {
+        "vendor_classification": {
+          "classification_accuracy": 0
+        },
+        "warehouse_specialization": {
+          "specialization_score": 0
+        },
+        "temporal_consistency": {
+          "temporal_consistency_score": 90.0,
+          "temporal_issues": []
+        }
+      },
+      "score": 45.93030341907755,
+      "issues": []
+    }
+  },
+  "sparql_rules_applied": 6,
+  "overall_score": 54.44266573957063,
+  "critical_issues": [
+    "HVDC WAREHOUSE_HITACHI(HE).xlsx: 품질 점수 63.0% (임계값 70% 미만)",
+    "HVDC WAREHOUSE_SIMENSE(SIM).xlsx: 품질 점수 45.9% (임계값 70% 미만)",
+    "HVDC WAREHOUSE_SIMENSE(SIM).xlsx: CBM 양수 검증 - 383건 위반"
+  ],
+  "recommendations": [
+    "데이터 품질 개선을 위한 데이터 클리닝 작업 필요",
+    "SPARQL 규칙 위반 항목에 대한 데이터 수정 권장",
+    "비즈니스 규칙 검증을 통한 데이터 일관성 향상 권장"
+  ]
+}

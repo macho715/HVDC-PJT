@@ -1,0 +1,325 @@
+{
+  "demo_results": [
+    {
+      "context_name": "완전한 HVDC Context",
+      "precision": 1.0,
+      "recall": 0.02,
+      "groundedness": 0.4166666666666667,
+      "memory_quality": {
+        "freshness": 0.0,
+        "relevance": 0.0,
+        "coherence": 0.0,
+        "penalty": 0.05
+      },
+      "total_score": 0.6696666666666667
+    },
+    {
+      "context_name": "부분적 Context",
+      "precision": 0.0,
+      "recall": 0.0,
+      "groundedness": 0.5,
+      "memory_quality": {
+        "freshness": 0.0,
+        "relevance": 0.0,
+        "coherence": 0.0,
+        "penalty": 0.05
+      },
+      "total_score": 0.35000000000000003
+    },
+    {
+      "context_name": "빈 Context",
+      "precision": 0.0,
+      "recall": 0.0,
+      "groundedness": 0.0,
+      "memory_quality": {
+        "freshness": 0.0,
+        "relevance": 0.0,
+        "coherence": 0.0,
+        "penalty": 0.05
+      },
+      "total_score": 0.05
+    },
+    {
+      "response_name": "우수한 응답",
+      "groundedness": 0.95,
+      "completeness": 1.0,
+      "faithfulness": 1.0,
+      "helpfulness": 1.0,
+      "toxicity": 0.0,
+      "latency": 0.1,
+      "total_score": 0.825
+    },
+    {
+      "response_name": "보통 응답",
+      "groundedness": 0.8,
+      "completeness": 0.7999999999999999,
+      "faithfulness": 1.0,
+      "helpfulness": 1.0,
+      "toxicity": 0.0,
+      "latency": 0.1,
+      "total_score": 0.74
+    },
+    {
+      "response_name": "오류 응답",
+      "groundedness": 0.0,
+      "completeness": 0.4666666666666666,
+      "faithfulness": 0.0,
+      "helpfulness": 0.3,
+      "toxicity": 0.5,
+      "latency": 0.1,
+      "total_score": 0.028333333333333315
+    },
+    {
+      "memory_scenario": "신선한 메모리 (24시간 내)",
+      "memory_quality": {
+        "freshness": 1.0,
+        "relevance": 1.0,
+        "coherence": 0.5,
+        "penalty": 0.0
+      },
+      "total_score": 0.18333333333333335
+    },
+    {
+      "memory_scenario": "혼합 메모리 (신선 + 오래됨)",
+      "memory_quality": {
+        "freshness": 0.5,
+        "relevance": 1.0,
+        "coherence": 0.5,
+        "penalty": 0.0
+      },
+      "total_score": 0.16666666666666669
+    },
+    {
+      "memory_scenario": "빈 메모리",
+      "memory_quality": {
+        "freshness": 0.0,
+        "relevance": 0.0,
+        "coherence": 0.0,
+        "penalty": 0.05
+      },
+      "total_score": 0.15000000000000002
+    },
+    {
+      "command_name": "대시보드 강화",
+      "execution_time": 0.0,
+      "result": {
+        "status": "SUCCESS",
+        "confidence": 0.95,
+        "mode": "LATTICE",
+        "command": "enhance_dashboard",
+        "parameters": {
+          "dashboard_id": "main",
+          "enhancement_type": "weather_integration"
+        },
+        "recommended_commands": [
+          "get_kpi",
+          "weather_tie"
+        ],
+        "timestamp": "2025-07-14T21:51:03.534054",
+        "enhancement_result": "Dashboard enhanced with weather integration",
+        "enhanced_context_engineering": {
+          "context_score": 0.49583333333333335,
+          "response_score": 0.8049999999999999,
+          "context_precision": 0.0,
+          "context_recall": 0.0,
+          "groundedness": 0.125,
+          "field_resonance": 0.85,
+          "attractor_strength": 0.8,
+          "memory_quality": {
+            "freshness": 1.0,
+            "relevance": 1.0,
+            "coherence": 1.0
+          },
+          "context_history_length": 1,
+          "dynamic_thresholds": {
+            "confidence": 0.85,
+            "context_precision": 0.7,
+            "context_recall": 0.7,
+            "groundedness": 0.8,
+            "memory_penalty": 0.05
+          },
+          "performance_trend": "insufficient_data"
+        }
+      }
+    },
+    {
+      "command_name": "Excel 쿼리",
+      "execution_time": 0.0,
+      "result": {
+        "status": "SUCCESS",
+        "confidence": 0.88,
+        "mode": "PRIME",
+        "command": "excel_query",
+        "parameters": {
+          "query": "Show me all HITACHI equipment"
+        },
+        "recommended_commands": [
+          "enhance_dashboard"
+        ],
+        "timestamp": "2025-07-14T21:51:03.534054",
+        "query_result": "Data filtered successfully",
+        "enhanced_context_engineering": {
+          "context_score": 0.5806666666666667,
+          "response_score": 0.784,
+          "context_precision": 0.0,
+          "context_recall": 0.0,
+          "groundedness": 0.20833333333333334,
+          "field_resonance": 0.85,
+          "attractor_strength": 0.8,
+          "memory_quality": {
+            "freshness": 1.0,
+            "relevance": 1.0,
+            "coherence": 1.0
+          },
+          "context_history_length": 2,
+          "dynamic_thresholds": {
+            "confidence": 0.85,
+            "context_precision": 0.7,
+            "context_recall": 0.7,
+            "groundedness": 0.8,
+            "memory_penalty": 0.05
+          },
+          "performance_trend": "insufficient_data"
+        }
+      }
+    },
+    {
+      "command_name": "알 수 없는 명령어",
+      "execution_time": 0.0,
+      "result": {
+        "status": "ERROR",
+        "error_message": "Unknown command: unknown_command",
+        "confidence": 0.0,
+        "mode": "ZERO",
+        "enhanced_context_engineering": {
+          "context_score": 0.23333333333333334,
+          "response_score": 0.07499999999999998,
+          "context_precision": 0.0,
+          "context_recall": 0.0,
+          "groundedness": 0.0,
+          "field_resonance": 0.85,
+          "attractor_strength": 0.8,
+          "memory_quality": {
+            "freshness": 1.0,
+            "relevance": 1.0,
+            "coherence": 1.0
+          },
+          "context_history_length": 3,
+          "dynamic_thresholds": {
+            "confidence": 0.85,
+            "context_precision": 0.7,
+            "context_recall": 0.7,
+            "groundedness": 0.8,
+            "memory_penalty": 0.05
+          },
+          "performance_trend": "insufficient_data"
+        }
+      }
+    },
+    {
+      "analytics": {
+        "total_contexts": 3,
+        "average_context_score": 0.5366111111111111,
+        "average_response_score": 0.5546666666666666,
+        "average_precision": 0.0,
+        "average_recall": 0.0,
+        "average_groundedness": 0.11111111111111112,
+        "field_resonance_trend": [
+          0.85,
+          0.85,
+          0.85
+        ],
+        "attractor_strength_trend": [
+          0.8,
+          0.8,
+          0.8
+        ],
+        "memory_quality": {
+          "average_freshness": 1.0,
+          "average_relevance": 1.0,
+          "average_coherence": 1.0
+        },
+        "most_used_tools": [
+          [
+            "weather_api",
+            1
+          ],
+          [
+            "kpi_database",
+            1
+          ],
+          [
+            "html_generator",
+            1
+          ],
+          [
+            "performance_monitor",
+            1
+          ],
+          [
+            "pandas",
+            1
+          ],
+          [
+            "excel_parser",
+            1
+          ],
+          [
+            "natural_language_processor",
+            1
+          ],
+          [
+            "data_validator",
+            1
+          ]
+        ],
+        "enhanced_quality_distribution": {
+          "excellent": 0,
+          "good": 0,
+          "fair": 2,
+          "poor": 1
+        },
+        "performance_metrics": {
+          "context_scores": [
+            0.5958333333333333,
+            0.6806666666666666,
+            0.33333333333333337
+          ],
+          "response_scores": [
+            0.8049999999999999,
+            0.784,
+            0.07499999999999998
+          ],
+          "precision_scores": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "recall_scores": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "groundedness_scores": [
+            0.125,
+            0.20833333333333334,
+            0.0
+          ]
+        },
+        "dynamic_thresholds": {
+          "confidence": 0.85,
+          "context_precision": 0.7,
+          "context_recall": 0.7,
+          "groundedness": 0.8,
+          "memory_penalty": 0.05
+        }
+      }
+    }
+  ],
+  "summary": {
+    "total_demos": 13,
+    "context_quality_avg": 0.35655555555555557,
+    "response_quality_avg": 0.5311111111111111,
+    "memory_quality_avg": 0.16666666666666666
+  }
+}

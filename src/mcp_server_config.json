@@ -1,0 +1,183 @@
+{
+  "mcpServers": {
+    "shrimp-task-manager": {
+      "command": "python",
+      "args": ["shrimp_task_manager.py"],
+      "env": {
+        "PYTHONPATH": ".",
+        "HVDC_PROJECT_MODE": "PRODUCTION"
+      }
+    }
+  },
+  "tools": {
+    "task_manager": {
+      "description": "HVDC 프로젝트 작업 관리",
+      "commands": {
+        "list_tasks": {
+          "description": "모든 작업 조회",
+          "parameters": {
+            "filters": {
+              "type": "object",
+              "description": "필터 조건 (status, priority, category, assignee, mode)",
+              "optional": true
+            }
+          }
+        },
+        "create_task": {
+          "description": "새 작업 생성",
+          "parameters": {
+            "title": {
+              "type": "string",
+              "description": "작업 제목"
+            },
+            "description": {
+              "type": "string",
+              "description": "작업 설명",
+              "optional": true
+            },
+            "priority": {
+              "type": "string",
+              "enum": ["low", "medium", "high", "critical"],
+              "description": "우선순위",
+              "optional": true
+            },
+            "category": {
+              "type": "string",
+              "enum": ["logistics", "warehouse", "inventory", "analysis", "reporting"],
+              "description": "작업 카테고리",
+              "optional": true
+            },
+            "assignee": {
+              "type": "string",
+              "description": "담당자",
+              "optional": true
+            },
+            "tags": {
+              "type": "array",
+              "items": {"type": "string"},
+              "description": "태그 목록",
+              "optional": true
+            }
+          }
+        },
+        "update_task": {
+          "description": "작업 업데이트",
+          "parameters": {
+            "task_id": {
+              "type": "string",
+              "description": "작업 ID"
+            },
+            "updates": {
+              "type": "object",
+              "description": "업데이트할 필드들"
+            }
+          }
+        },
+        "delete_task": {
+          "description": "작업 삭제",
+          "parameters": {
+            "task_id": {
+              "type": "string",
+              "description": "작업 ID"
+            }
+          }
+        },
+        "get_analytics": {
+          "description": "작업 분석 데이터 조회",
+          "parameters": {}
+        },
+        "integrate_macho": {
+          "description": "MACHO-GPT 시스템과 통합",
+          "parameters": {
+            "task_id": {
+              "type": "string",
+              "description": "작업 ID"
+            }
+          }
+        }
+      }
+    },
+    "macho_gpt": {
+      "description": "MACHO-GPT 물류 시스템",
+      "commands": {
+        "switch_mode": {
+          "description": "Containment mode 전환",
+          "parameters": {
+            "mode": {
+              "type": "string",
+              "enum": ["PRIME", "ORACLE", "ZERO", "LATTICE", "RHYTHM", "COST-GUARD"],
+              "description": "전환할 모드"
+            }
+          }
+        },
+        "invoice_audit": {
+          "description": "송장 OCR 처리 및 FANR/MOIAT 규정 준수 검증",
+          "parameters": {
+            "file_path": {
+              "type": "string",
+              "description": "송장 파일 경로"
+            }
+          }
+        },
+        "predict_eta": {
+          "description": "ETA 예측 (날씨 고려)",
+          "parameters": {
+            "vessel_data": {
+              "type": "object",
+              "description": "선박 데이터"
+            }
+          }
+        },
+        "heat_stow_analysis": {
+          "description": "Heat-Stow 분석을 통한 컨테이너 적재 최적화",
+          "parameters": {
+            "container_data": {
+              "type": "array",
+              "items": {"type": "object"},
+              "description": "컨테이너 데이터 목록"
+            }
+          }
+        },
+        "weather_check": {
+          "description": "날씨 조건 확인 및 영향도 분석",
+          "parameters": {
+            "port_code": {
+              "type": "string",
+              "description": "포트 코드"
+            }
+          }
+        },
+        "generate_kpi": {
+          "description": "실시간 KPI 대시보드 생성",
+          "parameters": {}
+        }
+      }
+    }
+  },
+  "project": {
+    "name": "HVDC Project - Shrimp Task Manager",
+    "version": "1.0.0",
+    "description": "MACHO-GPT 통합 프로젝트 관리 시스템",
+    "author": "HVDC Team",
+    "license": "MIT"
+  },
+  "integrations": {
+    "macho_gpt": {
+      "enabled": true,
+      "modes": ["PRIME", "ORACLE", "ZERO", "LATTICE", "RHYTHM", "COST-GUARD"],
+      "confidence_threshold": 0.90,
+      "auto_triggers": true
+    },
+    "database": {
+      "type": "sqlite",
+      "path": "hvdc_tasks.db",
+      "backup_enabled": true
+    },
+    "logging": {
+      "level": "INFO",
+      "file": "shrimp_task_manager.log",
+      "max_size": "10MB",
+      "backup_count": 5
+    }
+  }
+} 

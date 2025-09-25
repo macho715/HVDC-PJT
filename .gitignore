@@ -1,84 +1,56 @@
-# 대용량 백업 파일들
+# Large files that exceed GitHub's 100MB limit
+*.db
+*.pack
+*.idx
+*.xlsx
+*.xls
+*.csv
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.pdf
 *.zip
-*Backup*.zip
-*backup*.zip
+*.tar
+*.gz
+*.rar
+*.7z
 
-# Python 캐시 파일들
-__pycache__/
-*.py[cod]
-*$py.class
-*.so
-.Python
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-*.egg-info/
-.installed.cfg
-*.egg
-MANIFEST
+# Specific large files
+data/test/live_logistics_processor.db
+output/HVDC_Status_Location_Date_복구완료_20250704_120043.xlsx
+**/live_logistics_processor.db
+**/HVDC_Status_Location_Date_복구완료_*.xlsx
 
-# Virtual environments
-venv/
-env/
-ENV/
+# Secret keys and credentials
+~/.cursor/mcp.json
+figma_integration_complete_report.md
+figma_mcp_config.json
+src/backend/README_AWS_Setup.md
+src/backend/claude_desktop_ec2_config.json
+src/backend/set_aws_credentials.ps1
+src/backend/setup_aws_mcp_auto.ps1
+src/backend/test_mcp_integration.py
+src/backend/create_ec2_instance.ps1
+src/backend/ec2_aws_mcp_setup.sh
 
-# IDE 파일들
+# Git objects
+.git/objects/pack/*.pack
+.git/objects/pack/*.idx
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+*.bak
+*.backup
+
+# IDE files
 .vscode/
 .idea/
 *.swp
 *.swo
-.cursor/
 
-# OS 파일들
+# OS files
 .DS_Store
 Thumbs.db
-
-# 로그 파일들
-*.log
-logs/
-
-# 임시 파일들
-*.tmp
-*.temp
-*.bak
-
-# Excel 임시 파일들
-~$*.xlsx
-~$*.xls
-
-# pytest 캐시
-.pytest_cache/
-
-# Coverage reports
-htmlcov/
-.coverage
-.coverage.*
-coverage.xml
-*.cover
-.hypothesis/
-
-# Jupyter Notebook
-.ipynb_checkpoints
-
-# pyenv
-.python-version
-
-# 환경 변수 파일
-.env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-
-# Git 관련
-.git/
-*.orig 

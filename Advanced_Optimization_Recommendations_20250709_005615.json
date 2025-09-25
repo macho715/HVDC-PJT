@@ -1,0 +1,225 @@
+{
+  "jit_compilation": {
+    "numpy_intensive_functions": [
+      {
+        "function": "calculate_final_location_optimized",
+        "potential_speedup": "5-10x",
+        "complexity": "Medium",
+        "implementation": "Numba @jit decorator",
+        "estimated_effort": "4-6 hours"
+      },
+      {
+        "function": "vectorized_date_conversion",
+        "potential_speedup": "3-5x",
+        "complexity": "Low",
+        "implementation": "Numba @vectorize",
+        "estimated_effort": "2-3 hours"
+      }
+    ],
+    "loop_intensive_functions": [
+      {
+        "function": "calculate_warehouse_inbound_stats",
+        "potential_speedup": "8-15x",
+        "complexity": "High",
+        "implementation": "Numba @jit with nopython=True",
+        "estimated_effort": "8-12 hours"
+      }
+    ],
+    "recommended_libraries": [
+      "numba",
+      "cython",
+      "pypy (alternative interpreter)"
+    ],
+    "implementation_example": "\n# JIT 컴파일 예시\nfrom numba import jit, vectorize\nimport numpy as np\n\n@jit(nopython=True)\ndef fast_final_location_calc(markaz_dates, indoor_dates, outdoor_dates):\n    \"\"\"JIT 컴파일된 Final_Location 계산\"\"\"\n    result = np.empty(len(markaz_dates), dtype=np.int32)\n    \n    for i in range(len(markaz_dates)):\n        if not np.isnan(markaz_dates[i]):\n            result[i] = 1  # DSV Al Markaz\n        elif not np.isnan(indoor_dates[i]):\n            result[i] = 2  # DSV Indoor\n        else:\n            result[i] = 3  # Default\n    \n    return result\n\n# 벡터화된 날짜 변환\n@vectorize(['float64(float64)'], target='parallel')\ndef fast_date_conversion(date_value):\n    \"\"\"병렬 처리된 날짜 변환\"\"\"\n    if np.isnan(date_value):\n        return np.nan\n    return date_value  # 실제 변환 로직\n"
+  },
+  "parallel_processing": {
+    "multiprocessing_opportunities": [
+      {
+        "operation": "warehouse_column_processing",
+        "current_approach": "Sequential loop through warehouses",
+        "parallel_approach": "Process each warehouse in separate process",
+        "expected_speedup": "3-7x (depends on CPU cores)",
+        "memory_overhead": "High",
+        "complexity": "Medium"
+      },
+      {
+        "operation": "monthly_pivot_calculation",
+        "current_approach": "Single-threaded pivot table creation",
+        "parallel_approach": "Chunk-based parallel processing",
+        "expected_speedup": "2-4x",
+        "memory_overhead": "Low",
+        "complexity": "Low"
+      }
+    ],
+    "threading_opportunities": [
+      {
+        "operation": "file_io_operations",
+        "benefit": "Overlap I/O with computation",
+        "implementation": "ThreadPoolExecutor",
+        "expected_improvement": "20-40%"
+      }
+    ],
+    "recommended_libraries": [
+      "multiprocessing",
+      "concurrent.futures",
+      "joblib",
+      "dask (for large datasets)"
+    ],
+    "implementation_example": "\n# 병렬 처리 예시\nfrom multiprocessing import Pool\nfrom concurrent.futures import ProcessPoolExecutor, ThreadPoolExecutor\nimport pandas as pd\n\ndef process_warehouse_parallel(warehouse_data):\n    \"\"\"개별 창고 데이터 병렬 처리\"\"\"\n    warehouse_name, warehouse_column = warehouse_data\n    # 창고별 처리 로직\n    return process_single_warehouse(warehouse_column)\n\ndef parallel_warehouse_processing(df, warehouse_columns):\n    \"\"\"창고 데이터 병렬 처리\"\"\"\n    with ProcessPoolExecutor(max_workers=4) as executor:\n        warehouse_data = [(name, df[name]) for name in warehouse_columns if name in df.columns]\n        results = list(executor.map(process_warehouse_parallel, warehouse_data))\n    \n    return combine_results(results)\n\n# 청크 기반 병렬 처리\ndef process_data_chunks(df, chunk_size=1000):\n    \"\"\"데이터 청크 병렬 처리\"\"\"\n    chunks = [df[i:i+chunk_size] for i in range(0, len(df), chunk_size)]\n    \n    with ProcessPoolExecutor() as executor:\n        results = executor.map(process_single_chunk, chunks)\n    \n    return pd.concat(results, ignore_index=True)\n"
+  },
+  "caching_system": {
+    "cache_candidates": [
+      {
+        "data_type": "final_location_mappings",
+        "cache_key": "warehouse_priority_hash",
+        "cache_duration": "1 hour",
+        "memory_impact": "Low",
+        "hit_rate_estimate": "85-95%",
+        "implementation": "LRU Cache"
+      },
+      {
+        "data_type": "aggregation_results",
+        "cache_key": "data_hash + operation_type",
+        "cache_duration": "30 minutes",
+        "memory_impact": "Medium",
+        "hit_rate_estimate": "70-80%",
+        "implementation": "Redis/Memcached"
+      },
+      {
+        "data_type": "processed_dataframes",
+        "cache_key": "file_hash + processing_config",
+        "cache_duration": "2 hours",
+        "memory_impact": "High",
+        "hit_rate_estimate": "60-70%",
+        "implementation": "Disk-based cache"
+      }
+    ],
+    "cache_strategies": [
+      {
+        "strategy": "Lazy Loading",
+        "description": "Load data only when requested",
+        "best_for": "Large datasets with partial access patterns"
+      },
+      {
+        "strategy": "Write-Through",
+        "description": "Update cache immediately when data changes",
+        "best_for": "Frequently updated data"
+      },
+      {
+        "strategy": "Write-Behind",
+        "description": "Update cache asynchronously",
+        "best_for": "High-performance requirements"
+      }
+    ],
+    "implementation_example": "\n# 캐싱 시스템 예시\nfrom functools import lru_cache\nimport hashlib\nimport pickle\nimport os\n\nclass DataCache:\n    \"\"\"데이터 캐싱 시스템\"\"\"\n    \n    def __init__(self, cache_dir=\"cache\"):\n        self.cache_dir = cache_dir\n        os.makedirs(cache_dir, exist_ok=True)\n    \n    def get_cache_key(self, data, operation):\n        \"\"\"캐시 키 생성\"\"\"\n        data_hash = hashlib.md5(str(data).encode()).hexdigest()\n        return f\"{operation}_{data_hash}\"\n    \n    @lru_cache(maxsize=128)\n    def get_final_location(self, warehouse_config):\n        \"\"\"Final Location 계산 결과 캐싱\"\"\"\n        # 실제 계산 로직\n        return calculate_final_location(warehouse_config)\n    \n    def cache_dataframe(self, df, operation):\n        \"\"\"DataFrame 디스크 캐시\"\"\"\n        cache_key = self.get_cache_key(df.to_string(), operation)\n        cache_path = os.path.join(self.cache_dir, f\"{cache_key}.pkl\")\n        \n        with open(cache_path, 'wb') as f:\n            pickle.dump(df, f)\n        \n        return cache_path\n    \n    def load_cached_dataframe(self, cache_path):\n        \"\"\"캐시된 DataFrame 로드\"\"\"\n        if os.path.exists(cache_path):\n            with open(cache_path, 'rb') as f:\n                return pickle.load(f)\n        return None\n"
+  },
+  "memory_optimization": {
+    "memory_pooling": {
+      "description": "Pre-allocate memory pools for frequently used objects",
+      "benefits": [
+        "Reduce garbage collection overhead",
+        "Improve memory locality",
+        "Predictable memory usage"
+      ],
+      "implementation": "Custom memory pool or pymalloc"
+    },
+    "data_structure_optimization": [
+      {
+        "current": "pandas DataFrame",
+        "alternative": "Apache Arrow",
+        "benefit": "2-5x memory reduction",
+        "trade_off": "Different API"
+      },
+      {
+        "current": "Python lists",
+        "alternative": "numpy arrays",
+        "benefit": "3-10x memory reduction",
+        "trade_off": "Type restrictions"
+      },
+      {
+        "current": "String columns",
+        "alternative": "Category dtype",
+        "benefit": "50-90% memory reduction",
+        "trade_off": "Limited string operations"
+      }
+    ],
+    "memory_profiling_tools": [
+      "memory_profiler",
+      "tracemalloc",
+      "pympler",
+      "objgraph"
+    ],
+    "implementation_example": "\n# 메모리 최적화 예시\nimport numpy as np\nimport pandas as pd\nfrom memory_profiler import profile\n\nclass MemoryOptimizer:\n    \"\"\"메모리 최적화 도구\"\"\"\n    \n    def __init__(self, pool_size=1000):\n        self.object_pool = []\n        self.pool_size = pool_size\n        self._initialize_pools()\n    \n    def _initialize_pools(self):\n        \"\"\"메모리 풀 초기화\"\"\"\n        self.object_pool = [None] * self.pool_size\n    \n    def optimize_dataframe_memory(self, df):\n        \"\"\"DataFrame 메모리 최적화\"\"\"\n        original_memory = df.memory_usage(deep=True).sum()\n        \n        # 숫자형 다운캐스팅\n        for col in df.select_dtypes(include=['int64']).columns:\n            df[col] = pd.to_numeric(df[col], downcast='integer')\n        \n        for col in df.select_dtypes(include=['float64']).columns:\n            df[col] = pd.to_numeric(df[col], downcast='float')\n        \n        # 문자열 → 카테고리 변환\n        for col in df.select_dtypes(include=['object']).columns:\n            if df[col].nunique() / len(df) < 0.5:\n                df[col] = df[col].astype('category')\n        \n        optimized_memory = df.memory_usage(deep=True).sum()\n        reduction = (original_memory - optimized_memory) / original_memory\n        \n        return df, reduction\n    \n    @profile\n    def memory_efficient_processing(self, data):\n        \"\"\"메모리 효율적 처리\"\"\"\n        # 청크 단위 처리로 메모리 사용량 제한\n        chunk_size = 1000\n        results = []\n        \n        for i in range(0, len(data), chunk_size):\n            chunk = data[i:i+chunk_size]\n            processed_chunk = self.process_chunk(chunk)\n            results.append(processed_chunk)\n            \n            # 메모리 해제\n            del chunk\n        \n        return pd.concat(results, ignore_index=True)\n"
+  },
+  "monitoring_system": {
+    "monitoring_metrics": [
+      {
+        "metric": "execution_time",
+        "threshold": "< 3 seconds",
+        "alert_condition": "> 5 seconds",
+        "collection_method": "Decorator-based timing"
+      },
+      {
+        "metric": "memory_usage",
+        "threshold": "< 100 MB",
+        "alert_condition": "> 200 MB",
+        "collection_method": "Memory profiler"
+      },
+      {
+        "metric": "cpu_utilization",
+        "threshold": "< 80%",
+        "alert_condition": "> 95%",
+        "collection_method": "System monitoring"
+      }
+    ],
+    "monitoring_tools": [
+      "Prometheus + Grafana",
+      "New Relic",
+      "Custom dashboard",
+      "Real-time alerts"
+    ],
+    "implementation_example": "\n# 성능 모니터링 시스템 예시\nimport time\nimport psutil\nfrom functools import wraps\nimport json\nfrom datetime import datetime\n\nclass PerformanceMonitor:\n    \"\"\"실시간 성능 모니터링\"\"\"\n    \n    def __init__(self):\n        self.metrics = []\n        self.thresholds = {\n            'execution_time': 3.0,\n            'memory_usage': 100.0,  # MB\n            'cpu_usage': 80.0\n        }\n    \n    def monitor_performance(self, function_name=None):\n        \"\"\"성능 모니터링 데코레이터\"\"\"\n        def decorator(func):\n            @wraps(func)\n            def wrapper(*args, **kwargs):\n                # 시작 시간\n                start_time = time.time()\n                start_memory = psutil.Process().memory_info().rss / 1024 / 1024\n                \n                try:\n                    result = func(*args, **kwargs)\n                    \n                    # 성능 메트릭 수집\n                    end_time = time.time()\n                    end_memory = psutil.Process().memory_info().rss / 1024 / 1024\n                    \n                    metrics = {\n                        'function': function_name or func.__name__,\n                        'timestamp': datetime.now().isoformat(),\n                        'execution_time': end_time - start_time,\n                        'memory_usage': end_memory - start_memory,\n                        'cpu_usage': psutil.cpu_percent(),\n                        'success': True\n                    }\n                    \n                    self.collect_metrics(metrics)\n                    self.check_thresholds(metrics)\n                    \n                    return result\n                \n                except Exception as e:\n                    # 오류 메트릭 수집\n                    metrics = {\n                        'function': function_name or func.__name__,\n                        'timestamp': datetime.now().isoformat(),\n                        'error': str(e),\n                        'success': False\n                    }\n                    self.collect_metrics(metrics)\n                    raise\n            \n            return wrapper\n        return decorator\n    \n    def collect_metrics(self, metrics):\n        \"\"\"메트릭 수집\"\"\"\n        self.metrics.append(metrics)\n        \n        # 메트릭 저장 (JSON 파일 또는 데이터베이스)\n        with open('performance_metrics.json', 'a') as f:\n            json.dump(metrics, f)\n            f.write('\\n')\n    \n    def check_thresholds(self, metrics):\n        \"\"\"임계값 확인 및 알림\"\"\"\n        for metric_name, threshold in self.thresholds.items():\n            if metric_name in metrics and metrics[metric_name] > threshold:\n                self.send_alert(metric_name, metrics[metric_name], threshold)\n    \n    def send_alert(self, metric_name, value, threshold):\n        \"\"\"성능 알림 발송\"\"\"\n        alert_message = f\"⚠️ {metric_name} 임계값 초과: {value:.2f} > {threshold:.2f}\"\n        print(alert_message)\n        # 실제 알림 시스템 연동 (이메일, 슬랙 등)\n    \n    def generate_performance_report(self):\n        \"\"\"성능 리포트 생성\"\"\"\n        if not self.metrics:\n            return \"성능 데이터가 없습니다.\"\n        \n        df = pd.DataFrame(self.metrics)\n        successful_metrics = df[df['success'] == True]\n        \n        report = {\n            'total_functions': len(successful_metrics),\n            'avg_execution_time': successful_metrics['execution_time'].mean(),\n            'avg_memory_usage': successful_metrics['memory_usage'].mean(),\n            'avg_cpu_usage': successful_metrics['cpu_usage'].mean(),\n            'slowest_function': successful_metrics.loc[successful_metrics['execution_time'].idxmax(), 'function'],\n            'memory_intensive_function': successful_metrics.loc[successful_metrics['memory_usage'].idxmax(), 'function']\n        }\n        \n        return report\n"
+  },
+  "optimization_roadmap": {
+    "phase_1_immediate": {
+      "duration": "1-2 weeks",
+      "priority": "High",
+      "tasks": [
+        "JIT 컴파일 적용 (핵심 함수 3개)",
+        "LRU 캐시 도입",
+        "기본 성능 모니터링 구축"
+      ],
+      "expected_improvement": "50-70% 성능 향상"
+    },
+    "phase_2_parallel": {
+      "duration": "2-3 weeks",
+      "priority": "Medium",
+      "tasks": [
+        "창고 데이터 병렬 처리 구현",
+        "ThreadPoolExecutor 도입",
+        " 청크 기반 처리 최적화"
+      ],
+      "expected_improvement": "30-50% 추가 성능 향상"
+    },
+    "phase_3_advanced": {
+      "duration": "3-4 weeks",
+      "priority": "Medium",
+      "tasks": [
+        "Apache Arrow 데이터 구조 전환",
+        "Redis 캐시 시스템 구축",
+        "고급 메모리 최적화"
+      ],
+      "expected_improvement": "20-40% 추가 성능 향상"
+    },
+    "phase_4_monitoring": {
+      "duration": "1-2 weeks",
+      "priority": "Low",
+      "tasks": [
+        "Prometheus + Grafana 대시보드",
+        "실시간 알림 시스템",
+        "자동화된 성능 리포트"
+      ],
+      "expected_improvement": "운영 효율성 향상"
+    }
+  }
+}

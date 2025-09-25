@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MACHO-GPT v3.4-mini Live KPI Dashboard</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            min-height: 100vh;
+        }
+        
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header h1 {
+            color: #2c3e50;
+            font-size: 2.5em;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            text-align: center;
+            color: #7f8c8d;
+            font-size: 1.1em;
+        }
+        
+        .status-bar {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .status-item {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 10px 20px;
+            border-radius: 25px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            font-weight: 600;
+        }
+        
+        .status-item.online {
+            color: #27ae60;
+            border-left: 4px solid #27ae60;
+        }
+        
+        .status-item.warning {
+            color: #f39c12;
+            border-left: 4px solid #f39c12;
+        }
+        
+        .status-item.error {
+            color: #e74c3c;
+            border-left: 4px solid #e74c3c;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .card-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #ecf0f1;
+        }
+        
+        .card-icon {
+            font-size: 2em;
+            margin-right: 15px;
+            width: 50px;
+            text-align: center;
+        }
+        
+        .card-title {
+            font-size: 1.4em;
+            font-weight: 700;
+            color: #2c3e50;
+        }
+        
+        .metric-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+        }
+        
+        .metric {
+            text-align: center;
+            padding: 15px;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-radius: 10px;
+            border: 1px solid #dee2e6;
+        }
+        
+        .metric-value {
+            font-size: 2em;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+        
+        .metric-label {
+            font-size: 0.9em;
+            color: #6c757d;
+            font-weight: 500;
+        }
+        
+        .metric-trend {
+            font-size: 0.8em;
+            margin-top: 5px;
+        }
+        
+        .trend-up {
+            color: #27ae60;
+        }
+        
+        .trend-down {
+            color: #e74c3c;
+        }
+        
+        .trend-stable {
+            color: #f39c12;
+        }
+        
+        .alerts-section {
+            grid-column: 1 / -1;
+        }
+        
+        .alert {
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border-left: 4px solid;
+            background: rgba(255, 255, 255, 0.9);
+        }
+        
+        .alert.critical {
+            border-left-color: #e74c3c;
+            background: rgba(231, 76, 60, 0.1);
+        }
+        
+        .alert.high {
+            border-left-color: #f39c12;
+            background: rgba(243, 156, 18, 0.1);
+        }
+        
+        .alert.medium {
+            border-left-color: #f1c40f;
+            background: rgba(241, 196, 15, 0.1);
+        }
+        
+        .alert.low {
+            border-left-color: #27ae60;
+            background: rgba(39, 174, 96, 0.1);
+        }
+        
+        .chart-container {
+            height: 300px;
+            margin-top: 20px;
+        }
+        
+        .workflow-status {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        
+        .workflow-item {
+            padding: 15px;
+            border-radius: 10px;
+            border: 2px solid;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .workflow-item.active {
+            border-color: #27ae60;
+            background: rgba(39, 174, 96, 0.1);
+        }
+        
+        .workflow-item.inactive {
+            border-color: #95a5a6;
+            background: rgba(149, 165, 166, 0.1);
+        }
+        
+        .workflow-name {
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        
+        .workflow-confidence {
+            font-size: 1.2em;
+            font-weight: 700;
+            color: #2c3e50;
+        }
+        
+        .refresh-info {
+            text-align: center;
+            margin-top: 20px;
+            color: #7f8c8d;
+            font-size: 0.9em;
+        }
+        
+        .loading {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #3498db;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .no-alerts {
+            text-align: center;
+            color: #27ae60;
+            font-weight: 600;
+            padding: 30px;
+            background: rgba(39, 174, 96, 0.1);
+            border-radius: 10px;
+            border: 2px solid #27ae60;
+        }
+        
+        @media (max-width: 768px) {
+            .dashboard-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .status-bar {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .header h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🚀 MACHO-GPT v3.4-mini Live KPI Dashboard</h1>
+        <p>HVDC Samsung C&T × ADNOC DSV Partnership - Real-time Logistics Monitoring</p>
+        <div class="status-bar">
+            <div class="status-item online" id="system-status">
+                <span id="status-icon">🟢</span> System: <span id="status-text">Online</span>
+            </div>
+            <div class="status-item" id="last-update">
+                <span id="update-icon">⏰</span> Last Update: <span id="update-time">Loading...</span>
+            </div>
+            <div class="status-item" id="refresh-status">
+                <span id="refresh-icon" class="loading"></span> Auto-refresh: <span id="refresh-text">30s</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="dashboard-grid">
+            <!-- System Performance Card -->
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-icon">⚡</div>
+                    <div class="card-title">System Performance</div>
+                </div>
+                <div class="metric-grid">
+                    <div class="metric">
+                        <div class="metric-value" id="confidence">--</div>
+                        <div class="metric-label">Overall Confidence</div>
+                        <div class="metric-trend" id="confidence-trend">--</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-value" id="uptime">--</div>
+                        <div class="metric-label">System Uptime</div>
+                        <div class="metric-trend" id="uptime-trend">--</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-value" id="response-time">--</div>
+                        <div class="metric-label">Response Time</div>
+                        <div class="metric-trend" id="response-trend">--</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-value" id="active-workflows">--</div>
+                        <div class="metric-label">Active Workflows</div>
+                        <div class="metric-trend" id="workflows-trend">--</div>
+                    </div>
+                </div>
+                <div class="chart-container" id="performance-chart"></div>
+            </div>
+
+            <!-- Logistics Operations Card -->
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-icon">📦</div>
+                    <div class="card-title">Logistics Operations</div>
+                </div>
+                <div class="metric-grid">
+                    <div class="metric">
+                        <div class="metric-value" id="containers">--</div>
+                        <div class="metric-label">Containers Today</div>
+                        <div class="metric-trend" id="containers-trend">--</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-value" id="invoices">--</div>
+                        <div class="metric-label">Invoices Today</div>
+                        <div class="metric-trend" id="invoices-trend">--</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-value" id="cost-savings">--</div>
+                        <div class="metric-label">Cost Savings (AED)</div>
+                        <div class="metric-trend" id="savings-trend">--</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-value" id="weather-alerts">--</div>
+                        <div class="metric-label">Weather Alerts</div>
+                        <div class="metric-trend" id="weather-trend">--</div>
+                    </div>
+                </div>
+                <div class="chart-container" id="logistics-chart"></div>
+            </div>
+
+            <!-- Compliance Status Card -->
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-icon">✅</div>
+                    <div class="card-title">Compliance Status</div>
+                </div>
+                <div class="metric-grid">
+                    <div class="metric">
+                        <div class="metric-value" id="fanr-compliance">--</div>
+                        <div class="metric-label">FANR Compliance</div>
+                        <div class="metric-trend" id="fanr-trend">--</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-value" id="moiat-compliance">--</div>
+                        <div class="metric-label">MOIAT Compliance</div>
+                        <div class="metric-trend" id="moiat-trend">--</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-value" id="audit-score">--</div>
+                        <div class="metric-label">Audit Score</div>
+                        <div class="metric-trend" id="audit-trend">--</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-value" id="safety-incidents">--</div>
+                        <div class="metric-label">Safety Incidents</div>
+                        <div class="metric-trend" id="safety-trend">--</div>
+                    </div>
+                </div>
+                <div class="chart-container" id="compliance-chart"></div>
+            </div>
+
+            <!-- Operational Efficiency Card -->
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-icon">📊</div>
+                    <div class="card-title">Operational Efficiency</div>
+                </div>
+                <div class="metric-grid">
+                    <div class="metric">
+                        <div class="metric-value" id="warehouse-utilization">--</div>
+                        <div class="metric-label">Warehouse Utilization</div>
+                        <div class="metric-trend" id="warehouse-trend">--</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-value" id="customer-satisfaction">--</div>
+                        <div class="metric-label">Customer Satisfaction</div>
+                        <div class="metric-trend" id="satisfaction-trend">--</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-value" id="on-time-delivery">--</div>
+                        <div class="metric-label">On-time Delivery</div>
+                        <div class="metric-trend" id="delivery-trend">--</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-value" id="automation-rate">--</div>
+                        <div class="metric-label">Automation Rate</div>
+                        <div class="metric-trend" id="automation-trend">--</div>
+                    </div>
+                </div>
+                <div class="chart-container" id="efficiency-chart"></div>
+            </div>
+
+            <!-- Workflow Status Card -->
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-icon">⚙️</div>
+                    <div class="card-title">Workflow Status</div>
+                </div>
+                <div class="workflow-status" id="workflow-status">
+                    <!-- Workflow items will be populated by JavaScript -->
+                </div>
+            </div>
+
+            <!-- Alerts Section -->
+            <div class="card alerts-section">
+                <div class="card-header">
+                    <div class="card-icon">🚨</div>
+                    <div class="card-title">Active Alerts</div>
+                </div>
+                <div id="alerts-container">
+                    <div class="no-alerts">
+                        ✅ No active alerts - All systems operating normally
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="refresh-info">
+            <p>🔄 Auto-refreshing every 30 seconds | Last data collection: <span id="last-collection">--</span></p>
+        </div>
+    </div>
+
+    <script>
+        // Global variables
+        let kpiData = null;
+        let refreshInterval = null;
+        let performanceChart = null;
+        let logisticsChart = null;
+        let complianceChart = null;
+        let efficiencyChart = null;
+
+        // Initialize dashboard
+        document.addEventListener('DOMContentLoaded', function() {
+            loadKPIData();
+            startAutoRefresh();
+        });
+
+        // Load KPI data from API
+        async function loadKPIData() {
+            try {
+                const response = await fetch('/api/kpis');
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                kpiData = await response.json();
+                updateDashboard(kpiData);
+                updateStatusBar(true);
+            } catch (error) {
+                console.error('Error loading KPI data:', error);
+                updateStatusBar(false);
+                showError('Failed to load KPI data. Retrying...');
+            }
+        }
+
+        // Update dashboard with KPI data
+        function updateDashboard(data) {
+            if (!data) return;
+
+            // Update system performance metrics
+            updateMetric('confidence', data.system_performance?.overall_confidence, '%');
+            updateMetric('uptime', data.system_performance?.system_uptime, '%');
+            updateMetric('response-time', data.system_performance?.response_time_ms, 'ms');
+            updateMetric('active-workflows', data.system_performance?.active_workflows, '/5');
+
+            // Update logistics metrics
+            updateMetric('containers', data.logistics_metrics?.containers_processed_today, '');
+            updateMetric('invoices', data.logistics_metrics?.invoices_processed_today, '');
+            updateMetric('cost-savings', data.logistics_metrics?.optimization_savings_aed?.toLocaleString(), '');
+            updateMetric('weather-alerts', data.logistics_metrics?.weather_alerts_today, '');
+
+            // Update compliance metrics
+            updateMetric('fanr-compliance', (data.compliance_status?.fanr_compliance * 100).toFixed(2), '%');
+            updateMetric('moiat-compliance', (data.compliance_status?.moiat_compliance * 100).toFixed(2), '%');
+            updateMetric('audit-score', data.compliance_status?.audit_score, '/100');
+            updateMetric('safety-incidents', data.compliance_status?.safety_incidents, '');
+
+            // Update efficiency metrics
+            updateMetric('warehouse-utilization', data.operational_efficiency?.warehouse_utilization, '%');
+            updateMetric('customer-satisfaction', data.operational_efficiency?.customer_satisfaction, '%');
+            updateMetric('on-time-delivery', data.operational_efficiency?.on_time_delivery, '%');
+            updateMetric('automation-rate', data.operational_efficiency?.automation_rate, '%');
+
+            // Update workflow status
+            updateWorkflowStatus(data.workflow_status);
+
+            // Update alerts
+            updateAlerts(data.alerts);
+
+            // Update charts
+            updateCharts(data);
+
+            // Update timestamps
+            document.getElementById('update-time').textContent = new Date().toLocaleTimeString();
+            document.getElementById('last-collection').textContent = new Date().toLocaleTimeString();
+        }
+
+        // Update individual metric
+        function updateMetric(elementId, value, unit) {
+            const element = document.getElementById(elementId);
+            if (element && value !== undefined && value !== null) {
+                element.textContent = value + (unit ? unit : '');
+            }
+        }
+
+        // Update workflow status
+        function updateWorkflowStatus(workflows) {
+            const container = document.getElementById('workflow-status');
+            if (!container || !workflows) return;
+
+            container.innerHTML = '';
+            
+            Object.entries(workflows).forEach(([name, workflow]) => {
+                if (typeof workflow === 'object' && workflow.status) {
+                    const workflowDiv = document.createElement('div');
+                    workflowDiv.className = `workflow-item ${workflow.status}`;
+                    
+                    const confidence = (workflow.confidence * 100).toFixed(1);
+                    workflowDiv.innerHTML = `
+                        <div class="workflow-name">${name.replace('_', ' ').toUpperCase()}</div>
+                        <div class="workflow-confidence">${confidence}%</div>
+                        <div class="metric-label">${workflow.status}</div>
+                    `;
+                    
+                    container.appendChild(workflowDiv);
+                }
+            });
+        }
+
+        // Update alerts
+        function updateAlerts(alerts) {
+            const container = document.getElementById('alerts-container');
+            if (!container) return;
+
+            if (!alerts || alerts.length === 0) {
+                container.innerHTML = '<div class="no-alerts">✅ No active alerts - All systems operating normally</div>';
+                return;
+            }
+
+            container.innerHTML = '';
+            alerts.forEach(alert => {
+                const alertDiv = document.createElement('div');
+                alertDiv.className = `alert ${alert.severity.toLowerCase()}`;
+                alertDiv.innerHTML = `
+                    <strong>${alert.type}</strong> (${alert.severity})<br>
+                    ${alert.message}<br>
+                    <small>Workflow: ${alert.workflow || 'System'} | ${new Date(alert.timestamp).toLocaleString()}</small>
+                `;
+                container.appendChild(alertDiv);
+            });
+        }
+
+        // Update status bar
+        function updateStatusBar(isOnline) {
+            const statusItem = document.getElementById('system-status');
+            const statusIcon = document.getElementById('status-icon');
+            const statusText = document.getElementById('status-text');
+
+            if (isOnline) {
+                statusItem.className = 'status-item online';
+                statusIcon.textContent = '🟢';
+                statusText.textContent = 'Online';
+            } else {
+                statusItem.className = 'status-item error';
+                statusIcon.textContent = '🔴';
+                statusText.textContent = 'Offline';
+            }
+        }
+
+        // Update charts
+        function updateCharts(data) {
+            // Performance chart
+            if (data.system_performance) {
+                const perfData = [
+                    {
+                        x: ['Confidence', 'Uptime', 'Response Time'],
+                        y: [
+                            data.system_performance.overall_confidence * 100,
+                            data.system_performance.system_uptime,
+                            data.system_performance.response_time_ms / 10
+                        ],
+                        type: 'bar',
+                        marker: {
+                            color: ['#27ae60', '#3498db', '#f39c12']
+                        },
+                        name: 'Performance Metrics'
+                    }
+                ];
+
+                const perfLayout = {
+                    title: 'System Performance Overview',
+                    yaxis: { title: 'Value' },
+                    height: 250,
+                    margin: { t: 40, b: 40, l: 40, r: 40 }
+                };
+
+                Plotly.newPlot('performance-chart', perfData, perfLayout);
+            }
+
+            // Logistics chart
+            if (data.logistics_metrics) {
+                const logData = [
+                    {
+                        labels: ['Containers', 'Invoices', 'Weather Alerts'],
+                        values: [
+                            data.logistics_metrics.containers_processed_today,
+                            data.logistics_metrics.invoices_processed_today,
+                            data.logistics_metrics.weather_alerts_today
+                        ],
+                        type: 'pie',
+                        marker: {
+                            colors: ['#e74c3c', '#3498db', '#f39c12']
+                        }
+                    }
+                ];
+
+                const logLayout = {
+                    title: 'Today\'s Operations',
+                    height: 250,
+                    margin: { t: 40, b: 40, l: 40, r: 40 }
+                };
+
+                Plotly.newPlot('logistics-chart', logData, logLayout);
+            }
+
+            // Compliance chart
+            if (data.compliance_status) {
+                const compData = [
+                    {
+                        x: ['FANR', 'MOIAT', 'Audit Score'],
+                        y: [
+                            data.compliance_status.fanr_compliance * 100,
+                            data.compliance_status.moiat_compliance * 100,
+                            data.compliance_status.audit_score
+                        ],
+                        type: 'bar',
+                        marker: {
+                            color: ['#27ae60', '#27ae60', '#f39c12']
+                        },
+                        name: 'Compliance Metrics'
+                    }
+                ];
+
+                const compLayout = {
+                    title: 'Compliance Status',
+                    yaxis: { title: 'Percentage', range: [0, 100] },
+                    height: 250,
+                    margin: { t: 40, b: 40, l: 40, r: 40 }
+                };
+
+                Plotly.newPlot('compliance-chart', compData, compLayout);
+            }
+
+            // Efficiency chart
+            if (data.operational_efficiency) {
+                const effData = [
+                    {
+                        x: ['Warehouse', 'Customer Satisfaction', 'On-time Delivery', 'Automation'],
+                        y: [
+                            data.operational_efficiency.warehouse_utilization,
+                            data.operational_efficiency.customer_satisfaction,
+                            data.operational_efficiency.on_time_delivery,
+                            data.operational_efficiency.automation_rate
+                        ],
+                        type: 'bar',
+                        marker: {
+                            color: ['#9b59b6', '#e67e22', '#1abc9c', '#34495e']
+                        },
+                        name: 'Efficiency Metrics'
+                    }
+                ];
+
+                const effLayout = {
+                    title: 'Operational Efficiency',
+                    yaxis: { title: 'Percentage', range: [0, 100] },
+                    height: 250,
+                    margin: { t: 40, b: 40, l: 40, r: 40 }
+                };
+
+                Plotly.newPlot('efficiency-chart', effData, effLayout);
+            }
+        }
+
+        // Start auto-refresh
+        function startAutoRefresh() {
+            if (refreshInterval) {
+                clearInterval(refreshInterval);
+            }
+            
+            refreshInterval = setInterval(() => {
+                loadKPIData();
+            }, 30000); // 30 seconds
+        }
+
+        // Show error message
+        function showError(message) {
+            console.error(message);
+            // Could add a toast notification here
+        }
+
+        // Handle page visibility change
+        document.addEventListener('visibilitychange', function() {
+            if (document.hidden) {
+                if (refreshInterval) {
+                    clearInterval(refreshInterval);
+                    refreshInterval = null;
+                }
+            } else {
+                loadKPIData();
+                startAutoRefresh();
+            }
+        });
+
+        // Handle window focus
+        window.addEventListener('focus', function() {
+            loadKPIData();
+        });
+    </script>
+</body>
+</html> 
