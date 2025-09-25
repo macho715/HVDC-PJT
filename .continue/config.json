@@ -1,0 +1,72 @@
+{
+  "models": [
+    {
+      "title": "GPT-4o",
+      "provider": "openai",
+      "model": "gpt-4o",
+      "apiKey": "${OPENAI_API_KEY}",
+      "contextLength": 128000,
+      "template": "You are a senior software engineer specializing in logistics systems for the HVDC Project. Follow TDD principles and Kent Beck's 'Tidy First' approach. Always maintain HVDC project structure and MACHO-GPT v3.4-mini integration compatibility."
+    },
+    {
+      "title": "Claude 3.5 Sonnet",
+      "provider": "anthropic",
+      "model": "claude-3-5-sonnet-20241022",
+      "apiKey": "${ANTHROPIC_API_KEY}",
+      "contextLength": 200000,
+      "template": "You are a logistics systems expert for the HVDC Project. Focus on Samsung C&T and ADNOC·DSV partnership requirements. Maintain code quality and follow established patterns."
+    }
+  ],
+  "customCommands": [
+    {
+      "name": "hvdc-fix-mypy",
+      "description": "Fix MyPy type errors in HVDC project",
+      "prompt": "Fix MyPy type errors in the selected code. Follow HVDC project conventions and maintain MACHO-GPT integration compatibility."
+    },
+    {
+      "name": "hvdc-refactor",
+      "description": "Refactor code following TDD principles",
+      "prompt": "Refactor the selected code following Kent Beck's TDD and Tidy First principles. Maintain HVDC project structure and logistics domain logic."
+    },
+    {
+      "name": "hvdc-add-tests",
+      "description": "Add comprehensive tests for HVDC functionality",
+      "prompt": "Add comprehensive unit tests for the selected code. Follow TDD principles and include logistics domain test cases."
+    },
+    {
+      "name": "hvdc-optimize-logistics",
+      "description": "Optimize logistics-specific code",
+      "prompt": "Optimize the selected code for logistics operations. Consider Samsung C&T and ADNOC·DSV requirements, FANR/MOIAT compliance, and MACHO-GPT integration."
+    }
+  ],
+  "contextProviders": [
+    {
+      "name": "git",
+      "params": {}
+    },
+    {
+      "name": "diff",
+      "params": {}
+    },
+    {
+      "name": "open",
+      "params": {}
+    },
+    {
+      "name": "terminal",
+      "params": {}
+    }
+  ],
+  "tabAutocompleteModel": {
+    "title": "GPT-4o",
+    "provider": "openai",
+    "model": "gpt-4o",
+    "apiKey": "${OPENAI_API_KEY}"
+  },
+  "allowAnonymousTelemetry": false,
+  "embeddingsProvider": {
+    "provider": "openai",
+    "model": "text-embedding-3-small",
+    "apiKey": "${OPENAI_API_KEY}"
+  }
+}
