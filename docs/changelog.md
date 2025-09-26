@@ -1,5 +1,20 @@
 # HVDC Project Changelog
 
+## v3.5.0 (2025-07-12)
+
+### ✉️ Outlook Email Knowledge Pipeline
+
+#### 새로운 기능 / New Features
+- **`src/email_pipeline`** 패키지 추가로 Outlook `.msg` 파일 파서, 온톨로지, Supabase 연동 구현.
+- `EmailIngestionService`가 메일 메타데이터·첨부·임베딩을 일괄 업서트.
+- `SupabaseSettings.from_env()`로 `.env` 기반 보안 설정 로드 지원.
+
+#### 문서 / Docs
+- **`docs/en/email_pipeline.md`**, **`docs/kr/email_pipeline.md`**에 운영 가이드 추가.
+
+#### 테스트 / Tests
+- `tests/test_email_pipeline.py`에서 파서·저장소·서비스 유닛 테스트 제공.
+
 ## v2.8.2-hotfix-EB-004 (2025-01-10)
 
 ### 🔧 Event-Based Outbound Logic 구현

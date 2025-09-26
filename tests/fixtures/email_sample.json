@@ -1,0 +1,9 @@
+{
+  "entry_id": "ABC123",
+  "message_id": "<sample@example.com>",
+  "subject": "Logistics status update",
+  "from": "planner@example.com",
+  "to": ["ops1@example.com", "ops2@example.com"],
+  "cc": ["lead@example.com"],
+  "received_at": "2025-07-12T09:30:00+00:00"
+}
