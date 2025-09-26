@@ -22,7 +22,9 @@ from email_pipeline.parser import MessageProtocol
 class FakeAttachment:
     """테스트용 첨부 모형 | Test attachment mock."""
 
-    def __init__(self, name: str, data: bytes, cid: Optional[str] = None) -> None:
+    def __init__(
+        self, name: Optional[str], data: bytes, cid: Optional[str] = None
+    ) -> None:
         """모형 첨부를 초기화 | Initialize attachment mock."""
 
         self.longFilename: Optional[str] = name
@@ -262,6 +264,27 @@ def test_parser_preserves_multi_suffix_extensions(tmp_path: Path) -> None:
 
     stored_bytes = [attachment.storage_path.read_bytes() for attachment in record.attachments]
     assert stored_bytes == [b"first", b"second"]
+
+
+def test_parser_handles_missing_attachment_names(tmp_path: Path) -> None:
+    """Unnamed attachments are stored with generated unique filenames."""
+
+    attachments = [
+        FakeAttachment("", b"first"),
+        FakeAttachment("???", b"second"),
+        FakeAttachment(None, b"third"),
+    ]
+    message = FakeMessage(attachments)
+
+    parser = EmailParser(tmp_path, message_loader=lambda _: cast(MessageProtocol, message))
+    record = parser.parse(tmp_path / "mail.msg")
+
+    filenames = [attachment.filename for attachment in record.attachments]
+    assert len(filenames) == len(set(filenames))
+    assert all(name.startswith("attachment") for name in filenames)
+
+    stored_bytes = [attachment.storage_path.read_bytes() for attachment in record.attachments]
+    assert stored_bytes == [b"first", b"second", b"third"]
 
 
 def test_ingestion_service_runs_full_pipeline(tmp_path: Path) -> None:
