@@ -1,0 +1,51 @@
+{
+  "timestamp": "2025-07-04T12:44:29.416452",
+  "system_version": "3.0.0",
+  "demos": {
+    "mapping_rules": {
+      "success": true,
+      "field_mappings_count": 67,
+      "property_mappings_count": 66,
+      "required_fields_count": 4,
+      "key_mappings": {
+        "Case_No": "hasCase",
+        "Date": "hasDate",
+        "Location": "hasLocation",
+        "Qty": "hasQuantity",
+        "Amount": "hasAmount"
+      }
+    },
+    "ontology_schema": {
+      "success": true,
+      "schema_components": {
+        "classes": 23,
+        "properties": 68,
+        "korean_labels": 116,
+        "hierarchy_relations": 7,
+        "instances": 16
+      },
+      "key_classes_found": 7,
+      "key_classes_total": 7,
+      "found_classes": [
+        "TransportEvent",
+        "Warehouse",
+        "Site",
+        "Invoice",
+        "Case",
+        "StockSnapshot",
+        "CostCenter"
+      ]
+    },
+    "ofco_mapping": {
+      "success": true,
+      "cost_centers_count": 21,
+      "mapping_rules_count": 18,
+      "test_invoices_count": 8,
+      "mapped_count": 6,
+      "success_rate": 75.0
+    },
+    "data_pipeline": {
+      "success": true,
+      "sample_data_rows": 3,
+      "sample_data_columns": 12,
+      "null_status_location_date": 

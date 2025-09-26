@@ -1,0 +1,34 @@
+{
+  "name": "HVDC Warehouse 3D Visualization",
+  "description": "Template for HVDC warehouse 3D visualization UI",
+  "frames": [
+    {
+      "name": "Main Layout",
+      "width": 1200,
+      "height": 800,
+      "components": [
+        "Header",
+        "Sidebar",
+        "3D Viewport",
+        "KPI Dashboard",
+        "Item Details Table"
+      ]
+    }
+  ],
+  "design_tokens": {
+    "colors": {
+      "primary-blue": "#2196f3",
+      "primary-brown": "#8d6e63",
+      "primary-gray": "#9e9e9e",
+      "primary-yellow": "#ffc107",
+      "primary-red": "#dc3545"
+    },
+    "spacing": {
+      "xs": "4px",
+      "sm": "8px",
+      "md": "16px",
+      "lg": "24px",
+      "xl": "32px"
+    }
+  }
+}

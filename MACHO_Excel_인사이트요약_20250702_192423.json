@@ -1,0 +1,30 @@
+{
+  "analysis_timestamp": "20250702_192423",
+  "total_transactions": 7573,
+  "direct_transport_rate": 37.6,
+  "multi_warehouse_rate": 16.0,
+  "efficiency_grade": "B (Good)",
+  "cost_optimization_potential": 8.4,
+  "vendor_comparison": {
+    "HITACHI": {
+      "transactions": 5346,
+      "direct_rate": 34.0,
+      "efficiency": 79.4
+    },
+    "SIMENSE": {
+      "transactions": 2227,
+      "direct_rate": 46.1,
+      "efficiency": 86.5
+    }
+  },
+  "top_warehouses": [
+    "DSV Outdoor (41.6%)",
+    "DSV Indoor (41.3%)",
+    "DSV Al Markaz (38.6%)"
+  ],
+  "optimization_targets": [
+    "복합창고경유 최소화",
+    "SIMENSE 패턴 벤치마킹",
+    "저활용 창고 최적화"
+  ]
+}

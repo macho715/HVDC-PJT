@@ -1,0 +1,827 @@
+{
+  "namespace": "http://samsung.com/project-logistics#",
+  "version": "3.0.0",
+  "description": "HVDC 통합 온톨로지 매핑 규칙 v3.0.0 - 완전 통합 버전 (MACHO-GPT v3.4-mini 확장)",
+  "last_updated": "2025-01-04",
+  "integration_features": {
+    "ontology_schema_integration": true,
+    "ofco_mapping_rules": true,
+    "macho_gpt_v34_compliance": true,
+    "backward_compatibility": ["v2.8.3", "v2.6", "v2.4"]
+  },
+  
+  "namespaces": {
+    "ex": "http://samsung.com/project-logistics#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  
+  "data_normalization": {
+    "code_normalization": "strip_leading_zeros",
+    "hvdc_code3_valid": ["HE", "SIM", "SCT"],
+    "warehouse_codes": ["DSV Outdoor", "DSV Indoor", "DSV Al Markaz", "DSV MZP", "AAA Storage", "MOSB"],
+    "site_codes": ["AGI", "DAS", "MIR", "SHU"],
+    "month_matching": "operation_month_eq_eta_month",
+    "null_pkg_auto_correction": true,
+    "flow_code_normalization": {
+      "6": "3",
+      "NULL": "0"
+    }
+  },
+  
+  "field_mappings": {
+    "Case_No": "hasCase",
+    "Operation Month": "hasOperationMonth",
+    "Date": "hasDate",
+    "Qty": "hasQuantity",
+    "Location": "hasLocation",
+    "Category": "hasCategory",
+    "TxType_Refined": "hasTransactionType",
+    "Vendor": "hasVendor",
+    "Amount": "hasAmount",
+    "TOTAL": "hasTotalAmount",
+    "CBM": "hasCBM",
+    "Weight (kg)": "hasWeight",
+    "Handling In": "hasHandlingIn",
+    "Handling out": "hasHandlingOut",
+    "Handling Fee": "hasHandlingFee",
+    "Unstuffing": "hasUnstuffing",
+    "Stuffing": "hasStuffing",
+    "folk lift": "hasForklift",
+    "crane": "hasCrane",
+    "20FT": "has20FTContainer",
+    "40FT": "has40FTContainer",
+    "20FR": "has20FRContainer",
+    "40FR": "has40FRContainer",
+    "CNTR Stuffing Q'TY": "hasContainerStuffing",
+    "CNTR Unstuffing Q'TY": "hasContainerUnstuffing",
+    "Start": "hasStartDate",
+    "Finish": "hasFinishDate",
+    "pkg": "hasPackageCount",
+    "SQM": "hasSQM",
+    "Custom Field": "hasCustomField",
+    "OFCO": "hasOFCO",
+    "Cost Center": "hasCostCenter",
+    "Status": "hasStatus",
+    "Status_Location": "hasLocation",
+    "Status_Location_Date": "hasDate",
+    "Status_Current": "hasCurrentStatus",
+    "Status_Storage": "hasStorageType",
+    "Logistics Flow Code": "hasLogisticsFlowCode",
+    "wh handling": "hasWHHandling",
+    "Sheet Name": "hasDocumentRef",
+    "SHPT NO": "hasShippingNumber",
+    "Invoice Line Item": "hasChargeDescription",
+    "Calculation Logic": "hasCalculationLogic",
+    "Rate (USD)": "hasRateUSD",
+    "Total (USD)": "hasTotalUSD",
+    "Detailed Calculation / Doc": "hasSupportingEvidence",
+    "Verification Status": "hasVerificationStatus",
+    "Draft Invoice Date": "hasInvoiceDate",
+    "Customer ID": "hasCustomerID",
+    "CW1 Job Number": "hasJobNumber",
+    "Order Ref. Number": "hasCase",
+    "MBL Number": "hasMasterBL",
+    "REF NO": "hasRefNo",
+    "Rate Source": "hasRateSource",
+    "Description": "hasChargeDescription",
+    "Rate": "hasRateUSD",
+    "Rev Total": "hasTotalUSD",
+    "Customs": "hasCustomsClearanceFee",
+    "DO": "hasDOFee",
+    "PHC": "hasPortHandlingCharge",
+    "Inland": "hasInlandTruckingCharge",
+    "Inspection": "hasInspectionFee",
+    "Detention": "hasDetentionCharge",
+    "Storage": "hasStorageCharge",
+    "Others": "hasOtherCharges",
+    "DHL Warehouse": "hasDHLWarehouse",
+    "Stack_Status": "hasStackStatus",
+    "Case No.": {
+      "ontology_property": "hasCaseNumber",
+      "data_type": "string",
+      "description": "Unique case identifier"
+    },
+    "no.": {
+      "ontology_property": "hasSequenceNumber",
+      "data_type": "integer",
+      "description": "Sequential number"
+    },
+    "Shipment Invoice No.": {
+      "ontology_property": "hasShipmentInvoiceNumber",
+      "data_type": "string",
+      "description": "Shipment invoice reference number"
+    },
+    "HVDC CODE": {
+      "ontology_property": "hasHVDCCode",
+      "data_type": "string",
+      "description": "HVDC project code"
+    },
+    "HVDC CODE 1": {
+      "ontology_property": "hasHVDCCode1",
+      "data_type": "string",
+      "description": "HVDC code level 1"
+    },
+    "HVDC CODE 2": {
+      "ontology_property": "hasHVDCCode2",
+      "data_type": "string",
+      "description": "HVDC code level 2"
+    },
+    "HVDC CODE 3": {
+      "ontology_property": "hasHVDCCode3",
+      "data_type": "string",
+      "description": "HVDC code level 3"
+    },
+    "HVDC CODE 4": {
+      "ontology_property": "hasHVDCCode4",
+      "data_type": "string",
+      "description": "HVDC code level 4"
+    },
+    "HVDC CODE 5": {
+      "ontology_property": "hasHVDCCode5",
+      "data_type": "string",
+      "description": "HVDC code level 5"
+    },
+    "EQ No": {
+      "ontology_property": "hasEquipmentNumber",
+      "data_type": "string",
+      "description": "Equipment number"
+    },
+    "Pkg": {
+      "ontology_property": "hasPackageCount",
+      "data_type": "integer",
+      "description": "Package count"
+    },
+    "Storage": {
+      "ontology_property": "hasStorageType",
+      "data_type": "string",
+      "description": "Storage type"
+    },
+    "Description": {
+      "ontology_property": "hasDescription",
+      "data_type": "string",
+      "description": "Item description"
+    },
+    "L(CM)": {
+      "ontology_property": "hasLength",
+      "data_type": "float",
+      "description": "Length in centimeters"
+    },
+    "W(CM)": {
+      "ontology_property": "hasWidth",
+      "data_type": "float",
+      "description": "Width in centimeters"
+    },
+    "H(CM)": {
+      "ontology_property": "hasHeight",
+      "data_type": "float",
+      "description": "Height in centimeters"
+    },
+    "CBM": {
+      "ontology_property": "hasCubicMeter",
+      "data_type": "float",
+      "description": "Cubic meter volume"
+    },
+    "N.W(kgs)": {
+      "ontology_property": "hasNetWeight",
+      "data_type": "float",
+      "description": "Net weight in kilograms"
+    },
+    "G.W(kgs)": {
+      "ontology_property": "hasGrossWeight",
+      "data_type": "float",
+      "description": "Gross weight in kilograms"
+    },
+    "Stack": {
+      "ontology_property": "hasStackInfo",
+      "data_type": "string",
+      "description": "Stack information"
+    },
+    "HS Code": {
+      "ontology_property": "hasHSCode",
+      "data_type": "string",
+      "description": "Harmonized System code"
+    },
+    "Currency": {
+      "ontology_property": "hasCurrency",
+      "data_type": "string",
+      "description": "Currency type"
+    },
+    "Price": {
+      "ontology_property": "hasPrice",
+      "data_type": "float",
+      "description": "Price value"
+    },
+    "Vessel": {
+      "ontology_property": "hasVessel",
+      "data_type": "string",
+      "description": "Vessel name"
+    },
+    "COE": {
+      "ontology_property": "hasCOE",
+      "data_type": "string",
+      "description": "COE information"
+    },
+    "POL": {
+      "ontology_property": "hasPortOfLoading",
+      "data_type": "string",
+      "description": "Port of loading"
+    },
+    "POD": {
+      "ontology_property": "hasPortOfDischarge",
+      "data_type": "string",
+      "description": "Port of discharge"
+    },
+    "ETD/ATD": {
+      "ontology_property": "hasETDATD",
+      "data_type": "datetime",
+      "description": "Estimated/Actual time of departure"
+    },
+    "ETA/ATA": {
+      "ontology_property": "hasETAATA",
+      "data_type": "datetime",
+      "description": "Estimated/Actual time of arrival"
+    },
+    "DSV Indoor": {
+      "ontology_property": "hasDSVIndoor",
+      "data_type": "datetime",
+      "description": "DSV Indoor warehouse timestamp"
+    },
+    "DSV Al Markaz": {
+      "ontology_property": "hasDSVAlMarkaz",
+      "data_type": "datetime",
+      "description": "DSV Al Markaz warehouse timestamp"
+    },
+    "DSV Outdoor": {
+      "ontology_property": "hasDSVOutdoor",
+      "data_type": "datetime",
+      "description": "DSV Outdoor warehouse timestamp"
+    },
+    "AAA  Storage": {
+      "ontology_property": "hasAAAStorage",
+      "data_type": "datetime",
+      "description": "AAA Storage warehouse timestamp"
+    },
+    "Hauler Indoor": {
+      "ontology_property": "hasHaulerIndoor",
+      "data_type": "datetime",
+      "description": "Hauler Indoor timestamp"
+    },
+    "DSV MZP": {
+      "ontology_property": "hasDSVMZP",
+      "data_type": "datetime",
+      "description": "DSV MZP warehouse timestamp"
+    },
+    "MOSB": {
+      "ontology_property": "hasMOSB",
+      "data_type": "datetime",
+      "description": "MOSB timestamp"
+    },
+    "Shifting": {
+      "ontology_property": "hasShifting",
+      "data_type": "datetime",
+      "description": "Shifting timestamp"
+    },
+    "MIR": {
+      "ontology_property": "hasMIR",
+      "data_type": "datetime",
+      "description": "MIR timestamp"
+    },
+    "SHU": {
+      "ontology_property": "hasSHU",
+      "data_type": "datetime",
+      "description": "SHU timestamp"
+    },
+    "DAS": {
+      "ontology_property": "hasDAS",
+      "data_type": "datetime",
+      "description": "DAS timestamp"
+    },
+    "AGI": {
+      "ontology_property": "hasAGI",
+      "data_type": "datetime",
+      "description": "AGI timestamp"
+    },
+    "Status_WAREHOUSE": {
+      "ontology_property": "hasWarehouseStatus",
+      "data_type": "string",
+      "description": "Warehouse status"
+    },
+    "Status_SITE": {
+      "ontology_property": "hasSiteStatus",
+      "data_type": "string",
+      "description": "Site status"
+    },
+    "Status_Current": {
+      "ontology_property": "hasCurrentStatus",
+      "data_type": "string",
+      "description": "Current status"
+    },
+    "Status_Storage": {
+      "ontology_property": "hasStorageStatus",
+      "data_type": "string",
+      "description": "Storage status"
+    },
+    "wh handling": {
+      "ontology_property": "hasWarehouseHandling",
+      "data_type": "integer",
+      "description": "Warehouse handling count"
+    },
+    "site  handling": {
+      "ontology_property": "hasSiteHandling",
+      "data_type": "integer",
+      "description": "Site handling count"
+    },
+    "total handling": {
+      "ontology_property": "hasTotalHandling",
+      "data_type": "integer",
+      "description": "Total handling count"
+    },
+    "minus": {
+      "ontology_property": "hasMinusValue",
+      "data_type": "float",
+      "description": "Minus value"
+    },
+    "final handling": {
+      "ontology_property": "hasFinalHandling",
+      "data_type": "integer",
+      "description": "Final handling count"
+    },
+    "SQM": {
+      "ontology_property": "hasSQM",
+      "data_type": "float",
+      "description": "Square meter area"
+    },
+    "Stack_Status": {
+      "ontology_property": "hasStackStatus",
+      "data_type": "string",
+      "description": "Stack status information"
+    },
+    "열1": {
+      "ontology_property": "hasColumn1",
+      "data_type": "string",
+      "description": "Column 1 data"
+    },
+    "열2": {
+      "ontology_property": "hasColumn2",
+      "data_type": "string",
+      "description": "Column 2 data"
+    },
+    "DHL Warehouse": {
+      "ontology_property": "hasWarehouseEntry",
+      "data_type": "datetime",
+      "description": "DHL warehouse entry timestamp"
+    }
+  },
+  
+  "property_mappings": {
+    "Case_No": {"predicate": "hasCase", "datatype": "xsd:string", "required": true},
+    "Operation Month": {"predicate": "hasOperationMonth", "datatype": "xsd:date"},
+    "Date": {"predicate": "hasDate", "datatype": "xsd:dateTime", "required": true},
+    "Qty": {"predicate": "hasQuantity", "datatype": "xsd:integer", "required": true},
+    "Location": {"predicate": "hasLocation", "datatype": "xsd:string", "required": true},
+    "Category": {"predicate": "hasCategory", "datatype": "xsd:string"},
+    "TxType_Refined": {"predicate": "hasTransactionType", "datatype": "xsd:string"},
+    "Vendor": {"predicate": "hasVendor", "datatype": "xsd:string"},
+    "Amount": {"predicate": "hasAmount", "datatype": "xsd:decimal"},
+    "TOTAL": {"predicate": "hasTotalAmount", "datatype": "xsd:decimal"},
+    "CBM": {"predicate": "hasCBM", "datatype": "xsd:decimal"},
+    "Weight (kg)": {"predicate": "hasWeight", "datatype": "xsd:decimal"},
+    "Handling In": {"predicate": "hasHandlingIn", "datatype": "xsd:decimal"},
+    "Handling out": {"predicate": "hasHandlingOut", "datatype": "xsd:decimal"},
+    "Handling Fee": {"predicate": "hasHandlingFee", "datatype": "xsd:decimal"},
+    "Unstuffing": {"predicate": "hasUnstuffing", "datatype": "xsd:decimal"},
+    "Stuffing": {"predicate": "hasStuffing", "datatype": "xsd:decimal"},
+    "folk lift": {"predicate": "hasForklift", "datatype": "xsd:decimal"},
+    "crane": {"predicate": "hasCrane", "datatype": "xsd:decimal"},
+    "20FT": {"predicate": "has20FTContainer", "datatype": "xsd:integer"},
+    "40FT": {"predicate": "has40FTContainer", "datatype": "xsd:integer"},
+    "20FR": {"predicate": "has20FRContainer", "datatype": "xsd:integer"},
+    "40FR": {"predicate": "has40FRContainer", "datatype": "xsd:integer"},
+    "CNTR Stuffing Q'TY": {"predicate": "hasContainerStuffing", "datatype": "xsd:integer"},
+    "CNTR Unstuffing Q'TY": {"predicate": "hasContainerUnstuffing", "datatype": "xsd:integer"},
+    "Start": {"predicate": "hasStartDate", "datatype": "xsd:date"},
+    "Finish": {"predicate": "hasFinishDate", "datatype": "xsd:date"},
+    "pkg": {"predicate": "hasPackageCount", "datatype": "xsd:integer"},
+    "SQM": {"predicate": "hasSQM", "datatype": "xsd:decimal"},
+    "Custom Field": {"predicate": "hasCustomField", "datatype": "xsd:string"},
+    "OFCO": {"predicate": "hasOFCO", "datatype": "xsd:string"},
+    "Cost Center": {"predicate": "hasCostCenter", "datatype": "xsd:string"},
+    "Status": {"predicate": "hasStatus", "datatype": "xsd:string"},
+    "Status_Location": {"predicate": "hasLocation", "datatype": "xsd:string"},
+    "Status_Location_Date": {"predicate": "hasDate", "datatype": "xsd:dateTime"},
+    "Status_Current": {"predicate": "hasCurrentStatus", "datatype": "xsd:string"},
+    "Status_Storage": {"predicate": "hasStorageType", "datatype": "xsd:string"},
+    "Logistics Flow Code": {"predicate": "hasLogisticsFlowCode", "datatype": "xsd:integer"},
+    "wh handling": {"predicate": "hasWHHandling", "datatype": "xsd:integer"},
+    "Sheet Name": {"predicate": "hasDocumentRef", "datatype": "xsd:string"},
+    "SHPT NO": {"predicate": "hasShippingNumber", "datatype": "xsd:integer"},
+    "Invoice Line Item": {"predicate": "hasChargeDescription", "datatype": "xsd:string"},
+    "Calculation Logic": {"predicate": "hasCalculationLogic", "datatype": "xsd:string"},
+    "Rate (USD)": {"predicate": "hasRateUSD", "datatype": "xsd:decimal"},
+    "Total (USD)": {"predicate": "hasTotalUSD", "datatype": "xsd:decimal"},
+    "Detailed Calculation / Doc": {"predicate": "hasSupportingEvidence", "datatype": "xsd:string"},
+    "Verification Status": {"predicate": "hasVerificationStatus", "datatype": "xsd:string"},
+    "Draft Invoice Date": {"predicate": "hasInvoiceDate", "datatype": "xsd:date"},
+    "Customer ID": {"predicate": "hasCustomerID", "datatype": "xsd:string"},
+    "CW1 Job Number": {"predicate": "hasJobNumber", "datatype": "xsd:string"},
+    "MBL Number": {"predicate": "hasMasterBL", "datatype": "xsd:string"},
+    "REF NO": {"predicate": "hasRefNo", "datatype": "xsd:integer"},
+    "Rate Source": {"predicate": "hasRateSource", "datatype": "xsd:string"},
+    "Description": {"predicate": "hasChargeDescription", "datatype": "xsd:string"},
+    "Rate": {"predicate": "hasRateUSD", "datatype": "xsd:decimal"},
+    "Rev Total": {"predicate": "hasTotalUSD", "datatype": "xsd:decimal"},
+    "Customs": {"predicate": "hasCustomsClearanceFee", "datatype": "xsd:decimal"},
+    "DO": {"predicate": "hasDOFee", "datatype": "xsd:decimal"},
+    "PHC": {"predicate": "hasPortHandlingCharge", "datatype": "xsd:decimal"},
+    "Inland": {"predicate": "hasInlandTruckingCharge", "datatype": "xsd:decimal"},
+    "Inspection": {"predicate": "hasInspectionFee", "datatype": "xsd:decimal"},
+    "Detention": {"predicate": "hasDetentionCharge", "datatype": "xsd:decimal"},
+    "Storage": {"predicate": "hasStorageCharge", "datatype": "xsd:decimal"},
+    "Others": {"predicate": "hasOtherCharges", "datatype": "xsd:decimal"},
+    "DHL Warehouse": {"predicate": "hasDHLWarehouse", "datatype": "xsd:dateTime"},
+    "Stack_Status": {"predicate": "hasStackStatus", "datatype": "xsd:string"}
+  },
+  
+  "class_mappings": {
+    "TransportEvent": "TransportEvent",
+    "StockSnapshot": "StockSnapshot",
+    "Warehouse": "Warehouse",
+    "IndoorWarehouse": "IndoorWarehouse",
+    "OutdoorWarehouse": "OutdoorWarehouse",
+    "DangerousCargoWarehouse": "DangerousCargoWarehouse",
+    "Site": "Site",
+    "OffshoreBase": "OffshoreBase",
+    "PreArrivalItem": "PreArrivalItem",
+    "Case": "Case",
+    "Item": "Item",
+    "Container": "Container",
+    "Cargo": "Cargo",
+    "HitachiCargo": "HitachiCargo",
+    "SiemensCargo": "SiemensCargo",
+    "Invoice": "Invoice",
+    "InvoiceLineItem": "InvoiceLineItem",
+    "ChargeSummary": "ChargeSummary",
+    "Vendor": "Vendor",
+    "ShippingDocument": "ShippingDocument",
+    "Dataset": "Dataset",
+    "CostCenter": "CostCenter",
+    "MappingRule": "MappingRule"
+  },
+  
+  "warehouse_classification": {
+    "Indoor": {
+      "warehouses": ["DSV Indoor", "DSV Al Markaz", "Hauler Indoor"],
+      "characteristics": ["climate_controlled", "secure_storage", "high_value_items"]
+    },
+    "Outdoor": {
+      "warehouses": ["DSV Outdoor", "DSV MZP"],
+      "characteristics": ["open_air", "heavy_cargo", "bulk_storage"]
+    },
+    "Site": {
+      "locations": ["AGI", "DAS", "MIR", "SHU"],
+      "characteristics": ["installation_ready", "final_destination", "project_sites"]
+    },
+    "dangerous_cargo": {
+      "warehouses": ["AAA Storage", "Dangerous Storage"],
+      "characteristics": ["hazmat_certified", "special_handling", "restricted_access"]
+    },
+    "Pre_Arrival": {
+      "status": ["PRE ARRIVAL", "INBOUND_PENDING", "NOT_YET_RECEIVED"],
+      "characteristics": ["not_physical", "forecast_data", "planning_stage"]
+    },
+    "OffshoreBase": {
+      "locations": ["MOSB", "MARINE BASE", "OFFSHORE BASE"],
+      "characteristics": ["marine_environment", "specialized_handling", "weather_dependent"]
+    }
+  },
+  
+  "logistics_flow_definition": {
+    "0": {"name": "Pre Arrival", "description": "아직 도착하지 않은 상태", "path": "Planning → Port"},
+    "1": {"name": "Direct Port→Site", "description": "항구에서 현장으로 직접 운송", "path": "Port → Site"},
+    "2": {"name": "Port→WH→Site", "description": "항구→창고→현장", "path": "Port → Warehouse → Site"},
+    "3": {"name": "Port→WH→MOSB→Site", "description": "항구→창고→해상기지→현장", "path": "Port → Warehouse → MOSB → Site"},
+    "4": {"name": "Port→WH→WH→MOSB→Site", "description": "항구→창고→창고→해상기지→현장", "path": "Port → Warehouse → Warehouse → MOSB → Site"},
+    "6": {"name": "Alias for Flow 3", "description": "Flow Code 3의 별칭 (정규화됨)", "path": "Port → Warehouse → MOSB → Site"}
+  },
+  
+  "vendor_mappings": {
+    "normalization": {
+      "SIMENSE": "SIM",
+      "SIM": "SIM",
+      "SUMIMOTO": "SEI",
+      "HITACHI": "HITACHI",
+      "HE": "HITACHI",
+      "SCT": "SAMSUNG",
+      "SAMSUNG": "SAMSUNG",
+      "ZEN": "ZENER",
+      "ZENER": "ZENER",
+      "ETC": "ETC"
+    },
+    "vendor_instances": {
+      "HITACHI": "ex:HitachiVendor",
+      "SIM": "ex:SiemensVendor",
+      "SAMSUNG": "ex:SamsungVendor"
+    }
+  },
+  
+  "container_standardization": {
+    "20FT": ["20FT", "20'FT", "20DC", "20dc", "20ft", "20feet", "20'"],
+    "40FT": ["40FT", "40'FT", "40DC", "40dc", "40ft", "40feet", "40'"],
+    "20FR": ["20FR", "20fr", "20frt", "20fr(ft)", "20'FR", "20'fr"],
+    "40FR": ["40FR", "40fr", "40frt", "40fr(ft)", "40'FR", "40'fr"]
+  },
+  
+  "ofco_mapping_rules": {
+    "cost_centers": {
+      "AT_COST": "AT COST",
+      "AT_COST_CONSUMABLES": "AT COST(CONSUMABLES)",
+      "AT_COST_FORKLIFT": "AT COST(FORKLIFT)",
+      "AT_COST_FUEL_SUPPLY": "AT COST(FUEL SUPPLY (10,000GL))",
+      "AT_COST_WATER_SUPPLY": "AT COST(WATER SUPPLY)",
+      "CONTRACT": "CONTRACT",
+      "CONTRACT_AF_FOR_BA": "CONTRACT(AF FOR BA)",
+      "CONTRACT_AF_FOR_CC": "CONTRACT(AF FOR CC)",
+      "CONTRACT_AF_FOR_EQUIP_PASS_ARRG": "CONTRACT(AF FOR EQUIP PASS ARRG)",
+      "CONTRACT_AF_FOR_FW_SA": "CONTRACT(AF FOR FW SA)",
+      "CONTRACT_AF_FOR_PASS_ARRG": "CONTRACT(AF FOR PASS ARRG)",
+      "CONTRACT_AF_FOR_PTW_ARRG": "CONTRACT(AF FOR PTW ARRG)",
+      "CONTRACT_OFCO_FOLK_LIFT_HF": "CONTRACT(OFCO FOLK LIFT HF)",
+      "CONTRACT_OFCO_HF": "CONTRACT(OFCO HF)",
+      "CONTRACT_OFCO_PORT_CHARGE_HF": "CONTRACT(OFCO PORT CHARGE HF)",
+      "PORT_HANDLING_CHARGE": "PORT HANDLING CHARGE",
+      "PORT_HANDLING_CHARGE_BULK_CARGO_EQUIPMENT": "PORT HANDLING CHARGE(BULK CARGO_EQUIPMENT)",
+      "PORT_HANDLING_CHARGE_BULK_CARGO_MANPOWER": "PORT HANDLING CHARGE(BULK CARGO_MANPOWER)",
+      "PORT_HANDLING_CHARGE_CHANNEL_TRANSIT_CHARGES": "PORT HANDLING CHARGE(CHANNEL TRANSIT CHARGES)",
+      "PORT_HANDLING_CHARGE_PORT_DUES_SERVICES": "PORT HANDLING CHARGE(PORT DUES & SERVICES CHARGES)",
+      "PORT_HANDLING_CHARGE_YARD_STORAGE": "PORT HANDLING CHARGE(YARD STORAGE)"
+    },
+    "mapping_rules": [
+      {
+        "priority": 1,
+        "pattern": "(?i)\\b(Berthing|Pilot\\s*Arrangement|Channel\\s*Transit\\s*Permission)\\b",
+        "cost_center_a": "CONTRACT_AF_FOR_BA",
+        "cost_center_b": "CONTRACT"
+      },
+      {
+        "priority": 2,
+        "pattern": "(?i)\\b(Cargo\\s*Clearance|Cargo\\s*Clearnace)\\b",
+        "cost_center_a": "CONTRACT_AF_FOR_CC",
+        "cost_center_b": "CONTRACT"
+      },
+      {
+        "priority": 3,
+        "pattern": "(?i)\\b(Arranging\\s*FW\\s*Supply|FW\\s*Supply|Fresh\\s*Water\\s*Supply)\\b",
+        "cost_center_a": "CONTRACT_AF_FOR_FW_SA",
+        "cost_center_b": "CONTRACT"
+      },
+      {
+        "priority": 4,
+        "pattern": "(?i)\\b(PTW|Permit\\s*to\\s*Work)\\b",
+        "cost_center_a": "CONTRACT_AF_FOR_PTW_ARRG",
+        "cost_center_b": "CONTRACT"
+      },
+      {
+        "priority": 5,
+        "pattern": "(?i)\\bOFCO\\s*10%\\s*Handling\\s*Fee\\b",
+        "cost_center_a": "CONTRACT_OFCO_HF",
+        "cost_center_b": "CONTRACT"
+      },
+      {
+        "priority": 6,
+        "pattern": "(?i)\\bOFCO\\s*Forklift\\s*Handling\\s*Fee\\b",
+        "cost_center_a": "CONTRACT_OFCO_FOLK_LIFT_HF",
+        "cost_center_b": "CONTRACT"
+      },
+      {
+        "priority": 7,
+        "pattern": "(?i)\\bOFCO\\s*Port\\s*Charge\\s*Handling\\s*Fee\\b",
+        "cost_center_a": "CONTRACT_OFCO_PORT_CHARGE_HF",
+        "cost_center_b": "CONTRACT"
+      },
+      {
+        "priority": 8,
+        "pattern": "(?i)\\bSAFEEN\\b",
+        "cost_center_a": "PORT_HANDLING_CHARGE_CHANNEL_TRANSIT_CHARGES",
+        "cost_center_b": "PORT_HANDLING_CHARGE"
+      },
+      {
+        "priority": 9,
+        "pattern": "(?i)\\b(ADP|PHC|Port\\s*Dues|Port\\s*Services)\\b",
+        "cost_center_a": "PORT_HANDLING_CHARGE_PORT_DUES_SERVICES",
+        "cost_center_b": "PORT_HANDLING_CHARGE"
+      },
+      {
+        "priority": 10,
+        "pattern": "(?i)\\b(Manpower\\s*Charges|Supervisor|Foreman|Banksman|Riggers|Labour)\\b",
+        "cost_center_a": "PORT_HANDLING_CHARGE_BULK_CARGO_MANPOWER",
+        "cost_center_b": "PORT_HANDLING_CHARGE"
+      },
+      {
+        "priority": 11,
+        "pattern": "(?i)\\b(Crane|Spreader\\s*Beam|Forklift\\s*charges|Equipment\\s*Charges|Third\\s*Party\\s*Equipment)\\b",
+        "cost_center_a": "PORT_HANDLING_CHARGE_BULK_CARGO_EQUIPMENT",
+        "cost_center_b": "PORT_HANDLING_CHARGE"
+      },
+      {
+        "priority": 12,
+        "pattern": "(?i)\\b(MGO|Fuel\\s*Supply|Diesel|\\+10\\s*%\\s*as\\s*per\\s*DN)\\b",
+        "cost_center_a": "AT_COST_FUEL_SUPPLY",
+        "cost_center_b": "AT_COST"
+      },
+      {
+        "priority": 13,
+        "pattern": "(?i)\\b(5000\\s*IG\\s*FW|Water\\s*Supply)\\b",
+        "cost_center_a": "AT_COST_WATER_SUPPLY",
+        "cost_center_b": "AT_COST"
+      },
+      {
+        "priority": 14,
+        "pattern": "(?i)\\bForklift\\s*charges\\b",
+        "cost_center_a": "AT_COST_FORKLIFT",
+        "cost_center_b": "AT_COST"
+      },
+      {
+        "priority": 15,
+        "pattern": "(?i)\\b(Mobilization|Demobilization|Consumables|Misc\\.)\\b",
+        "cost_center_a": "AT_COST_CONSUMABLES",
+        "cost_center_b": "AT_COST"
+      },
+      {
+        "priority": 16,
+        "pattern": "(?i)\\bEquipment\\s*Pass\\s*Arrangement\\b",
+        "cost_center_a": "CONTRACT_AF_FOR_EQUIP_PASS_ARRG",
+        "cost_center_b": "CONTRACT"
+      },
+      {
+        "priority": 17,
+        "pattern": "(?i)\\b(Pass\\s*Arrangement|Gate\\s*Pass\\s*Arrangement)\\b",
+        "cost_center_a": "CONTRACT_AF_FOR_PASS_ARRG",
+        "cost_center_b": "CONTRACT"
+      },
+      {
+        "priority": 18,
+        "pattern": "(?i)\\b(Yard\\s*Storage|Monthly\\s*Rental|Storage)\\b",
+        "cost_center_a": "PORT_HANDLING_CHARGE_YARD_STORAGE",
+        "cost_center_b": "PORT_HANDLING_CHARGE"
+      }
+    ]
+  },
+  
+  "sparql_templates": {
+    "basic_queries": {
+      "monthly_warehouse_summary": "PREFIX ex: <{namespace}> SELECT ?month ?warehouse (SUM(?amount) AS ?totalAmount) (SUM(?qty) AS ?totalQty) WHERE { ?event rdf:type ex:TransportEvent ; ex:hasLocation ?warehouse ; ex:hasDate ?date ; ex:hasAmount ?amount ; ex:hasQuantity ?qty . BIND(SUBSTR(STR(?date), 1, 7) AS ?month) } GROUP BY ?month ?warehouse ORDER BY ?month ?warehouse",
+      "vendor_analysis": "PREFIX ex: <{namespace}> SELECT ?vendor (SUM(?amount) AS ?totalAmount) (COUNT(?event) AS ?eventCount) WHERE { ?event rdf:type ex:TransportEvent ; ex:hasVendor ?vendor ; ex:hasAmount ?amount . } GROUP BY ?vendor ORDER BY DESC(?totalAmount)",
+      "logistics_flow_analysis": "PREFIX ex: <{namespace}> SELECT ?flowCode (COUNT(?event) AS ?eventCount) (SUM(?amount) AS ?totalAmount) WHERE { ?event rdf:type ex:TransportEvent ; ex:hasLogisticsFlowCode ?flowCode ; ex:hasAmount ?amount . } GROUP BY ?flowCode ORDER BY ?flowCode",
+      "container_summary": "PREFIX ex: <{namespace}> SELECT ?warehouse (SUM(?container20) AS ?total20FT) (SUM(?container40) AS ?total40FT) WHERE { ?event rdf:type ex:TransportEvent ; ex:hasLocation ?warehouse ; ex:has20FTContainer ?container20 ; ex:has40FTContainer ?container40 . } GROUP BY ?warehouse ORDER BY ?warehouse"
+    },
+    "advanced_queries": {
+      "pre_arrival_tracking": "PREFIX ex: <{namespace}> SELECT ?event ?case ?location ?qty ?amount WHERE { ?event rdf:type ex:TransportEvent ; ex:hasLogisticsFlowCode 0 ; ex:hasCase ?case ; ex:hasLocation ?location ; ex:hasQuantity ?qty ; ex:hasAmount ?amount . } ORDER BY ?case",
+      "wh_handling_analysis": "PREFIX ex: <{namespace}> SELECT ?whHandling (COUNT(?event) AS ?eventCount) (SUM(?amount) AS ?totalAmount) WHERE { ?event rdf:type ex:TransportEvent ; ex:hasWHHandling ?whHandling ; ex:hasAmount ?amount . } GROUP BY ?whHandling ORDER BY ?whHandling",
+      "cost_center_mapping": "PREFIX ex: <{namespace}> SELECT ?costCenter (COUNT(?charge) AS ?chargeCount) (SUM(?totalUSD) AS ?totalAmount) WHERE { ?charge rdf:type ex:InvoiceLineItem ; ex:hasCostCenter ?costCenter ; ex:hasTotalUSD ?totalUSD . } GROUP BY ?costCenter ORDER BY DESC(?totalAmount)",
+      "invoice_verification_status": "PREFIX ex: <{namespace}> SELECT ?verificationStatus (COUNT(?charge) AS ?chargeCount) (SUM(?totalUSD) AS ?statusTotal) WHERE { ?charge rdf:type ex:InvoiceLineItem ; ex:hasVerificationStatus ?verificationStatus ; ex:hasTotalUSD ?totalUSD . } GROUP BY ?verificationStatus ORDER BY DESC(?statusTotal)"
+    }
+  },
+  
+  "validation_rules": {
+    "required_fields": ["Case_No", "Date", "Location", "Qty"],
+    "numeric_fields": ["Qty", "Amount", "Handling Fee", "CBM", "Weight (kg)", "Logistics Flow Code", "wh handling"],
+    "date_fields": ["Date", "Start", "Finish", "Operation Month", "Status_Location_Date", "Draft Invoice Date"],
+    "string_fields": ["Case_No", "Location", "Category", "Vendor", "Status", "Description"],
+    "flow_code_range": [0, 6],
+    "wh_handling_range": [0, 3],
+    "null_handling": {
+      "pkg_null_to_one": true,
+      "flow_code_6_to_3": true,
+      "empty_string_to_null": true
+    },
+    "deduplication": {
+      "keys": ["Case_No", "Location", "Logistics Flow Code", "pkg"],
+      "strategy": "keep_latest",
+      "tolerance": 0.01
+    }
+  },
+  
+  "automation_features": {
+    "auto_field_detection": true,
+    "auto_normalization": true,
+    "auto_aggregation": true,
+    "auto_report_generation": true,
+    "auto_rdf_conversion": true,
+    "auto_sparql_generation": true,
+    "auto_flow_code_calculation": true,
+    "auto_wh_handling_calculation": true,
+    "auto_cost_center_mapping": true,
+    "auto_invoice_processing": true,
+    "auto_validation": true,
+    "auto_deduplication": true
+  },
+  
+  "report_templates": {
+    "standard_reports": {
+      "monthly_summary": {
+        "sheets": ["01_월별IN_창고현장", "02_월별OUT_창고현장", "03_월별재고_창고현장", "04_물류흐름코드별"],
+        "aggregations": ["월별", "창고별", "벤더별", "물류코드별"],
+        "metrics": ["수량", "금액", "하역비", "물류흐름코드", "WH처리"]
+      },
+      "detailed_analysis": {
+        "sheets": ["통계요약", "벤더별집계", "컨테이너별집계", "Pre_Arrival분석", "OffshoreBase분석"],
+        "aggregations": ["월별", "창고별", "카테고리별", "물류코드별", "WH처리별"],
+        "metrics": ["수량", "금액", "하역비", "CBM", "무게", "물류흐름코드", "WH처리"]
+      },
+      "invoice_reports": {
+        "sheets": ["인보이스요약", "비용센터별", "검증상태별", "요금분석"],
+        "aggregations": ["월별", "문서별", "비용센터별", "검증상태별"],
+        "metrics": ["USD요율", "USD총액", "통관비", "항만비", "내륙운송비"]
+      }
+    },
+    "custom_reports": {
+      "dhl_warehouse_tracking": {
+        "description": "DHL 창고 추적 리포트",
+        "fields": ["Case_No", "DHL Warehouse", "Location", "Status"],
+        "filters": ["DHL Warehouse IS NOT NULL"]
+      },
+      "stack_status_monitoring": {
+        "description": "적재 상태 모니터링",
+        "fields": ["Case_No", "Stack_Status", "Location", "Qty"],
+        "filters": ["Stack_Status IS NOT NULL"]
+      }
+    }
+  },
+  
+  "integration_points": {
+    "macho_gpt_v34": {
+      "containment_modes": ["PRIME", "ORACLE", "ZERO", "LATTICE", "RHYTHM", "COST-GUARD"],
+      "command_integration": true,
+      "auto_trigger_support": true,
+      "confidence_threshold": 0.90,
+      "fail_safe_mode": true
+    },
+    "samsung_ct_systems": {
+      "edas_connector": true,
+      "boe_processor": true,
+      "api_integration": true
+    },
+    "adnoc_dsv_systems": {
+      "port_api": true,
+      "shipment_tracker": true,
+      "weather_tie": true
+    }
+  },
+  
+  "version_history": {
+    "v3.0.0": {
+      "date": "2025-01-04",
+      "changes": [
+        "완전한 온톨로지 스키마 통합",
+        "OFCO 매핑 규칙 통합",
+        "DHL Warehouse 및 Stack_Status 컬럼 추가",
+        "Status_Location_Date 복구 지원",
+        "MACHO-GPT v3.4-mini 완전 호환",
+        "향상된 검증 규칙 및 자동화 기능"
+      ]
+    },
+    "v2.8.3": {
+      "date": "2024-12-XX",
+      "changes": [
+        "Flow Code 6 정규화",
+        "NULL PKG 자동 보정",
+        "스마트 중복 제거",
+        "Pre Arrival KPI 필터"
+      ]
+    }
+  },
+  
+  "extension_guide": {
+    "adding_new_fields": {
+      "steps": [
+        "field_mappings에 Excel 컬럼명 → RDF 속성 매핑 추가",
+        "property_mappings에 데이터 타입 및 검증 규칙 추가",
+        "validation_rules에 필요시 추가 규칙 정의",
+        "report_templates에 리포트 포함 설정"
+      ],
+      "example": {
+        "New_Field": "hasNewField",
+        "property_mapping": {
+          "New_Field": {"predicate": "hasNewField", "datatype": "xsd:string"}
+        }
+      }
+    },
+    "adding_new_warehouses": {
+      "steps": [
+        "warehouse_classification에 새 창고 추가",
+        "ontology schema에 인스턴스 추가",
+        "validation_rules에 새 창고 코드 추가"
+      ]
+    },
+    "adding_new_cost_centers": {
+      "steps": [
+        "ofco_mapping_rules.cost_centers에 새 비용센터 추가",
+        "ofco_mapping_rules.mapping_rules에 매핑 규칙 추가",
+        "ontology schema에 인스턴스 추가"
+      ]
+    }
+  }
+} 

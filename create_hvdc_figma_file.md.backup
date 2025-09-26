@@ -1,0 +1,149 @@
+# 🎨 HVDC Figma 파일 생성 가이드
+
+## ✅ API 키 확인 완료
+
+**사용자 정보:**
+- 👤 **사용자**: MINKYU CHA
+- 📧 **이메일**: mscho715@gmail.com
+- 🏢 **팀**: Personal
+
+## 🚀 HVDC Figma 파일 생성 단계
+
+### 1. Figma에서 새 파일 생성
+
+1. **Figma 웹사이트 접속**: https://www.figma.com
+2. **새 파일 생성**: "New design file" 클릭
+3. **파일명 설정**: `HVDC Warehouse 3D Visualization`
+4. **프레임 크기**: 1200x800px
+
+### 2. 기본 레이아웃 구성
+
+#### 📁 프레임 구조
+```
+HVDC Warehouse 3D Visualization/
+├── Header (1200x60px)
+│   ├── Logo
+│   ├── Title: "HVDC Warehouse 3D Visualization"
+│   └── User Info
+├── Sidebar (300x740px)
+│   ├── File Upload Section
+│   ├── 3D Settings
+│   ├── Export Options
+│   └── KPI Dashboard
+├── Main View (900x740px)
+│   ├── 3D Viewport
+│   ├── Grid System
+│   └── Crate Boxes
+└── Footer (1200x60px)
+    ├── Status Bar
+    └── Legend
+```
+
+### 3. 디자인 시스템 설정
+
+#### 🎨 색상 팔레트
+```css
+/* Primary Colors */
+--primary-blue: #2196f3;    /* Plastic crates */
+--primary-brown: #8d6e63;   /* Wooden crates */
+--primary-gray: #9e9e9e;    /* Steel crates */
+--primary-yellow: #ffc107;  /* Aisle */
+--primary-red: #dc3545;     /* Excluded items */
+
+/* UI Colors */
+--background: #f8f9fa;
+--surface: #ffffff;
+--border: #dee2e6;
+--text-primary: #495057;
+--text-secondary: #6c757d;
+```
+
+#### 📐 간격 시스템
+```css
+--spacing-xs: 4px;
+--spacing-sm: 8px;
+--spacing-md: 16px;
+--spacing-lg: 24px;
+--spacing-xl: 32px;
+```
+
+### 4. 컴포넌트 라이브러리 생성
+
+#### 📦 기본 컴포넌트
+1. **WarehouseCrate**
+   - Plastic, Wood, Steel 버전
+   - 상태별 색상 (placed, excluded, pending)
+
+2. **KPICard**
+   - 성공, 경고, 위험, 정보 색상
+   - 트렌드 아이콘 (up, down, stable)
+
+3. **Button**
+   - Primary, Secondary, Danger 스타일
+   - Hover, Active 상태
+
+4. **Input**
+   - Text, Number, File upload
+   - Validation 상태
+
+### 5. 파일 ID 확인
+
+파일 생성 후 URL에서 파일 ID를 확인:
+```
+https://www.figma.com/file/XXXXXXXXXXXXXXX/HVDC-Warehouse-3D-Visualization
+                                    ↑
+                              파일 ID (복사)
+```
+
+## 🔧 다음 단계
+
+### 1. 파일 생성 후
+```bash
+# 파일 ID를 사용하여 디자인 토큰 추출
+python figma_mcp_commands.py extract_tokens YOUR_FILE_ID
+
+# React 컴포넌트 생성
+python figma_mcp_commands.py generate_components YOUR_FILE_ID src/components
+```
+
+### 2. SVG 와이어프레임 가져오기
+```bash
+# 기존 SVG 와이어프레임을 Figma로 가져오기
+python figma_mcp_commands.py import_svg src/warehouse_ui_wireframe.svg YOUR_FILE_ID
+```
+
+### 3. 실시간 동기화 설정
+```python
+# 실시간 디자인-코드 동기화
+from figma_mcp_integration import FigmaMCPIntegration
+
+figma = FigmaMCPIntegration()
+figma.watch_figma_changes("YOUR_FILE_ID", 60)  # 1분마다 확인
+```
+
+## 📋 체크리스트
+
+- [ ] Figma 파일 생성
+- [ ] 기본 레이아웃 구성
+- [ ] 색상 팔레트 설정
+- [ ] 컴포넌트 라이브러리 생성
+- [ ] 파일 ID 확인
+- [ ] 디자인 토큰 추출 테스트
+- [ ] React 컴포넌트 생성 테스트
+
+## 🎯 권장 워크플로우
+
+1. **디자인 단계**: Figma에서 UI 디자인 완성
+2. **토큰 추출**: 디자인 토큰 자동 추출
+3. **컴포넌트 생성**: React 컴포넌트 자동 생성
+4. **3D 통합**: 3D 시각화 시스템에 통합
+5. **실시간 동기화**: 디자인 변경사항 자동 반영
+
+---
+
+🔧 **추천 명령어:**
+/figma create_file [새 Figma 파일 생성]
+/figma import_svg warehouse_ui_wireframe.svg [SVG 가져오기]
+/figma extract_tokens [FILE_ID] [토큰 추출]
+/figma generate_components [FILE_ID] [컴포넌트 생성]
+/3d_visualization integrate_figma [3D 시각화 통합] 

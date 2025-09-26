@@ -1,0 +1,6 @@
+HVDC_Code,Vendor,Category,Weight,Location,Status
+HVDC-ADOPT-HE-0001,Hitachi,Elec,35000,DSV Indoor,warehouse
+HVDC-ADOPT-HE-0002,Hitachi,Elec,28000,DSV Indoor,warehouse
+HVDC-ADOPT-ME-0001,Hyundai,Mech,45000,MOSB,warehouse
+HVDC-ADOPT-CE-0001,LS Cable,Elec,15000,DSV Outdoor,warehouse
+HVDC-ADOPT-IE-0001,ABB,Inst,2000,AGI,site

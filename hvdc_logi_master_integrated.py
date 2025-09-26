@@ -38,6 +38,15 @@ except ImportError:
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
 
+# Event-Based Outbound Logic 지원
+try:
+    from scripts.event_based_outbound import EventBasedOutboundResolver
+    EVENT_OUTBOUND_AVAILABLE = True
+    logger.info("✅ Event-Based Outbound Logic 모듈 로드 완료")
+except ImportError:
+    EVENT_OUTBOUND_AVAILABLE = False
+    logger.warning("⚠️ Event-Based Outbound Logic 모듈 없음 - 기본 로직 사용")
+
 # ===== 1. 핵심 데이터 클래스 정의 =====
 
 @dataclass
@@ -55,8 +64,10 @@ class HVDCItem:
     sqm: float = 0.0
     flow_code: int = 0
     
-    def to_rdf(self, graph: Graph) -> URIRef:
+    def to_rdf(self, graph) -> 'URIRef':
         """RDF 트리플로 변환"""
+        if not RDF_AVAILABLE:
+            return None
         item_uri = EX[f"item_{self.hvdc_code}"]
         
         # 기본 클래스 선언
@@ -89,7 +100,9 @@ class Warehouse:
     current_utilization: float
     handling_fee: float
     
-    def to_rdf(self, graph: Graph) -> URIRef:
+    def to_rdf(self, graph) -> 'URIRef':
+        if not RDF_AVAILABLE:
+            return None
         warehouse_uri = EX[f"warehouse_{self.name.replace(' ', '_')}"]
         
         # 창고 타입에 따른 클래스 분류
@@ -426,6 +439,21 @@ class HVDCLogiMaster:
         for warehouse in self.location_columns['warehouses']:
             if warehouse in df.columns:
                 df[warehouse] = pd.to_datetime(df[warehouse], errors='coerce')
+        
+        # Event-Based Outbound Logic: Final_Location 재구성 (월별 집계 전 호출)
+        if EVENT_OUTBOUND_AVAILABLE:
+            try:
+                print('🎯 Event-Based Final_Location 재구성 중...')
+                resolver = EventBasedOutboundResolver(config_path='config/wh_priority.yaml')
+                df = resolver.resolve_final_location(df)
+                print(f'✅ Final_Location 재구성 완료 - {df["Final_Location"].value_counts().to_dict()}')
+            except Exception as e:
+                logger.warning(f"Final_Location 재구성 실패: {e}, 기본 로직 사용")
+                # 기본 Final_Location 로직 (Status_Location 사용)
+                df['Final_Location'] = df['Status_Location'].fillna('Unknown')
+        else:
+            # 기본 Final_Location 로직
+            df['Final_Location'] = df['Status_Location'].fillna('Unknown')
         
         # Flow Code 검증
         if 'FLOW_CODE' in df.columns:

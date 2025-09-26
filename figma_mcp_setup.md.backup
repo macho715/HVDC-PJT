@@ -1,0 +1,267 @@
+# 🎨 Figma MCP Setup for HVDC Warehouse Visualization
+
+## 📋 Overview
+
+Figma MCP (Model Context Protocol) 서버를 설정하여 HVDC 프로젝트의 3D 창고 시각화 UI를 Figma에서 직접 작업할 수 있습니다.
+
+## 🚀 Quick Setup
+
+### 1. Figma API Token 생성
+
+1. [Figma Personal Access Tokens](https://help.figma.com/hc/en-us/articles/8085703771159-Manage-personal-access-tokens) 페이지 접속
+2. **Create new token** 클릭
+3. 토큰 이름: `HVDC-Warehouse-MCP`
+4. 토큰 복사 및 안전한 곳에 저장
+
+### 2. MCP 서버 설치 및 설정
+
+#### Windows 환경
+```json
+{
+  "mcpServers": {
+    "Framelink Figma MCP": {
+      "command": "cmd",
+      "args": ["/c", "npx", "-y", "figma-developer-mcp", "--figma-api-key=YOUR-FIGMA-API-KEY", "--stdio"]
+    }
+  }
+}
+```
+
+#### 환경변수 설정 (선택사항)
+```json
+{
+  "mcpServers": {
+    "Framelink Figma MCP": {
+      "command": "cmd",
+      "args": ["/c", "npx", "-y", "figma-developer-mcp", "--stdio"],
+      "env": {
+        "FIGMA_API_KEY": "YOUR-FIGMA-API-KEY",
+        "PORT": "3000"
+      }
+    }
+  }
+}
+```
+
+### 3. 로컬 개발 환경 설정
+
+```bash
+# HVDC 프로젝트 디렉토리로 이동
+cd HVDC_PJT/Figma-Context-MCP
+
+# 의존성 설치
+npm install
+
+# 개발 모드 실행
+npm run dev
+
+# 또는 프로덕션 빌드
+npm run build
+npm start
+```
+
+## 🎯 HVDC Warehouse UI Workflow
+
+### 1. Figma 파일 생성
+- 새 Figma 파일 생성: `HVDC Warehouse 3D Visualization`
+- 프레임 크기: 1200x800px (SVG 와이어프레임과 동일)
+
+### 2. 컴포넌트 구조 설계
+
+#### 📁 Components
+```
+HVDC Warehouse UI/
+├── Layout/
+│   ├── Header
+│   ├── Sidebar
+│   ├── Main View
+│   └── Footer
+├── Controls/
+│   ├── File Upload
+│   ├── 3D Settings
+│   ├── Export Options
+│   └── KPI Dashboard
+├── 3D View/
+│   ├── Viewport
+│   ├── Grid System
+│   ├── Crate Boxes
+│   └── Aisle
+└── Data/
+    ├── Item Table
+    ├── Legend
+    └── Status Indicators
+```
+
+### 3. Material Design System
+
+#### 🎨 Color Palette
+```css
+/* Primary Colors */
+--primary-blue: #2196f3;    /* Plastic crates */
+--primary-brown: #8d6e63;   /* Wooden crates */
+--primary-gray: #9e9e9e;    /* Steel crates */
+--primary-yellow: #ffc107;  /* Aisle */
+--primary-red: #dc3545;     /* Excluded items */
+
+/* UI Colors */
+--background: #f8f9fa;
+--surface: #ffffff;
+--border: #dee2e6;
+--text-primary: #495057;
+--text-secondary: #6c757d;
+```
+
+#### 📐 Spacing System
+```css
+--spacing-xs: 4px;
+--spacing-sm: 8px;
+--spacing-md: 16px;
+--spacing-lg: 24px;
+--spacing-xl: 32px;
+```
+
+## 🔧 Integration Commands
+
+### Figma MCP 명령어
+```bash
+# Figma 파일 링크로 컨텍스트 가져오기
+/figma import [FIGMA_FILE_URL]
+
+# 특정 프레임/컴포넌트 가져오기
+/figma frame [FRAME_ID]
+
+# 디자인 토큰 추출
+/figma tokens [FILE_ID]
+
+# 컴포넌트 정보 가져오기
+/figma component [COMPONENT_ID]
+```
+
+### HVDC 특화 명령어
+```bash
+# 창고 레이아웃 생성
+/warehouse_layout create_3d_view
+
+# KPI 대시보드 업데이트
+/kpi_dashboard update_metrics
+
+# 3D 모델 내보내기
+/3d_export generate_stl_gltf
+
+# Figma → HTML 변환
+/figma_to_html convert_design
+```
+
+## 📊 Workflow Integration
+
+### 1. SVG → Figma Import
+```bash
+# SVG 와이어프레임을 Figma로 가져오기
+/figma import_svg warehouse_ui_wireframe.svg
+```
+
+### 2. Figma → Code Generation
+```bash
+# Figma 디자인을 React/Vue 컴포넌트로 변환
+/figma_to_code generate_react_components
+```
+
+### 3. Real-time Sync
+```bash
+# Figma 변경사항을 실시간으로 코드에 반영
+/figma_sync enable_realtime
+```
+
+## 🎨 Design System Components
+
+### 1. Warehouse Crate Component
+```typescript
+interface WarehouseCrate {
+  id: string;
+  dimensions: {
+    length: number;
+    width: number;
+    height: number;
+  };
+  material: 'plastic' | 'wood' | 'steel';
+  weight: number;
+  position: {
+    x: number;
+    y: number;
+    z: number;
+  };
+  status: 'placed' | 'excluded' | 'pending';
+}
+```
+
+### 2. KPI Card Component
+```typescript
+interface KPICard {
+  title: string;
+  value: number | string;
+  unit?: string;
+  trend?: 'up' | 'down' | 'stable';
+  color: 'success' | 'warning' | 'danger' | 'info';
+}
+```
+
+### 3. 3D Viewport Component
+```typescript
+interface Viewport3D {
+  camera: {
+    position: { x: number; y: number; z: number };
+    rotation: { x: number; y: number; z: number };
+  };
+  grid: {
+    size: number;
+    divisions: number;
+  };
+  crates: WarehouseCrate[];
+}
+```
+
+## 🔄 Development Workflow
+
+### 1. Design Phase
+1. Figma에서 UI 와이어프레임 생성
+2. 컴포넌트 라이브러리 구축
+3. 디자인 토큰 정의
+
+### 2. Development Phase
+1. Figma MCP로 디자인 데이터 가져오기
+2. 코드 자동 생성
+3. 컴포넌트 구현
+
+### 3. Integration Phase
+1. 3D 시각화 엔진과 연동
+2. 실시간 데이터 업데이트
+3. 성능 최적화
+
+## 📁 File Structure
+
+```
+HVDC_PJT/
+├── Figma-Context-MCP/          # Figma MCP 서버
+├── src/
+│   ├── warehouse_ui_wireframe.svg  # SVG 와이어프레임
+│   ├── warehouse_3d_visualization_system.py
+│   └── warehouse_stl_generator.py
+├── figma_mcp_setup.md          # 이 파일
+└── figma_design_system.json    # 디자인 시스템 정의
+```
+
+## 🚀 Next Steps
+
+1. **Figma API Token 설정**
+2. **MCP 서버 구성**
+3. **디자인 시스템 구축**
+4. **컴포넌트 라이브러리 생성**
+5. **실시간 동기화 설정**
+
+---
+
+🔧 **추천 명령어:**
+/figma_mcp setup_server [Figma MCP 서버 설정]
+/warehouse_ui create_design_system [디자인 시스템 생성]
+/figma_to_code generate_components [Figma → 코드 변환]
+/3d_visualization integrate_figma [3D 시각화 + Figma 연동] 

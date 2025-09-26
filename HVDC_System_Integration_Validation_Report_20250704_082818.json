@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-07-04T08:28:18.931288",
+  "overall_success_rate": 0.4,
+  "target_reliability": 0.95,
+  "achievement": false,
+  "detailed_results": {
+    "flow_code_0_test": {
+      "passed": false,
+      "error": "ImprovedFlowCodeSystem.determine_flow_code_improved() missing 1 required positional argument: 'row_data'"
+    },
+    "flow_code_2_test": {
+      "passed": false,
+      "error": "ImprovedFlowCodeSystem.determine_flow_code_improved() missing 1 required positional argument: 'row_data'"
+    },
+    "inventory_consistency_test": {
+      "consistency_rate": 1.0,
+      "critical_issues": 0,
+      "report_generated": true,
+      "passed": true
+    },
+    "data_integration_test": {
+      "overall_completeness": 1.0,
+      "completeness_checks": {
+        "case_no_complete": 1.0,
+        "package_complete": 1.0,
+        "location_complete": 1.0,
+        "flow_code_complete": 1.0
+      },
+      "flow_code_distribution": {
+        "4": 22,
+        "0": 21,
+        "3": 21,
+        "1": 19,
+        "2": 17
+      },
+      "total_records": 100,
+      "passed": "True"
+    },
+    "performance_test": {
+      "passed": false,
+      "error": "ImprovedFlowCodeSystem.determine_flow_code_improved() missing 1 required positional argument: 'row_data'"
+    }
+  },
+  "recommendations": [
+    "FLOW CODE 0 로직 추가 보정 필요",
+    "FLOW CODE 2 로직 정교화 필요",
+    "시스템 성능 최적화 필요"
+  ]
+}

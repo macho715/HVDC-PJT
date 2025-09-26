@@ -1,6 +1,0 @@
-@prefix ex: <http://samsung.com/project-logistics#> .
-
-ex:TransportEvent_00001 a ex:TransportEvent .
-
-ex:TransportEvent_00002 a ex:TransportEvent .
-

@@ -1,0 +1,56 @@
+{
+  "report_timestamp": "20250702_192947",
+  "current_annual_cost": 7493297,
+  "monthly_cost": 624441.4166666666,
+  "daily_cost": 20529.580821917807,
+  "cost_per_transaction_model": {
+    "0": 575,
+    "1": 1070,
+    "2": 1672,
+    "3": 2540
+  },
+  "optimization_scenarios": {
+    "Conservative": {
+      "savings": 433650,
+      "percentage": 5.8,
+      "impl_cost": 115000,
+      "roi_1year": 277.1,
+      "roi_3year": 1031.3,
+      "payback_months": 3.2,
+      "npv": 1065937
+    },
+    "Moderate": {
+      "savings": 593782,
+      "percentage": 7.9,
+      "impl_cost": 190000,
+      "roi_1year": 212.5,
+      "roi_3year": 837.6,
+      "payback_months": 3.8,
+      "npv": 1427016
+    },
+    "Aggressive": {
+      "savings": 1528092,
+      "percentage": 20.4,
+      "impl_cost": 400000,
+      "roi_1year": 282.0,
+      "roi_3year": 1046.1,
+      "payback_months": 3.1,
+      "npv": 3761374
+    }
+  },
+  "recommended_scenario": "Moderate",
+  "key_insights": [
+    "현재 연간 물류비: 7,493,297 AED (월 624,441 AED)",
+    "Moderate 시나리오 추천: 593,782 AED 절감 (7.9%)",
+    "투자회수기간: 3.8개월 (매우 빠른 회수)",
+    "3년 ROI: 838% (높은 수익성)",
+    "3년 NPV: 1,427,016 AED (강력한 투자 타당성)"
+  ],
+  "critical_success_factors": [
+    "경영진의 강력한 지원과 리더십",
+    "직원들의 적극적인 참여와 교육",
+    "단계적이고 체계적인 실행",
+    "지속적인 모니터링과 피드백",
+    "고객 서비스 품질 유지"
+  ]
+}

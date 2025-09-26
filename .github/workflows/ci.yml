@@ -1,0 +1,13 @@
+name: CI
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v2
+        with: {version: 8}
+      - run: pnpm install
+      - run: pnpm run lint
+      - run: pnpm run test
+      - run: pnpm run build 

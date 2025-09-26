@@ -1,0 +1,28 @@
+{
+  "data_load": {
+    "raw_count": 7779,
+    "processed_count": 7779,
+    "has_flow_code": true,
+    "has_status_location": true
+  },
+  "data_integrity": {
+    "flow_range_valid": true,
+    "missing_flow_codes": 0,
+    "duplicate_records": 0,
+    "flow_codes": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  "flow_distribution": {
+    "distribution": {
+      "0": 476,
+      "1": 652,
+      "2": 2731,
+      "3": 2977,
+      "4": 943
+    },
+    "code_0_reasonable": 

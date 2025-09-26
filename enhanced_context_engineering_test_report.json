@@ -1,0 +1,198 @@
+{
+  "total_tests": 7,
+  "passed_tests": 6,
+  "pass_rate": 85.71428571428571,
+  "results": [
+    [
+      "업계 표준 지표",
+      {
+        "precision": 0.6666666666666666,
+        "recall": 0.02,
+        "groundedness": 0.3125,
+        "memory_quality": {
+          "freshness": 0.5,
+          "relevance": 1.0,
+          "coherence": 0.5,
+          "penalty": 0.0
+        }
+      }
+    ],
+    [
+      "향상된 점수 시스템",
+      {
+        "complete_score": 0.6931666666666667,
+        "partial_score": 0.2833333333333333,
+        "empty_score": 0.05
+      }
+    ],
+    [
+      "응답 품질 평가",
+      {
+        "excellent_score": 0.825,
+        "average_score": 0.69,
+        "error_score": 0.028333333333333315
+      }
+    ],
+    [
+      "동적 임계값",
+      {
+        "initial_threshold": 0.85,
+        "updated_threshold": 0.92372281323269,
+        "threshold_change": 0.07372281323269003
+      }
+    ],
+    [
+      "메모리 패널티",
+      {
+        "score_with_memory": 0.2,
+        "score_without_memory": 0.15000000000000002,
+        "penalty_effect": 0.04999999999999999
+      }
+    ],
+    [
+      "품질 분포",
+      {
+        "scores": [
+          0.5265,
+          0.5265,
+          0.5265,
+          0.5265,
+          0.5265,
+          0.325,
+          0.325,
+          0.325,
+          0.325,
+          0.325,
+          0.325,
+          0.325,
+          0.325,
+          0.15000000000000002,
+          0.15000000000000002,
+          0.15000000000000002
+        ],
+        "distribution": {
+          "excellent": 0,
+          "good": 0,
+          "fair": 5,
+          "poor": 11
+        },
+        "statistics": {
+          "mean": 0.35515624999999995,
+          "std": 0.1323668810954519,
+          "min": 0.15000000000000002,
+          "max": 0.5265
+        }
+      }
+    ],
+    [
+      "향상된 통합",
+      {
+        "execution_result": {
+          "status": "SUCCESS",
+          "confidence": 0.92,
+          "mode": "PRIME",
+          "command": "enhance_dashboard",
+          "parameters": {
+            "dashboard_id": "main",
+            "enhancement_type": "weather_integration"
+          },
+          "recommended_commands": [
+            "get_kpi",
+            "enhance_dashboard"
+          ],
+          "timestamp": "2025-07-14T21:47:46.534315",
+          "enhanced_context_engineering": {
+            "context_score": 0.49583333333333335,
+            "response_score": 0.796,
+            "context_precision": 0.0,
+            "context_recall": 0.0,
+            "groundedness": 0.125,
+            "field_resonance": 0.85,
+            "attractor_strength": 0.8,
+            "memory_quality": {
+              "freshness": 1.0,
+              "relevance": 1.0,
+              "coherence": 1.0
+            },
+            "context_history_length": 1,
+            "dynamic_thresholds": {
+              "confidence": 0.85,
+              "context_precision": 0.7,
+              "context_recall": 0.7,
+              "groundedness": 0.8,
+              "memory_penalty": 0.05
+            },
+            "performance_trend": "insufficient_data"
+          }
+        },
+        "analytics": {
+          "total_contexts": 1,
+          "average_context_score": 0.5958333333333333,
+          "average_response_score": 0.796,
+          "average_precision": 0.0,
+          "average_recall": 0.0,
+          "average_groundedness": 0.125,
+          "field_resonance_trend": [
+            0.85
+          ],
+          "attractor_strength_trend": [
+            0.8
+          ],
+          "memory_quality": {
+            "average_freshness": 1.0,
+            "average_relevance": 1.0,
+            "average_coherence": 1.0
+          },
+          "most_used_tools": [
+            [
+              "weather_api",
+              1
+            ],
+            [
+              "kpi_database",
+              1
+            ],
+            [
+              "html_generator",
+              1
+            ],
+            [
+              "performance_monitor",
+              1
+            ]
+          ],
+          "enhanced_quality_distribution": {
+            "excellent": 0,
+            "good": 0,
+            "fair": 1,
+            "poor": 0
+          },
+          "performance_metrics": {
+            "context_scores": [
+              0.5958333333333333
+            ],
+            "response_scores": [
+              0.796
+            ],
+            "precision_scores": [
+              0.0
+            ],
+            "recall_scores": [
+              0.0
+            ],
+            "groundedness_scores": [
+              0.125
+            ]
+          },
+          "dynamic_thresholds": {
+            "confidence": 0.85,
+            "context_precision": 0.7,
+            "context_recall": 0.7,
+            "groundedness": 0.8,
+            "memory_penalty": 0.05
+          }
+        }
+      }
+    ]
+  ]
+}

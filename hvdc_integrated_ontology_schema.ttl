@@ -1,0 +1,505 @@
+# HVDC 프로젝트 통합 온톨로지 스키마 v3.0.0
+# Generated: 2025-01-04
+# MACHO-GPT v3.4-mini 표준 준수
+# Samsung C&T × ADNOC·DSV Partnership
+
+@prefix ex: <http://samsung.com/project-logistics#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# 온톨로지 선언
+ex: a owl:Ontology ;
+    rdfs:label "HVDC Project Integrated Ontology"@en ;
+    rdfs:label "HVDC 프로젝트 통합 온톨로지"@ko ;
+    rdfs:comment "Samsung C&T × ADNOC·DSV Partnership 물류 온톨로지"@ko ;
+    owl:versionInfo "3.0.0" ;
+    owl:versionIRI <http://samsung.com/project-logistics#v3.0.0> .
+
+# ====== 핵심 클래스 정의 ======
+
+# 1. TransportEvent - 물류 이동 이벤트
+ex:TransportEvent a owl:Class ;
+    rdfs:label "Transport Event"@en ;
+    rdfs:label "운송 이벤트"@ko ;
+    rdfs:comment "물류 이동 이벤트 (IN/OUT/TRANSFER)"@ko .
+
+# 2. StockSnapshot - 재고 스냅샷
+ex:StockSnapshot a owl:Class ;
+    rdfs:label "Stock Snapshot"@en ;
+    rdfs:label "재고 스냅샷"@ko ;
+    rdfs:comment "특정 시점의 재고 상태"@ko .
+
+# 3. 창고 계층 구조
+ex:Warehouse a owl:Class ;
+    rdfs:label "Warehouse"@en ;
+    rdfs:label "창고"@ko ;
+    rdfs:comment "물류 저장 시설"@ko .
+
+ex:IndoorWarehouse a owl:Class ;
+    rdfs:label "Indoor Warehouse"@en ;
+    rdfs:label "실내 창고"@ko ;
+    rdfs:comment "DSV Indoor, DSV Al Markaz, Hauler Indoor"@ko ;
+    rdfs:subClassOf ex:Warehouse .
+
+ex:OutdoorWarehouse a owl:Class ;
+    rdfs:label "Outdoor Warehouse"@en ;
+    rdfs:label "실외 창고"@ko ;
+    rdfs:comment "DSV Outdoor, DSV MZP, MOSB"@ko ;
+    rdfs:subClassOf ex:Warehouse .
+
+ex:DangerousCargoWarehouse a owl:Class ;
+    rdfs:label "Dangerous Cargo Warehouse"@en ;
+    rdfs:label "위험물 창고"@ko ;
+    rdfs:comment "AAA Storage, Dangerous Storage"@ko ;
+    rdfs:subClassOf ex:Warehouse .
+
+ex:Site a owl:Class ;
+    rdfs:label "Site"@en ;
+    rdfs:label "현장"@ko ;
+    rdfs:comment "AGI Site, DAS Site, MIR Site, SHU Site"@ko ;
+    rdfs:subClassOf ex:Warehouse .
+
+ex:OffshoreBase a owl:Class ;
+    rdfs:label "Offshore Base"@en ;
+    rdfs:label "해상 기지"@ko ;
+    rdfs:comment "MOSB, Marine Base, Offshore Base"@ko ;
+    rdfs:subClassOf ex:Warehouse .
+
+# 4. 물품 및 컨테이너
+ex:Case a owl:Class ;
+    rdfs:label "Case"@en ;
+    rdfs:label "케이스"@ko ;
+    rdfs:comment "물품 케이스"@ko .
+
+ex:Item a owl:Class ;
+    rdfs:label "Item"@en ;
+    rdfs:label "아이템"@ko ;
+    rdfs:comment "개별 물품"@ko .
+
+ex:Container a owl:Class ;
+    rdfs:label "Container"@en ;
+    rdfs:label "컨테이너"@ko ;
+    rdfs:comment "운송 컨테이너"@ko .
+
+# 5. 화물 분류
+ex:Cargo a owl:Class ;
+    rdfs:label "Cargo"@en ;
+    rdfs:label "화물"@ko ;
+    rdfs:comment "운송 화물"@ko .
+
+ex:HitachiCargo a owl:Class ;
+    rdfs:label "Hitachi Cargo"@en ;
+    rdfs:label "히타치 화물"@ko ;
+    rdfs:comment "히타치 제조 화물"@ko ;
+    rdfs:subClassOf ex:Cargo .
+
+ex:SiemensCargo a owl:Class ;
+    rdfs:label "Siemens Cargo"@en ;
+    rdfs:label "지멘스 화물"@ko ;
+    rdfs:comment "지멘스 제조 화물"@ko ;
+    rdfs:subClassOf ex:Cargo .
+
+ex:PreArrivalItem a owl:Class ;
+    rdfs:label "Pre Arrival Item"@en ;
+    rdfs:label "사전 도착 아이템"@ko ;
+    rdfs:comment "아직 도착하지 않은 물품"@ko .
+
+# 6. 인보이스 및 비용
+ex:Invoice a owl:Class ;
+    rdfs:label "Invoice"@en ;
+    rdfs:label "인보이스"@ko ;
+    rdfs:comment "청구서"@ko .
+
+ex:InvoiceLineItem a owl:Class ;
+    rdfs:label "Invoice Line Item"@en ;
+    rdfs:label "인보이스 라인 아이템"@ko ;
+    rdfs:comment "인보이스 세부 항목"@ko .
+
+ex:ChargeSummary a owl:Class ;
+    rdfs:label "Charge Summary"@en ;
+    rdfs:label "요금 요약"@ko ;
+    rdfs:comment "요금 집계 정보"@ko .
+
+ex:CostCenter a owl:Class ;
+    rdfs:label "Cost Center"@en ;
+    rdfs:label "비용 센터"@ko ;
+    rdfs:comment "OFCO 비용 센터"@ko .
+
+# 7. 기타 클래스
+ex:Vendor a owl:Class ;
+    rdfs:label "Vendor"@en ;
+    rdfs:label "벤더"@ko ;
+    rdfs:comment "공급업체"@ko .
+
+ex:ShippingDocument a owl:Class ;
+    rdfs:label "Shipping Document"@en ;
+    rdfs:label "선적 문서"@ko ;
+    rdfs:comment "선적 관련 문서"@ko .
+
+ex:Dataset a owl:Class ;
+    rdfs:label "Dataset"@en ;
+    rdfs:label "데이터셋"@ko ;
+    rdfs:comment "데이터 집합"@ko .
+
+# ====== 속성 정의 ======
+
+# 1. 기본 식별자
+ex:hasCase a owl:DatatypeProperty ;
+    rdfs:label "케이스 번호"@ko ;
+    rdfs:domain ex:TransportEvent ;
+    rdfs:range xsd:string .
+
+ex:hasRecordId a owl:DatatypeProperty ;
+    rdfs:label "레코드 ID"@ko ;
+    rdfs:range xsd:string .
+
+# 2. 날짜 속성
+ex:hasDate a owl:DatatypeProperty ;
+    rdfs:label "날짜"@ko ;
+    rdfs:domain ex:TransportEvent ;
+    rdfs:range xsd:dateTime .
+
+ex:hasOperationMonth a owl:DatatypeProperty ;
+    rdfs:label "작업 월"@ko ;
+    rdfs:range xsd:date .
+
+ex:hasStartDate a owl:DatatypeProperty ;
+    rdfs:label "시작 날짜"@ko ;
+    rdfs:range xsd:date .
+
+ex:hasFinishDate a owl:DatatypeProperty ;
+    rdfs:label "완료 날짜"@ko ;
+    rdfs:range xsd:date .
+
+ex:hasInvoiceDate a owl:DatatypeProperty ;
+    rdfs:label "인보이스 날짜"@ko ;
+    rdfs:range xsd:date .
+
+# 3. 위치 속성
+ex:hasLocation a owl:DatatypeProperty ;
+    rdfs:label "위치"@ko ;
+    rdfs:domain ex:TransportEvent ;
+    rdfs:range xsd:string .
+
+ex:hasWarehouseName a owl:DatatypeProperty ;
+    rdfs:label "창고명"@ko ;
+    rdfs:range xsd:string .
+
+# 4. 수량 및 물리적 속성
+ex:hasQuantity a owl:DatatypeProperty ;
+    rdfs:label "수량"@ko ;
+    rdfs:domain ex:TransportEvent ;
+    rdfs:range xsd:integer .
+
+ex:hasPackageCount a owl:DatatypeProperty ;
+    rdfs:label "패키지 수"@ko ;
+    rdfs:domain ex:TransportEvent ;
+    rdfs:range xsd:integer .
+
+ex:hasWeight a owl:DatatypeProperty ;
+    rdfs:label "무게(kg)"@ko ;
+    rdfs:domain ex:TransportEvent ;
+    rdfs:range xsd:decimal .
+
+ex:hasCBM a owl:DatatypeProperty ;
+    rdfs:label "부피(CBM)"@ko ;
+    rdfs:domain ex:TransportEvent ;
+    rdfs:range xsd:decimal .
+
+ex:hasSQM a owl:DatatypeProperty ;
+    rdfs:label "면적(SQM)"@ko ;
+    rdfs:range xsd:decimal .
+
+# 5. 금액 속성
+ex:hasAmount a owl:DatatypeProperty ;
+    rdfs:label "금액"@ko ;
+    rdfs:domain ex:TransportEvent ;
+    rdfs:range xsd:decimal .
+
+ex:hasTotalAmount a owl:DatatypeProperty ;
+    rdfs:label "총액"@ko ;
+    rdfs:range xsd:decimal .
+
+ex:hasHandlingIn a owl:DatatypeProperty ;
+    rdfs:label "입고 하역비"@ko ;
+    rdfs:range xsd:decimal .
+
+ex:hasHandlingOut a owl:DatatypeProperty ;
+    rdfs:label "출고 하역비"@ko ;
+    rdfs:range xsd:decimal .
+
+ex:hasHandlingFee a owl:DatatypeProperty ;
+    rdfs:label "하역비"@ko ;
+    rdfs:range xsd:decimal .
+
+ex:hasRateUSD a owl:DatatypeProperty ;
+    rdfs:label "USD 요율"@ko ;
+    rdfs:range xsd:decimal .
+
+ex:hasTotalUSD a owl:DatatypeProperty ;
+    rdfs:label "USD 총액"@ko ;
+    rdfs:range xsd:decimal .
+
+# 6. 컨테이너 속성
+ex:has20FTContainer a owl:DatatypeProperty ;
+    rdfs:label "20피트 컨테이너"@ko ;
+    rdfs:range xsd:integer .
+
+ex:has40FTContainer a owl:DatatypeProperty ;
+    rdfs:label "40피트 컨테이너"@ko ;
+    rdfs:range xsd:integer .
+
+ex:has20FRContainer a owl:DatatypeProperty ;
+    rdfs:label "20피트 FR 컨테이너"@ko ;
+    rdfs:range xsd:integer .
+
+ex:has40FRContainer a owl:DatatypeProperty ;
+    rdfs:label "40피트 FR 컨테이너"@ko ;
+    rdfs:range xsd:integer .
+
+ex:hasContainerStuffing a owl:DatatypeProperty ;
+    rdfs:label "컨테이너 적재 수량"@ko ;
+    rdfs:range xsd:integer .
+
+ex:hasContainerUnstuffing a owl:DatatypeProperty ;
+    rdfs:label "컨테이너 하역 수량"@ko ;
+    rdfs:range xsd:integer .
+
+# 7. 장비 속성
+ex:hasForklift a owl:DatatypeProperty ;
+    rdfs:label "포크리프트"@ko ;
+    rdfs:range xsd:decimal .
+
+ex:hasCrane a owl:DatatypeProperty ;
+    rdfs:label "크레인"@ko ;
+    rdfs:range xsd:decimal .
+
+ex:hasUnstuffing a owl:DatatypeProperty ;
+    rdfs:label "하역 작업"@ko ;
+    rdfs:range xsd:decimal .
+
+ex:hasStuffing a owl:DatatypeProperty ;
+    rdfs:label "적재 작업"@ko ;
+    rdfs:range xsd:decimal .
+
+# 8. 분류 속성
+ex:hasCategory a owl:DatatypeProperty ;
+    rdfs:label "카테고리"@ko ;
+    rdfs:range xsd:string .
+
+ex:hasVendor a owl:DatatypeProperty ;
+    rdfs:label "벤더"@ko ;
+    rdfs:range xsd:string .
+
+ex:hasTransactionType a owl:DatatypeProperty ;
+    rdfs:label "트랜잭션 타입"@ko ;
+    rdfs:range xsd:string .
+
+ex:hasCargoType a owl:DatatypeProperty ;
+    rdfs:label "화물 타입"@ko ;
+    rdfs:range xsd:string .
+
+ex:hasHVDCCode a owl:DatatypeProperty ;
+    rdfs:label "HVDC 코드"@ko ;
+    rdfs:range xsd:string .
+
+ex:hasLogisticsFlowCode a owl:DatatypeProperty ;
+    rdfs:label "물류 흐름 코드"@ko ;
+    rdfs:range xsd:integer .
+
+ex:hasWHHandling a owl:DatatypeProperty ;
+    rdfs:label "창고 처리"@ko ;
+    rdfs:range xsd:integer .
+
+# 9. 상태 속성
+ex:hasStatus a owl:DatatypeProperty ;
+    rdfs:label "상태"@ko ;
+    rdfs:range xsd:string .
+
+ex:hasCurrentStatus a owl:DatatypeProperty ;
+    rdfs:label "현재 상태"@ko ;
+    rdfs:range xsd:string .
+
+ex:hasStorageType a owl:DatatypeProperty ;
+    rdfs:label "저장 타입"@ko ;
+    rdfs:range xsd:string .
+
+ex:hasVerificationStatus a owl:DatatypeProperty ;
+    rdfs:label "검증 상태"@ko ;
+    rdfs:range xsd:string .
+
+# 10. 문서 속성
+ex:hasDocumentRef a owl:DatatypeProperty ;
+    rdfs:label "문서 참조"@ko ;
+    rdfs:range xsd:string .
+
+ex:hasShippingNumber a owl:DatatypeProperty ;
+    rdfs:label "선적 번호"@ko ;
+    rdfs:range xsd:integer .
+
+ex:hasJobNumber a owl:DatatypeProperty ;
+    rdfs:label "작업 번호"@ko ;
+    rdfs:range xsd:string .
+
+ex:hasMasterBL a owl:DatatypeProperty ;
+    rdfs:label "마스터 BL"@ko ;
+    rdfs:range xsd:string .
+
+ex:hasRefNo a owl:DatatypeProperty ;
+    rdfs:label "참조 번호"@ko ;
+    rdfs:range xsd:integer .
+
+ex:hasCustomerID a owl:DatatypeProperty ;
+    rdfs:label "고객 ID"@ko ;
+    rdfs:range xsd:string .
+
+# 11. 비용 세부 속성
+ex:hasCustomsClearanceFee a owl:DatatypeProperty ;
+    rdfs:label "통관 수수료"@ko ;
+    rdfs:range xsd:decimal .
+
+ex:hasDOFee a owl:DatatypeProperty ;
+    rdfs:label "DO 수수료"@ko ;
+    rdfs:range xsd:decimal .
+
+ex:hasPortHandlingCharge a owl:DatatypeProperty ;
+    rdfs:label "항만 하역비"@ko ;
+    rdfs:range xsd:decimal .
+
+ex:hasInlandTruckingCharge a owl:DatatypeProperty ;
+    rdfs:label "내륙 운송비"@ko ;
+    rdfs:range xsd:decimal .
+
+ex:hasInspectionFee a owl:DatatypeProperty ;
+    rdfs:label "검사 수수료"@ko ;
+    rdfs:range xsd:decimal .
+
+ex:hasDetentionCharge a owl:DatatypeProperty ;
+    rdfs:label "체화료"@ko ;
+    rdfs:range xsd:decimal .
+
+ex:hasStorageCharge a owl:DatatypeProperty ;
+    rdfs:label "보관료"@ko ;
+    rdfs:range xsd:decimal .
+
+ex:hasOtherCharges a owl:DatatypeProperty ;
+    rdfs:label "기타 요금"@ko ;
+    rdfs:range xsd:decimal .
+
+# 12. 기타 속성
+ex:hasChargeDescription a owl:DatatypeProperty ;
+    rdfs:label "요금 설명"@ko ;
+    rdfs:range xsd:string .
+
+ex:hasCalculationLogic a owl:DatatypeProperty ;
+    rdfs:label "계산 로직"@ko ;
+    rdfs:range xsd:string .
+
+ex:hasSupportingEvidence a owl:DatatypeProperty ;
+    rdfs:label "증빙 자료"@ko ;
+    rdfs:range xsd:string .
+
+ex:hasRateSource a owl:DatatypeProperty ;
+    rdfs:label "요율 출처"@ko ;
+    rdfs:range xsd:string .
+
+ex:hasDataSource a owl:DatatypeProperty ;
+    rdfs:label "데이터 소스"@ko ;
+    rdfs:range xsd:string .
+
+ex:hasCustomField a owl:DatatypeProperty ;
+    rdfs:label "사용자 정의 필드"@ko ;
+    rdfs:range xsd:string .
+
+ex:hasOFCO a owl:DatatypeProperty ;
+    rdfs:label "OFCO"@ko ;
+    rdfs:range xsd:string .
+
+ex:hasCostCenter a owl:DatatypeProperty ;
+    rdfs:label "비용 센터"@ko ;
+    rdfs:range xsd:string .
+
+# ====== OFCO 매핑 규칙 ======
+
+# MappingRule 클래스 정의
+ex:MappingRule a owl:Class ;
+    rdfs:label "Mapping Rule"@en ;
+    rdfs:label "매핑 규칙"@ko ;
+    rdfs:comment "OFCO 비용 센터 매핑 규칙"@ko .
+
+# MappingRule 속성
+ex:priority a owl:DatatypeProperty ;
+    rdfs:label "우선순위"@ko ;
+    rdfs:domain ex:MappingRule ;
+    rdfs:range xsd:integer .
+
+ex:regexPattern a owl:DatatypeProperty ;
+    rdfs:label "정규식 패턴"@ko ;
+    rdfs:domain ex:MappingRule ;
+    rdfs:range xsd:string .
+
+ex:mapsToCostCenterA a owl:ObjectProperty ;
+    rdfs:label "비용 센터 A 매핑"@ko ;
+    rdfs:domain ex:MappingRule ;
+    rdfs:range ex:CostCenter .
+
+ex:mapsToCostCenterB a owl:ObjectProperty ;
+    rdfs:label "비용 센터 B 매핑"@ko ;
+    rdfs:domain ex:MappingRule ;
+    rdfs:range ex:CostCenter .
+
+# ====== 인스턴스 정의 ======
+
+# 창고 인스턴스
+ex:DSVIndoor a ex:IndoorWarehouse ;
+    rdfs:label "DSV Indoor"@en .
+
+ex:DSVOutdoor a ex:OutdoorWarehouse ;
+    rdfs:label "DSV Outdoor"@en .
+
+ex:DSVAlMarkaz a ex:IndoorWarehouse ;
+    rdfs:label "DSV Al Markaz"@en .
+
+ex:DSVMZP a ex:OutdoorWarehouse ;
+    rdfs:label "DSV MZP"@en .
+
+ex:AAAStorage a ex:DangerousCargoWarehouse ;
+    rdfs:label "AAA Storage"@en .
+
+ex:MOSB a ex:OffshoreBase ;
+    rdfs:label "MOSB"@en .
+
+# 현장 인스턴스
+ex:AGISite a ex:Site ;
+    rdfs:label "AGI Site"@en .
+
+ex:DASSite a ex:Site ;
+    rdfs:label "DAS Site"@en .
+
+ex:MIRSite a ex:Site ;
+    rdfs:label "MIR Site"@en .
+
+ex:SHUSite a ex:Site ;
+    rdfs:label "SHU Site"@en .
+
+# 벤더 인스턴스
+ex:HitachiVendor a ex:Vendor ;
+    rdfs:label "Hitachi"@en .
+
+ex:SiemensVendor a ex:Vendor ;
+    rdfs:label "Siemens"@en .
+
+ex:SamsungVendor a ex:Vendor ;
+    rdfs:label "Samsung"@en .
+
+# 비용 센터 인스턴스 (OFCO 매핑용)
+ex:AT_COST a ex:CostCenter ;
+    rdfs:label "AT COST"@en .
+
+ex:CONTRACT a ex:CostCenter ;
+    rdfs:label "CONTRACT"@en .
+
+ex:PORT_HANDLING_CHARGE a ex:CostCenter ;
+    rdfs:label "PORT HANDLING CHARGE"@en . 

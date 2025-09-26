@@ -1,0 +1,15 @@
+{
+  "validation_date": "2025-07-09 20:51:23",
+  "pre_arrival_accuracy": 100.0,
+  "direct_delivery_found": 652,
+  "total_records": 7779,
+  "flow_code_distribution": {
+    "0": 476,
+    "1": 652,
+    "2": 2731,
+    "3": 2977,
+    "4": 943
+  },
+  "final_verdict": "시스템 구축 성공",
+  "business_ready": true
+}
