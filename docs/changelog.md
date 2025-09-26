@@ -1,5 +1,13 @@
 # HVDC Project Changelog
 
+## v3.5.0-alpha (2025-07-15)
+
+### ✉️ Outlook 이메일 지식베이스 파이프라인
+- `.msg` 수집 후 `extract-msg` 기반 파싱 로직 정식 반영
+- Incoterm·HS 코드 자동 검증 및 schema.org/EmailMessage JSON-LD 생성
+- Supabase pgvector 업서트용 벡터 스토어 모듈 도입 (OpenAI text-embedding-3-small 지원)
+- `tests/test_email_ingestion_pipeline.py` 신규 TDD 커버리지 포함
+
 ## v2.8.2-hotfix-EB-004 (2025-01-10)
 
 ### 🔧 Event-Based Outbound Logic 구현
