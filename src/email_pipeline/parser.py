@@ -103,13 +103,15 @@ class EmailParser:
     ) -> Iterable[EmailAttachment]:
         """첨부 파일을 저장하고 메타데이터 생성 | Store attachments and build metadata."""
 
+        name_counts: Dict[str, int] = {}
         for index, attachment in enumerate(attachments):
             filename = (
                 attachment.longFilename
                 or attachment.shortFilename
                 or f"attachment-{index + 1}"
             )
-            safe_name = self._sanitize_filename(filename)
+            base_name = self._sanitize_filename(filename)
+            safe_name = self._deduplicate_filename(base_name, name_counts)
             target_path = self.attachment_dir / message_id / safe_name
             target_path.parent.mkdir(parents=True, exist_ok=True)
             target_path.write_bytes(attachment.data)
@@ -132,6 +134,24 @@ class EmailParser:
             "".join(ch for ch in name if ch.isalnum() or ch in {".", "_", "-"})
             or "attachment"
         )
+
+    @staticmethod
+    def _deduplicate_filename(
+        base_name: str, name_counts: Dict[str, int]
+    ) -> str:
+        """Ensure attachment filenames are unique within a message."""
+
+        count = name_counts.get(base_name, 0)
+        name_counts[base_name] = count + 1
+        if count == 0:
+            return base_name
+
+        path = Path(base_name)
+        suffix = path.suffix
+        stem = path.stem
+        if not stem:
+            stem = base_name[: -len(suffix)] if suffix else base_name
+        return f"{stem}_{count}{suffix}"
 
     @staticmethod
     def _parse_addresses(raw_value: Optional[str]) -> List[str]:
