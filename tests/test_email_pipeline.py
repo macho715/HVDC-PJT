@@ -203,6 +203,29 @@ def test_repository_persists_entities(tmp_path: Path) -> None:
     assert collection.records
 
 
+def test_parser_deduplicates_duplicate_attachment_names(tmp_path: Path) -> None:
+    """중복된 첨부 파일명이 덮어쓰기 되지 않는다 | Duplicate attachments keep unique names."""
+
+    attachments = [
+        FakeAttachment("image001.png", b"first"),
+        FakeAttachment("image001.png", b"second"),
+        FakeAttachment("image001.png", b"third"),
+    ]
+    message = FakeMessage(attachments)
+
+    def loader(_: Path) -> MessageProtocol:
+        return cast(MessageProtocol, message)
+
+    parser = EmailParser(tmp_path, message_loader=loader)
+    record = parser.parse(tmp_path / "mail.msg")
+
+    filenames = [attachment.filename for attachment in record.attachments]
+    assert filenames == ["image001.png", "image001_1.png", "image001_2.png"]
+
+    stored_bytes = [attachment.storage_path.read_bytes() for attachment in record.attachments]
+    assert stored_bytes == [b"first", b"second", b"third"]
+
+
 def test_ingestion_service_runs_full_pipeline(tmp_path: Path) -> None:
     """수집 서비스가 전체 파이프라인 실행 | Ingestion service runs pipeline."""
 

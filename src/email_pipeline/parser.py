@@ -104,6 +104,7 @@ class EmailParser:
         """첨부 파일을 저장하고 메타데이터 생성 | Store attachments and build metadata."""
 
         name_counts: Dict[str, int] = {}
+        used_names: set[str] = set()
         for index, attachment in enumerate(attachments):
             filename = (
                 attachment.longFilename
@@ -111,7 +112,7 @@ class EmailParser:
                 or f"attachment-{index + 1}"
             )
             base_name = self._sanitize_filename(filename)
-            safe_name = self._deduplicate_filename(base_name, name_counts)
+            safe_name = self._deduplicate_filename(base_name, name_counts, used_names)
             target_path = self.attachment_dir / message_id / safe_name
             target_path.parent.mkdir(parents=True, exist_ok=True)
             target_path.write_bytes(attachment.data)
@@ -137,12 +138,23 @@ class EmailParser:
 
     @staticmethod
     def _deduplicate_filename(
-        base_name: str, name_counts: Dict[str, int]
+        base_name: str, name_counts: Dict[str, int], used_names: set[str]
     ) -> str:
         """Ensure attachment filenames are unique within a message."""
 
         count = name_counts.get(base_name, 0)
+        candidate = EmailParser._build_candidate_name(base_name, count)
+        while candidate in used_names:
+            count += 1
+            candidate = EmailParser._build_candidate_name(base_name, count)
         name_counts[base_name] = count + 1
+        used_names.add(candidate)
+        return candidate
+
+    @staticmethod
+    def _build_candidate_name(base_name: str, count: int) -> str:
+        """Generate a candidate filename with a numeric suffix when needed."""
+
         if count == 0:
             return base_name
 
