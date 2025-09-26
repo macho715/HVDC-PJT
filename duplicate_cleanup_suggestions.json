@@ -1,0 +1,826 @@
+[
+  {
+    "keep": "C:\\HVDC PJT\\hvdc_macho_gpt\\add_warehouse_example.py",
+    "delete": [
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\hvdc_ontology_system\\add_warehouse_example.py"
+    ],
+    "reason": "동일 파일 2개 중 가장 상위 경로 유지"
+  },
+  {
+    "keep": "C:\\HVDC PJT\\hvdc_macho_gpt\\check_installation.py",
+    "delete": [
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\hvdc_ontology_system\\check_installation.py"
+    ],
+    "reason": "동일 파일 2개 중 가장 상위 경로 유지"
+  },
+  {
+    "keep": "C:\\HVDC PJT\\hvdc_macho_gpt\\database_init.py",
+    "delete": [
+      "C:\\HVDC PJT\\hvdc_ontology_system\\database_init.py"
+    ],
+    "reason": "동일 파일 2개 중 가장 상위 경로 유지"
+  },
+  {
+    "keep": "C:\\HVDC PJT\\hvdc_macho_gpt\\folder_structure.txt",
+    "delete": [
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\hvdc_ontology_system\\folder_structure.txt"
+    ],
+    "reason": "동일 파일 2개 중 가장 상위 경로 유지"
+  },
+  {
+    "keep": "C:\\HVDC PJT\\Mapping\\test_mapping_rule_patch.py",
+    "delete": [
+      "C:\\HVDC PJT\\Mapping\\test_v282_simple.py",
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\hvdc_logi_master_integrated.py",
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\test_mapping_rule_patch.py",
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\test_v282_simple.py",
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_Excel_Reporter_v282_검증완료보고서.md",
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\cleanup_files\\README_CLEANUP.md",
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\core\\__init__.py",
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_Clean_Project_Backup_v2.6_20250626\\core\\__init__.py",
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\backup_20250626_144500\\core\\__init__.py"
+    ],
+    "reason": "동일 파일 10개 중 가장 상위 경로 유지"
+  },
+  {
+    "keep": "C:\\HVDC PJT\\hvdc_macho_gpt\\INSTALLATION_GUIDE.md",
+    "delete": [
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\hvdc_ontology_system\\INSTALLATION_GUIDE.md"
+    ],
+    "reason": "동일 파일 2개 중 가장 상위 경로 유지"
+  },
+  {
+    "keep": "C:\\HVDC PJT\\hvdc_macho_gpt\\INSTALLATION_GUIDE_summary.txt",
+    "delete": [
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\hvdc_ontology_system\\INSTALLATION_GUIDE_summary.txt"
+    ],
+    "reason": "동일 파일 2개 중 가장 상위 경로 유지"
+  },
+  {
+    "keep": "C:\\HVDC PJT\\hvdc_macho_gpt\\integrated_system.py",
+    "delete": [
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\hvdc_ontology_system\\integrated_system.py"
+    ],
+    "reason": "동일 파일 2개 중 가장 상위 경로 유지"
+  },
+  {
+    "keep": "C:\\HVDC PJT\\hvdc_macho_gpt\\macho_flow_code_validation.py",
+    "delete": [
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\macho_flow_code_validation.py"
+    ],
+    "reason": "동일 파일 2개 중 가장 상위 경로 유지"
+  },
+  {
+    "keep": "C:\\HVDC PJT\\hvdc_macho_gpt\\README_summary.txt",
+    "delete": [
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\hvdc_ontology_system\\README_summary.txt"
+    ],
+    "reason": "동일 파일 2개 중 가장 상위 경로 유지"
+  },
+  {
+    "keep": "C:\\HVDC PJT\\hvdc_macho_gpt\\requirements.txt",
+    "delete": [
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\hvdc_ontology_system\\requirements.txt"
+    ],
+    "reason": "동일 파일 2개 중 가장 상위 경로 유지"
+  },
+  {
+    "keep": "C:\\HVDC PJT\\hvdc_macho_gpt\\run_hvdc.bat",
+    "delete": [
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\hvdc_ontology_system\\run_hvdc.bat"
+    ],
+    "reason": "동일 파일 2개 중 가장 상위 경로 유지"
+  },
+  {
+    "keep": "C:\\HVDC PJT\\hvdc_macho_gpt\\test_mcp_automation.txt",
+    "delete": [
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\hvdc_ontology_system\\test_mcp_automation.txt"
+    ],
+    "reason": "동일 파일 2개 중 가장 상위 경로 유지"
+  },
+  {
+    "keep": "C:\\HVDC PJT\\hvdc_macho_gpt\\tree_output.txt",
+    "delete": [
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\hvdc_ontology_system\\tree_output.txt"
+    ],
+    "reason": "동일 파일 2개 중 가장 상위 경로 유지"
+  },
+  {
+    "keep": "C:\\HVDC PJT\\hvdc_macho_gpt\\HVDC STATUS\\deploy-MintLight\\README.md",
+    "delete": [
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\HVDC STATUS\\deploy-MintLight\\theme_MintLight.json"
+    ],
+    "reason": "동일 파일 2개 중 가장 상위 경로 유지"
+  },
+  {
+    "keep": "C:\\HVDC PJT\\hvdc_ontology_system\\hvdc_cli.py",
+    "delete": [
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\hvdc_ontology_system\\hvdc_cli.py"
+    ],
+    "reason": "동일 파일 2개 중 가장 상위 경로 유지"
+  },
+  {
+    "keep": "C:\\HVDC PJT\\hvdc_ontology_system\\hvdc_engine.py",
+    "delete": [
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\hvdc_ontology_system\\hvdc_engine.py"
+    ],
+    "reason": "동일 파일 2개 중 가장 상위 경로 유지"
+  },
+  {
+    "keep": "C:\\HVDC PJT\\hvdc_ontology_system\\run_example.py",
+    "delete": [
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\hvdc_ontology_system\\run_example.py"
+    ],
+    "reason": "동일 파일 2개 중 가장 상위 경로 유지"
+  },
+  {
+    "keep": "C:\\HVDC PJT\\hvdc_ontology_system\\config\\settings.json",
+    "delete": [
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\hvdc_ontology_system\\config\\settings.json"
+    ],
+    "reason": "동일 파일 2개 중 가장 상위 경로 유지"
+  },
+  {
+    "keep": "C:\\HVDC PJT\\hvdc_macho_gpt\\src\\logi_meta_fixed.py",
+    "delete": [
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\hvdc_ontology_system\\src\\logi_meta_fixed.py"
+    ],
+    "reason": "동일 파일 2개 중 가장 상위 경로 유지"
+  },
+  {
+    "keep": "C:\\HVDC PJT\\Mapping\\contract_inland_trucking_charge_rates_v1.1.md",
+    "delete": [
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\contract_inland_trucking_charge_rates_v1.1.md",
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\inland invoice\\contract_inland_trucking_charge_rates_v1.1.md"
+    ],
+    "reason": "동일 파일 3개 중 가장 상위 경로 유지"
+  },
+  {
+    "keep": "C:\\HVDC PJT\\Mapping\\DOMESTIC_DELIVERY_APRIL_VERIFICATION.md",
+    "delete": [
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\inland invoice\\DOMESTIC_DELIVERY_APRIL_VERIFICATION.md"
+    ],
+    "reason": "동일 파일 2개 중 가장 상위 경로 유지"
+  },
+  {
+    "keep": "C:\\HVDC PJT\\Mapping\\Domestic_Rate_Additional_Analysis.md",
+    "delete": [
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\inland invoice\\Domestic_Rate_Additional_Analysis.md"
+    ],
+    "reason": "동일 파일 2개 중 가장 상위 경로 유지"
+  },
+  {
+    "keep": "C:\\HVDC PJT\\Mapping\\Domestic_Rate_Reference_Summary.md",
+    "delete": [
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\inland invoice\\Domestic_Rate_Reference_Summary.md"
+    ],
+    "reason": "동일 파일 2개 중 가장 상위 경로 유지"
+  },
+  {
+    "keep": "C:\\HVDC PJT\\Mapping\\hvdc_inland_trucking_mapping_v27.ttl",
+    "delete": [
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\inland invoice\\hvdc_inland_trucking_mapping_v27.ttl"
+    ],
+    "reason": "동일 파일 2개 중 가장 상위 경로 유지"
+  },
+  {
+    "keep": "C:\\HVDC PJT\\Mapping\\inland_trucking_charge_rates.md",
+    "delete": [
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\inland invoice\\inland_trucking_charge_rates.md"
+    ],
+    "reason": "동일 파일 2개 중 가장 상위 경로 유지"
+  },
+  {
+    "keep": "C:\\HVDC PJT\\Mapping\\analyze_hvdc_status.py",
+    "delete": [
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\analyze_hvdc_status.py",
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\analyze_hvdc_status.py"
+    ],
+    "reason": "동일 파일 3개 중 가장 상위 경로 유지"
+  },
+  {
+    "keep": "C:\\HVDC PJT\\Mapping\\analyze_inland_trucking_v27.py",
+    "delete": [
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\analyze_inland_trucking_v27.py"
+    ],
+    "reason": "동일 파일 2개 중 가장 상위 경로 유지"
+  },
+  {
+    "keep": "C:\\HVDC PJT\\Mapping\\analyze_scnt_invoice_fixed.py",
+    "delete": [
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\analyze_scnt_invoice_fixed.py",
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\analyze_scnt_invoice_fixed.py"
+    ],
+    "reason": "동일 파일 3개 중 가장 상위 경로 유지"
+  },
+  {
+    "keep": "C:\\HVDC PJT\\Mapping\\apply_v281_patch.py",
+    "delete": [
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\apply_v281_patch.py"
+    ],
+    "reason": "동일 파일 2개 중 가장 상위 경로 유지"
+  },
+  {
+    "keep": "C:\\HVDC PJT\\Mapping\\calc_flow_code_v2.py",
+    "delete": [
+      "C:\\HVDC PJT\\Mapping\\backup_v2.8.1_1751267433\\calc_flow_code_v2.py",
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\calc_flow_code_v2.py",
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\backup_v2.8.1_1751267433\\calc_flow_code_v2.py"
+    ],
+    "reason": "동일 파일 4개 중 가장 상위 경로 유지"
+  },
+  {
+    "keep": "C:\\HVDC PJT\\Mapping\\diagnose_mosb_issue.py",
+    "delete": [
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\diagnose_mosb_issue.py"
+    ],
+    "reason": "동일 파일 2개 중 가장 상위 경로 유지"
+  },
+  {
+    "keep": "C:\\HVDC PJT\\Mapping\\expected_stock.yml",
+    "delete": [
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\expected_stock.yml",
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\expected_stock.yml",
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_Clean_Project_Backup_v2.6_20250626\\expected_stock.yml"
+    ],
+    "reason": "동일 파일 4개 중 가장 상위 경로 유지"
+  },
+  {
+    "keep": "C:\\HVDC PJT\\Mapping\\flow_code_gap_analysis.py",
+    "delete": [
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\flow_code_gap_analysis.py"
+    ],
+    "reason": "동일 파일 2개 중 가장 상위 경로 유지"
+  },
+  {
+    "keep": "C:\\HVDC PJT\\Mapping\\full_data_ontology_mapping.py",
+    "delete": [
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\full_data_ontology_mapping.py",
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\full_data_ontology_mapping.py"
+    ],
+    "reason": "동일 파일 3개 중 가장 상위 경로 유지"
+  },
+  {
+    "keep": "C:\\HVDC PJT\\Mapping\\HVDC_Invoice_Mapping_Integration_Report.md",
+    "delete": [
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\HVDC_Invoice_Mapping_Integration_Report.md"
+    ],
+    "reason": "동일 파일 2개 중 가장 상위 경로 유지"
+  },
+  {
+    "keep": "C:\\HVDC PJT\\Mapping\\HVDC_Logistics_Flow_Report.md",
+    "delete": [
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\HVDC_Logistics_Flow_Report.md"
+    ],
+    "reason": "동일 파일 2개 중 가장 상위 경로 유지"
+  },
+  {
+    "keep": "C:\\HVDC PJT\\Mapping\\HVDC_MAPPING_BACKUP_SUMMARY_v2.7.md",
+    "delete": [
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\HVDC_MAPPING_BACKUP_SUMMARY_v2.7.md"
+    ],
+    "reason": "동일 파일 2개 중 가장 상위 경로 유지"
+  },
+  {
+    "keep": "C:\\HVDC PJT\\Mapping\\HVDC_Real_Data_Validation_Report.md",
+    "delete": [
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\HVDC_Real_Data_Validation_Report.md"
+    ],
+    "reason": "동일 파일 2개 중 가장 상위 경로 유지"
+  },
+  {
+    "keep": "C:\\HVDC PJT\\Mapping\\hvdc_status_637records_20250629_043157.ttl",
+    "delete": [
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\hvdc_status_637records_20250629_043157.ttl",
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\rdf_output\\hvdc_status_637records_20250629_043157.ttl"
+    ],
+    "reason": "동일 파일 3개 중 가장 상위 경로 유지"
+  },
+  {
+    "keep": "C:\\HVDC PJT\\Mapping\\HVDC_v282_Patch_Summary.md",
+    "delete": [
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\HVDC_v282_Patch_Summary.md"
+    ],
+    "reason": "동일 파일 2개 중 가장 상위 경로 유지"
+  },
+  {
+    "keep": "C:\\HVDC PJT\\Mapping\\HVDC_v282_Project_Final_Report.md",
+    "delete": [
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\HVDC_v282_Project_Final_Report.md"
+    ],
+    "reason": "동일 파일 2개 중 가장 상위 경로 유지"
+  },
+  {
+    "keep": "C:\\HVDC PJT\\Mapping\\HVDC_v282_VERIFICATION_COMPLETE.md",
+    "delete": [
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\HVDC_v282_VERIFICATION_COMPLETE.md"
+    ],
+    "reason": "동일 파일 2개 중 가장 상위 경로 유지"
+  },
+  {
+    "keep": "C:\\HVDC PJT\\Mapping\\HVDC_v282_Work_Log.md",
+    "delete": [
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\HVDC_v282_Work_Log.md"
+    ],
+    "reason": "동일 파일 2개 중 가장 상위 경로 유지"
+  },
+  {
+    "keep": "C:\\HVDC PJT\\Mapping\\HVDC_v28_UPGRADE_GUIDE.md",
+    "delete": [
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\HVDC_v28_UPGRADE_GUIDE.md"
+    ],
+    "reason": "동일 파일 2개 중 가장 상위 경로 유지"
+  },
+  {
+    "keep": "C:\\HVDC PJT\\Mapping\\invoice_mapping_integration_v283.ttl",
+    "delete": [
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\invoice_mapping_integration_v283.ttl"
+    ],
+    "reason": "동일 파일 2개 중 가장 상위 경로 유지"
+  },
+  {
+    "keep": "C:\\HVDC PJT\\Mapping\\mapping_rules_v2.4_backup.json",
+    "delete": [
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\mapping_rules_v2.4_backup.json",
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\backup_20250626_144500\\mapping_rules_v2.4.json",
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\cleanup_files\\old_versions\\mapping_rules_v2.4.json"
+    ],
+    "reason": "동일 파일 4개 중 가장 상위 경로 유지"
+  },
+  {
+    "keep": "C:\\HVDC PJT\\Mapping\\mapping_rules_v2.6.json",
+    "delete": [
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\mapping_rules_v2.6.json",
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\mapping_rules_v2.6.json"
+    ],
+    "reason": "동일 파일 3개 중 가장 상위 경로 유지"
+  },
+  {
+    "keep": "C:\\HVDC PJT\\Mapping\\mapping_rules_v2.8.json",
+    "delete": [
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\mapping_rules_v2.8.json"
+    ],
+    "reason": "동일 파일 2개 중 가장 상위 경로 유지"
+  },
+  {
+    "keep": "C:\\HVDC PJT\\Mapping\\mapping_utils.py",
+    "delete": [
+      "C:\\HVDC PJT\\hvdc_ontology_system\\mapping_utils.py",
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\mapping_utils.py"
+    ],
+    "reason": "동일 파일 3개 중 가장 상위 경로 유지"
+  },
+  {
+    "keep": "C:\\HVDC PJT\\Mapping\\ontology_mapper.py",
+    "delete": [
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\ontology_mapper.py",
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\ontology_mapper.py"
+    ],
+    "reason": "동일 파일 3개 중 가장 상위 경로 유지"
+  },
+  {
+    "keep": "C:\\HVDC PJT\\Mapping\\ontology_mapping_example.py",
+    "delete": [
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\ontology_mapping_example.py",
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\ontology_mapping_example.py"
+    ],
+    "reason": "동일 파일 3개 중 가장 상위 경로 유지"
+  },
+  {
+    "keep": "C:\\HVDC PJT\\Mapping\\ontology_mapping_v2.4.md",
+    "delete": [
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\ontology_mapping_v2.4.md",
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\docs\\ontology_mapping_v2.4.md"
+    ],
+    "reason": "동일 파일 3개 중 가장 상위 경로 유지"
+  },
+  {
+    "keep": "C:\\HVDC PJT\\Mapping\\ontology_reasoning_engine.py",
+    "delete": [
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\ontology_reasoning_engine.py",
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\ontology_reasoning_engine.py"
+    ],
+    "reason": "동일 파일 3개 중 가장 상위 경로 유지"
+  },
+  {
+    "keep": "C:\\HVDC PJT\\Mapping\\quick_test_v282.py",
+    "delete": [
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\quick_test_v282.py"
+    ],
+    "reason": "동일 파일 2개 중 가장 상위 경로 유지"
+  },
+  {
+    "keep": "C:\\HVDC PJT\\Mapping\\real_data_analysis_summary.md",
+    "delete": [
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\real_data_analysis_summary.md"
+    ],
+    "reason": "동일 파일 2개 중 가장 상위 경로 유지"
+  },
+  {
+    "keep": "C:\\HVDC PJT\\Mapping\\real_data_ontology_mapping.py",
+    "delete": [
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\real_data_ontology_mapping.py",
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\real_data_ontology_mapping.py"
+    ],
+    "reason": "동일 파일 3개 중 가장 상위 경로 유지"
+  },
+  {
+    "keep": "C:\\HVDC PJT\\Mapping\\real_data_validation.py",
+    "delete": [
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\real_data_validation.py"
+    ],
+    "reason": "동일 파일 2개 중 가장 상위 경로 유지"
+  },
+  {
+    "keep": "C:\\HVDC PJT\\Mapping\\repair_columns_tool.py",
+    "delete": [
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\repair_columns_tool.py"
+    ],
+    "reason": "동일 파일 2개 중 가장 상위 경로 유지"
+  },
+  {
+    "keep": "C:\\HVDC PJT\\Mapping\\scnt_invoice_fixed_37records_20250629_044010.ttl",
+    "delete": [
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\scnt_invoice_fixed_37records_20250629_044010.ttl",
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\rdf_output\\scnt_invoice_fixed_37records_20250629_044010.ttl"
+    ],
+    "reason": "동일 파일 3개 중 가장 상위 경로 유지"
+  },
+  {
+    "keep": "C:\\HVDC PJT\\Mapping\\scnt_query_executor.py",
+    "delete": [
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\scnt_query_executor.py",
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\scnt_query_executor.py"
+    ],
+    "reason": "동일 파일 3개 중 가장 상위 경로 유지"
+  },
+  {
+    "keep": "C:\\HVDC PJT\\Mapping\\test_v282_verification.py",
+    "delete": [
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\test_v282_verification.py"
+    ],
+    "reason": "동일 파일 2개 중 가장 상위 경로 유지"
+  },
+  {
+    "keep": "C:\\HVDC PJT\\Mapping\\test_v283_patch.py",
+    "delete": [
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\test_v283_patch.py"
+    ],
+    "reason": "동일 파일 2개 중 가장 상위 경로 유지"
+  },
+  {
+    "keep": "C:\\HVDC PJT\\Mapping\\test_v28_upgrade.py",
+    "delete": [
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\test_v28_upgrade.py"
+    ],
+    "reason": "동일 파일 2개 중 가장 상위 경로 유지"
+  },
+  {
+    "keep": "C:\\HVDC PJT\\Mapping\\test_v28_upgrade_large.py",
+    "delete": [
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\test_v28_upgrade_large.py"
+    ],
+    "reason": "동일 파일 2개 중 가장 상위 경로 유지"
+  },
+  {
+    "keep": "C:\\HVDC PJT\\Mapping\\tools_ontology_mapper.py",
+    "delete": [
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\tools_ontology_mapper.py",
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\tools\\ontology_mapper.py",
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_Clean_Project_Backup_v2.6_20250626\\tools\\ontology_mapper.py"
+    ],
+    "reason": "동일 파일 4개 중 가장 상위 경로 유지"
+  },
+  {
+    "keep": "C:\\HVDC PJT\\Mapping\\tools_update_expected_yaml.py",
+    "delete": [
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\tools_update_expected_yaml.py",
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\tools\\update_expected_yaml.py",
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_Clean_Project_Backup_v2.6_20250626\\tools\\update_expected_yaml.py"
+    ],
+    "reason": "동일 파일 4개 중 가장 상위 경로 유지"
+  },
+  {
+    "keep": "C:\\HVDC PJT\\Mapping\\tools_validate_yaml_ontology.py",
+    "delete": [
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\tools_validate_yaml_ontology.py",
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\tools\\validate_yaml_ontology.py",
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_Clean_Project_Backup_v2.6_20250626\\tools\\validate_yaml_ontology.py"
+    ],
+    "reason": "동일 파일 4개 중 가장 상위 경로 유지"
+  },
+  {
+    "keep": "C:\\HVDC PJT\\Mapping\\validate_ontology.py",
+    "delete": [
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\validate_ontology.py",
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\validate_ontology.py"
+    ],
+    "reason": "동일 파일 3개 중 가장 상위 경로 유지"
+  },
+  {
+    "keep": "C:\\HVDC PJT\\Mapping\\verify_invoice_integration.py",
+    "delete": [
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\verify_invoice_integration.py"
+    ],
+    "reason": "동일 파일 2개 중 가장 상위 경로 유지"
+  },
+  {
+    "keep": "C:\\HVDC PJT\\Mapping\\backup_v2.8.1_1751267433\\mapping_utils.py",
+    "delete": [
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\backup_v2.8.1_1751267433\\mapping_utils.py"
+    ],
+    "reason": "동일 파일 2개 중 가장 상위 경로 유지"
+  },
+  {
+    "keep": "C:\\HVDC PJT\\Mapping\\reasoning_output\\validation\\validation_hvdc_graph_20250630_102016.json",
+    "delete": [
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\Mapping\\reasoning_output\\validation\\validation_hvdc_graph_20250630_102016.json",
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\reasoning_output\\validation\\validation_hvdc_graph_20250629_015915.json",
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\reasoning_output\\validation\\validation_hvdc_graph_20250629_015933.json",
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\reasoning_output\\validation\\validation_hvdc_graph_20250629_015955.json",
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\reasoning_output\\validation\\validation_hvdc_graph_20250629_020436.json"
+    ],
+    "reason": "동일 파일 6개 중 가장 상위 경로 유지"
+  },
+  {
+    "keep": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\bi_dashboard.py",
+    "delete": [
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_Clean_Project_Backup_v2.6_20250626\\bi_dashboard.py"
+    ],
+    "reason": "동일 파일 2개 중 가장 상위 경로 유지"
+  },
+  {
+    "keep": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\config.py",
+    "delete": [
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_Clean_Project_Backup_v2.6_20250626\\config.py",
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\backup_20250626_144500\\config.py"
+    ],
+    "reason": "동일 파일 3개 중 가장 상위 경로 유지"
+  },
+  {
+    "keep": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\data_validation_engine.py",
+    "delete": [
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_Clean_Project_Backup_v2.6_20250626\\data_validation_engine.py"
+    ],
+    "reason": "동일 파일 2개 중 가장 상위 경로 유지"
+  },
+  {
+    "keep": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\debug_handling_fee.py",
+    "delete": [
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\backup_20250626_144500\\debug_handling_fee.py"
+    ],
+    "reason": "동일 파일 2개 중 가장 상위 경로 유지"
+  },
+  {
+    "keep": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_v2.6_실행가이드.md",
+    "delete": [
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_Clean_Project_Backup_v2.6_20250626\\HVDC_v2.6_실행가이드.md"
+    ],
+    "reason": "동일 파일 2개 중 가장 상위 경로 유지"
+  },
+  {
+    "keep": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_정리된_프로젝트_구조_다이어그램.md",
+    "delete": [
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_Clean_Project_Backup_v2.6_20250626\\HVDC_정리된_프로젝트_구조_다이어그램.md"
+    ],
+    "reason": "동일 파일 2개 중 가장 상위 경로 유지"
+  },
+  {
+    "keep": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_코드구조_시각화_다이어그램.md",
+    "delete": [
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_Clean_Project_Backup_v2.6_20250626\\HVDC_코드구조_시각화_다이어그램.md"
+    ],
+    "reason": "동일 파일 2개 중 가장 상위 경로 유지"
+  },
+  {
+    "keep": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_프로젝트_전체구조_요약보고서.md",
+    "delete": [
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_Clean_Project_Backup_v2.6_20250626\\HVDC_프로젝트_전체구조_요약보고서.md"
+    ],
+    "reason": "동일 파일 2개 중 가장 상위 경로 유지"
+  },
+  {
+    "keep": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\integrated_automation_pipeline.py",
+    "delete": [
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_Clean_Project_Backup_v2.6_20250626\\integrated_automation_pipeline.py",
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\backup_20250626_144500\\integrated_automation_pipeline.py"
+    ],
+    "reason": "동일 파일 3개 중 가장 상위 경로 유지"
+  },
+  {
+    "keep": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\README.md",
+    "delete": [
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_Clean_Project_Backup_v2.6_20250626\\README.md"
+    ],
+    "reason": "동일 파일 2개 중 가장 상위 경로 유지"
+  },
+  {
+    "keep": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\requirements.txt",
+    "delete": [
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_Clean_Project_Backup_v2.6_20250626\\requirements.txt"
+    ],
+    "reason": "동일 파일 2개 중 가장 상위 경로 유지"
+  },
+  {
+    "keep": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\run_data_validation.py",
+    "delete": [
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_Clean_Project_Backup_v2.6_20250626\\run_data_validation.py"
+    ],
+    "reason": "동일 파일 2개 중 가장 상위 경로 유지"
+  },
+  {
+    "keep": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\test_end_to_end.py",
+    "delete": [
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\backup_20250626_144500\\test_end_to_end.py"
+    ],
+    "reason": "동일 파일 2개 중 가장 상위 경로 유지"
+  },
+  {
+    "keep": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\test_integration.py",
+    "delete": [
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\backup_20250626_144500\\test_integration.py"
+    ],
+    "reason": "동일 파일 2개 중 가장 상위 경로 유지"
+  },
+  {
+    "keep": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\test_inventory_amount.py",
+    "delete": [
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\backup_20250626_144500\\test_inventory_amount.py"
+    ],
+    "reason": "동일 파일 2개 중 가장 상위 경로 유지"
+  },
+  {
+    "keep": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\test_location_normalization.py",
+    "delete": [
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\backup_20250626_144500\\test_location_normalization.py"
+    ],
+    "reason": "동일 파일 2개 중 가장 상위 경로 유지"
+  },
+  {
+    "keep": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\test_system.py",
+    "delete": [
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\backup_20250626_144500\\test_system.py"
+    ],
+    "reason": "동일 파일 2개 중 가장 상위 경로 유지"
+  },
+  {
+    "keep": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\test_variance_analysis.py",
+    "delete": [
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_Clean_Project_Backup_v2.6_20250626\\test_variance_analysis.py"
+    ],
+    "reason": "동일 파일 2개 중 가장 상위 경로 유지"
+  },
+  {
+    "keep": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\valid_warehouse_ids.json",
+    "delete": [
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_Clean_Project_Backup_v2.6_20250626\\valid_warehouse_ids.json",
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\backup_20250626_144500\\valid_warehouse_ids.json"
+    ],
+    "reason": "동일 파일 3개 중 가장 상위 경로 유지"
+  },
+  {
+    "keep": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\variance_analyzer.py",
+    "delete": [
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_Clean_Project_Backup_v2.6_20250626\\variance_analyzer.py"
+    ],
+    "reason": "동일 파일 2개 중 가장 상위 경로 유지"
+  },
+  {
+    "keep": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\visualize_out_transactions.py",
+    "delete": [
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\backup_20250626_144500\\visualize_out_transactions.py"
+    ],
+    "reason": "동일 파일 2개 중 가장 상위 경로 유지"
+  },
+  {
+    "keep": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_Clean_Project_Backup_v2.6_20250626\\excel_reporter.py",
+    "delete": [
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\backup_20250626_144500\\excel_reporter.py"
+    ],
+    "reason": "동일 파일 2개 중 가장 상위 경로 유지"
+  },
+  {
+    "keep": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_Clean_Project_Backup_v2.6_20250626\\main.py",
+    "delete": [
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\backup_20250626_144500\\main.py"
+    ],
+    "reason": "동일 파일 2개 중 가장 상위 경로 유지"
+  },
+  {
+    "keep": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_Clean_Project_Backup_v2.6_20250626\\mapping_rules_v2.6.json",
+    "delete": [
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\backup_20250626_144500\\mapping_rules_v2.6.json"
+    ],
+    "reason": "동일 파일 2개 중 가장 상위 경로 유지"
+  },
+  {
+    "keep": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_Clean_Project_Backup_v2.6_20250626\\mapping_utils.py",
+    "delete": [
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\backup_20250626_144500\\mapping_utils.py"
+    ],
+    "reason": "동일 파일 2개 중 가장 상위 경로 유지"
+  },
+  {
+    "keep": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_Clean_Project_Backup_v2.6_20250626\\ontology_mapper.py",
+    "delete": [
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\backup_20250626_144500\\ontology_mapper.py"
+    ],
+    "reason": "동일 파일 2개 중 가장 상위 경로 유지"
+  },
+  {
+    "keep": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\core\\config_manager.py",
+    "delete": [
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_Clean_Project_Backup_v2.6_20250626\\core\\config_manager.py",
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\backup_20250626_144500\\core\\config_manager.py"
+    ],
+    "reason": "동일 파일 3개 중 가장 상위 경로 유지"
+  },
+  {
+    "keep": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\core\\deduplication.py",
+    "delete": [
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_Clean_Project_Backup_v2.6_20250626\\core\\deduplication.py",
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\backup_20250626_144500\\core\\deduplication.py"
+    ],
+    "reason": "동일 파일 3개 중 가장 상위 경로 유지"
+  },
+  {
+    "keep": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\core\\helpers.py",
+    "delete": [
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_Clean_Project_Backup_v2.6_20250626\\core\\helpers.py",
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\backup_20250626_144500\\core\\helpers.py"
+    ],
+    "reason": "동일 파일 3개 중 가장 상위 경로 유지"
+  },
+  {
+    "keep": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\core\\inventory_engine.py",
+    "delete": [
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_Clean_Project_Backup_v2.6_20250626\\core\\inventory_engine.py",
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\backup_20250626_144500\\core\\inventory_engine.py"
+    ],
+    "reason": "동일 파일 3개 중 가장 상위 경로 유지"
+  },
+  {
+    "keep": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_Clean_Project_Backup_v2.6_20250626\\core\\loader.py",
+    "delete": [
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\backup_20250626_144500\\core\\loader.py"
+    ],
+    "reason": "동일 파일 2개 중 가장 상위 경로 유지"
+  },
+  {
+    "keep": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\core\\logger.py",
+    "delete": [
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_Clean_Project_Backup_v2.6_20250626\\core\\logger.py",
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\backup_20250626_144500\\core\\logger.py"
+    ],
+    "reason": "동일 파일 3개 중 가장 상위 경로 유지"
+  },
+  {
+    "keep": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\core\\schemas.py",
+    "delete": [
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_Clean_Project_Backup_v2.6_20250626\\core\\schemas.py",
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\backup_20250626_144500\\core\\schemas.py"
+    ],
+    "reason": "동일 파일 3개 중 가장 상위 경로 유지"
+  },
+  {
+    "keep": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\core\\timeline.py",
+    "delete": [
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\HVDC_Clean_Project_Backup_v2.6_20250626\\core\\timeline.py",
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\backup_20250626_144500\\core\\timeline.py"
+    ],
+    "reason": "동일 파일 3개 중 가장 상위 경로 유지"
+  },
+  {
+    "keep": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\test_output\\basic_output.ttl",
+    "delete": [
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\test_output\\hvdc_data_20250626_142806.ttl",
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\backup_20250626_144500\\test_output\\basic_output.ttl",
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\backup_20250626_144500\\test_output\\hvdc_data_20250626_142806.ttl"
+    ],
+    "reason": "동일 파일 4개 중 가장 상위 경로 유지"
+  },
+  {
+    "keep": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\test_output\\enhanced_output.ttl",
+    "delete": [
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\backup_20250626_144500\\test_output\\enhanced_output.ttl"
+    ],
+    "reason": "동일 파일 2개 중 가장 상위 경로 유지"
+  },
+  {
+    "keep": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\rdf_output\\schema_20250629_013023.ttl",
+    "delete": [
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\test_output\\schema.ttl",
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\test_output\\schema_20250626_142806.ttl",
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\backup_20250626_144500\\test_output\\schema.ttl",
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\backup_20250626_144500\\test_output\\schema_20250626_142806.ttl"
+    ],
+    "reason": "동일 파일 5개 중 가장 상위 경로 유지"
+  },
+  {
+    "keep": "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\rdf_output\\hvdc_full_data_8038records_20250629_013856.ttl",
+    "delete": [
+      "C:\\HVDC PJT\\hvdc_macho_gpt\\WAREHOUSE\\reasoning_output\\hvdc_graph.ttl"
+    ],
+    "reason": "동일 파일 2개 중 가장 상위 경로 유지"
+  }
+]

@@ -1,0 +1,93 @@
+# Aider configuration for HVDC Project
+# AI-powered command-line chat for code editing
+
+# Model configuration
+model: gpt-4o
+temperature: 0.1
+max_tokens: 8000
+
+# Project-specific settings
+project_name: "HVDC Project - Samsung C&T Logistics & ADNOC·DSV Partnership"
+project_description: "Advanced logistics AI system with MACHO-GPT v3.4-mini integration"
+
+# Code editing preferences
+auto_commits: true
+auto_tests: true
+dirty_commits: true
+show_diffs: true
+map_tokens: 0
+
+# File patterns to include/exclude
+include_patterns:
+  - "src/**/*.py"
+  - "tools/**/*.py"
+  - "tests/**/*.py"
+  - "*.py"
+  - "*.yaml"
+  - "*.yml"
+  - "*.toml"
+  - "*.md"
+
+exclude_patterns:
+  - "**/__pycache__/**"
+  - "**/.*"
+  - "**/node_modules/**"
+  - "**/venv/**"
+  - "**/env/**"
+  - "**/.git/**"
+  - "**/reports/**"
+  - "**/logs/**"
+
+# HVDC-specific context
+system_prompt: |
+  You are a senior software engineer specializing in logistics systems for the HVDC Project.
+  
+  PROJECT CONTEXT:
+  - Samsung C&T Logistics & ADNOC·DSV Strategic Partnership
+  - MACHO-GPT v3.4-mini integration required
+  - TDD and Kent Beck's "Tidy First" principles
+  - FANR/MOIAT compliance for nuclear materials
+  - Real-time logistics optimization
+  
+  CORE MODULES:
+  - Inv-OCR: Invoice processing with 95%+ confidence
+  - Heat-Stow: Container stowage optimization (≤4t/m² pressure)
+  - WHF/Cap: Warehouse capacity management
+  - WeatherTie: Weather-based ETA adjustments
+  - HSRisk: Hazardous materials risk assessment
+  - CostGuard: Cost optimization and monitoring
+  - CertChk: FANR/MOIAT certification validation
+  - MCP-Agent: Multi-agent workflow orchestration
+  - API/RAG: Real-time data integration
+  - Predictive-Analytics: AI-driven forecasting
+  
+  CODING STANDARDS:
+  - Follow TDD cycle: Red → Green → Refactor
+  - Maintain HVDC project structure
+  - Preserve MACHO-GPT integration
+  - Include comprehensive error handling
+  - Add type hints and docstrings
+  - Write logistics domain tests
+  
+  QUALITY REQUIREMENTS:
+  - MyPy type checking compliance
+  - Ruff linting standards
+  - Black code formatting
+  - Pytest test coverage ≥90%
+  - Security scanning compliance
+  
+  When making changes:
+  1. Always maintain existing business logic
+  2. Preserve MACHO-GPT v3.4-mini compatibility
+  3. Follow logistics domain best practices
+  4. Include appropriate error handling
+  5. Add/update tests as needed
+  6. Update documentation if required
+
+# Git integration
+git_dirty_commits: true
+auto_commits: true
+commit_message_template: "aider: {message}"
+
+# Editor settings
+editor_command: "code --wait"

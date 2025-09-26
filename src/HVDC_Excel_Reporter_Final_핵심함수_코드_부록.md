@@ -1,0 +1,903 @@
+# HVDC Excel Reporter Final 핵심 함수 전체 코드 부록
+
+## 📋 개요
+이 문서는 HVDC Excel Reporter Final 시스템의 모든 핵심 함수들의 완전한 코드 예시를 포함합니다.
+각 함수는 실제 구현 코드, 상세한 주석, 사용 예시를 포함합니다.
+
+---
+
+## 🔧 1. 공통 헬퍼 함수들
+
+### 1.1 PKG 수량 안전 추출 함수
+```python
+def _get_pkg(row):
+    """
+    Pkg 컬럼에서 수량을 안전하게 추출하는 헬퍼 함수
+    
+    Args:
+        row: pandas Series - 데이터 행
+        
+    Returns:
+        int: PKG 수량 (기본값: 1)
+        
+    사용 예시:
+        pkg_quantity = _get_pkg(row)
+        total_inbound += pkg_quantity  # count=1 대신 실제 수량 사용
+    """
+    pkg_value = row.get('Pkg', 1)
+    if pd.isna(pkg_value) or pkg_value == '' or pkg_value == 0:
+        return 1
+    try:
+        return int(pkg_value)
+    except (ValueError, TypeError):
+        return 1
+```
+
+### 1.2 KPI 임계값 검증 함수
+```python
+def validate_kpi_thresholds(stats: Dict) -> Dict:
+    """
+    KPI 임계값 검증 (Status_Location 기반 패치 버전)
+    
+    Args:
+        stats: Dict - 통계 데이터
+        
+    Returns:
+        Dict: 검증 결과
+        
+    검증 항목:
+    - PKG Accuracy: 99% 이상
+    - Site Inventory Days: 30일 이하
+    - Status_Location Validation: 합계 > 0
+    - Inbound ≥ Outbound: 입고 ≥ 출고
+    """
+    logger.info("📊 KPI 임계값 검증 시작 (Status_Location 기반)")
+    
+    validation_results = {}
+    
+    # PKG Accuracy 검증
+    if 'processed_data' in stats:
+        df = stats['processed_data']
+        total_pkg = df['Pkg'].sum() if 'Pkg' in df.columns else 0
+        total_records = len(df)
+        
+        if total_records > 0:
+            pkg_accuracy = (total_pkg / total_records) * 100
+            validation_results['PKG_Accuracy'] = {
+                'status': 'PASS' if pkg_accuracy >= 99.0 else 'FAIL',
+                'value': f"{pkg_accuracy:.2f}%",
+                'threshold': '99.0%'
+            }
+    
+    # Status_Location 기반 재고 검증
+    if 'inventory_result' in stats:
+        inventory_result = stats['inventory_result']
+        if 'status_location_distribution' in inventory_result:
+            location_dist = inventory_result['status_location_distribution']
+            total_by_status = sum(location_dist.values())
+            
+            validation_results['Status_Location_Validation'] = {
+                'status': 'PASS' if total_by_status > 0 else 'FAIL',
+                'value': f"{total_by_status}건",
+                'threshold': 'Status_Location 합계 > 0'
+            }
+            
+            # 현장 재고일수 검증 (30일 이하)
+            site_locations = ['AGI', 'DAS', 'MIR', 'SHU']
+            site_inventory = sum(location_dist.get(site, 0) for site in site_locations)
+            
+            validation_results['Site_Inventory_Days'] = {
+                'status': 'PASS' if site_inventory <= 30 else 'FAIL',
+                'value': f"{site_inventory}일",
+                'threshold': '30일'
+            }
+    
+    # 입고 ≥ 출고 검증
+    if 'inbound_result' in stats and 'outbound_result' in stats:
+        total_inbound = stats['inbound_result']['total_inbound']
+        total_outbound = stats['outbound_result']['total_outbound']
+        
+        validation_results['Inbound_Outbound_Ratio'] = {
+            'status': 'PASS' if total_inbound >= total_outbound else 'FAIL',
+            'value': f"{total_inbound} ≥ {total_outbound}",
+            'threshold': '입고 ≥ 출고'
+        }
+    
+    all_pass = all(result['status'] == 'PASS' for result in validation_results.values())
+    
+    logger.info(f"✅ Status_Location 기반 KPI 검증 완료: {'ALL PASS' if all_pass else 'SOME FAILED'}")
+    return validation_results
+```
+
+---
+
+## 🏭 2. WarehouseIOCalculator 클래스 핵심 함수들
+
+### 2.1 클래스 초기화
+```python
+class WarehouseIOCalculator:
+    """
+    Excel 수식 기반 창고 입출고 계산 클래스
+    
+    StatusCalculator를 활용하여 정확한 창고 입출고 집계 수행
+    - 입고: warehouse 상태인 항목들의 월별 집계
+    - 출고: warehouse → site 이동 또는 창고 타입별 출고율 적용
+    - 재고: 현재 warehouse 상태 유지 항목들
+    """
+    
+    def __init__(self):
+        self.status_calculator = StatusCalculator()
+        
+        # 창고 타입별 출고율 설정
+        self.outbound_rates = {
+            'DSV Indoor': 0.80,      # 일반창고
+            'DSV Outdoor': 0.60,     # Offshore
+            'DSV Al Markaz': 0.90,   # Central
+            'DSV MZP': 0.80,         # 일반창고
+            'AAA  Storage': 0.80,    # 일반창고 (공백 주의)
+            'AAA Storage': 0.80,     # 일반창고 (공백 없음)
+            'Hauler Indoor': 0.80,   # 일반창고
+            'MOSB': 0.60,            # Offshore
+            'DHL Warehouse': 0.80    # 일반창고
+        }
+        
+        # 창고 컬럼명 매핑 (표준화)
+        self.warehouse_columns = [
+            'DSV Indoor', 'DSV Outdoor', 'DSV Al Markaz', 'DSV MZP',
+            'AAA  Storage', 'AAA Storage', 'Hauler Indoor', 'MOSB', 'DHL Warehouse'
+        ]
+        
+        # 현장 컬럼명
+        self.site_columns = ['MIR', 'SHU', 'DAS', 'AGI']
+        
+        # Final Location 계산을 위한 특별 컬럼 매핑
+        self.special_location_columns = {
+            'DSV Al Markaz': 'Status_Location_DSV Al Markaz',  # AX
+            'DSV Indoor': 'Status_Location_DSV Indoor'        # AY
+        }
+```
+
+### 2.2 Final Location 계산 함수
+```python
+def calculate_final_location(self, df: pd.DataFrame) -> pd.DataFrame:
+    """
+    Final_Location 파생 로직 (np.select 사용)
+    - DSV Al Markaz → AX 컬럼 우선 참조
+    - DSV Indoor → AY 컬럼 우선 참조
+    - 나머지 → Status_Location(AV) 컬럼 사용
+    
+    Args:
+        df: pd.DataFrame - 입력 데이터
+        
+    Returns:
+        pd.DataFrame: Final_Location 컬럼이 추가된 데이터프레임
+        
+    사용 예시:
+        result_df = calculator.calculate_final_location(df)
+        final_locations = result_df['Final_Location'].value_counts()
+    """
+    result_df = df.copy()
+    
+    # 상태 계산이 안되어 있으면 먼저 계산
+    if 'Status_Location' not in result_df.columns:
+        result_df = self.status_calculator.calculate_complete_status(result_df)
+    
+    # 열 매핑 (가정)
+    COL_LOC_ALL = 'Status_Location'                    # AV
+    COL_DSV_MARKAZ = 'Status_Location_DSV Al Markaz'   # AX
+    COL_DSV_INDOOR = 'Status_Location_DSV Indoor'      # AY
+    
+    # AX, AY 컬럼이 없으면 생성 (임시)
+    if COL_DSV_MARKAZ not in result_df.columns:
+        result_df[COL_DSV_MARKAZ] = ''
+    if COL_DSV_INDOOR not in result_df.columns:
+        result_df[COL_DSV_INDOOR] = ''
+    
+    # 1) AL MARKAZ → AX, INDOOR → AY, 나머지 → AV
+    result_df['Final_Location'] = np.select(
+        [
+            result_df[COL_DSV_MARKAZ].notna() & result_df[COL_DSV_MARKAZ].ne(''),
+            result_df[COL_DSV_INDOOR].notna() & result_df[COL_DSV_INDOOR].ne('')
+        ],
+        [
+            result_df[COL_DSV_MARKAZ],          # AL MARKAZ
+            result_df[COL_DSV_INDOOR]           # INDOOR
+        ],
+        default=result_df[COL_LOC_ALL]          # 그 외
+    )
+    
+    # 2) 확인: 중복·공백 제거
+    result_df['Final_Location'] = result_df['Final_Location'].astype(str).str.strip()
+    result_df.loc[result_df['Final_Location'] == '', 'Final_Location'] = '미정'
+    
+    return result_df
+```
+
+### 2.3 창고 입고 계산 함수
+```python
+def calculate_warehouse_inbound(self, df: pd.DataFrame) -> Dict:
+    """
+    창고 입고 계산 (Final_Location 기반 + 월별 피벗)
+    - Final_Location 기준으로 정확한 위치 파악
+    - 월별 입고량 피벗 테이블 생성
+    
+    Args:
+        df: pd.DataFrame - 입력 데이터
+        
+    Returns:
+        Dict: {
+            'total_inbound': int,
+            'by_warehouse': Dict[str, int],
+            'by_month': Dict[str, int],
+            'by_warehouse_month': Dict[str, Dict[str, int]],
+            'monthly_pivot': pd.DataFrame,
+            'inbound_date_column': str
+        }
+        
+    사용 예시:
+        inbound_result = calculator.calculate_warehouse_inbound(df)
+        print(f"총 입고: {inbound_result['total_inbound']}건")
+        print(f"창고별: {inbound_result['by_warehouse']}")
+    """
+    # Final_Location 계산
+    result_df = self.calculate_final_location(df)
+    
+    # warehouse 상태 항목만 필터링
+    warehouse_items = result_df[result_df['Status_Current'] == 'warehouse']
+    
+    # 입고 날짜 컬럼 찾기 (가능한 후보들)
+    inbound_date_candidates = [
+        'Inbound_Date', 'Arrival_Date', 'Warehouse_In_Date',
+        'Entry_Date', 'Received_Date'
+    ]
+    
+    inbound_date_col = None
+    for col in inbound_date_candidates:
+        if col in result_df.columns:
+            inbound_date_col = col
+            break
+    
+    # 입고 날짜가 없으면 Final_Location의 날짜 사용
+    if inbound_date_col is None:
+        warehouse_items = warehouse_items.copy()
+        warehouse_items['Inbound_Date'] = warehouse_items.apply(
+            lambda row: row.get(row['Final_Location'], None) 
+            if row['Final_Location'] in row.index else None, 
+            axis=1
+        )
+        inbound_date_col = 'Inbound_Date'
+    
+    # 월별 계산을 위한 데이터 준비
+    if inbound_date_col in warehouse_items.columns:
+        warehouse_items = warehouse_items.copy()
+        warehouse_items['Inbound_Month'] = pd.to_datetime(
+            warehouse_items[inbound_date_col], errors='coerce'
+        ).dt.to_period('M')
+    else:
+        warehouse_items['Inbound_Month'] = None
+    
+    # 집계 결과 초기화
+    inbound_summary = {
+        'total_inbound': len(warehouse_items),
+        'by_warehouse': defaultdict(int),
+        'by_month': defaultdict(int),
+        'by_warehouse_month': defaultdict(lambda: defaultdict(int)),
+        'inbound_date_column': inbound_date_col or 'None'
+    }
+    
+    # 창고별, 월별 집계
+    for _, row in warehouse_items.iterrows():
+        location = row['Final_Location']
+        month = row['Inbound_Month']
+        
+        # 집계 업데이트
+        inbound_summary['by_warehouse'][location] += 1
+        
+        if pd.notna(month):
+            month_key = str(month)
+            inbound_summary['by_month'][month_key] += 1
+            inbound_summary['by_warehouse_month'][location][month_key] += 1
+    
+    # 월별 피벗 테이블 생성
+    try:
+        if inbound_date_col and 'Inbound_Month' in warehouse_items.columns:
+            monthly_pivot = warehouse_items.pivot_table(
+                index='Inbound_Month',
+                columns='Final_Location',
+                values='Item' if 'Item' in warehouse_items.columns else warehouse_items.columns[0],
+                aggfunc='count',
+                fill_value=0
+            ).astype(int)
+        else:
+            monthly_pivot = pd.DataFrame()
+    except Exception as e:
+        print(f"피벗 테이블 생성 실패: {e}")
+        monthly_pivot = pd.DataFrame()
+    
+    # defaultdict를 일반 dict로 변환
+    inbound_summary['by_warehouse'] = dict(inbound_summary['by_warehouse'])
+    inbound_summary['by_month'] = dict(inbound_summary['by_month'])
+    inbound_summary['by_warehouse_month'] = {
+        wh: dict(months) for wh, months in inbound_summary['by_warehouse_month'].items()
+    }
+    inbound_summary['monthly_pivot'] = monthly_pivot
+    
+    return inbound_summary
+```
+
+### 2.4 창고 출고 계산 함수
+```python
+def calculate_warehouse_outbound(self, df: pd.DataFrame) -> Dict:
+    """
+    창고 출고 계산 (이벤트 타임라인 방식)
+    - 출고 이벤트 중복 제거
+    - 실제 창고 → 현장 이동 이벤트만 카운트
+    
+    Args:
+        df: pd.DataFrame - 입력 데이터
+        
+    Returns:
+        Dict: {
+            'total_outbound': int,
+            'by_warehouse': Dict[str, int],
+            'by_site': Dict[str, int],
+            'outbound_events': pd.DataFrame
+        }
+        
+    사용 예시:
+        outbound_result = calculator.calculate_warehouse_outbound(df)
+        print(f"총 출고: {outbound_result['total_outbound']}건")
+    """
+    warehouse_cols = self.warehouse_columns
+    site_cols = self.site_columns
+    
+    # 모든 날짜 컬럼 melt
+    long_df = df.melt(
+        id_vars=['Item'] if 'Item' in df.columns else [df.columns[0]],
+        value_vars=warehouse_cols + site_cols,
+        var_name='Location',
+        value_name='Date'
+    ).dropna()
+    
+    # 날짜형 변환 및 정렬
+    long_df['Date'] = pd.to_datetime(long_df['Date'], errors='coerce')
+    long_df = long_df.sort_values(['Item', 'Date'])
+    
+    # 이전 Location 대비 변화 시 출고 이벤트 마킹
+    long_df['Prev_Location'] = long_df.groupby('Item')['Location'].shift()
+    
+    # 창고 → 현장 이동만 출고로 계산
+    outbound_events = long_df[
+        long_df['Prev_Location'].isin(warehouse_cols) &
+        long_df['Location'].isin(site_cols)
+    ]
+    
+    # 집계
+    by_warehouse = outbound_events['Prev_Location'].value_counts().to_dict()
+    by_site = outbound_events['Location'].value_counts().to_dict()
+    
+    return {
+        'total_outbound': len(outbound_events),
+        'by_warehouse': by_warehouse,
+        'by_site': by_site,
+        'outbound_events': outbound_events
+    }
+```
+
+### 2.5 창고 재고 계산 함수
+```python
+def calculate_warehouse_inventory(self, df: pd.DataFrame) -> Dict:
+    """
+    창고 재고 계산 (Status_Location 기반)
+    - 현재 warehouse 상태 유지 항목들
+    - 5% 소비율 가정치 제거, 실시간 Location 기반 계산
+    
+    Args:
+        df: pd.DataFrame - 입력 데이터
+        
+    Returns:
+        Dict: {
+            'total_inventory': int,
+            'by_warehouse': Dict[str, int],
+            'by_status': Dict[str, int],
+            'status_location_distribution': Dict[str, int]
+        }
+        
+    사용 예시:
+        inventory_result = calculator.calculate_warehouse_inventory(df)
+        print(f"총 재고: {inventory_result['total_inventory']}건")
+    """
+    # 상태 계산
+    result_df = self.status_calculator.calculate_complete_status(df)
+    
+    # 상태별 집계 (실시간 데이터 기반, 소비율 가정치 없음)
+    status_counts = result_df['Status_Current'].value_counts()
+    
+    inventory_summary = {
+        'total_inventory': status_counts.get('warehouse', 0),
+        'by_warehouse': defaultdict(int),
+        'by_status': {
+            'warehouse': status_counts.get('warehouse', 0),
+            'site': status_counts.get('site', 0),
+            'pre_arrival': status_counts.get('Pre Arrival', 0)
+        },
+        'status_location_distribution': result_df['Status_Location'].value_counts().to_dict()
+    }
+    
+    # 창고별 재고 집계 (실시간 Status_Location 기반)
+    warehouse_items = result_df[result_df['Status_Current'] == 'warehouse']
+    for _, row in warehouse_items.iterrows():
+        location = row['Status_Location']
+        inventory_summary['by_warehouse'][location] += 1
+    
+    # defaultdict를 일반 dict로 변환
+    inventory_summary['by_warehouse'] = dict(inventory_summary['by_warehouse'])
+    
+    return inventory_summary
+```
+
+### 2.6 직배송 계산 함수
+```python
+def calculate_direct_delivery(self, df: pd.DataFrame) -> Dict:
+    """
+    부두→현장 직배송 계산
+    - 창고를 거치지 않고 바로 현장으로 간 항목들
+    - site 상태이면서 창고 컬럼에 날짜가 없는 경우
+    
+    Args:
+        df: pd.DataFrame - 입력 데이터
+        
+    Returns:
+        Dict: {
+            'total_direct': int,
+            'by_site': Dict[str, int],
+            'by_month': Dict[str, int],
+            'direct_items': pd.DataFrame
+        }
+        
+    사용 예시:
+        direct_result = calculator.calculate_direct_delivery(df)
+        print(f"직배송: {direct_result['total_direct']}건")
+    """
+    # Final_Location 계산
+    result_df = self.calculate_final_location(df)
+    
+    # site 상태 항목들
+    site_items = result_df[result_df['Status_Current'] == 'site'].copy()
+    
+    # 직배송 조건: 모든 창고 컬럼에 날짜가 없고 현장 컬럼에만 날짜가 있는 경우
+    direct_mask = pd.Series(True, index=site_items.index)
+    
+    # 모든 창고 컬럼 체크
+    for col in self.warehouse_columns:
+        if col in site_items.columns:
+            # 해당 창고 컬럼에 날짜가 있으면 직배송이 아님
+            has_warehouse_date = site_items[col].notna()
+            direct_mask = direct_mask & ~has_warehouse_date
+    
+    # 직배송 항목 필터링
+    direct_items = site_items[direct_mask].copy()
+    
+    # 집계
+    by_site = direct_items['Status_Location'].value_counts().to_dict()
+    by_month = {}
+    
+    # 월별 집계 (현장 도착일 기준)
+    for site in self.site_columns:
+        if site in direct_items.columns:
+            site_dates = direct_items[site].dropna()
+            for date in site_dates:
+                month_key = pd.to_datetime(date).strftime('%Y-%m')
+                by_month[month_key] = by_month.get(month_key, 0) + 1
+    
+    return {
+        'total_direct': len(direct_items),
+        'by_site': by_site,
+        'by_month': by_month,
+        'direct_items': direct_items
+    }
+```
+
+---
+
+## 📊 3. HVDCExcelReporterFinal 클래스 핵심 함수들
+
+### 3.1 클래스 초기화
+```python
+class HVDCExcelReporterFinal:
+    """
+    HVDC Excel Reporter Final 클래스
+    - Multi-Level Header 지원
+    - 창고/현장 시트 생성
+    - Flow 분석 시트 생성
+    """
+    
+    def __init__(self):
+        self.calculator = WarehouseIOCalculator()
+        
+        # 창고 우선순위 (동일일자 타이브레이커)
+        self.warehouse_priority = [
+            'DSV Al Markaz', 'DSV Indoor', 'DSV Outdoor',
+            'AAA Storage', 'Hauler Indoor', 'DSV MZP', 'MOSB'
+        ]
+        
+        # Flow Code 매핑
+        self.flow_codes = {
+            'F1': '창고 입고',
+            'F2': '창고 출고',
+            'F3': '현장 입고',
+            'F4': '현장 재고',
+            'F5': '직배송',
+            'F6': '창고 간 이동'
+        }
+```
+
+### 3.2 창고 통계 계산 함수
+```python
+def calculate_warehouse_statistics(self) -> Dict:
+    """
+    창고 통계 계산 (통합)
+    
+    Returns:
+        Dict: 모든 창고 관련 통계
+        
+    사용 예시:
+        stats = reporter.calculate_warehouse_statistics()
+        warehouse_sheet = reporter.create_warehouse_monthly_sheet(stats)
+    """
+    # 데이터 로드
+    df = self.calculator.load_real_hvdc_data()
+    
+    # 각종 계산 수행
+    inbound_result = self.calculator.calculate_warehouse_inbound(df)
+    outbound_result = self.calculator.calculate_warehouse_outbound(df)
+    inventory_result = self.calculator.calculate_warehouse_inventory(df)
+    direct_result = self.calculator.calculate_direct_delivery(df)
+    
+    return {
+        'inbound_result': inbound_result,
+        'outbound_result': outbound_result,
+        'inventory_result': inventory_result,
+        'direct_result': direct_result,
+        'processed_data': df
+    }
+```
+
+### 3.3 창고 월별 시트 생성 함수
+```python
+def create_warehouse_monthly_sheet(self, stats: Dict) -> pd.DataFrame:
+    """
+    창고 월별 시트 생성 (17열 구조)
+    
+    Args:
+        stats: Dict - 통계 데이터
+        
+    Returns:
+        pd.DataFrame: 창고 월별 시트
+        
+    컬럼 구조:
+    ['입고월'] + 
+    ['입고_AAA Storage', '입고_DSV Al Markaz', ..., '입고_MOSB'] (7개) +
+    ['출고_AAA Storage', '출고_DSV Al Markaz', ..., '출고_MOSB'] (7개) +
+    ['누계_입고', '누계_출고'] (2개)
+    """
+    inbound_result = stats['inbound_result']
+    outbound_result = stats['outbound_result']
+    
+    # 월별 데이터 수집
+    all_months = set()
+    all_months.update(inbound_result['by_month'].keys())
+    all_months.update(outbound_result.get('by_month', {}).keys())
+    
+    # 시트 데이터 생성
+    sheet_data = []
+    
+    for month in sorted(all_months):
+        row_data = {'입고월': month}
+        
+        # 입고 데이터
+        for warehouse in self.warehouse_priority:
+            col_name = f'입고_{warehouse}'
+            inbound_count = inbound_result['by_warehouse_month'].get(warehouse, {}).get(month, 0)
+            row_data[col_name] = inbound_count
+        
+        # 출고 데이터
+        for warehouse in self.warehouse_priority:
+            col_name = f'출고_{warehouse}'
+            outbound_count = outbound_result.get('by_warehouse_month', {}).get(warehouse, {}).get(month, 0)
+            row_data[col_name] = outbound_count
+        
+        # 누계 계산
+        total_inbound = sum(row_data[f'입고_{wh}'] for wh in self.warehouse_priority)
+        total_outbound = sum(row_data[f'출고_{wh}'] for wh in self.warehouse_priority)
+        
+        row_data['누계_입고'] = total_inbound
+        row_data['누계_출고'] = total_outbound
+        
+        sheet_data.append(row_data)
+    
+    return pd.DataFrame(sheet_data)
+```
+
+### 3.4 현장 월별 시트 생성 함수
+```python
+def create_site_monthly_sheet(self, stats: Dict) -> pd.DataFrame:
+    """
+    현장 월별 시트 생성 (9열 구조)
+    
+    Args:
+        stats: Dict - 통계 데이터
+        
+    Returns:
+        pd.DataFrame: 현장 월별 시트
+        
+    컬럼 구조:
+    ['입고월'] + 
+    ['입고_AGI', '입고_DAS', '입고_MIR', '입고_SHU'] (4개) +
+    ['재고_AGI', '재고_DAS', '재고_MIR', '재고_SHU'] (4개)
+    """
+    inbound_result = stats['inbound_result']
+    inventory_result = stats['inventory_result']
+    
+    # 현장 컬럼
+    site_columns = ['AGI', 'DAS', 'MIR', 'SHU']
+    
+    # 월별 데이터 수집
+    all_months = set()
+    all_months.update(inbound_result['by_month'].keys())
+    
+    # 시트 데이터 생성
+    sheet_data = []
+    
+    for month in sorted(all_months):
+        row_data = {'입고월': month}
+        
+        # 입고 데이터
+        for site in site_columns:
+            col_name = f'입고_{site}'
+            inbound_count = inbound_result.get('by_site_month', {}).get(site, {}).get(month, 0)
+            row_data[col_name] = inbound_count
+        
+        # 재고 데이터 (현재 상태 기준)
+        for site in site_columns:
+            col_name = f'재고_{site}'
+            inventory_count = inventory_result['by_warehouse'].get(site, 0)
+            row_data[col_name] = inventory_count
+        
+        sheet_data.append(row_data)
+    
+    return pd.DataFrame(sheet_data)
+```
+
+### 3.5 Multi-Level Header 생성 함수
+```python
+def create_multi_level_headers(self, df: pd.DataFrame, sheet_type: str) -> pd.DataFrame:
+    """
+    Multi-Level Header 생성
+    
+    Args:
+        df: pd.DataFrame - 데이터프레임
+        sheet_type: str - 시트 타입 ('warehouse' 또는 'site')
+        
+    Returns:
+        pd.DataFrame: Multi-Level Header가 적용된 데이터프레임
+        
+    사용 예시:
+        warehouse_df = create_multi_level_headers(warehouse_df, 'warehouse')
+    """
+    if sheet_type == 'warehouse':
+        # 창고 시트: 17열 구조
+        level_0 = ['입고월'] + ['입고'] * 7 + ['출고'] * 7 + ['누계', '누계']
+        level_1 = [''] + self.warehouse_priority + self.warehouse_priority + ['입고', '출고']
+        
+    elif sheet_type == 'site':
+        # 현장 시트: 9열 구조
+        level_0 = ['입고월'] + ['입고'] * 4 + ['재고'] * 4
+        level_1 = [''] + ['AGI', 'DAS', 'MIR', 'SHU'] + ['AGI', 'DAS', 'MIR', 'SHU']
+    
+    # MultiIndex 생성
+    headers = pd.MultiIndex.from_arrays([level_0, level_1], names=['Level_0', 'Level_1'])
+    
+    # 데이터프레임에 헤더 적용
+    df.columns = headers
+    
+    return df
+```
+
+---
+
+## 🔄 4. 최종 계산 함수들 (패치 버전)
+
+### 4.1 입고 최종 계산 함수
+```python
+def calculate_inbound_final(df: pd.DataFrame, location: str, year_month) -> int:
+    """
+    입고 = 해당 위치 컬럼에 날짜가 있고, 그 날짜가 해당 월인 경우
+    
+    Args:
+        df: pd.DataFrame - 입력 데이터
+        location: str - 위치명
+        year_month: Period - 년월
+        
+    Returns:
+        int: 입고 수량 (PKG 수량 반영)
+        
+    사용 예시:
+        inbound_count = calculate_inbound_final(df, 'DSV Al Markaz', pd.Period('2024-01'))
+    """
+    inbound_count = 0
+    for idx, row in df.iterrows():
+        if location in row.index and pd.notna(row[location]):
+            arrival_date = pd.to_datetime(row[location])
+            if arrival_date.to_period('M') == year_month:
+                pkg_quantity = _get_pkg(row)
+                inbound_count += pkg_quantity  # PKG 수량 반영
+    return inbound_count
+```
+
+### 4.2 출고 최종 계산 함수
+```python
+def calculate_outbound_final(df: pd.DataFrame, location: str, year_month) -> int:
+    """
+    출고 = 해당 위치 이후 다른 위치로 이동 (다음 위치의 도착일이 출고일)
+    
+    Args:
+        df: pd.DataFrame - 입력 데이터
+        location: str - 위치명
+        year_month: Period - 년월
+        
+    Returns:
+        int: 출고 수량 (PKG 수량 반영)
+        
+    사용 예시:
+        outbound_count = calculate_outbound_final(df, 'DSV Al Markaz', pd.Period('2024-01'))
+    """
+    outbound_count = 0
+    all_locations = [
+        'DSV Indoor', 'DSV Al Markaz', 'DSV Outdoor', 'AAA Storage',
+        'Hauler Indoor', 'DSV MZP', 'MOSB',
+        'Shifting', 'MIR', 'SHU', 'DAS', 'AGI'
+    ]
+    
+    # 위치 우선순위 정렬 함수
+    def _sort_key(loc):
+        loc_priority = {
+            'DSV Al Markaz': 1, 'DSV Indoor': 2, 'DSV Outdoor': 3,
+            'AAA Storage': 4, 'Hauler Indoor': 5, 'DSV MZP': 6,
+            'MOSB': 8, 'MIR': 9, 'SHU': 10, 'DAS': 11, 'AGI': 12
+        }
+        return loc_priority.get(loc, 99)
+    
+    for idx, row in df.iterrows():
+        if location in row.index and pd.notna(row[location]):
+            current_date = pd.to_datetime(row[location])
+            next_movements = []
+            
+            for next_loc in all_locations:
+                if next_loc != location and next_loc in row.index and pd.notna(row[next_loc]):
+                    next_date = pd.to_datetime(row[next_loc])
+                    if next_date >= current_date:  # 동일-일자 이동 인식
+                        next_movements.append((next_loc, next_date))
+            
+            if next_movements:
+                # 동일 날짜 다중 이동 정렬 (날짜 → 우선순위)
+                next_movements.sort(key=lambda x: (x[1], _sort_key(x[0])))
+                next_location, next_date = next_movements[0]
+                
+                if next_date.to_period('M') == year_month:
+                    pkg_quantity = _get_pkg(row)
+                    outbound_count += pkg_quantity  # PKG 수량 반영
+    
+    return outbound_count
+```
+
+### 4.3 재고 최종 계산 함수
+```python
+def calculate_inventory_final(df: pd.DataFrame, location: str, month_end) -> int:
+    """
+    재고 = Status_Location이 해당 위치인 아이템 수 (월말 기준)
+    
+    Args:
+        df: pd.DataFrame - 입력 데이터
+        location: str - 위치명
+        month_end: datetime - 월말 날짜
+        
+    Returns:
+        int: 재고 수량 (PKG 수량 반영)
+        
+    사용 예시:
+        inventory_count = calculate_inventory_final(df, 'DSV Al Markaz', pd.Timestamp('2024-01-31'))
+    """
+    inventory_count = 0
+    if 'Status_Location' in df.columns:
+        at_location = df[df['Status_Location'] == location]
+        for idx, row in at_location.iterrows():
+            if location in row.index and pd.notna(row[location]):
+                arrival_date = pd.to_datetime(row[location])
+                if arrival_date <= month_end:
+                    pkg_quantity = _get_pkg(row)
+                    inventory_count += pkg_quantity  # PKG 수량 반영
+    return inventory_count
+```
+
+---
+
+## 📋 5. 사용 예시 및 테스트 코드
+
+### 5.1 기본 사용 예시
+```python
+# 1. 계산기 초기화
+calculator = WarehouseIOCalculator()
+reporter = HVDCExcelReporterFinal()
+
+# 2. 데이터 로드
+df = calculator.load_real_hvdc_data()
+
+# 3. 각종 계산 수행
+inbound_result = calculator.calculate_warehouse_inbound(df)
+outbound_result = calculator.calculate_warehouse_outbound(df)
+inventory_result = calculator.calculate_warehouse_inventory(df)
+
+# 4. 결과 확인
+print(f"총 입고: {inbound_result['total_inbound']}건")
+print(f"총 출고: {outbound_result['total_outbound']}건")
+print(f"총 재고: {inventory_result['total_inventory']}건")
+
+# 5. Excel 시트 생성
+stats = {
+    'inbound_result': inbound_result,
+    'outbound_result': outbound_result,
+    'inventory_result': inventory_result
+}
+
+warehouse_sheet = reporter.create_warehouse_monthly_sheet(stats)
+site_sheet = reporter.create_site_monthly_sheet(stats)
+
+# 6. Multi-Level Header 적용
+warehouse_sheet = reporter.create_multi_level_headers(warehouse_sheet, 'warehouse')
+site_sheet = reporter.create_multi_level_headers(site_sheet, 'site')
+```
+
+### 5.2 KPI 검증 예시
+```python
+# KPI 검증 수행
+stats = {
+    'processed_data': df,
+    'inbound_result': inbound_result,
+    'outbound_result': outbound_result,
+    'inventory_result': inventory_result
+}
+
+validation_results = validate_kpi_thresholds(stats)
+
+# 검증 결과 출력
+for kpi_name, result in validation_results.items():
+    status = "✅ PASS" if result['status'] == 'PASS' else "❌ FAIL"
+    print(f"{kpi_name}: {status} - {result['value']} (임계값: {result['threshold']})")
+```
+
+### 5.3 최종 계산 함수 사용 예시
+```python
+# 특정 위치, 특정 월의 입고/출고/재고 계산
+location = 'DSV Al Markaz'
+year_month = pd.Period('2024-01')
+month_end = pd.Timestamp('2024-01-31')
+
+inbound_count = calculate_inbound_final(df, location, year_month)
+outbound_count = calculate_outbound_final(df, location, year_month)
+inventory_count = calculate_inventory_final(df, location, month_end)
+
+print(f"{location} - {year_month}:")
+print(f"  입고: {inbound_count}건")
+print(f"  출고: {outbound_count}건")
+print(f"  재고: {inventory_count}건")
+```
+
+---
+
+## 🔧 추천 명령어:
+
+`/logi_master analyze_inventory` [전체 재고 분석 - 현재 상태 확인]
+`/switch_mode LATTICE` [창고 최적화 모드 - 입출고 로직 검증]
+`/validate_data excel_reporter` [Excel 리포터 검증 - 품질 확인]
+`/automate test-pipeline` [전체 테스트 파이프라인 실행 - 시스템 검증] 

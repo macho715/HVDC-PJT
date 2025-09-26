@@ -1,0 +1,134 @@
+[
+  {
+    "category": "Core System",
+    "name": "MACHO-GPT v3.4-mini",
+    "features": [
+      "6개 Containment Modes",
+      "60+ 명령어 지원",
+      "AI 통합 제어 시스템",
+      "신뢰도 ≥95% 유지",
+      "Fail-safe 메커니즘"
+    ]
+  },
+  {
+    "category": "Data Engine",
+    "name": "Enhanced Data Sync v2.8.4",
+    "features": [
+      "8,038건 데이터 처리",
+      "100% 데이터 품질",
+      "4초 처리 시간",
+      "Excel → SQLite 동기화",
+      "자동 데이터 정규화"
+    ]
+  },
+  {
+    "category": "Logic Engine",
+    "name": "MACHO Flow Corrected v2.8.4",
+    "features": [
+      "FLOW CODE 0-4 완전 체계",
+      "WH HANDLING 분석",
+      "100% Excel 피벗 일치",
+      "Pre Arrival 상태 관리",
+      "창고 경유 경로 분석"
+    ]
+  },
+  {
+    "category": "Task Management",
+    "name": "LogiMaster System",
+    "features": [
+      "4계층 통합 아키텍처",
+      "SQLite 기반 작업 관리",
+      "Shrimp Task Manager 통합",
+      "실시간 작업 추적",
+      "우선순위 기반 스케줄링"
+    ]
+  },
+  {
+    "category": "Warehouse Management",
+    "name": "6개 창고 통합 시스템",
+    "features": [
+      "DSV Outdoor/Indoor/MZP",
+      "DSV Al Markaz",
+      "AAA Storage",
+      "Heat-Stow 분석",
+      "WHF/Cap 최적화"
+    ]
+  },
+  {
+    "category": "Ontology Engine",
+    "name": "RDF/SPARQL 지식 관리",
+    "features": [
+      "16개 필드 표준화",
+      "시맨틱 분류 엔진",
+      "TTL 그래프 생성기",
+      "SQLite 온톨로지 저장소",
+      "SPARQL 쿼리 지원"
+    ]
+  },
+  {
+    "category": "Dashboard Integration",
+    "name": "실시간 대시보드",
+    "features": [
+      "HTML/API 통합",
+      "KPI 모니터링",
+      "인터랙티브 차트",
+      "실시간 데이터 업데이트",
+      "다중 대시보드 지원"
+    ]
+  },
+  {
+    "category": "MCP Integration",
+    "name": "6개 MCP 서버 통합",
+    "features": [
+      "JSON/Calculator MCP",
+      "Context7/DeepView MCP",
+      "Android MCP",
+      "MCP Aggregator",
+      "95% 신뢰도 유지"
+    ]
+  },
+  {
+    "category": "Compliance & Security",
+    "name": "FANR/MOIAT 규정 준수",
+    "features": [
+      "자동 규정 검증",
+      "인증서 관리",
+      "보안 감사 추적",
+      "접근 제어 시스템",
+      "NDA/PII 보호"
+    ]
+  },
+  {
+    "category": "TDD Framework",
+    "name": "테스트 주도 개발",
+    "features": [
+      "16개 테스트 파일",
+      "5단계 테스트 시나리오",
+      "99.5% 테스트 커버리지",
+      "자동화된 테스트 파이프라인",
+      "CI/CD 통합"
+    ]
+  },
+  {
+    "category": "Weather & ETA",
+    "name": "WeatherTie 분석",
+    "features": [
+      "실시간 기상 조건",
+      "ETA 예측 알고리즘",
+      "24시간 지연 감지",
+      "자동 알림 시스템",
+      "포트별 기상 영향도"
+    ]
+  },
+  {
+    "category": "Cost Management",
+    "name": "CostGuard 시스템",
+    "features": [
+      "비용 최적화 알고리즘",
+      "승인 워크플로우",
+      "실시간 비용 모니터링",
+      "예산 관리",
+      "ROI 분석"
+    ]
+  }
+] 

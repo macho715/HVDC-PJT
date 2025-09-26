@@ -1,0 +1,67 @@
+﻿{
+    "mcpServers":  {
+                       "brave-search":  {
+                                            "args":  [
+                                                         "-y",
+                                                         "@modelcontextprotocol/server-brave-search",
+                                                         "--port",
+                                                         "8091",
+                                                         "--api-key",
+                                                         ""
+                                                     ],
+                                            "command":  "npx",
+                                            "description":  "Live web search MCP server"
+                                        },
+                       "filesystem":  {
+                                          "args":  [
+                                                       "-y",
+                                                       "@modelcontextprotocol/server-filesystem",
+                                                       "/c"
+                                                   ],
+                                          "command":  "npx",
+                                          "description":  "File system operations MCP server"
+                                      },
+                       "seq-think":  {
+                                         "args":  [
+                                                      "-y",
+                                                      "@modelcontextprotocol/server-sequential-thinking",
+                                                      "--port",
+                                                      "8090"
+                                                  ],
+                                         "command":  "npx",
+                                         "description":  "Structured reasoning MCP server"
+                                     },
+                       "desktop-commander":  {
+                                                 "args":  [
+                                                              "-y",
+                                                              "@wonderwhy-er/desktop-commander"
+                                                          ],
+                                                 "command":  "npx",
+                                                 "description":  "Desktop automation MCP server"
+                                             },
+                       "win-cli":  {
+                                       "args":  [
+                                                    "-y",
+                                                    "@simonb97/server-win-cli"
+                                                ],
+                                       "command":  "npx",
+                                       "description":  "Windows CLI operations MCP server"
+                                   },
+                       "context7":  {
+                                        "args":  [
+                                                     "-y",
+                                                     "@upstash/context7-mcp"
+                                                 ],
+                                        "command":  "npx",
+                                        "description":  "Context management MCP server"
+                                    },
+                       "playwright":  {
+                                          "args":  [
+                                                       "-y",
+                                                       "@executeautomation/playwright-mcp-server"
+                                                   ],
+                                          "command":  "npx",
+                                          "description":  "Web browser automation MCP server"
+                                      }
+                   }
+}

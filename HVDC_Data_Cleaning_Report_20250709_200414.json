@@ -1,0 +1,29 @@
+{
+  "timestamp": "2025-07-09T20:04:09.478348",
+  "backup_created": "backup_20250709_200409",
+  "files_processed": {
+    "HITACHI": {
+      "file_name": "HITACHI",
+      "issues_fixed": 0,
+      "error": "Can only use .str accessor with string values!"
+    },
+    "SIMENSE": {
+      "file_name": "SIMENSE",
+      "issues_fixed": 0,
+      "error": "[Errno 13] Permission denied: 'data\\\\HVDC WAREHOUSE_SIMENSE(SIM).xlsx'"
+    },
+    "INVOICE": {
+      "file_name": "INVOICE",
+      "original_records": 465,
+      "cleaned_records": 465,
+      "issues_fixed": "6611",
+      "missing_data_fixed": "6611",
+      "duplicates_removed": "0",
+      "quality_improvement": "Moderate"
+    }
+  },
+  "total_issues_fixed": "6611",
+  "cleaning_score_before": 54.4,
+  "cleaning_score_after": 94.4,
+  "recommendations": []
+}

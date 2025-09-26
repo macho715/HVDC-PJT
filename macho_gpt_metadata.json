@@ -1,0 +1,420 @@
+{
+  "system_status": {
+    "system_info": {
+      "version": "v3.4-mini",
+      "project": "HVDC_SAMSUNG_CT_ADNOC_DSV",
+      "current_mode": "PRIME",
+      "confidence": "97.3%",
+      "uptime": "99.2%",
+      "active_modules": "9/12",
+      "timestamp": "2025-07-02T21:25:31.261372"
+    },
+    "integration_status": "✅ FULL",
+    "total_commands": 22,
+    "fail_safe_rate": "<3%"
+  },
+  "commands": {
+    "containment": [
+      {
+        "name": "switch_mode PRIME",
+        "category": "containment",
+        "description": "Production environment activation",
+        "integration": [
+          "web_search",
+          "drive_search"
+        ],
+        "success_rate": 98.5,
+        "execution_time": "<1min",
+        "status": "✅ Active",
+        "last_updated": "2025-06-25"
+      },
+      {
+        "name": "switch_mode ORACLE",
+        "category": "containment",
+        "description": "Real-time data synchronization",
+        "integration": [
+          "API",
+          "real_time_feeds"
+        ],
+        "success_rate": 97.2,
+        "execution_time": "<1min",
+        "status": "✅ Active",
+        "last_updated": "2025-06-25"
+      },
+      {
+        "name": "switch_mode ZERO",
+        "category": "containment",
+        "description": "Emergency fallback mode",
+        "integration": [
+          "manual_override"
+        ],
+        "success_rate": 100.0,
+        "execution_time": "<30s",
+        "status": "⚠️ Standby",
+        "last_updated": "2025-06-25"
+      },
+      {
+        "name": "switch_mode LATTICE",
+        "category": "containment",
+        "description": "Container stowage optimization",
+        "integration": [
+          "OCR",
+          "heat_analysis"
+        ],
+        "success_rate": 95.3,
+        "execution_time": "1-2min",
+        "status": "✅ Active",
+        "last_updated": "2025-06-25"
+      },
+      {
+        "name": "switch_mode RHYTHM",
+        "category": "containment",
+        "description": "KPI monitoring & alerting",
+        "integration": [
+          "real_time_dashboards"
+        ],
+        "success_rate": 96.8,
+        "execution_time": "<1min",
+        "status": "✅ Active",
+        "last_updated": "2025-06-25"
+      },
+      {
+        "name": "switch_mode COST-GUARD",
+        "category": "containment",
+        "description": "Cost validation & approval",
+        "integration": [
+          "financial_validation"
+        ],
+        "success_rate": 94.7,
+        "execution_time": "1-3min",
+        "status": "✅ Active",
+        "last_updated": "2025-06-25"
+      }
+    ],
+    "core_workflow": [
+      {
+        "name": "logi_master invoice-audit",
+        "category": "core_workflow",
+        "description": "OCR-based invoice processing",
+        "integration": [
+          "filesystem",
+          "repl",
+          "OCR"
+        ],
+        "success_rate": 96.8,
+        "execution_time": "2-5min",
+        "status": "✅ Active",
+        "last_updated": "2025-06-25"
+      },
+      {
+        "name": "logi_master predict",
+        "category": "core_workflow",
+        "description": "ETA prediction with weather",
+        "integration": [
+          "web_search",
+          "weather_API"
+        ],
+        "success_rate": 94.2,
+        "execution_time": "1-3min",
+        "status": "✅ Active",
+        "last_updated": "2025-06-25"
+      },
+      {
+        "name": "logi_master kpi-dash",
+        "category": "core_workflow",
+        "description": "Real-time KPI dashboard",
+        "integration": [
+          "drive_search",
+          "repl",
+          "artifacts"
+        ],
+        "success_rate": 98.1,
+        "execution_time": "30s-2min",
+        "status": "✅ Active",
+        "last_updated": "2025-06-25"
+      },
+      {
+        "name": "logi_master weather-tie",
+        "category": "core_workflow",
+        "description": "Weather impact analysis",
+        "integration": [
+          "web_search",
+          "weather_API"
+        ],
+        "success_rate": 95.7,
+        "execution_time": "1-2min",
+        "status": "✅ Active",
+        "last_updated": "2025-06-25"
+      },
+      {
+        "name": "logi_master report",
+        "category": "core_workflow",
+        "description": "Automated report generation",
+        "integration": [
+          "drive_search",
+          "artifacts"
+        ],
+        "success_rate": 97.4,
+        "execution_time": "2-5min",
+        "status": "✅ Active",
+        "last_updated": "2025-06-25"
+      },
+      {
+        "name": "logi_master customs",
+        "category": "core_workflow",
+        "description": "Customs clearance processing",
+        "integration": [
+          "web_search",
+          "BOE",
+          "eDAS"
+        ],
+        "success_rate": 93.9,
+        "execution_time": "3-8min",
+        "status": "✅ Active",
+        "last_updated": "2025-06-25"
+      },
+      {
+        "name": "logi_master stowage",
+        "category": "core_workflow",
+        "description": "Container stowage optimization",
+        "integration": [
+          "repl",
+          "heat_analysis"
+        ],
+        "success_rate": 95.3,
+        "execution_time": "2-4min",
+        "status": "✅ Active",
+        "last_updated": "2025-06-25"
+      },
+      {
+        "name": "logi_master warehouse",
+        "category": "core_workflow",
+        "description": "WHF capacity management",
+        "integration": [
+          "drive_search",
+          "calculations"
+        ],
+        "success_rate": 96.1,
+        "execution_time": "1-3min",
+        "status": "✅ Active",
+        "last_updated": "2025-06-25"
+      },
+      {
+        "name": "logi_master summary-mail",
+        "category": "core_workflow",
+        "description": "Executive summary emails",
+        "integration": [
+          "drive_search",
+          "templates"
+        ],
+        "success_rate": 98.6,
+        "execution_time": "30s-1min",
+        "status": "✅ Active",
+        "last_updated": "2025-06-25"
+      }
+    ],
+    "automation": [
+      {
+        "name": "automate_workflow",
+        "category": "automation",
+        "description": "Full pipeline automation",
+        "integration": [
+          "all_tools"
+        ],
+        "success_rate": 94.8,
+        "execution_time": "3-15min",
+        "status": "✅ Active",
+        "last_updated": "2025-06-25"
+      },
+      {
+        "name": "schedule_email",
+        "category": "automation",
+        "description": "Time-based email automation",
+        "integration": [
+          "templates",
+          "scheduler"
+        ],
+        "success_rate": 97.9,
+        "execution_time": "<1min",
+        "status": "✅ Active",
+        "last_updated": "2025-06-25"
+      },
+      {
+        "name": "batch_process",
+        "category": "automation",
+        "description": "Bulk file processing",
+        "integration": [
+          "filesystem",
+          "repl",
+          "OCR"
+        ],
+        "success_rate": 95.4,
+        "execution_time": "5-30min",
+        "status": "✅ Active",
+        "last_updated": "2025-06-25"
+      },
+      {
+        "name": "health_check",
+        "category": "automation",
+        "description": "System health automation",
+        "integration": [
+          "all_tools",
+          "monitoring"
+        ],
+        "success_rate": 99.1,
+        "execution_time": "1-3min",
+        "status": "✅ Active",
+        "last_updated": "2025-06-25"
+      }
+    ],
+    "visualization": [
+      {
+        "name": "visualize_data --type=heatmap",
+        "category": "visualization",
+        "description": "Heat-Stow pressure map",
+        "integration": [
+          "repl",
+          "artifacts"
+        ],
+        "success_rate": 96.7,
+        "execution_time": "30s-2min",
+        "status": "✅ Active",
+        "last_updated": "2025-06-25"
+      },
+      {
+        "name": "visualize_data --type=dashboard",
+        "category": "visualization",
+        "description": "Executive KPI dashboard",
+        "integration": [
+          "drive_search",
+          "artifacts"
+        ],
+        "success_rate": 98.3,
+        "execution_time": "1-3min",
+        "status": "✅ Active",
+        "last_updated": "2025-06-25"
+      },
+      {
+        "name": "analyze_text",
+        "category": "visualization",
+        "description": "NLP text analysis",
+        "integration": [
+          "repl",
+          "web_search"
+        ],
+        "success_rate": 94.9,
+        "execution_time": "1-2min",
+        "status": "✅ Active",
+        "last_updated": "2025-06-25"
+      }
+    ]
+  },
+  "kpi_triggers": [
+    {
+      "condition": "ΔRate Change",
+      "threshold": ">10%",
+      "auto_action": "/web_search market_updates",
+      "status": "✅ Active"
+    },
+    {
+      "condition": "ETA Delay",
+      "threshold": ">24h",
+      "auto_action": "/weather_tie check_conditions",
+      "status": "✅ Active"
+    },
+    {
+      "condition": "Pressure Load",
+      "threshold": ">4t/m²",
+      "auto_action": "/safety_verification required",
+      "status": "✅ Active"
+    },
+    {
+      "condition": "Utilization Rate",
+      "threshold": ">85%",
+      "auto_action": "/capacity_optimization analysis",
+      "status": "✅ Active"
+    },
+    {
+      "condition": "Certificate Expiry",
+      "threshold": "<30 days",
+      "auto_action": "/cert_renewal_alert",
+      "status": "✅ Active"
+    },
+    {
+      "condition": "Cost Variance",
+      "threshold": ">15%",
+      "auto_action": "/cost_audit required",
+      "status": "✅ Active"
+    },
+    {
+      "condition": "OCR Confidence",
+      "threshold": "<85%",
+      "auto_action": "/manual_review required",
+      "status": "✅ Active"
+    },
+    {
+      "condition": "Data Lag",
+      "threshold": ">1h",
+      "auto_action": "/sync_systems trigger",
+      "status": "✅ Active"
+    }
+  ],
+  "tool_integrations": [
+    {
+      "name": "web_search",
+      "status": "✅ Operational",
+      "uptime": 99.7,
+      "last_check": "2025-06-25 14:23",
+      "version": "Latest"
+    },
+    {
+      "name": "google_drive_search",
+      "status": "✅ Operational",
+      "uptime": 99.2,
+      "last_check": "2025-06-25 14:23",
+      "version": "Latest"
+    },
+    {
+      "name": "filesystem",
+      "status": "✅ Operational",
+      "uptime": 99.8,
+      "last_check": "2025-06-25 14:23",
+      "version": "Latest"
+    },
+    {
+      "name": "repl",
+      "status": "✅ Operational",
+      "uptime": 99.9,
+      "last_check": "2025-06-25 14:23",
+      "version": "Latest"
+    },
+    {
+      "name": "artifacts",
+      "status": "✅ Operational",
+      "uptime": 99.6,
+      "last_check": "2025-06-25 14:23",
+      "version": "Latest"
+    },
+    {
+      "name": "OCR_Engine",
+      "status": "✅ Operational",
+      "uptime": 97.8,
+      "last_check": "2025-06-25 14:22",
+      "version": "v2.1"
+    },
+    {
+      "name": "Weather_API",
+      "status": "✅ Operational",
+      "uptime": 98.3,
+      "last_check": "2025-06-25 14:21",
+      "version": "v3.0"
+    },
+    {
+      "name": "Port_API",
+      "status": "⚠️ Degraded",
+      "uptime": 89.2,
+      "last_check": "2025-06-25 14:20",
+      "version": "v1.8"
+    }
+  ]
+}

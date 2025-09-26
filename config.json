@@ -1,0 +1,72 @@
+{
+  "mcpServers": {
+    "filesystem": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "C:\\cursor-mcp\\HVDC_PJT"
+      ]
+    },
+    "sequential-thinking": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-sequential-thinking"
+      ]
+    },
+    "memory": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-memory"
+      ]
+    },
+    "everything": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-everything"
+      ]
+    },
+    "puppeteer": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@hisma/server-puppeteer"
+      ]
+    }
+  },
+  "integrations": {
+    "samsung_ct": true,
+    "adnoc_dsv": true,
+    "weather_api": true,
+    "port_api": true
+  },
+  "performance": {
+    "memory_limit": "100MB",
+    "cache_enabled": true,
+    "compression": true,
+    "batch_size": 1000
+  },
+  "optimization": {
+    "parallel_processing": true,
+    "data_preloading": true,
+    "chart_caching": true,
+    "lazy_rendering": true
+  },
+  "security": {
+    "allowed_domains": ["chat.openai.com", "perplexity.ai"],
+    "file_access": {
+      "allowed_paths": ["C:\\cursor-mcp\\HVDC_PJT"],
+      "blocked_extensions": [".exe", ".bat", ".cmd"]
+    },
+    "api_rate_limit": 100
+  },
+  "logging": {
+    "level": "info",
+    "file": "mcp_superassistant.log",
+    "max_size": "10MB",
+    "retention": "7 days"
+  }
+} 

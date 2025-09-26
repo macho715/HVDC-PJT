@@ -1,0 +1,72 @@
+{
+  "timestamp": "2025-07-11T09:03:51.490490",
+  "duration_seconds": 0.004129,
+  "total_tests": 10,
+  "passed_tests": 2,
+  "failed_tests": 8,
+  "quality_score": 20.0,
+  "grade": "[개선 필요] Needs Improvement",
+  "recommendation": "시스템 재구축 권장",
+  "detailed_results": [
+    {
+      "test_name": "통합 데이터 파일 존재",
+      "status": "[FAIL]",
+      "message": "발견된 파일: 0개",
+      "timestamp": "2025-07-11T09:03:51.488490"
+    },
+    {
+      "test_name": "최종 리포트 파일 존재",
+      "status": "[FAIL]",
+      "message": "발견된 리포트: 0개",
+      "timestamp": "2025-07-11T09:03:51.488490"
+    },
+    {
+      "test_name": "핵심 스크립트 파일 존재",
+      "status": "[FAIL]",
+      "message": "확인된 스크립트: 0/3개",
+      "timestamp": "2025-07-11T09:03:51.488490"
+    },
+    {
+      "test_name": "데이터 품질 검증",
+      "status": "[FAIL]",
+      "message": "통합 데이터 파일이 없음",
+      "timestamp": "2025-07-11T09:03:51.488490"
+    },
+    {
+      "test_name": "Flow Code 로직",
+      "status": "[FAIL]",
+      "message": "Flow Code 컬럼이 없음",
+      "timestamp": "2025-07-11T09:03:51.489490"
+    },
+    {
+      "test_name": "성능 지표 검증",
+      "status": "[FAIL]",
+      "message": "성능 측정할 파일이 없음",
+      "timestamp": "2025-07-11T09:03:51.489490"
+    },
+    {
+      "test_name": "배치 스크립트 존재",
+      "status": "[FAIL]",
+      "message": "확인된 스크립트: []",
+      "timestamp": "2025-07-11T09:03:51.489490"
+    },
+    {
+      "test_name": "로그 시스템",
+      "status": "[PASS]",
+      "message": "로그 디렉토리 확인됨",
+      "timestamp": "2025-07-11T09:03:51.489490"
+    },
+    {
+      "test_name": "설정 파일 시스템",
+      "status": "[PASS]",
+      "message": "설정 파일 확인됨",
+      "timestamp": "2025-07-11T09:03:51.489490"
+    },
+    {
+      "test_name": "출력 디렉토리 구조",
+      "status": "[FAIL]",
+      "message": "확인된 디렉토리: []",
+      "timestamp": "2025-07-11T09:03:51.490490"
+    }
+  ]
+}

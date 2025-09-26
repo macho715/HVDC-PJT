@@ -1,0 +1,20 @@
+{
+  "timestamp": "2025-07-09T20:09:02.684593",
+  "backup_created": "backup_fixed_20250709_200902",
+  "files_processed": {
+    "HITACHI": {
+      "file_name": "HITACHI",
+      "issues_fixed": 0,
+      "error": "[WinError 32] 다른 프로세스가 파일을 사용 중이기 때문에 프로세스가 액세스 할 수 없습니다"
+    },
+    "SIMENSE": {
+      "file_name": "SIMENSE",
+      "issues_fixed": 0,
+      "error": "[WinError 32] 다른 프로세스가 파일을 사용 중이기 때문에 프로세스가 액세스 할 수 없습니다"
+    }
+  },
+  "total_issues_fixed": 0,
+  "cleaning_score_before": 54.4,
+  "cleaning_score_after": 54.4,
+  "recommendations": []
+}

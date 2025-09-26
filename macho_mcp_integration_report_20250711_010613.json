@@ -1,0 +1,120 @@
+{
+  "macho_gpt_version": "v3.4-mini",
+  "project": "HVDC_Samsung_CT_ADNOC_DSV",
+  "integration_status": "INTEGRATION_FAILED",
+  "overall_confidence": 0.44375,
+  "timestamp": "2025-07-11T01:06:13.727611",
+  "mcp_configuration": {
+    "proxy_url": "http://localhost:3006",
+    "active_servers": 5,
+    "total_tools": 37,
+    "total_resources": 11
+  },
+  "test_results": {
+    "connection_test": {
+      "status": "error",
+      "error": "HTTPConnectionPool(host='localhost', port=3006): Read timed out.",
+      "timestamp": "2025-07-11T01:06:10.688819",
+      "confidence": 0.0
+    },
+    "filesystem_test": {
+      "test": "filesystem_integration",
+      "status": "success",
+      "success_rate": 0.75,
+      "accessible_files": [
+        {
+          "file": "config.json",
+          "size": 1578,
+          "modified": "2025-07-10T22:06:30.209980",
+          "accessible": true
+        },
+        {
+          "file": "start_mcp_proxy.ps1",
+          "size": 1623,
+          "modified": "2025-07-10T21:48:34.370435",
+          "accessible": true
+        },
+        {
+          "file": "MCP_PROXY_README.md",
+          "size": 4934,
+          "modified": "2025-07-10T21:49:11.744570",
+          "accessible": true
+        },
+        {
+          "file": "data/HVDC WAREHOUSE_INVOICE.xlsx",
+          "accessible": false
+        }
+      ],
+      "server": "filesystem",
+      "tools_available": 12,
+      "confidence": 0.8250000000000001,
+      "timestamp": "2025-07-11T01:06:10.691603"
+    },
+    "workflow_configuration": {
+      "configuration": "logistics_workflows",
+      "status": "success",
+      "configuration_rate": 1.0,
+      "workflows": {
+        "invoice_ocr": {
+          "status": "configured",
+          "server": "filesystem",
+          "tools_available": 12,
+          "resources_available": 0,
+          "confidence_threshold": 0.9,
+          "integration_ready": true
+        },
+        "heat_stow": {
+          "status": "configured",
+          "server": "memory",
+          "tools_available": 9,
+          "resources_available": 0,
+          "confidence_threshold": 0.95,
+          "integration_ready": true
+        },
+        "weather_tie": {
+          "status": "configured",
+          "server": "puppeteer",
+          "tools_available": 7,
+          "resources_available": 1,
+          "confidence_threshold": 0.85,
+          "integration_ready": true
+        },
+        "container_analysis": {
+          "status": "configured",
+          "server": "sequential-thinking",
+          "tools_available": 1,
+          "resources_available": 0,
+          "confidence_threshold": 0.9,
+          "integration_ready": true
+        },
+        "kpi_monitoring": {
+          "status": "configured",
+          "server": "everything",
+          "tools_available": 8,
+          "resources_available": 10,
+          "confidence_threshold": 0.95,
+          "integration_ready": true
+        }
+      },
+      "total_workflows": 5,
+      "ready_workflows": 5,
+      "confidence": 0.95,
+      "timestamp": "2025-07-11T01:06:10.691603"
+    },
+    "chrome_extension_test": {
+      "test": "chrome_extension_connectivity",
+      "status": "error",
+      "error": "HTTPConnectionPool(host='localhost', port=3006): Read timed out.",
+      "confidence": 0.0
+    }
+  },
+  "recommendations": [
+    "Improve unknown (confidence: 0.00%)",
+    "Improve chrome_extension_connectivity (confidence: 0.00%)"
+  ],
+  "next_steps": [
+    "Check MCP proxy status",
+    "Verify network connectivity",
+    "Review server logs for errors"
+  ]
+}

@@ -1,0 +1,45 @@
+# HVDC Project Code Owners
+# This file defines who is responsible for code in different parts of the repository
+
+# Global owners
+* @hvdc-team
+
+# Core system files
+/.github/ @hvdc-team @devops-team
+/pyproject.toml @hvdc-team @devops-team
+/requirements.txt @hvdc-team @devops-team
+
+# Source code
+/src/ @hvdc-team @backend-team
+/tools/ @hvdc-team @devops-team
+
+# Documentation
+/README.md @hvdc-team @docs-team
+/docs/ @hvdc-team @docs-team
+
+# Configuration files
+*.yaml @hvdc-team @devops-team
+*.yml @hvdc-team @devops-team
+*.toml @hvdc-team @devops-team
+*.json @hvdc-team @devops-team
+
+# Security-sensitive files
+/.github/workflows/ @hvdc-team @devops-team @security-team
+/secrets/ @hvdc-team @security-team
+*.key @hvdc-team @security-team
+*.pem @hvdc-team @security-team
+
+# Database and data files
+*.db @hvdc-team @data-team
+*.sqlite @hvdc-team @data-team
+/data/ @hvdc-team @data-team
+
+# Logs and reports
+/logs/ @hvdc-team
+/reports/ @hvdc-team
+*.log @hvdc-team
+
+# Test files
+/tests/ @hvdc-team @qa-team
+test_*.py @hvdc-team @qa-team
+*_test.py @hvdc-team @qa-team

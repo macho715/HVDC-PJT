@@ -1,0 +1,26 @@
+# HVDC Project - 창고 우선순위 설정
+# Event-Based Outbound Logic용 설정 파일
+# Version: v2.8.2-hotfix-EB-004
+
+warehouse_priority:
+  - DSV Indoor
+  - DSV Al Markaz
+  - DSV Outdoor
+  - DSV MZP
+  - AAA Storage
+  - Hauler Indoor
+  - MOSB
+  - DHL Warehouse
+
+# 설정 설명:
+# 1. DSV Indoor: 최우선 창고 (실내 보관, 접근성 우수)
+# 2. DSV Al Markaz: 2순위 창고 (대용량 보관 가능)
+# 3. DSV Outdoor: 3순위 창고 (실외 보관)
+# 4. DSV MZP: 4순위 창고 (특수 보관)
+# 5. AAA Storage: 5순위 창고 (외부 창고)
+# 6. Hauler Indoor: 6순위 창고 (운송업체 실내)
+# 7. MOSB: 7순위 창고 (MOSB 전용)
+# 8. DHL Warehouse: 8순위 창고 (DHL 전용)
+
+# 사용법:
+# python scripts/event_based_outbound.py --rebuild-final-location input.xlsx --config config/wh_priority.yaml 

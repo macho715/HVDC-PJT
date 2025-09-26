@@ -1,0 +1,112 @@
+version: '3.8'
+
+services:
+  # 백엔드 API 서버
+  backend:
+    build:
+      context: ./src/backend
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=postgresql://hvdc_user:hvdc_password@postgres:5432/hvdc_db
+      - REDIS_URL=redis://redis:6379
+    depends_on:
+      - postgres
+      - redis
+    volumes:
+      - ./src/backend:/app
+    networks:
+      - hvdc-network
+
+  # 프론트엔드 React 앱
+  frontend:
+    build:
+      context: ./src/frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - REACT_APP_API_URL=http://localhost:8000
+    depends_on:
+      - backend
+    volumes:
+      - ./src/frontend:/app
+      - /app/node_modules
+    networks:
+      - hvdc-network
+
+  # PostgreSQL 데이터베이스
+  postgres:
+    image: postgres:15
+    environment:
+      - POSTGRES_DB=hvdc_db
+      - POSTGRES_USER=hvdc_user
+      - POSTGRES_PASSWORD=hvdc_password
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - hvdc-network
+
+  # Redis 캐시
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    networks:
+      - hvdc-network
+
+  # Celery 워커 (백그라운드 작업)
+  celery:
+    build:
+      context: ./src/backend
+      dockerfile: Dockerfile
+    command: celery -A app.celery worker --loglevel=info
+    environment:
+      - DATABASE_URL=postgresql://hvdc_user:hvdc_password@postgres:5432/hvdc_db
+      - REDIS_URL=redis://redis:6379
+    depends_on:
+      - postgres
+      - redis
+    volumes:
+      - ./src/backend:/app
+    networks:
+      - hvdc-network
+
+  # Celery Beat (스케줄러)
+  celery-beat:
+    build:
+      context: ./src/backend
+      dockerfile: Dockerfile
+    command: celery -A app.celery beat --loglevel=info
+    environment:
+      - DATABASE_URL=postgresql://hvdc_user:hvdc_password@postgres:5432/hvdc_db
+      - REDIS_URL=redis://redis:6379
+    depends_on:
+      - postgres
+      - redis
+    volumes:
+      - ./src/backend:/app
+    networks:
+      - hvdc-network
+
+volumes:
+  postgres_data:
+  redis_data:
+
+networks:
+  hvdc-network:
+    driver: bridge
+
+
+
+
+
+
+
+
+

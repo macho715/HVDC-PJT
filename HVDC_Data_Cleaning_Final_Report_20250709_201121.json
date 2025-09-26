@@ -1,0 +1,45 @@
+{
+  "timestamp": "2025-07-09T20:11:21.307184",
+  "files_processed": {
+    "HITACHI": {
+      "file_name": "HITACHI",
+      "input_file": "data\\HVDC WAREHOUSE_HITACHI(HE).xlsx",
+      "output_file": "data_cleaned\\HVDC_WAREHOUSE_HITACHI_CLEANED_20250709_201121.xlsx",
+      "original_records": 5552,
+      "cleaned_records": 5552,
+      "issues_fixed": 37028,
+      "missing_data_fixed": 33564,
+      "outliers_fixed": 3457,
+      "duplicates_removed": 0,
+      "flow_code_normalized": 0,
+      "type_fixes": 7
+    },
+    "SIMENSE": {
+      "file_name": "SIMENSE",
+      "input_file": "data\\HVDC WAREHOUSE_SIMENSE(SIM).xlsx",
+      "output_file": "data_cleaned\\HVDC_WAREHOUSE_SIMENSE_CLEANED_20250709_201121.xlsx",
+      "original_records": 2227,
+      "cleaned_records": 2227,
+      "issues_fixed": 15497,
+      "cbm_violations_fixed": 765,
+      "pkg_normalized": 0,
+      "missing_data_fixed": 14725,
+      "duplicates_removed": 0,
+      "type_fixes": 7
+    },
+    "INVOICE": {
+      "file_name": "INVOICE",
+      "input_file": "data\\HVDC WAREHOUSE_INVOICE.xlsx",
+      "output_file": "data_cleaned\\HVDC_WAREHOUSE_INVOICE_CLEANED_20250709_201121.xlsx",
+      "original_records": 465,
+      "cleaned_records": 465,
+      "issues_fixed": 4,
+      "missing_data_fixed": 0,
+      "duplicates_removed": 0,
+      "type_fixes": 4
+    }
+  },
+  "total_issues_fixed": 52529,
+  "cleaning_score_before": 54.4,
+  "cleaning_score_after": 89.4
+}
