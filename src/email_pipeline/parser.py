@@ -159,10 +159,16 @@ class EmailParser:
             return base_name
 
         path = Path(base_name)
-        suffix = path.suffix
-        stem = path.stem
+        if path.suffixes:
+            suffix = "".join(path.suffixes)
+            stem = path.name[: -len(suffix)]
+        else:
+            suffix = ""
+            stem = path.name
+
         if not stem:
             stem = base_name[: -len(suffix)] if suffix else base_name
+
         return f"{stem}_{count}{suffix}"
 
     @staticmethod

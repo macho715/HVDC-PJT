@@ -226,6 +226,44 @@ def test_parser_deduplicates_duplicate_attachment_names(tmp_path: Path) -> None:
     assert stored_bytes == [b"first", b"second", b"third"]
 
 
+def test_parser_deduplicates_after_sanitizing_names(tmp_path: Path) -> None:
+    """Sanitized filenames still receive unique suffixes when duplicates arise."""
+
+    attachments = [
+        FakeAttachment("r eport?.pdf", b"first"),
+        FakeAttachment("r!eport.pdf", b"second"),
+    ]
+    message = FakeMessage(attachments)
+
+    parser = EmailParser(tmp_path, message_loader=lambda _: cast(MessageProtocol, message))
+    record = parser.parse(tmp_path / "mail.msg")
+
+    filenames = [attachment.filename for attachment in record.attachments]
+    assert filenames == ["report.pdf", "report_1.pdf"]
+
+    stored_bytes = [attachment.storage_path.read_bytes() for attachment in record.attachments]
+    assert stored_bytes == [b"first", b"second"]
+
+
+def test_parser_preserves_multi_suffix_extensions(tmp_path: Path) -> None:
+    """Multi-extension files keep their suffix chain when deduplicated."""
+
+    attachments = [
+        FakeAttachment("archive.tar.gz", b"first"),
+        FakeAttachment("archive.tar.gz", b"second"),
+    ]
+    message = FakeMessage(attachments)
+
+    parser = EmailParser(tmp_path, message_loader=lambda _: cast(MessageProtocol, message))
+    record = parser.parse(tmp_path / "mail.msg")
+
+    filenames = [attachment.filename for attachment in record.attachments]
+    assert filenames == ["archive.tar.gz", "archive_1.tar.gz"]
+
+    stored_bytes = [attachment.storage_path.read_bytes() for attachment in record.attachments]
+    assert stored_bytes == [b"first", b"second"]
+
+
 def test_ingestion_service_runs_full_pipeline(tmp_path: Path) -> None:
     """수집 서비스가 전체 파이프라인 실행 | Ingestion service runs pipeline."""
 
