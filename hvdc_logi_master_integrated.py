@@ -727,6 +727,22 @@ class HVDCLogiMaster:
         commands.append('/generate_kpi_dashboard [KPI 대시보드 생성]')
         
         return commands
+
+    def generate_kpi_dash(self) -> Dict[str, Any]:
+        """KPI 대시보드를 생성합니다/Generate KPI dashboard."""
+        kpi_data = {
+            'confidence_threshold': round(self.confidence_threshold, 2),
+            'success_rate_target': round(self.success_rate_target, 2),
+            'kpi_thresholds': self.kpi_thresholds,
+        }
+        return {
+            'status': 'SUCCESS',
+            'confidence': round(self.confidence_threshold, 2),
+            'mode': self.mode.value,
+            'triggers': [],
+            'next_cmds': self._get_next_commands(pd.DataFrame()),
+            'data': kpi_data,
+        }
     
     def switch_mode(self, new_mode: ContainmentMode, reason: str = "") -> Dict[str, Any]:
         """컨테인먼트 모드 전환"""
